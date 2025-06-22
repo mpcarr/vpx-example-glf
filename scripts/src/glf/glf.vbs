@@ -47,7 +47,7 @@ Dim glf_autofiredevices : Set glf_autofiredevices = CreateObject("Scripting.Dict
 Dim glf_ball_holds : Set glf_ball_holds = CreateObject("Scripting.Dictionary")
 Dim glf_magnets : Set glf_magnets = CreateObject("Scripting.Dictionary")
 Dim glf_segment_displays : Set glf_segment_displays = CreateObject("Scripting.Dictionary")
-Dim glf_droptargets : Set glf_droptargets = CreateObject("Scripting.Dictionary")
+Dim glf_drop_targets : Set glf_drop_targets = CreateObject("Scripting.Dictionary")
 Dim glf_multiball_locks : Set glf_multiball_locks = CreateObject("Scripting.Dictionary")
 Dim glf_multiballs : Set glf_multiballs = CreateObject("Scripting.Dictionary")
 Dim glf_shows : Set glf_shows = CreateObject("Scripting.Dictionary")
@@ -159,6 +159,28 @@ Public Sub Glf_Init()
 	For Each spinner in Glf_Spinners
 		codestr = codestr & "Sub " & spinner.Name & "_Spin() : If Not glf_gameTilted Then : DispatchPinEvent """ & spinner.Name & "_active"", ActiveBall : glf_last_switch_hit_time = gametime : glf_last_switch_hit = """& spinner.Name &""": End If  : End Sub" & vbCrLf
 	Next
+
+	Dim drop_target, drop_index
+	Dim drop_array, using_roth_drops
+	using_roth_drops = False
+	drop_array = Array()
+	drop_index = 1
+	For Each drop_target in glf_drop_targets.Items()
+		codestr = codestr & "Sub " & drop_target.Switch & "_Hit() : If Not glf_gameTilted Then : If glf_drop_targets(""" & drop_target.Name & """).UseRothDroptarget = True Then : DTHit """ & drop_index & """ : Else : DispatchPinEvent """ & drop_target.Switch & "_active"", ActiveBall : glf_last_switch_hit_time = gametime : glf_last_switch_hit = """& drop_target.Switch &""": End If : End If : End Sub" & vbCrLf
+		
+		If drop_target.UseRothDroptarget = True Then
+			using_roth_drops = True
+			Dim DT, dt_switch
+			dt_switch = drop_target.Switch
+    		Set DT = (new DropTarget)(Eval(dt_switch), Eval(dt_switch & "a"), Eval("BM_" & dt_switch), drop_index, 0, False)
+			drop_array = AppendArray(drop_array, DT)
+			drop_index = drop_index + 1
+		End If
+	Next
+	
+	If using_roth_drops = True Then
+		DTArray = drop_array
+	End If
 
     codestr = codestr & vbCrLf
 
@@ -2774,7 +2796,7 @@ Class GlfBallSearch
                     SetDelay "ball_search_next_device" , "BallSearchHandler", Array(Array("next_device", Me, 0), Null), m_search_interval.Value
                 End If
             ElseIf m_current_device_type = "balldevices" Then
-                m_devices = glf_droptargets.Items()
+                m_devices = glf_drop_targets.Items()
                 m_current_device_type = "droptargets"
                 If UBound(m_devices) > -1 Then
                     m_devices(0).BallSearch(m_phase)
@@ -12895,15 +12917,22 @@ Class GlfDroptarget
 	Private m_reset_events
     Private m_complete
     Private m_exclude_from_ball_search
-
+    Private m_use_roth
     
     Private m_debug
 
+
+    Public Property Get Name()
+        Name = Replace(m_name, "drop_target_", "")
+    End Property
 	Public Property Let Switch(value)
 		m_switch = value
 		AddPinEventListener m_switch & "_active", m_name & "_switch_active", "DroptargetEventHandler", 1000, Array("switch_active", Me)
 		AddPinEventListener m_switch & "_inactive", m_name & "_switch_inactive", "DroptargetEventHandler", 1000, Array("switch_inactive", Me)
 	End Property
+    Public Property Get Switch()
+        Switch = m_switch
+    End Property
     Public Property Let EnableKeepUpEvents(value)
         Dim evt
         If IsArray(m_enable_keep_up_events) Then
@@ -12955,6 +12984,12 @@ Class GlfDroptarget
 		Next
 	End Property
     Public Property Let ExcludeFromBallSearch(value) : m_exclude_from_ball_search = value : End Property
+    Public Property Get UseRothDroptarget()
+        UseRothDroptarget = m_use_roth
+    End Property
+    Public Property Let UseRothDroptarget(value)
+        m_use_roth = value
+    End Property
     Public Property Let Debug(value) : m_debug = value : End Property
 
 	Public default Function init(name)
@@ -12967,8 +13002,9 @@ Class GlfDroptarget
 		ResetEvents = Array()
         m_complete = 0
 		m_debug = False
+        m_use_roth = False
         m_exclude_from_ball_search = False
-        glf_droptargets.Add name, Me
+        glf_drop_targets.Add name, Me
         Set Init = Me
 	End Function
 

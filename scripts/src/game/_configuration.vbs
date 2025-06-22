@@ -34,6 +34,7 @@ Sub ConfigureGlfDevices
         .KnockdownEvents = Array("sw1_knockdown")
         .ResetEvents = Array("ball_started")
         .ActionCallback = "DT1Callback"
+        .UseRothDroptarget = True
     End With
 
     With CreateGlfDroptarget("drop2")
@@ -41,6 +42,7 @@ Sub ConfigureGlfDevices
         .KnockdownEvents = Array("sw2_knockdown")
         .ResetEvents = Array("ball_started")
         .ActionCallback = "DT2Callback"
+        .UseRothDroptarget = True
     End With
 
     With CreateGlfDroptarget("drop3")
@@ -48,6 +50,7 @@ Sub ConfigureGlfDevices
         .KnockdownEvents = Array("sw3_knockdown")
         .ResetEvents = Array("ball_started")
         .ActionCallback = "DT3Callback"
+        .UseRothDroptarget = True
     End With
 
     With EnableGlfHighScores()
@@ -79,7 +82,7 @@ Sub DT1Callback(state)
     Select Case state
         Case 0
             DTRaise 1
-            SoundDropTargetDrop sw1p
+            SoundDropTargetDrop BM_sw1
         Case 1
             DTDrop 1
         Case 3
@@ -95,7 +98,7 @@ Sub DT2Callback(state)
     Select Case state
         Case 0
             DTRaise 2
-            SoundDropTargetDrop sw2p
+            SoundDropTargetDrop BM_sw2
         Case 1
             DTDrop 2
         Case 3
@@ -111,7 +114,7 @@ Sub DT3Callback(state)
     Select Case state
         Case 0
             DTRaise 3
-            SoundDropTargetDrop sw3p
+            SoundDropTargetDrop BM_sw3
         Case 1
             DTDrop 3
         Case 3

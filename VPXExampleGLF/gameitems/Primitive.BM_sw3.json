@@ -1,8 +1,8 @@
 {
   "Primitive": {
     "position": {
-      "x": 749.7261,
-      "y": 1137.7238,
+      "x": 766.1622,
+      "y": 1182.1814,
       "z": 44.0
     },
     "size": {
@@ -24,7 +24,7 @@
     "image": "DropTargetSimple",
     "normal_map": "",
     "sides": 4,
-    "name": "sw2p",
+    "name": "BM_sw3",
     "material": "Plastic with an image",
     "side_color": "#96009696",
     "is_visible": true,

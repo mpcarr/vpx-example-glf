@@ -3,12 +3,7 @@
 '  ZDRT : DROP TARGETS by Rothbauerw
 '******************************************************
 
-Sub sw1_Hit: 	DTHit 1 : End Sub
-Sub sw2_Hit: 	DTHit 2 : End Sub
-Sub sw3_Hit: 	DTHit 3 : End Sub
-
 '  DROP TARGETS INITIALIZATION
-
 Class DropTarget
     Private m_primary, m_secondary, m_prim, m_sw, m_animate, m_isDropped, m_keepup
   
@@ -65,13 +60,7 @@ Dim DT1, DT2, DT3
 '
 '	Values for annimate: 1 - bend target (hit to primary), 2 - drop target (hit to secondary), 3 - brick target (high velocity hit to secondary), -1 - raise target 
 
-Set DT1 = (new DropTarget)(sw1, sw1a, sw1p, 1, 0, False)
-Set DT2 = (new DropTarget)(sw2, sw2a, sw2p, 2, 0, False)
-Set DT3 = (new DropTarget)(sw3, sw3a, sw3p, 3, 0, False)
-
-
 Dim DTArray
-DTArray = Array(DT1, DT2, DT3)
 
 'Configure the behavior of Drop Targets.
 Const DTDropSpeed = 90 'in milliseconds

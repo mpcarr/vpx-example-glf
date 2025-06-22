@@ -414,5 +414,16 @@
     "fire_events": false,
     "stop_single_events": false,
     "group_elements": false
+  },
+  {
+    "name": "glf_droptargets",
+    "items": [
+      "sw1",
+      "sw2",
+      "sw3"
+    ],
+    "fire_events": false,
+    "stop_single_events": false,
+    "group_elements": false
   }
 ]
