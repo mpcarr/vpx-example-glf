@@ -385,5 +385,35 @@
     "fire_events": true,
     "stop_single_events": false,
     "group_elements": false
+  },
+  {
+    "name": "glf_lights",
+    "items": [],
+    "fire_events": false,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "glf_switches",
+    "items": [
+      "s_Plunger"
+    ],
+    "fire_events": false,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "glf_slingshots",
+    "items": [],
+    "fire_events": false,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "glf_spinners",
+    "items": [],
+    "fire_events": false,
+    "stop_single_events": false,
+    "group_elements": false
   }
 ]
