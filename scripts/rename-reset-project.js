@@ -22,9 +22,10 @@ async function main() {
 
     const args = process.argv.slice(2);
     const newName = args[0];
+    const doGitReset = args.includes('--git');
 
-    if (!newName) {
-        console.error(`Usage: node ${path.join(scriptSubDir, path.basename(__filename))} <NewProjectName>`);
+    if (!newName || newName.startsWith('--')) {
+        console.error(`Usage: node ${path.join(scriptSubDir, path.basename(__filename))} <NewProjectName> [--git]`);
         process.exit(1);
     }
 
@@ -45,6 +46,7 @@ async function main() {
 
     console.log(`\nOld Name: "${oldProjectName}"`);
     console.log(`New Name: "${newName}"`);
+    if (doGitReset) console.log(`Git reset: ENABLED`);
 
     const oldFolderPath = path.join(projectRoot, oldProjectName);
     const newFolderPath = path.join(projectRoot, newName);
@@ -80,23 +82,25 @@ async function main() {
         await fs.writeFile(gameNameFilePath, newName);
         console.log(`Updated "${gameNameFilePath}".`);
 
-        // --- GIT RESET + INITIAL COMMIT ---
-        const gitDirPath = path.join(projectRoot, '.git');
-        if (await fs.pathExists(gitDirPath)) {
-            console.log('\nRemoving existing Git repository...');
-            await fs.remove(gitDirPath);
-            console.log('.git directory deleted.');
+        // --- Optional Git logic ---
+        if (doGitReset) {
+            const gitDirPath = path.join(projectRoot, '.git');
+            if (await fs.pathExists(gitDirPath)) {
+                console.log('\nRemoving existing Git repository...');
+                await fs.remove(gitDirPath);
+                console.log('.git directory deleted.');
+            }
+
+            console.log('Initializing new Git repository...');
+            await runCommand('git init', projectRoot);
+
+            console.log('Staging all files...');
+            await runCommand('git add .', projectRoot);
+
+            const commitMessage = `Initial commit for ${newName}`;
+            console.log(`Creating initial commit: "${commitMessage}"`);
+            await runCommand(`git commit -m "${commitMessage}"`, projectRoot);
         }
-
-        console.log('Initializing new Git repository...');
-        await runCommand('git init', projectRoot);
-
-        console.log('Staging all files...');
-        await runCommand('git add .', projectRoot);
-
-        const commitMessage = `Initial commit for ${newName}`;
-        console.log(`Creating initial commit: "${commitMessage}"`);
-        await runCommand(`git commit -m "${commitMessage}"`, projectRoot);
 
         console.log('\nProcess completed successfully!');
 
