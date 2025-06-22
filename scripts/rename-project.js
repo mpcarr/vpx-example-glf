@@ -1,13 +1,11 @@
-// renameAndReplace.js
+// renameAndReplace.mjs (Note the .mjs extension)
 
-const fs = require('fs-extra');
-const path = require('path');
-const replaceInFile = require('replace-in-file');
+import fs from 'fs-extra';
+import path from 'path';
+import replaceInFile from 'replace-in-file'; // Now using ES module import
 
 // --- CONFIGURATION ---
 // IMPORTANT: Define the file types/paths where the old name should be replaced.
-// This is a glob pattern, so it will search in these files throughout your project.
-// Adjust as needed (e.g., if you only want to replace in .vbs files, use ['**/*.vbs']).
 const FILES_TO_SEARCH = [
     '**/*.js',
     '**/*.json',
@@ -18,10 +16,9 @@ const FILES_TO_SEARCH = [
 ];
 
 // Define paths to ignore during file content replacement.
-// This prevents the script from trying to replace in its own code or in node_modules.
 const FILES_TO_IGNORE = [
     'node_modules/**',
-    'renameAndReplace.js', // Exclude this script itself
+    'renameAndReplace.mjs', // Exclude this script itself
     // Add other paths to ignore if needed (e.g., build output directories)
 ];
 
@@ -33,8 +30,8 @@ async function main() {
     const newName = args[0];
 
     if (!newName) {
-        console.error('Usage: node renameAndReplace.js <NewFolderName>');
-        console.error('Example: node renameAndReplace.js MyNewProjectName');
+        console.error('Usage: node renameAndReplace.mjs <NewFolderName>');
+        console.error('Example: node renameAndReplace.mjs MyNewProjectName');
         process.exit(1);
     }
 
@@ -112,4 +109,3 @@ async function main() {
 }
 
 main();
-

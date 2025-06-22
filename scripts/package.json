@@ -10,7 +10,7 @@
     "script-watcher": "grunt watch:vpx",
     "concat-vpx": "grunt concat:vpx",
     "convert-shows": "node mpf-show-convert.js src/glf/yamlshows",
-    "rename-project": "node renameAndReplace.js",
+    "rename-project": "node rename-project.js",
     "update-glf": "curl -o ./src/glf/glf.vbs https://raw.githubusercontent.com/mpcarr/vpx-glf/refs/heads/main/scripts/vpx-glf.vbs"
   },
   "author": "",
