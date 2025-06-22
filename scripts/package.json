@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "extract-vpx": "powershell -Command \"$gameName = Get-Content ../gamename.txt | Select-Object -First 1; vpxtool extract ../$gameName.vpx\"",
     "assemble-vpx": "powershell -Command \"$gameName = Get-Content ../gamename.txt | Select-Object -First 1; vpxtool assemble ../$gameName\"",
-    "grunt-vpx": "grunt watch:vpx",
+    "script-watcher": "grunt watch:vpx",
     "concat-vpx": "grunt concat:vpx",
     "convert-shows": "node mpf-show-convert.js src/glf/yamlshows",
     "update-glf": "curl -o ./src/glf/glf.vbs https://raw.githubusercontent.com/mpcarr/vpx-glf/refs/heads/main/scripts/vpx-glf.vbs"
@@ -22,6 +22,8 @@
     "js-yaml": "^4.1.0"
   },
   "devDependencies": {
+    "grunt-contrib-clean": "^2.0.1",
+    "grunt-mkdir": "^1.1.0",
     "shx": "^0.3.4"
   }
 }
