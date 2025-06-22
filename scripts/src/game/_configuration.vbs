@@ -15,6 +15,20 @@ Sub ConfigureGlfDevices
         .EjectCallback = "PlungerEjectCallback"
     End With
 
+    With CreateGlfFlipper("left")
+        .Switch = "s_left_flipper"
+        .ActionCallback = "SolLFlipper"
+        .DisableEvents = Array("kill_flippers")
+        .EnableEvents = Array("ball_started","enable_flippers")
+    End With
+
+    With CreateGlfFlipper("right")
+        .Switch = "s_right_flipper"
+        .ActionCallback = "SolRFlipper"
+        .DisableEvents = Array("kill_flippers")
+        .EnableEvents = Array("ball_started","enable_flippers")
+    End With
+
     With EnableGlfHighScores()
         With .Categories()
             .Add "score", Array("GRAND CHAMPION", "HIGH SCORE 1", "HIGH SCORE 2", "HIGH SCORE 3") 
