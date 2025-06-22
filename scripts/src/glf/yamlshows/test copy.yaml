@@ -1,0 +1,101 @@
+#show_version=6
+- time: 0.00000
+  lights:
+    gi17: "000000"
+    giapron: "000000"
+    gi22: "000000"
+    gi20: "000000"
+    gi21: "000000"
+    gi19: "000000"
+    gi18: "000000"
+    gi16: "000000"
+    gi15: "000000"
+    gi14: "000000"
+    gi13: "000000"
+    gi12: "000000"
+    gi11: "000000"
+    gi10: "000000"
+    gi09: "000000"
+    gi08: "000000"
+    gi07: "000000"
+    gi06: "000000"
+    gi05: "000000"
+    gi04: "000000"
+    gi03: "000000"
+    gi02: "000000"
+    gi01: "000000"
+- time: 0.03333
+- time: 0.06667
+  lights:
+    gi09: "ffffff"
+- time: 0.10000
+  lights:
+    gi09: "000000"
+- time: 0.13333
+  lights:
+    gi12: "ffffff"
+    gi04: "585858"
+- time: 0.16667
+  lights:
+    gi12: "000000"
+    gi10: "ffffff"
+    gi04: "000000"
+    gi03: "ffffff"
+- time: 0.20000
+  lights:
+    gi20: "ffffff"
+    gi19: "ffffff"
+    gi18: "ffffff"
+    gi14: "ffffff"
+    gi10: "000000"
+    gi08: "ffffff"
+    gi07: "ffffff"
+    gi03: "000000"
+    gi02: "ffffff"
+- time: 0.23333
+  lights:
+    gi20: "000000"
+    gi21: "ffffff"
+    gi18: "000000"
+    gi15: "1a1a1a"
+    gi14: "000000"
+    gi13: "ffffff"
+    gi08: "000000"
+    gi07: "eeeeee"
+    gi06: "fefefe"
+    gi05: "080808"
+    gi02: "000000"
+    gi01: "ffffff"
+- time: 0.26667
+  lights:
+    gi22: "ffffff"
+    gi19: "000000"
+    gi15: "ffffff"
+    gi13: "000000"
+    gi07: "000000"
+    gi06: "ffffff"
+    gi05: "ffffff"
+    gi01: "000000"
+- time: 0.30000
+  lights:
+    gi22: "000000"
+    gi21: "000000"
+    gi15: "000000"
+    gi06: "000000"
+    gi05: "000000"
+- time: 0.33333
+  lights:
+    giapron: "ffffff"
+    gi16: "ffffff"
+- time: 0.36667
+  lights:
+    gi17: "ffffff"
+    gi16: "7d7d7d"
+- time: 0.40000
+  lights:
+    giapron: "000000"
+    gi16: "000000"
+- time: 0.43333
+  lights:
+    gi17: "000000"
+- time: 0.46667

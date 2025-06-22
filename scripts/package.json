@@ -9,7 +9,7 @@
     "assemble-vpx": "powershell -Command \"$gameName = Get-Content ../gamename.txt | Select-Object -First 1; vpxtool assemble ../$gameName\"",
     "grunt-vpx": "grunt watch:vpx",
     "concat-vpx": "grunt concat:vpx",
-    
+    "convert-shows": "node mpf-show-convert.js src/glf/yamlshows",
     "update-glf": "curl -o ./src/glf/glf.vbs https://raw.githubusercontent.com/mpcarr/vpx-glf/refs/heads/main/scripts/vpx-glf.vbs"
   },
   "author": "",

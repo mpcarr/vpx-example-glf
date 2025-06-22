@@ -15,7 +15,27 @@ Sub ConfigureGlfDevices
         .EjectCallback = "PlungerEjectCallback"
     End With
 
+    With EnableGlfHighScores()
+        With .Categories()
+            .Add "score", Array("GRAND CHAMPION", "HIGH SCORE 1", "HIGH SCORE 2", "HIGH SCORE 3") 
+        End With
+        With .Defaults("score")
+            .Add "DAN", 5000000
+            .Add "MPC", 2000000
+            .Add "LFS", 1000000
+            .Add "PUP", 5000000
+        End With
+    End With
 
     CreateBaseMode()
 
+End Sub
+
+Sub PlungerEjectCallback(ball)
+	If s_Plunger.BallCntOver > 0 Then
+		KickBall ball, 0, 60, 0, 0
+		SoundSaucerKick 1, s_Plunger
+	Else
+		SoundSaucerKick 0, s_Plunger
+	End If
 End Sub
