@@ -1,0 +1,426 @@
+[
+  {
+    "name": "Rubbers",
+    "items": [
+      "Rubber9",
+      "Rubber8",
+      "Rubber7",
+      "Rubber6",
+      "Rubber5",
+      "Rubber4",
+      "Rubber10",
+      "Rubber20",
+      "Rubber21",
+      "Rubber22",
+      "Rubber23",
+      "Rubber24",
+      "Rubber25",
+      "Rubber26",
+      "Rubber27",
+      "Rubber28",
+      "LSling",
+      "RSling",
+      "RubberBand006",
+      "zCol_Rubber_Sleeve005",
+      "zCol_Rubber_Sleeve004",
+      "zCol_Rubber_Sleeve003",
+      "zCol_Rubber_Sleeve002",
+      "zCol_Rubber_Peg002",
+      "zCol_Rubber_Post035",
+      "zCol_Rubber_Post034",
+      "zCol_Rubber_Post033",
+      "zCol_Rubber_Post032",
+      "zCol_Rubber_Post031",
+      "zCol_Rubber_Post030",
+      "zCol_Rubber_Post029",
+      "zCol_Rubber_Post028",
+      "zCol_Rubber_Post027",
+      "zCol_Rubber_Post026",
+      "zCol_Rubber_Post025",
+      "zCol_Rubber_Post024",
+      "zCol_Rubber_Post023",
+      "zCol_Rubber_Post022",
+      "zCol_Rubber_Post021",
+      "zCol_Rubber_Post020",
+      "zCol_Rubber_Post019",
+      "zCol_Rubber_Post018",
+      "zCol_Rubber_Post017",
+      "zCol_Rubber_Post016",
+      "zCol_Rubber_Post015",
+      "zCol_Rubber_Post014",
+      "zCol_Rubber_Post013",
+      "zCol_Rubber_Post012",
+      "zCol_Rubber_Post011",
+      "zCol_Rubber_Post010",
+      "zCol_Rubber_Post009",
+      "zCol_Rubber_Post008",
+      "zCol_Rubber_Post007",
+      "zCol_Rubber_Post006",
+      "zCol_Rubber_Post005",
+      "zCol_Rubber_Post004",
+      "zCol_Rubber_Post003",
+      "zCol_Rubber_Post002",
+      "zCol_Rubber_Peg001",
+      "zCol_Rubber_Post001",
+      "zCol_Rubber_Sleeve001",
+      "RubberBand012",
+      "RubberBand011",
+      "RubberBand010",
+      "RubberBand009",
+      "RubberBand008",
+      "RubberBand007",
+      "RubberBand005",
+      "RubberBand004",
+      "RubberBand003"
+    ],
+    "fire_events": true,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "Posts",
+    "items": [
+      "Primitive29",
+      "Primitive28",
+      "Primitive21",
+      "Primitive22",
+      "Primitive24"
+    ],
+    "fire_events": true,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "Pins",
+    "items": [],
+    "fire_events": true,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "Targets",
+    "items": [],
+    "fire_events": true,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "Metals",
+    "items": [
+      "Wall1",
+      "Wall2",
+      "Wall20",
+      "Wall37",
+      "Ramp18",
+      "Ramp9",
+      "Ramp2",
+      "Wall6"
+    ],
+    "fire_events": true,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "Gates",
+    "items": [],
+    "fire_events": true,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "GatesWire",
+    "items": [
+      "Gate"
+    ],
+    "fire_events": true,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "Apron",
+    "items": [
+      "Wall78",
+      "Wall001"
+    ],
+    "fire_events": true,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "Walls",
+    "items": [
+      "plastic4",
+      "plastic3",
+      "plastic2",
+      "plastic1",
+      "plastic5",
+      "Wall5top",
+      "Wall350",
+      "Wall3",
+      "Wall12",
+      "Wall228",
+      "Wall4"
+    ],
+    "fire_events": true,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "Rollovers",
+    "items": [
+      "LeftInlane",
+      "RightInlane",
+      "sw6",
+      "sw7",
+      "sw8",
+      "sw9"
+    ],
+    "fire_events": true,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "dPosts",
+    "items": [
+      "zCol_Rubber_Post010",
+      "zCol_Rubber_Peg002",
+      "zCol_Rubber_Post009",
+      "zCol_Rubber_Post008",
+      "zCol_Rubber_Post007",
+      "zCol_Rubber_Post006",
+      "zCol_Rubber_Post005",
+      "zCol_Rubber_Post004",
+      "zCol_Rubber_Post003",
+      "zCol_Rubber_Post002",
+      "zCol_Rubber_Peg001",
+      "zCol_Rubber_Post001",
+      "zCol_Rubber_Post023",
+      "zCol_Rubber_Post022",
+      "zCol_Rubber_Post021",
+      "zCol_Rubber_Post011",
+      "zCol_Rubber_Post033",
+      "zCol_Rubber_Post032",
+      "zCol_Rubber_Post030",
+      "zCol_Rubber_Post028",
+      "zCol_Rubber_Post026",
+      "zCol_Rubber_Post024",
+      "zCol_Rubber_Post020",
+      "zCol_Rubber_Post019",
+      "zCol_Rubber_Post018",
+      "zCol_Rubber_Post017",
+      "zCol_Rubber_Post016",
+      "zCol_Rubber_Post015",
+      "zCol_Rubber_Post014",
+      "zCol_Rubber_Post013",
+      "zCol_Rubber_Post012",
+      "zCol_Rubber_Post035",
+      "zCol_Rubber_Post034",
+      "zCol_Rubber_Post031",
+      "zCol_Rubber_Post029",
+      "zCol_Rubber_Post027",
+      "zCol_Rubber_Post025"
+    ],
+    "fire_events": true,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "dSleeves",
+    "items": [
+      "zCol_Rubber_Sleeve005",
+      "zCol_Rubber_Sleeve001",
+      "zCol_Rubber_Sleeve002",
+      "zCol_Rubber_Sleeve003",
+      "zCol_Rubber_Sleeve004"
+    ],
+    "fire_events": true,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "VR_Cab",
+    "items": [
+      "PinCab_Backglass",
+      "PinCab_Coindoor",
+      "PinCab_Backbox",
+      "PinCab_Buttons",
+      "PinCab_Cabinet",
+      "PinCab_Metals",
+      "VR_Floor",
+      "VR_Roof",
+      "VR_Wall_Left",
+      "VR_Wall_Right",
+      "PinCab_Shooter",
+      "PinCab_Housing",
+      "PinCab_Bottom"
+    ],
+    "fire_events": false,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "ShadowDT",
+    "items": [
+      "DTshadow1",
+      "DTshadow2",
+      "DTshadow3"
+    ],
+    "fire_events": false,
+    "stop_single_events": false,
+    "group_elements": true
+  },
+  {
+    "name": "TargetBounce",
+    "items": [
+      "sw11o",
+      "sw12o",
+      "sw13o",
+      "sw3a",
+      "sw2a",
+      "sw1a"
+    ],
+    "fire_events": true,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "DynamicSources",
+    "items": [
+      "gi012",
+      "gi010",
+      "gi022",
+      "gi024",
+      "gi023",
+      "gi021",
+      "gi016",
+      "gi015",
+      "gi014",
+      "gi013"
+    ],
+    "fire_events": false,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "AllInsertLights",
+    "items": [
+      "l1",
+      "l2",
+      "l3",
+      "l6",
+      "l7",
+      "l8",
+      "l9",
+      "l11",
+      "l12",
+      "l13",
+      "l14",
+      "l15",
+      "l16",
+      "l17",
+      "l18",
+      "l19",
+      "l20",
+      "l22",
+      "l23"
+    ],
+    "fire_events": false,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "AllLamps",
+    "items": [
+      "l1",
+      "l11",
+      "l12",
+      "l13",
+      "l14",
+      "l15",
+      "l16",
+      "l17",
+      "l18",
+      "l19",
+      "l2",
+      "l20",
+      "l22",
+      "l23",
+      "l3",
+      "l6",
+      "l7",
+      "l8",
+      "l9"
+    ],
+    "fire_events": true,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "glf_lights",
+    "items": [
+      "l21",
+      "gi006",
+      "gi007",
+      "gi008",
+      "gi009",
+      "gi010",
+      "gi011",
+      "gi012",
+      "gi013",
+      "gi014",
+      "gi015",
+      "gi016",
+      "gi017",
+      "gi018",
+      "gi019",
+      "gi020",
+      "gi021",
+      "gi022",
+      "gi023",
+      "gi024",
+      "gi050",
+      "bumperbiglight5",
+      "bumperbiglight4",
+      "bumperbiglight2",
+      "bumperbiglight1",
+      "bumperbiglight3"
+    ],
+    "fire_events": false,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "glf_switches",
+    "items": [
+      "s_Plunger"
+    ],
+    "fire_events": false,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "glf_slingshots",
+    "items": [],
+    "fire_events": false,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "glf_spinners",
+    "items": [],
+    "fire_events": false,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "glf_droptargets",
+    "items": [
+      "sw1",
+      "sw2",
+      "sw3"
+    ],
+    "fire_events": false,
+    "stop_single_events": false,
+    "group_elements": false
+  }
+]
