@@ -1,9 +1,9 @@
 
+
 '*******************************************
 '	ZINI: Table Initialization and Exiting
 '*******************************************
 
-LoadCoreFiles
 Sub LoadCoreFiles
 	On Error Resume Next
 	ExecuteGlobal GetTextFile("core.vbs")
@@ -11,21 +11,48 @@ Sub LoadCoreFiles
 	On Error GoTo 0
 End Sub
 
+
 Sub Table1_Init
+	' Controller
+	LoadCoreFiles
+	LoadEM
+
+	' Grab magnet example
+    Set GrabMag = New cvpmMagnet
+    With GrabMag
+        .InitMagnet GrabMagnet, 30  
+        .GrabCenter = False
+		.strength = 15
+        .CreateEvents "GrabMag"
+    End With
+
+	' GLF
 	ConfigureGlfDevices()
     Glf_Init()
+
+	' Ball rolling sounds
+	InitRolling
+
+	' Flipper and sling corrections
+	InitPolarity
+	InitSlingCorrection
+
+	' Init VR things
+	InitVR
 End Sub
 
 
 Sub Table1_Exit
-	'Close flexDMD
-	If UseFlexDMD = 0 Then Exit Sub
-	If Not FlexDMD Is Nothing Or VRRoom = 0 Then
-		FlexDMD.Show = False
-		FlexDMD.Run = False
-		FlexDMD = Null
-	End If
-
 	Glf_Exit()
+	If B2SOn Then
+		Controller.Pause = False
+		Controller.Stop
+	End If
+End Sub
+
+Sub Table1_Paused
+End Sub
+
+Sub Table1_UnPaused
 End Sub
 

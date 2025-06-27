@@ -1,4 +1,5 @@
 
+
 '*******************************************
 '	ZTIM: Timers
 '*******************************************
@@ -21,6 +22,21 @@ Sub FrameTimer_Timer() 'The frame timer interval should be -1, so executes at th
 	BSUpdate
 End Sub
 
-'The CorTimer interval should be 10. It's sole purpose is to update the Cor calculations
+'The CorTimer interval should be 10. It's sole purpose is to update the Coefficient of Restitution (COR) calculations
 CorTimer.Interval = 10
 Sub CorTimer_Timer(): Cor.Update: End Sub
+
+
+' VR Plunger animation timers
+TimerPlunger.Interval = -1
+Sub TimerPlunger_Timer
+	If PinCab_Shooter.TransZ < 90 then
+		PinCab_Shooter.TransZ = PinCab_Shooter.TransZ + FrameTime*0.2
+	End If
+End Sub
+
+TimerPlunger2.Interval = -1
+Sub TimerPlunger2_Timer
+	PinCab_Shooter.TransZ = (6.0* Plunger.Position) - 20
+End Sub
+

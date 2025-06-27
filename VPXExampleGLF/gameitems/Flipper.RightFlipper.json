@@ -1,8 +1,8 @@
 {
   "Flipper": {
     "center": {
-      "x": 595.869,
-      "y": 1803.2711
+      "x": 593.7173,
+      "y": 1784.9519
     },
     "base_radius": 20.2,
     "end_radius": 12.0,
@@ -17,17 +17,17 @@
     "surface": "",
     "material": "Plastic White",
     "name": "RightFlipper",
-    "rubber_material": "Red Rubber",
+    "rubber_material": "Rubber Black",
     "rubber_thickness_int": 5,
     "rubber_thickness": 5.8825,
     "rubber_height_int": 17,
     "rubber_height": 17.6475,
     "rubber_width_int": 23,
     "rubber_width": 23.53,
-    "strength": 2300.0,
+    "strength": 2700.0,
     "elasticity": 0.88,
     "elasticity_falloff": 0.15,
-    "friction": 0.9,
+    "friction": 0.7,
     "ramp_up": 2.5,
     "scatter": 0.0,
     "torque_damping": 0.375,
@@ -36,7 +36,7 @@
     "is_visible": false,
     "is_enabled": true,
     "height": 50.0,
-    "image": "flipper_yellow_red_right",
+    "image": "",
     "is_reflection_enabled": false
   }
 }

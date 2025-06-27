@@ -34,8 +34,8 @@
     "overwrite_physics": false,
     "drag_points": [
       {
-        "x": 156.03314,
-        "y": 1037.463,
+        "x": 91.81574,
+        "y": 942.5647,
         "z": 0.0,
         "smooth": false,
         "is_slingshot": false,
@@ -177,8 +177,8 @@
         "editor_layer_visibility": true
       },
       {
-        "x": 150.90717,
-        "y": 1041.1163,
+        "x": 86.909164,
+        "y": 943.7686,
         "z": 0.0,
         "smooth": false,
         "is_slingshot": false,

@@ -1,18 +1,18 @@
 {
   "Plunger": {
     "center": {
-      "x": 898.027,
-      "y": 2105.312
+      "x": 899.6859,
+      "y": 2053.4834
     },
     "width": 25.0,
     "height": 20.0,
     "z_adjust": 0.0,
     "stroke": 155.0,
     "speed_pull": 0.25,
-    "speed_fire": 100.0,
+    "speed_fire": 140.0,
     "plunger_type": "custom",
     "anim_frames": 1,
-    "material": "Plastic with an image",
+    "material": "",
     "image": "CustomWhiteTip",
     "mech_strength": 100.0,
     "is_mech_plunger": true,

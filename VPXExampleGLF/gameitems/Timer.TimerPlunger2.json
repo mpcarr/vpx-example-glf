@@ -1,0 +1,12 @@
+{
+  "Timer": {
+    "center": {
+      "x": 278.2592,
+      "y": 2224.2932
+    },
+    "is_timer_enabled": false,
+    "timer_interval": -1,
+    "name": "TimerPlunger2",
+    "backglass": false
+  }
+}

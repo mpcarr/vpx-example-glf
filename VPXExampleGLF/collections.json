@@ -25,7 +25,6 @@
       "zCol_Rubber_Sleeve004",
       "zCol_Rubber_Sleeve003",
       "zCol_Rubber_Sleeve002",
-      "zCol_Rubber_Peg002",
       "zCol_Rubber_Post035",
       "zCol_Rubber_Post034",
       "zCol_Rubber_Post033",
@@ -55,14 +54,6 @@
       "zCol_Rubber_Post009",
       "zCol_Rubber_Post008",
       "zCol_Rubber_Post007",
-      "zCol_Rubber_Post006",
-      "zCol_Rubber_Post005",
-      "zCol_Rubber_Post004",
-      "zCol_Rubber_Post003",
-      "zCol_Rubber_Post002",
-      "zCol_Rubber_Peg001",
-      "zCol_Rubber_Post001",
-      "zCol_Rubber_Sleeve001",
       "RubberBand012",
       "RubberBand011",
       "RubberBand010",
@@ -70,8 +61,16 @@
       "RubberBand008",
       "RubberBand007",
       "RubberBand005",
-      "RubberBand004",
-      "RubberBand003"
+      "zCol_Rubber_Peg003",
+      "zCol_Rubber_rightsling",
+      "zCol_Rubber_Post005",
+      "zCol_Rubber_Post006",
+      "RubberBand002",
+      "zCol_Rubber_leftsling",
+      "zCol_Rubber_Post002",
+      "RubberBand001",
+      "zCol_Rubber_Post001",
+      "zCol_Rubber_Peg004"
     ],
     "fire_events": true,
     "stop_single_events": false,
@@ -83,7 +82,6 @@
       "Primitive29",
       "Primitive28",
       "Primitive21",
-      "Primitive22",
       "Primitive24"
     ],
     "fire_events": true,
@@ -111,10 +109,10 @@
       "Wall2",
       "Wall20",
       "Wall37",
-      "Ramp18",
-      "Ramp9",
       "Ramp2",
-      "Wall6"
+      "Wall6",
+      "Wall7",
+      "Wall5"
     ],
     "fire_events": true,
     "stop_single_events": false,
@@ -139,8 +137,8 @@
   {
     "name": "Apron",
     "items": [
-      "Wall78",
-      "Wall001"
+      "Wall001",
+      "Wall78"
     ],
     "fire_events": true,
     "stop_single_events": false,
@@ -157,8 +155,6 @@
       "Wall5top",
       "Wall350",
       "Wall3",
-      "Wall12",
-      "Wall228",
       "Wall4"
     ],
     "fire_events": true,
@@ -168,12 +164,13 @@
   {
     "name": "Rollovers",
     "items": [
-      "LeftInlane",
-      "RightInlane",
-      "sw6",
-      "sw7",
-      "sw8",
-      "sw9"
+      "s_TopLane4",
+      "s_TopLane3",
+      "s_TopLane2",
+      "s_TopLane1",
+      "s_LeftInlane",
+      "s_RightInlane",
+      "s_Plunger1"
     ],
     "fire_events": true,
     "stop_single_events": false,
@@ -183,17 +180,9 @@
     "name": "dPosts",
     "items": [
       "zCol_Rubber_Post010",
-      "zCol_Rubber_Peg002",
       "zCol_Rubber_Post009",
       "zCol_Rubber_Post008",
       "zCol_Rubber_Post007",
-      "zCol_Rubber_Post006",
-      "zCol_Rubber_Post005",
-      "zCol_Rubber_Post004",
-      "zCol_Rubber_Post003",
-      "zCol_Rubber_Post002",
-      "zCol_Rubber_Peg001",
-      "zCol_Rubber_Post001",
       "zCol_Rubber_Post023",
       "zCol_Rubber_Post022",
       "zCol_Rubber_Post021",
@@ -218,7 +207,15 @@
       "zCol_Rubber_Post031",
       "zCol_Rubber_Post029",
       "zCol_Rubber_Post027",
-      "zCol_Rubber_Post025"
+      "zCol_Rubber_Post025",
+      "zCol_Rubber_Post002",
+      "zCol_Rubber_leftsling",
+      "zCol_Rubber_rightsling",
+      "zCol_Rubber_Post005",
+      "zCol_Rubber_Peg003",
+      "zCol_Rubber_Post006",
+      "zCol_Rubber_Post001",
+      "zCol_Rubber_Peg004"
     ],
     "fire_events": true,
     "stop_single_events": false,
@@ -228,7 +225,6 @@
     "name": "dSleeves",
     "items": [
       "zCol_Rubber_Sleeve005",
-      "zCol_Rubber_Sleeve001",
       "zCol_Rubber_Sleeve002",
       "zCol_Rubber_Sleeve003",
       "zCol_Rubber_Sleeve004"
@@ -246,10 +242,6 @@
       "PinCab_Buttons",
       "PinCab_Cabinet",
       "PinCab_Metals",
-      "VR_Floor",
-      "VR_Roof",
-      "VR_Wall_Left",
-      "VR_Wall_Right",
       "PinCab_Shooter",
       "PinCab_Housing",
       "PinCab_Bottom"
@@ -272,12 +264,11 @@
   {
     "name": "TargetBounce",
     "items": [
-      "sw11o",
-      "sw12o",
-      "sw13o",
-      "sw3a",
-      "sw2a",
-      "sw1a"
+      "STBlocker2",
+      "STBlocker1",
+      "aDT3",
+      "aDT2",
+      "aDT1"
     ],
     "fire_events": true,
     "stop_single_events": false,
@@ -379,8 +370,6 @@
       "gi023",
       "gi024",
       "gi050",
-      "bumperbiglight5",
-      "bumperbiglight4",
       "bumperbiglight2",
       "bumperbiglight1",
       "bumperbiglight3"
@@ -392,7 +381,18 @@
   {
     "name": "glf_switches",
     "items": [
-      "s_Plunger"
+      "s_Bumper3",
+      "s_Bumper2",
+      "s_Bumper1",
+      "s_TopLane4",
+      "s_TopLane3",
+      "s_TopLane2",
+      "s_TopLane1",
+      "s_LeftInlane",
+      "s_RightInlane",
+      "s_Plunger1",
+      "s_ST1",
+      "s_ST2"
     ],
     "fire_events": false,
     "stop_single_events": false,
@@ -400,14 +400,19 @@
   },
   {
     "name": "glf_slingshots",
-    "items": [],
+    "items": [
+      "s_LeftSlingshot",
+      "s_RightSlingshot"
+    ],
     "fire_events": false,
     "stop_single_events": false,
     "group_elements": false
   },
   {
     "name": "glf_spinners",
-    "items": [],
+    "items": [
+      "s_spinner"
+    ],
     "fire_events": false,
     "stop_single_events": false,
     "group_elements": false
@@ -415,10 +420,29 @@
   {
     "name": "glf_droptargets",
     "items": [
-      "sw1",
-      "sw2",
-      "sw3"
+      "s_DT1",
+      "s_DT2",
+      "s_DT3"
     ],
+    "fire_events": false,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "VR_MinRoom",
+    "items": [
+      "VR_Wall_Right",
+      "VR_Floor",
+      "VR_Roof",
+      "VR_Wall_Left"
+    ],
+    "fire_events": false,
+    "stop_single_events": false,
+    "group_elements": false
+  },
+  {
+    "name": "DesktopLights",
+    "items": [],
     "fire_events": false,
     "stop_single_events": false,
     "group_elements": false

@@ -1,8 +1,8 @@
 {
   "Primitive": {
     "position": {
-      "x": 693.7074,
-      "y": 1611.4801,
+      "x": 695.22424,
+      "y": 1593.73,
       "z": 25.0
     },
     "size": {
@@ -43,7 +43,7 @@
     "static_rendering": false,
     "disable_lighting_top_old": null,
     "disable_lighting_top": 0.0,
-    "disable_lighting_below": 0.0,
+    "disable_lighting_below": 1.0,
     "is_reflection_enabled": false,
     "backfaces_enabled": false,
     "physics_material": "zCol_RubberPosts",
