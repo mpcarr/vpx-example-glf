@@ -1,19 +1,5 @@
 [
   {
-    "name": "Scratches",
-    "path": "C:\\Models\\Scratches.png",
-    "width": 256,
-    "height": 256,
-    "alpha_test_value": 128.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Models\\Scratches.png",
-      "name": "Scratches"
-    },
-    "bits": false
-  },
-  {
     "name": "emkicker-t1",
     "path": "C:\\UPin\\emkicker-t1.png",
     "width": 128,
@@ -3006,6 +2992,62 @@
     "jpeg": {
       "path": "C:\\VirtualPinball\\VisualPinball\\dev\\LUT\\colorgradelut256x16-100.jpg",
       "name": "colorgradelut256x16-100"
+    },
+    "bits": false
+  },
+  {
+    "name": "ball_Test8B",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\ball_Test8B.hdr",
+    "width": 600,
+    "height": 300,
+    "alpha_test_value": -1.0,
+    "is_opaque": true,
+    "is_signed": false,
+    "jpeg": {
+      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\ball_Test8B.hdr",
+      "name": "ball_Test8B"
+    },
+    "bits": false
+  },
+  {
+    "name": "balldecal_ScratchesWeathered2",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\balldecal_ScratchesWeathered2.png",
+    "width": 256,
+    "height": 256,
+    "alpha_test_value": -1.0,
+    "is_opaque": null,
+    "is_signed": false,
+    "jpeg": {
+      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\balldecal_ScratchesWeathered2.png",
+      "name": "balldecal_ScratchesWeathered2"
+    },
+    "bits": false
+  },
+  {
+    "name": "bgflash",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\bgflash.png",
+    "width": 293,
+    "height": 282,
+    "alpha_test_value": -1.0,
+    "is_opaque": null,
+    "is_signed": false,
+    "jpeg": {
+      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\bgflash.png",
+      "name": "bgflash"
+    },
+    "bits": false
+  },
+  {
+    "name": "NeoSegMap",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\NeoSegMap.png",
+    "width": 3285,
+    "height": 345,
+    "alpha_test_value": -1.0,
+    "is_opaque": true,
+    "is_signed": false,
+    "jpeg": {
+      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\NeoSegMap.png",
+      "name": "NeoSegMap"
     },
     "bits": false
   }

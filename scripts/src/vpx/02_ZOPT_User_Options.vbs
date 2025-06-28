@@ -9,7 +9,7 @@ Dim ColorLUT : ColorLUT = 1						' Color desaturation LUTs: 1 to 11, where 1 is 
 Dim VolumeDial : VolumeDial = 0.8           	' Overall Mechanical sound effect volume. Recommended values should be no greater than 1.
 Dim BallRollVolume : BallRollVolume = 0.5   	' Level of ball rolling volume. Value between 0 and 1
 Dim RampRollVolume : RampRollVolume = 0.5 		' Level of ramp rolling volume. Value between 0 and 1
-Dim StagedFlippers : StagedFlippers = 0         ' Staged Flippers. 0 = Disabled, 1 = Enabled
+Dim StagedFlipper : StagedFlipper = 0         	' Staged Flipper. 0 = Disabled, 1 = Enabled
 Dim VRRoomChoice : VRRoomChoice = 0	            ' 1 - Minimal Room, 2 - Ultra Minimal Room
 Dim VRRoom
 
@@ -51,7 +51,7 @@ Sub Table1_OptionEvent(ByVal eventId)
 '	SetRoomBrightness LightLevel   'Uncomment this line for lightmapped tables.
 
     ' Staged Flippers
-    StagedFlippers = Table1.Option("Staged Flippers", 0, 1, 1, 0, 0, Array("Disabled", "Enabled"))
+    StagedFlipper = Table1.Option("Staged Flippers", 0, 1, 1, 0, 0, Array("Disabled", "Enabled"))
 
     ' VR
 	VRRoomChoice = Table1.Option("VR Room", 1, 2, 1, 1, 0, Array("Minimal", "Ultra Minimal"))

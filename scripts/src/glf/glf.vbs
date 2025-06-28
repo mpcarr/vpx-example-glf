@@ -48,6 +48,7 @@ Dim glf_ball_holds : Set glf_ball_holds = CreateObject("Scripting.Dictionary")
 Dim glf_magnets : Set glf_magnets = CreateObject("Scripting.Dictionary")
 Dim glf_segment_displays : Set glf_segment_displays = CreateObject("Scripting.Dictionary")
 Dim glf_drop_targets : Set glf_drop_targets = CreateObject("Scripting.Dictionary")
+Dim glf_standup_targets : Set glf_standup_targets = CreateObject("Scripting.Dictionary")
 Dim glf_multiball_locks : Set glf_multiball_locks = CreateObject("Scripting.Dictionary")
 Dim glf_multiballs : Set glf_multiballs = CreateObject("Scripting.Dictionary")
 Dim glf_shows : Set glf_shows = CreateObject("Scripting.Dictionary")
@@ -165,7 +166,14 @@ Public Sub Glf_Init()
 	using_roth_drops = False
 	drop_array = Array()
 	For Each drop_target in glf_drop_targets.Items()
-		codestr = codestr & "Sub " & drop_target.Switch & "_Hit() : If Not glf_gameTilted Then : If glf_drop_targets(""" & drop_target.Name & """).UseRothDroptarget = True Then : DTHit glf_drop_targets(""" & drop_target.Name & """).RothDTArrayIndex : Else : DispatchPinEvent """ & drop_target.Switch & "_active"", ActiveBall : glf_last_switch_hit_time = gametime : glf_last_switch_hit = """& drop_target.Switch &""": End If : End If : End Sub" & vbCrLf
+		codestr = codestr & "Sub " & drop_target.Switch & "_Hit() : If Not glf_gameTilted Then : If glf_drop_targets(""" & drop_target.Name & """).UseRothDroptarget = True Then : DTHit glf_drop_targets(""" & drop_target.Name & """).RothDTSwitchID : Else : DispatchPinEvent """ & drop_target.Switch & "_active"", ActiveBall : glf_last_switch_hit_time = gametime : glf_last_switch_hit = """& drop_target.Switch &""": End If : End If : End Sub" & vbCrLf
+		codestr = codestr & "Sub " & drop_target.Switch & "_UnHit() : If Not glf_gameTilted Then : If glf_drop_targets(""" & drop_target.Name & """).UseRothDroptarget = False Then : DispatchPinEvent """ & drop_target.Switch & "_inactive"", ActiveBall : End If : End If : End Sub" & vbCrLf
+	Next
+
+	Dim standup_target
+	For Each standup_target in glf_standup_targets.Items()
+		codestr = codestr & "Sub " & standup_target.Switch & "_Hit() : If Not glf_gameTilted Then : If glf_standup_targets(""" & standup_target.Name & """).UseRothStanduptarget = True Then : STHit glf_standup_targets(""" & standup_target.Name & """).RothSTSwitchID : Else : DispatchPinEvent """ & standup_target.Switch & "_active"", ActiveBall : glf_last_switch_hit_time = gametime : glf_last_switch_hit = """& standup_target.Switch &""": End If : End If : End Sub" & vbCrLf
+		codestr = codestr & "Sub " & standup_target.Switch & "_UnHit() : If Not glf_gameTilted Then : If glf_standup_targets(""" & standup_target.Name & """).UseRothStanduptarget = False Then : DispatchPinEvent """ & standup_target.Switch & "_inactive"", ActiveBall : End If : End If : End Sub" & vbCrLf
 	Next
 	
     codestr = codestr & vbCrLf
@@ -12977,10 +12985,10 @@ Class GlfDroptarget
     Public Property Let UseRothDroptarget(value)
         m_use_roth = value
     End Property
-    Public Property Get RothDTArrayIndex()
-        RothDTArrayIndex = m_roth_array_index
+    Public Property Get RothDTSwitchID()
+        RothDTSwitchID = m_roth_array_index
     End Property
-    Public Property Let RothDTArrayIndex(value)
+    Public Property Let RothDTSwitchID(value)
         m_roth_array_index = value
     End Property
     
@@ -13263,6 +13271,7 @@ Class GlfLightSegmentDisplay
     private m_default_transition_update_hz
     private m_color
     private m_flex_dmd_index
+    private m_b2s_dmd_index
 
     Public Property Get Name() : Name = m_name : End Property
 
@@ -13314,6 +13323,10 @@ Class GlfLightSegmentDisplay
         m_flex_dmd_index = input
     End Property
 
+    Public Property Let ExternalB2SSegmentIndex(input)
+        m_b2s_dmd_index = input
+    End Property
+
     Public Property Get DefaultTransitionUpdateHz() : DefaultTransitionUpdateHz = m_default_transition_update_hz : End Property
     Public Property Let DefaultTransitionUpdateHz(input) : m_default_transition_update_hz = input : End Property
 
@@ -13341,6 +13354,7 @@ Class GlfLightSegmentDisplay
         m_integrated_dots = False
         m_use_dots_for_commas = False
         m_flex_dmd_index = -1
+        m_b2s_dmd_index = -1
 
         m_display_flash_duty = 30
         m_default_transition_update_hz = 30
@@ -13479,6 +13493,13 @@ Class GlfLightSegmentDisplay
 				    If Err Then Debug.Print "Error: " & Err
                     'glf_flex_alphadmd_segments(m_flex_dmd_index+i) = segment.CharMapping '&h2A0F '0010101000001111
                     glf_flex_alphadmd.Segments = glf_flex_alphadmd_segments
+                End If
+                If m_b2s_dmd_index > -1 Then
+                    dim b2sChar
+                    b2sChar = segment.B2SLEDValue
+                    On Error Resume Next
+				    controller.B2SSetLED m_b2s_dmd_index+i, b2sChar
+				    If Err Then Debug.Print "Error: " & Err
                 End If
                 segment_idx = segment_idx + 15
             ElseIf m_segment_type = "7Segment" Then
@@ -13851,6 +13872,63 @@ Class FourteenSegments
         Else
             CharMapping = hexcode
         End If
+    End Property
+
+    Public Property Get B2SLEDValue()						'to be used with dB2S 15-segments-LED used in Herweh's Designer
+        B2SLEDValue = 0									'default for unknown characters
+        select case char
+            Case "","":	B2SLEDValue = 0
+            Case "0":	B2SLEDValue = 63	
+            Case "1":	B2SLEDValue = 8704
+            Case "2":	B2SLEDValue = 2139
+            Case "3":	B2SLEDValue = 2127	
+            Case "4":	B2SLEDValue = 2150
+            Case "5":	B2SLEDValue = 2157
+            Case "6":	B2SLEDValue = 2172
+            Case "7":	B2SLEDValue = 7
+            Case "8":	B2SLEDValue = 2175
+            Case "9":	B2SLEDValue = 2159
+            Case "A":	B2SLEDValue = 2167
+            Case "B":	B2SLEDValue = 10767
+            Case "C":	B2SLEDValue = 57
+            Case "D":	B2SLEDValue = 8719
+            Case "E":	B2SLEDValue = 121
+            Case "F":	B2SLEDValue = 2161
+            Case "G":	B2SLEDValue = 2109
+            Case "H":	B2SLEDValue = 2166
+            Case "I":	B2SLEDValue = 8713
+            Case "J":	B2SLEDValue = 31
+            Case "K":	B2SLEDValue = 5232
+            Case "L":	B2SLEDValue = 56
+            Case "M":	B2SLEDValue = 1334
+            Case "N":	B2SLEDValue = 4406
+            Case "O":	B2SLEDValue = 63
+            Case "P":	B2SLEDValue = 2163
+            Case "Q":	B2SLEDValue = 4287
+            Case "R":	B2SLEDValue = 6259
+            Case "S":	B2SLEDValue = 2157
+            Case "T":	B2SLEDValue = 8705
+            Case "U":	B2SLEDValue = 62
+            Case "V":	B2SLEDValue = 17456
+            Case "W":	B2SLEDValue = 20534
+            Case "X":	B2SLEDValue = 21760
+            Case "Y":	B2SLEDValue = 9472
+            Case "Z":	B2SLEDValue = 17417
+            Case "<":	B2SLEDValue = 5120
+            Case ">":	B2SLEDValue = 16640
+            Case "^":	B2SLEDValue = 17414
+            Case ".":	B2SLEDValue = 8
+            Case "!":	B2SLEDValue = 0
+            Case ".":	B2SLEDValue = 128
+            Case "*":	B2SLEDValue = 32576
+            Case "/":	B2SLEDValue = 17408
+            Case "\":	B2SLEDValue = 4352
+            Case "|":	B2SLEDValue = 8704
+            Case "=":	B2SLEDValue = 2120
+            Case "+":	B2SLEDValue = 10816
+            Case "-":	B2SLEDValue = 2112
+        End Select			
+        B2SLEDValue = cint(B2SLEDValue)
     End Property
 
     Public default Function init(dp, l, m, n, k, j, h, g2, g1, f, e, d, c, b, a, char)
@@ -15050,6 +15128,60 @@ Class GlfSound
         End If
     End Sub
 
+End Class
+Function CreateGlfStanduptarget(name)
+	Dim standuptarget : Set standuptarget = (new GlfStandupTarget)(name)
+	Set CreateGlfStanduptarget = standuptarget
+End Function
+
+Class GlfStandupTarget
+
+    Private m_name
+	Private m_switch
+    Private m_use_roth
+    Private m_roth_array_index
+    
+    Private m_debug
+
+    Public Property Get Name()
+        Name = Replace(m_name, "standup_target_", "")
+    End Property
+	Public Property Let Switch(value)
+		m_switch = value
+	End Property
+    Public Property Get Switch()
+        Switch = m_switch
+    End Property
+    Public Property Get UseRothStanduptarget()
+        UseRothStanduptarget = m_use_roth
+    End Property
+    Public Property Let UseRothStanduptarget(value)
+        m_use_roth = value
+    End Property
+    Public Property Get RothSTSwitchID()
+        RothSTSwitchID = m_roth_array_index
+    End Property
+    Public Property Let RothSTSwitchID(value)
+        m_roth_array_index = value
+    End Property
+    
+    Public Property Let Debug(value) : m_debug = value : End Property
+
+	Public default Function init(name)
+        m_name = "standup_target_" & name
+		m_switch = Empty
+		m_debug = False
+        m_use_roth = False
+        m_roth_array_index = -1
+        glf_standup_targets.Add name, Me
+        Set Init = Me
+	End Function
+ 
+    Private Sub Log(message)
+        If m_debug = True Then
+            glf_debugLog.WriteToLog m_name, message
+        End If
+    End Sub
 End Class
 
 Class GlfEvent

@@ -39,7 +39,7 @@ Dim ST1, ST2
 '   prim:	   primitive target used for visuals and animation
 '				   IMPORTANT!!!
 '				   transy must be used to offset the target animation
-'   switch:	 	The switch ID.  The associated GLF target config must use this same number. 
+'   switch:	 	The switch ID. NOTE: The associated GLF standup target "RothSTArrayIndex" config must use this same number. 
 '   animate:	Arrary slot for handling the animation instrucitons, set to 0
 '
 'You will also need to add a secondary hit object for each stand up (name sw11o, sw12o, and sw13o on the example Table1)
@@ -151,5 +151,11 @@ Function STAnimate(primary, prim, switch, animate)
     End If
 End Function
   
-  
+Sub STAction(switchid, hit)
+    If hit = 1 Then
+        DispatchPinEvent STArray(STArrayID(switchid)).Primary.Name & "_active", Null
+    Else
+        DispatchPinEvent STArray(STArrayID(switchid)).Primary.Name & "_inactive", Null
+    End If
+End Sub
 

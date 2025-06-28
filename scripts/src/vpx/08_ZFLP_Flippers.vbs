@@ -13,7 +13,8 @@ Sub LeftFlipperAction(Enabled)
 	If Enabled Then
 		DOF 101, DOFOn
 		FlipperActivate LeftFlipper, LFPress
-		LF.Fire    
+		LF.Fire
+		If StagedFlipper = 0 Then LeftFlipper1.rotatetoend
 		If LeftFlipper.currentangle < LeftFlipper.endangle + ReflipAngle Then 
 			RandomSoundReflipUpLeft LeftFlipper
 		Else 
@@ -24,6 +25,7 @@ Sub LeftFlipperAction(Enabled)
 		DOF 101, DOFOff
 		FlipperDeActivate LeftFlipper, LFPress
 		LeftFlipper.RotateToStart
+		If StagedFlipper = 0 Then LeftFlipper1.RotateToStart
 		If LeftFlipper.currentangle < LeftFlipper.startAngle - 5 Then
 			RandomSoundFlipperDownLeft LeftFlipper
 		End If
@@ -36,7 +38,6 @@ Sub RightFlipperAction(Enabled)
 		DOF 102, DOFOn
 		FlipperActivate RightFlipper, RFPress
 		RF.Fire 
-		If StagedFlipper = 0 Then RightFlipper1.rotatetoend
 		If RightFlipper.currentangle > RightFlipper.endangle - ReflipAngle Then
 			RandomSoundReflipUpRight RightFlipper
 		Else 
@@ -47,7 +48,6 @@ Sub RightFlipperAction(Enabled)
 		DOF 102, DOFOff
 		FlipperDeActivate RightFlipper, RFPress
 		RightFlipper.RotateToStart
-		If StagedFlipper = 0 Then RightFlipper1.RotateToStart
 		If RightFlipper.currentangle > RightFlipper.startAngle + 5 Then
 			RandomSoundFlipperDownRight RightFlipper
 		End If	

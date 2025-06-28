@@ -17,7 +17,8 @@ Sub dSleeves_Hit(idx)
 	TargetBouncer ActiveBall, 0.7
 End Sub
 
-Sub NoTargetBouncer_Hit(idx)
+'add the two bottom sling posts to this collection (dont use dPosts for those)
+Sub NoTargetBouncer_Hit(idx)  
 	RubbersD.dampen ActiveBall
 End Sub
 

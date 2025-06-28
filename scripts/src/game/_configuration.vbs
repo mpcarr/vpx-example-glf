@@ -3,6 +3,12 @@
 '	ZGCF:  GLF Configurations
 '******************************************************
 
+' NOTE: switch and light names are case sensitive, so be aware of their names in VPX.
+
+
+Const SegmentsColor = "ff0000"
+
+
 Sub ConfigureGlfDevices
 
 
@@ -12,8 +18,9 @@ Sub ConfigureGlfDevices
 
 
     ' Plunger
+    'NOTE: Plunger switch SHOULD be added to the glf_switches collection (along with all other rollover switches) 
     With CreateGlfBallDevice("plunger")
-        .BallSwitches = Array("s_Plunger")
+        .BallSwitches = Array("s_Plunger1")
         .EjectTimeout = 200
         .MechanicalEject = True
         .DefaultDevice = True
@@ -22,6 +29,7 @@ Sub ConfigureGlfDevices
 
 
     ' Flippers
+    'NOTE: Flippers SHOULD NOT be added to the glf_switches collection nor any other collection. 
     With CreateGlfFlipper("left")
         .Switch = "s_left_flipper"
         .ActionCallback = "LeftFlipperAction"
@@ -45,6 +53,7 @@ Sub ConfigureGlfDevices
 
 
     ' Scoop
+    'NOTE: Scoop switches SHOULD be added to the glf_switches collection. 
     ' With CreateGlfBallDevice("scoop")
     '     .BallSwitches = Array("s_Scoop")
     '     .EjectTimeout = 2000
@@ -53,22 +62,16 @@ Sub ConfigureGlfDevices
     ' End With
 
 
-    ' Diverter
-    ' With CreateGlfDiverter("divert_pin")
-    '     .EnableEvents = Array("ball_started","reset_complete","enable_diverter")
-    '     .ActivateEvents = Array("raise_diverter") 
-    '     .DeactivateEvents = Array("drop_diverter","ball_ended") 
-    '     .ActionCallback = "RaiseDiverterPin"
-    ' End With
-
 
     'Drop Targets
+    'NOTE: Drop targets SHOULD NOT be added to the glf_switches collection nor any other collection. 
     With CreateGlfDroptarget("drop1")
         .Switch = "s_DT1"
         .KnockdownEvents = Array("DT1_knockdown")
         .ResetEvents = Array("ball_started")
         .ActionCallback = "DT1Callback"
         .UseRothDroptarget = True
+        .RothDTSwitchID = 1
     End With
 
     With CreateGlfDroptarget("drop2")
@@ -77,6 +80,7 @@ Sub ConfigureGlfDevices
         .ResetEvents = Array("ball_started")
         .ActionCallback = "DT2Callback"
         .UseRothDroptarget = True
+        .RothDTSwitchID = 2
     End With
 
     With CreateGlfDroptarget("drop3")
@@ -85,11 +89,27 @@ Sub ConfigureGlfDevices
         .ResetEvents = Array("ball_started")
         .ActionCallback = "DT3Callback"
         .UseRothDroptarget = True
+        .RothDTSwitchID = 3
     End With
 
 
+    'Standup Targets   'FIXME uncomment this once the glf standup config is ready
+    'NOTE: Stand-up targets SHOULD NOT be added to the glf_switches collection nor any other collection. 
+    With CreateGlfStanduptarget("target1")
+        .Switch = "s_ST1"
+        .UseRothStanduptarget = True
+        .RothSTSwitchID = 1
+    End With
+
+    With CreateGlfStanduptarget("target2")
+        .Switch = "s_ST2"
+        .UseRothStanduptarget = True
+        .RothSTSwitchID = 2
+    End With
+
 
     ' Slingshots
+    'NOTE: Slingshots SHOULD be added to the glf_slingshots collection. 
     With CreateGlfAutoFireDevice("left_sling")
         .Switch = "s_LeftSlingshot"
         .ActionCallback = "LeftSlingshotAction"
@@ -110,6 +130,7 @@ Sub ConfigureGlfDevices
 
 
     ' Bumpers
+   'NOTE: Slingshots SHOULD be added to the glf_switches collection. 
     With CreateGlfAutoFireDevice("bumper1")
         .Switch = "s_Bumper1"
         .ActionCallback = "Bumper1Action"
@@ -138,6 +159,15 @@ Sub ConfigureGlfDevices
     End With
 
 
+    ' Diverter
+    ' With CreateGlfDiverter("divert_pin")
+    '     .EnableEvents = Array("ball_started","reset_complete","enable_diverter")
+    '     .ActivateEvents = Array("raise_diverter") 
+    '     .DeactivateEvents = Array("drop_diverter","ball_ended") 
+    '     .ActionCallback = "RaiseDiverterPin"
+    ' End With
+
+
     ' Magnet
     With CreateGlfMagnet("mag1")
         .EnableEvents = Array("ball_started")
@@ -147,6 +177,75 @@ Sub ConfigureGlfDevices
         .GrabTime = 1000
         .ActionCallback = "GrabMagnetAction"
     End With
+
+
+
+
+    ' Alphanumeric displays
+
+    Dim segment_display_ball
+    Set segment_display_ball = (New GlfLightSegmentDisplay)("ball")
+
+    segment_display_ball.SegmentType = "14Segment"
+    segment_display_ball.SegmentSize = 2
+    segment_display_ball.DefaultColor = SegmentsColor
+    segment_display_ball.LightGroup = "ball_seg"
+
+    Dim segment_display_p1
+    Set segment_display_p1 = (New GlfLightSegmentDisplay)("player1")
+
+    segment_display_p1.SegmentType = "14Segment"
+    segment_display_p1.SegmentSize = 8
+    segment_display_p1.LightGroup = "p1_seg"
+    segment_display_p1.UpdateMethod = "stack"
+    segment_display_p1.DefaultColor = SegmentsColor
+    segment_display_p1.UseDotsForCommas = True
+    segment_display_p1.ExternalFlexDmdSegmentIndex = 0
+
+    Dim segment_display_p2
+    Set segment_display_p2 = (New GlfLightSegmentDisplay)("player2")
+
+    segment_display_p2.SegmentType = "14Segment"
+    segment_display_p2.SegmentSize = 8
+    segment_display_p2.LightGroup = "p2_seg"
+    segment_display_p2.UpdateMethod = "stack"
+    segment_display_p2.DefaultColor = SegmentsColor
+    segment_display_p2.UseDotsForCommas = True
+    segment_display_p2.ExternalFlexDmdSegmentIndex = 8
+
+    Dim segment_display_p3
+    Set segment_display_p3 = (New GlfLightSegmentDisplay)("player3")
+
+    segment_display_p3.SegmentType = "14Segment"
+    segment_display_p3.SegmentSize = 8
+    segment_display_p3.LightGroup = "p3_seg"
+    segment_display_p3.UpdateMethod = "stack"
+    segment_display_p3.DefaultColor = SegmentsColor
+    segment_display_p3.UseDotsForCommas = True
+    segment_display_p3.ExternalFlexDmdSegmentIndex = 16
+
+    Dim segment_display_p4
+    Set segment_display_p4 = (New GlfLightSegmentDisplay)("player4")
+
+    segment_display_p4.SegmentType = "14Segment"
+    segment_display_p4.SegmentSize = 8
+    segment_display_p4.LightGroup = "p4_seg"
+    segment_display_p4.UpdateMethod = "stack"
+    segment_display_p4.DefaultColor = SegmentsColor
+    segment_display_p4.UseDotsForCommas = True
+    segment_display_p4.ExternalFlexDmdSegmentIndex = 24
+
+    Dim segment_display_all
+    Set segment_display_all = (New GlfLightSegmentDisplay)("all")
+    
+    segment_display_all.SegmentType = "14Segment"
+    segment_display_all.SegmentSize = 32
+    segment_display_all.LightGroups = Array("p1_seg", "p2_seg", "p3_seg", "p4_seg")
+    segment_display_all.UpdateMethod = "stack"
+    segment_display_all.DefaultColor = SegmentsColor
+    segment_display_all.UseDotsForCommas = True
+    segment_display_all.DefaultTransitionUpdateHz = 10
+    segment_display_all.ExternalFlexDmdSegmentIndex = 0
 
 
     ' Sound effects bus
@@ -240,41 +339,41 @@ End Function
 
 
 
-' Shared profiles
+' Shared profile examples
 Public Sub CreateSharedShotProfiles()
 
     With GlfShotProfiles("off_on_color")
         With .States("unlit")
             .Show = "off"
-            .Key = "key_off_a"
+            .Key = "key_off_on_color_unlit"
         End With
         With .States("on")
             .Show = "led_color"
-            .Key = "key_on_a"
+            .Key = "key_off_on_color_on"
         End With
     End With
 
     With GlfShotProfiles("flicker_on_flicker_off")
         With .States("lit")
             .Show = "flicker_color_on"
-            .Key = "key_off_z"
+            .Key = "key_flicker_on_flicker_off_lit"
             .Speed = 3
         End With
         With .States("unlit")
             .Show = "flicker_color_off"
             .Speed = 3
-            .Key = "key_on_z"
+            .Key = "key_flicker_on_flicker_off_unlit"
         End With
     End With
 
     With GlfShotProfiles("flicker_on")
         With .States("unlit")
             .Show = "off"
-            .Key = "key_off_b"
+            .Key = "key_flicker_on_unlit"
         End With
         With .States("on")
             .Show = "flicker_color_on"
-            .Key = "key_on_b"
+            .Key = "key_flicker_on_on"
             .Speed = 4
         End With
     End With
@@ -282,7 +381,7 @@ Public Sub CreateSharedShotProfiles()
     With GlfShotProfiles("shoot_again")
       With .States("unlit")
           .Show = "off"
-          .Key = "key_off_e"
+          .Key = "key_shoot_again_unlit"
           '.Priority = 5000
           With .Tokens()
               .Add "lights", "LSA"
@@ -290,7 +389,7 @@ Public Sub CreateSharedShotProfiles()
       End With
       With .States("flashing")
           .Show = "flash_color_with_fade"
-          .Key = "key_flashing_e"
+          .Key = "key_shoot_again_flashing"
           .Speed = 2
           .Priority = 5000
           With .Tokens()
@@ -300,7 +399,7 @@ Public Sub CreateSharedShotProfiles()
       End With
       With .States("hurry")
           .Show = "flash_color"
-          .Key = "key_hurry_e"
+          .Key = "key_shoot_again_hurry"
           .Speed = 7
           .Priority = 5000
           With .Tokens()

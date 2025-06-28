@@ -60,7 +60,7 @@ Dim DT1, DT2, DT3
 '							rotx to bend the target back
 '							transz to move it up and down
 '							the pivot point should be in the center of the target on the x, y and at or below the playfield (0) on z
-'	switch:				The switch ID. The associated GLF drop target config must use this same number. 
+'	switch:				The switch ID. NOTE: The associated GLF drop target "RothDTArrayIndex" config must use this same number. 
 '	animate:			Arrary slot for handling the animation instrucitons, set to 0
 '
 '	Values for annimate: 1 - bend target (hit to primary), 2 - drop target (hit to secondary), 3 - brick target (high velocity hit to secondary), -1 - raise target 
@@ -330,6 +330,14 @@ Function DTDropped(switchid)
     DTDropped = DTArray(ind).isDropped
 End Function
 
+Sub DTAction(switchid, dropped)
+    If dropped = 1 Then
+        DispatchPinEvent DTArray(DTArrayID(switchid)).Primary.Name & "_active", Null
+    Else
+        DispatchPinEvent DTArray(DTArrayID(switchid)).Primary.Name & "_inactive", Null
+    End If
+End Sub
+
 
 ' Drop target specific callbacks
 ' Case 0 - Drop target is being reset
@@ -339,6 +347,7 @@ End Function
 ' Case 4 - Disable Keep up, i.e. allow roth drop to drop when a ball hits
 
 Sub DT1Callback(state)
+    msgbox "DT1Callback "&state
     Select Case state
         Case 0
             DTRaise 1
@@ -353,6 +362,7 @@ Sub DT1Callback(state)
 End Sub
   
 Sub DT2Callback(state)
+    msgbox "DT2Callback "&state
     Select Case state
         Case 0
             DTRaise 2
@@ -367,6 +377,7 @@ Sub DT2Callback(state)
 End Sub
   
 Sub DT3Callback(state)
+    msgbox "DT3Callback "&state
     Select Case state
         Case 0
             DTRaise 3
@@ -380,17 +391,4 @@ Sub DT3Callback(state)
     End Select
 End Sub
   
-Sub DT4Callback(state)
-    Select Case state
-        Case 0
-            DTRaise 4
-            SoundDropTargetDrop pDT4
-        Case 1
-            DTDrop 4
-        Case 3
-            DTEnableKeepup 4
-        Case 4
-            DTDisableKeepup 4
-    End Select
-End Sub
 
