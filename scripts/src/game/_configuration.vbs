@@ -92,8 +92,35 @@ Sub ConfigureGlfDevices
         .RothDTSwitchID = 3
     End With
 
+    With CreateGlfDroptarget("drop4")
+        .Switch = "s_DT4"
+        .KnockdownEvents = Array("DT4_knockdown")
+        .ResetEvents = Array("ball_started")
+        .ActionCallback = "DT4Callback"
+        .UseRothDroptarget = True
+        .RothDTSwitchID = 4
+    End With
 
-    'Standup Targets   'FIXME uncomment this once the glf standup config is ready
+    With CreateGlfDroptarget("drop5")
+        .Switch = "s_DT5"
+        .KnockdownEvents = Array("DT5_knockdown")
+        .ResetEvents = Array("ball_started")
+        .ActionCallback = "DT5Callback"
+        .UseRothDroptarget = True
+        .RothDTSwitchID = 5
+    End With
+
+    With CreateGlfDroptarget("drop6")
+        .Switch = "s_DT6"
+        .KnockdownEvents = Array("DT6_knockdown")
+        .ResetEvents = Array("ball_started")
+        .ActionCallback = "DT6Callback"
+        .UseRothDroptarget = True
+        .RothDTSwitchID = 6
+    End With
+
+
+    'Standup Targets
     'NOTE: Stand-up targets SHOULD NOT be added to the glf_switches collection nor any other collection. 
     With CreateGlfStanduptarget("target1")
         .Switch = "s_ST1"
@@ -105,6 +132,18 @@ Sub ConfigureGlfDevices
         .Switch = "s_ST2"
         .UseRothStanduptarget = True
         .RothSTSwitchID = 2
+    End With
+
+    With CreateGlfStanduptarget("target3")
+        .Switch = "s_ST3"
+        .UseRothStanduptarget = True
+        .RothSTSwitchID = 3
+    End With
+
+    With CreateGlfStanduptarget("target4")
+        .Switch = "s_ST4"
+        .UseRothStanduptarget = True
+        .RothSTSwitchID = 4
     End With
 
 
@@ -201,6 +240,7 @@ Sub ConfigureGlfDevices
     segment_display_p1.DefaultColor = SegmentsColor
     segment_display_p1.UseDotsForCommas = True
     segment_display_p1.ExternalFlexDmdSegmentIndex = 0
+    segment_display_p1.ExternalB2SSegmentIndex = 0
 
     Dim segment_display_p2
     Set segment_display_p2 = (New GlfLightSegmentDisplay)("player2")
@@ -212,6 +252,7 @@ Sub ConfigureGlfDevices
     segment_display_p2.DefaultColor = SegmentsColor
     segment_display_p2.UseDotsForCommas = True
     segment_display_p2.ExternalFlexDmdSegmentIndex = 8
+    segment_display_p2.ExternalB2SSegmentIndex = 8
 
     Dim segment_display_p3
     Set segment_display_p3 = (New GlfLightSegmentDisplay)("player3")
@@ -223,6 +264,7 @@ Sub ConfigureGlfDevices
     segment_display_p3.DefaultColor = SegmentsColor
     segment_display_p3.UseDotsForCommas = True
     segment_display_p3.ExternalFlexDmdSegmentIndex = 16
+    segment_display_p3.ExternalB2SSegmentIndex = 16
 
     Dim segment_display_p4
     Set segment_display_p4 = (New GlfLightSegmentDisplay)("player4")
@@ -234,6 +276,7 @@ Sub ConfigureGlfDevices
     segment_display_p4.DefaultColor = SegmentsColor
     segment_display_p4.UseDotsForCommas = True
     segment_display_p4.ExternalFlexDmdSegmentIndex = 24
+    segment_display_p4.ExternalB2SSegmentIndex = 24
 
     Dim segment_display_all
     Set segment_display_all = (New GlfLightSegmentDisplay)("all")

@@ -1,29 +1,29 @@
 {
   "Trigger": {
     "center": {
-      "x": 451.02737,
-      "y": 286.3631
+      "x": 376.883,
+      "y": 189.4907
     },
-    "radius": 32.0,
-    "rotation": 0.0,
-    "wire_thickness": 0.0,
-    "scale_x": 1.0,
-    "scale_y": 1.0,
+    "radius": 25.0,
+    "rotation": 180.0,
+    "wire_thickness": 1.0,
+    "scale_x": 0.65,
+    "scale_y": 0.65,
     "is_timer_enabled": false,
-    "timer_interval": 10,
-    "material": "Metal",
+    "timer_interval": 100,
+    "material": "Metal0.8",
     "surface": "",
     "is_visible": true,
     "is_enabled": true,
-    "hit_height": 60.0,
+    "hit_height": 50.0,
     "name": "s_TopLane2",
     "shape": "wire_a",
     "anim_speed": 1.0,
-    "is_reflection_enabled": true,
+    "is_reflection_enabled": false,
     "drag_points": [
       {
-        "x": 420.52737,
-        "y": 239.86455,
+        "x": 346.883,
+        "y": 159.4907,
         "z": 0.0,
         "smooth": false,
         "is_slingshot": false,
@@ -35,8 +35,8 @@
         "editor_layer_visibility": true
       },
       {
-        "x": 420.52737,
-        "y": 332.86163,
+        "x": 346.883,
+        "y": 219.4907,
         "z": 0.0,
         "smooth": false,
         "is_slingshot": false,
@@ -48,8 +48,8 @@
         "editor_layer_visibility": true
       },
       {
-        "x": 484.02737,
-        "y": 332.86163,
+        "x": 406.883,
+        "y": 219.4907,
         "z": 0.0,
         "smooth": false,
         "is_slingshot": false,
@@ -61,8 +61,8 @@
         "editor_layer_visibility": true
       },
       {
-        "x": 484.02737,
-        "y": 239.86455,
+        "x": 406.883,
+        "y": 159.4907,
         "z": 0.0,
         "smooth": false,
         "is_slingshot": false,

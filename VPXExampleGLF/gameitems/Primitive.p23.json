@@ -2,7 +2,7 @@
   "Primitive": {
     "position": {
       "x": 348.04633,
-      "y": 1209.44,
+      "y": 1187.106,
       "z": 0.0
     },
     "size": {
@@ -37,7 +37,7 @@
     "scatter": 0.0,
     "edge_factor_ui": 0.25,
     "collision_reduction_factor": 0.0,
-    "is_collidable": true,
+    "is_collidable": false,
     "is_toy": true,
     "use_3d_mesh": true,
     "static_rendering": false,

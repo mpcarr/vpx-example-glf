@@ -1,8 +1,8 @@
 {
   "HitTarget": {
     "position": {
-      "x": 108.850044,
-      "y": 1175.2509,
+      "x": 265.08554,
+      "y": 684.4602,
       "z": 0.0
     },
     "size": {
@@ -10,7 +10,7 @@
       "y": 38.0,
       "z": 38.0
     },
-    "rot_z": -90.0,
+    "rot_z": 3.0,
     "image": "hittarget",
     "target_type": "hit_target_round",
     "name": "s_ST1",

@@ -16,7 +16,7 @@
     "is_collidable": false,
     "is_visible": true,
     "radb": null,
-    "static_rendering": true,
+    "static_rendering": false,
     "show_in_editor": false,
     "rot_x": 0.0,
     "rot_y": 0.0,
