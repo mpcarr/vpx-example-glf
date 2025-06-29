@@ -1,8 +1,8 @@
 {
   "Trigger": {
     "center": {
-      "x": 78.22992,
-      "y": 424.60355
+      "x": 79.84663,
+      "y": 414.90326
     },
     "radius": 25.0,
     "rotation": -15.0,
@@ -22,8 +22,8 @@
     "is_reflection_enabled": true,
     "drag_points": [
       {
-        "x": 48.647392,
-        "y": 414.70514,
+        "x": 50.264114,
+        "y": 405.00485,
         "z": 0.0,
         "smooth": false,
         "is_slingshot": false,
@@ -35,8 +35,8 @@
         "editor_layer_visibility": true
       },
       {
-        "x": 60.120087,
-        "y": 459.283,
+        "x": 61.73681,
+        "y": 449.5827,
         "z": 0.0,
         "smooth": false,
         "is_slingshot": false,
@@ -48,8 +48,8 @@
         "editor_layer_visibility": true
       },
       {
-        "x": 114.2489,
-        "y": 442.34714,
+        "x": 115.86561,
+        "y": 432.64685,
         "z": 0.0,
         "smooth": false,
         "is_slingshot": false,
@@ -61,8 +61,8 @@
         "editor_layer_visibility": true
       },
       {
-        "x": 101.13728,
-        "y": 399.40833,
+        "x": 102.75399,
+        "y": 389.70804,
         "z": 0.0,
         "smooth": false,
         "is_slingshot": false,

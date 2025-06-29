@@ -62,16 +62,15 @@ end sub
 '*******************************************
 
 
-Sub RaiseDiverterPin(Enabled)
-	Dim BP
+Sub OpenDiverter(Enabled)
 	If Enabled Then
-		DiverterPin.isdropped=False
-		SoundSaucerKick 0,swRamp6
-		For Each BP in BP_DiverterPin : BP.transz = 0: Next
+		DiverterWall1.isdropped = True
+		DiverterWall2.isdropped = False
+		SoundSaucerKick 0, KickerUpperPrimitive
 	Else
-		DiverterPin.isdropped=True
-		SoundSaucerKick 0,swRamp6
-		For Each BP in BP_DiverterPin : BP.transz = -50: Next 
+		DiverterWall1.isdropped = False
+		DiverterWall2.isdropped = True
+		SoundSaucerKick 0, KickerUpperPrimitive
 	End If
 	DOF 111, DOFPulse
 End Sub

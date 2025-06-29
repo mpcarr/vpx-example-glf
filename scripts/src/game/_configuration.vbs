@@ -199,12 +199,12 @@ Sub ConfigureGlfDevices
 
 
     ' Diverter
-    ' With CreateGlfDiverter("divert_pin")
-    '     .EnableEvents = Array("ball_started","reset_complete","enable_diverter")
-    '     .ActivateEvents = Array("raise_diverter") 
-    '     .DeactivateEvents = Array("drop_diverter","ball_ended") 
-    '     .ActionCallback = "RaiseDiverterPin"
-    ' End With
+    With CreateGlfDiverter("diverter1")
+        .EnableEvents = Array("ball_started","reset_complete","enable_diverter")
+        .ActivateEvents = Array("open_diverter") 
+        .DeactivateEvents = Array("close_diverter","ball_ended") 
+        .ActionCallback = "OpenDiverter"
+    End With
 
 
     ' Magnet

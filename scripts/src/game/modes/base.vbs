@@ -8,7 +8,7 @@ Sub CreateBaseMode()
 
         With .EventPlayer()
             'new ball
-            .Add "mode_base_started", Array("stop_attract_mode")
+            .Add "mode_base_started", Array("stop_attract_mode","close_diverter")
             .Add "mode_base_started{current_player.number == 1}", Array("flash_player1_score")  'Events for flashing active player's score at start of mode
             .Add "mode_base_started{current_player.number == 2}", Array("flash_player2_score")
             .Add "mode_base_started{current_player.number == 3}", Array("flash_player3_score")
