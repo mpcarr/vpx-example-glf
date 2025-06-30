@@ -78,8 +78,8 @@ Sub InitFlasher(nr, col)
 	' store all objects in an array for use in FlashFlasher subroutine
     Set domelight(nr) = Eval("FL" & nr)
 	Set domebase(nr) = Eval("p_base_FL" & nr)
-	Set domelit(nr) = Eval("p_FL" & nr & "_")
-	Set domeflasher(nr) = Eval("f_FL" & nr & "_")
+	Set domelit(nr) = Eval("p_FL" & nr & "_")       'additive prim. follows light color
+	Set domeflasher(nr) = Eval("f_FL" & nr & "_")   'flasher. follows light color
 	
 	' If the flasher is parallel to the playfield, rotate the VPX flasher object for POV and place it at the correct height
 	If domebase(nr).RotY = 0 Then

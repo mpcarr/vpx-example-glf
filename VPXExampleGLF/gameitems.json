@@ -1,5 +1,19 @@
 [
   {
+    "file_name": "Light.BL3a.json",
+    "is_locked": true,
+    "editor_layer": 7,
+    "editor_layer_name": "Bumpers",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Light.BL2a.json",
+    "is_locked": true,
+    "editor_layer": 7,
+    "editor_layer_name": "Bumpers",
+    "editor_layer_visibility": false
+  },
+  {
     "file_name": "Primitive.playfield_mesh_vis.json",
     "is_locked": true,
     "editor_layer": 0,
@@ -1001,28 +1015,28 @@
     "editor_layer_visibility": false
   },
   {
-    "file_name": "Light.bumperbiglight1.json",
+    "file_name": "Light.BL1a.json",
     "is_locked": true,
     "editor_layer": 7,
-    "editor_layer_name": "GI",
+    "editor_layer_name": "Bumpers",
     "editor_layer_visibility": false
   },
   {
-    "file_name": "Light.bumpersmalllight1.json",
+    "file_name": "Light.BL1.json",
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Bumpers",
     "editor_layer_visibility": false
   },
   {
-    "file_name": "Light.bumpersmalllight2.json",
+    "file_name": "Light.BL2.json",
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Bumpers",
     "editor_layer_visibility": false
   },
   {
-    "file_name": "Light.bumpersmalllight3.json",
+    "file_name": "Light.BL3.json",
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Bumpers",
@@ -1036,119 +1050,105 @@
     "editor_layer_visibility": false
   },
   {
-    "file_name": "Light.bumperbiglight2.json",
-    "is_locked": true,
-    "editor_layer": 7,
-    "editor_layer_name": "GI",
-    "editor_layer_visibility": false
-  },
-  {
-    "file_name": "Light.bumperbiglight3.json",
-    "is_locked": true,
-    "editor_layer": 7,
-    "editor_layer_name": "GI",
-    "editor_layer_visibility": false
-  },
-  {
-    "file_name": "Primitive.bumperdisk2.json",
+    "file_name": "Primitive.p_bumperdisk_BL2.json",
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Bumpers",
     "editor_layer_visibility": false
   },
   {
-    "file_name": "Primitive.bumperdisk1.json",
+    "file_name": "Primitive.p_bumperdisk_BL1.json",
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Bumpers",
     "editor_layer_visibility": false
   },
   {
-    "file_name": "Primitive.bumperbase1.json",
+    "file_name": "Primitive.p_bumperbase_BL1.json",
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Bumpers",
     "editor_layer_visibility": false
   },
   {
-    "file_name": "Primitive.bumpertop1.json",
+    "file_name": "Primitive.p_bumpertop_BL1.json",
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Bumpers",
     "editor_layer_visibility": false
   },
   {
-    "file_name": "Primitive.bumperbulb1.json",
+    "file_name": "Primitive.p_bumperbulb_BL1_.json",
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Bumpers",
     "editor_layer_visibility": false
   },
   {
-    "file_name": "Primitive.bumperbase2.json",
+    "file_name": "Primitive.p_bumperbase_BL2.json",
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Bumpers",
     "editor_layer_visibility": false
   },
   {
-    "file_name": "Primitive.bumperbulb2.json",
+    "file_name": "Primitive.p_bumperbulb_BL2_.json",
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Bumpers",
     "editor_layer_visibility": false
   },
   {
-    "file_name": "Primitive.bumperdisk3.json",
+    "file_name": "Primitive.p_bumperdisk_BL3.json",
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Bumpers",
     "editor_layer_visibility": false
   },
   {
-    "file_name": "Primitive.bumperbase3.json",
+    "file_name": "Primitive.p_bumperbase_BL3.json",
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Bumpers",
     "editor_layer_visibility": false
   },
   {
-    "file_name": "Primitive.bumpertop3.json",
+    "file_name": "Primitive.p_bumpertop_BL3.json",
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Bumpers",
     "editor_layer_visibility": false
   },
   {
-    "file_name": "Primitive.bumpertop2.json",
+    "file_name": "Primitive.p_bumpertop_BL2.json",
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Bumpers",
     "editor_layer_visibility": false
   },
   {
-    "file_name": "Primitive.bumperscrews3.json",
+    "file_name": "Primitive.p_bumperscrews_BL3.json",
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Bumpers",
     "editor_layer_visibility": false
   },
   {
-    "file_name": "Primitive.bumperscrews1.json",
+    "file_name": "Primitive.p_bumperscrews_BL1.json",
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Bumpers",
     "editor_layer_visibility": false
   },
   {
-    "file_name": "Primitive.bumperscrews2.json",
+    "file_name": "Primitive.p_bumperscrews_BL2.json",
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Bumpers",
     "editor_layer_visibility": false
   },
   {
-    "file_name": "Primitive.bumperbulb3.json",
+    "file_name": "Primitive.p_bumperbulb_BL3_.json",
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Bumpers",
