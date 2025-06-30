@@ -1,19 +1,19 @@
 {
   "Primitive": {
     "position": {
-      "x": 348.04633,
-      "y": 1187.106,
+      "x": 150.70897,
+      "y": 589.14453,
       "z": 0.0
     },
     "size": {
-      "x": 1.75,
-      "y": 1.9,
-      "z": 1.0
+      "x": 143.0,
+      "y": 70.0,
+      "z": 143.0
     },
     "rot_and_tra": [
+      90.0,
+      -110.0,
       0.0,
-      0.0,
-      55.0,
       0.0,
       0.0,
       0.0,
@@ -21,11 +21,11 @@
       0.0,
       0.0
     ],
-    "image": "Insert_lightningsmalloff3",
+    "image": "Insert_Arrow1off4_180",
     "normal_map": "",
     "sides": 4,
     "name": "p23off",
-    "material": "InsertYellowOffTri",
+    "material": "InsertWhiteOffTri",
     "side_color": "#96009696",
     "is_visible": true,
     "draw_textures_inside": false,
@@ -37,7 +37,7 @@
     "scatter": 0.0,
     "edge_factor_ui": 0.25,
     "collision_reduction_factor": 0.0,
-    "is_collidable": true,
+    "is_collidable": false,
     "is_toy": true,
     "use_3d_mesh": true,
     "static_rendering": false,
@@ -54,7 +54,7 @@
     "max_aa_bound": null,
     "mesh_file_name": "",
     "depth_bias": 1000.0,
-    "add_blend": false,
+    "add_blend": true,
     "use_depth_mask": true,
     "alpha": 100.0,
     "color": "#ff00ffff",

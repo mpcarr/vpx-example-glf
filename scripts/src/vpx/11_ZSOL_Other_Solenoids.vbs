@@ -7,6 +7,8 @@
 
 '  Kickers, Saucers
 '*******************************************
+Const KickerAngleTol = 2
+Const KickerStrengthTol = 3
 
 Sub KickBall(kball, kangle, kvel, kvelz, kzlift)
 	dim rangle
@@ -19,15 +21,28 @@ Sub KickBall(kball, kangle, kvel, kvelz, kzlift)
 End Sub
 
 
-Sub ScoopEjectCallback(ball)
+Sub Kicker1EjectCallback(ball)
 	Dim ang, vel
-	If s_Scoop.BallCntOver > 0 Then
-		ang = 14.8 + ScoopAngleTol*2*(rnd-0.5)
-		vel = 70.0 + ScoopStrengthTol*2*(rnd-0.5)
-		KickBall ball, ang, vel, 0, 0
-		SoundSaucerKick 1, s_Scoop
+	If s_Kicker1.BallCntOver > 0 Then
+		ang = 160 + KickerAngleTol*2*(rnd-0.5)
+		vel = 10.0 + KickerStrengthTol*2*(rnd-0.5)
+		KickBall ball, ang, vel, 5, 25
+		SoundSaucerKick 1, s_Kicker1
 	Else
-		SoundSaucerKick 0, s_Scoop
+		SoundSaucerKick 0, s_Kicker1
+	End If
+	DOF 109, DOFPulse
+End Sub
+
+Sub Kicker2EjectCallback(ball)
+	Dim ang, vel
+	If s_Kicker2.BallCntOver > 0 Then
+		ang = -90 + KickerAngleTol*2*(rnd-0.5)
+		vel = 10.0 + KickerStrengthTol*2*(rnd-0.5)
+		KickBall ball, ang, vel, 5, 25
+		SoundSaucerKick 1, s_Kicker2
+	Else
+		SoundSaucerKick 0, s_Kicker2
 	End If
 	DOF 109, DOFPulse
 End Sub

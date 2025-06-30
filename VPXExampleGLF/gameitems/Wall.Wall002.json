@@ -28,14 +28,14 @@
     "is_side_visible": true,
     "disable_lighting_top_old": null,
     "disable_lighting_top": 0.0,
-    "disable_lighting_below": 0.0,
+    "disable_lighting_below": 0.00999999,
     "is_reflection_enabled": true,
     "physics_material": "",
     "overwrite_physics": true,
     "drag_points": [
       {
         "x": 687.9466,
-        "y": 1432.4509,
+        "y": 1445.0913,
         "z": 0.0,
         "smooth": true,
         "is_slingshot": false,
@@ -48,7 +48,7 @@
       },
       {
         "x": 680.5338,
-        "y": 1441.5322,
+        "y": 1454.1726,
         "z": 0.0,
         "smooth": false,
         "is_slingshot": false,
@@ -61,7 +61,7 @@
       },
       {
         "x": 611.86206,
-        "y": 1631.1714,
+        "y": 1643.8118,
         "z": 0.0,
         "smooth": false,
         "is_slingshot": false,
@@ -74,7 +74,7 @@
       },
       {
         "x": 609.7762,
-        "y": 1643.6033,
+        "y": 1656.2437,
         "z": 0.0,
         "smooth": true,
         "is_slingshot": false,
@@ -87,7 +87,7 @@
       },
       {
         "x": 617.8426,
-        "y": 1654.934,
+        "y": 1667.5743,
         "z": 0.0,
         "smooth": true,
         "is_slingshot": false,
@@ -100,7 +100,7 @@
       },
       {
         "x": 630.5288,
-        "y": 1656.0934,
+        "y": 1668.7338,
         "z": 0.0,
         "smooth": true,
         "is_slingshot": false,
@@ -113,7 +113,7 @@
       },
       {
         "x": 638.6179,
-        "y": 1650.6682,
+        "y": 1663.3086,
         "z": 0.0,
         "smooth": false,
         "is_slingshot": false,
@@ -126,7 +126,7 @@
       },
       {
         "x": 700.00397,
-        "y": 1609.2354,
+        "y": 1621.8757,
         "z": 0.0,
         "smooth": false,
         "is_slingshot": false,
@@ -139,7 +139,7 @@
       },
       {
         "x": 702.27466,
-        "y": 1606.9413,
+        "y": 1619.5817,
         "z": 0.0,
         "smooth": false,
         "is_slingshot": false,
@@ -152,7 +152,7 @@
       },
       {
         "x": 708.33386,
-        "y": 1599.515,
+        "y": 1612.1554,
         "z": 0.0,
         "smooth": true,
         "is_slingshot": false,
@@ -165,7 +165,7 @@
       },
       {
         "x": 710.0079,
-        "y": 1586.1598,
+        "y": 1598.8002,
         "z": 0.0,
         "smooth": false,
         "is_slingshot": false,
@@ -178,7 +178,7 @@
       },
       {
         "x": 711.3328,
-        "y": 1449.499,
+        "y": 1462.1394,
         "z": 0.0,
         "smooth": false,
         "is_slingshot": false,
@@ -191,7 +191,7 @@
       },
       {
         "x": 709.1114,
-        "y": 1437.3105,
+        "y": 1449.9509,
         "z": 0.0,
         "smooth": true,
         "is_slingshot": false,
@@ -204,7 +204,7 @@
       },
       {
         "x": 699.646,
-        "y": 1430.4644,
+        "y": 1443.1047,
         "z": 0.0,
         "smooth": true,
         "is_slingshot": false,

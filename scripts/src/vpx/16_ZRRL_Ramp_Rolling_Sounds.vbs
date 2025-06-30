@@ -165,5 +165,40 @@ Sub RandomSoundRampStop(obj)
 	End Select
 End Sub
 
+
+' Ramp SFX Triggers
+
+Sub ramptrigger001_hit
+	If Activeball.vely < 0 Then WireRampOn True
+End Sub
+
+Sub ramptrigger001_unhit
+	If Activeball.vely > 0 Then WireRampOff
+End Sub
+
+Sub ramptrigger002_hit
+	WireRampOff
+End Sub
+
+Sub ramptrigger002_unhit
+	WireRampOn False
+End Sub
+
+Sub ramptrigger003_hit
+	WireRampOff
+End Sub
+
+Sub ramptrigger004_hit
+	If Activeball.vely < 0 Then WireRampOn False
+End Sub
+
+Sub ramptrigger004_unhit
+	If Activeball.vely > 0 Then WireRampOff
+End Sub
+
+Sub ramptrigger005_unhit
+	If Activeball.vely < 0 Then WireRampOff
+End Sub
+
 ' END RAMP ROLLING SFX
 

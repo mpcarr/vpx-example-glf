@@ -1,8 +1,8 @@
 {
   "Flipper": {
     "center": {
-      "x": 593.7173,
-      "y": 1784.9519
+      "x": 594.57324,
+      "y": 1795.6528
     },
     "base_radius": 20.2,
     "end_radius": 12.0,
@@ -24,8 +24,8 @@
     "rubber_height": 17.6475,
     "rubber_width_int": 23,
     "rubber_width": 23.53,
-    "strength": 2500.0,
-    "elasticity": 0.88,
+    "strength": 2400.0,
+    "elasticity": 0.86,
     "elasticity_falloff": 0.15,
     "friction": 0.7,
     "ramp_up": 2.5,

@@ -54,12 +54,19 @@ Sub ConfigureGlfDevices
 
     ' Scoop
     'NOTE: Scoop switches SHOULD be added to the glf_switches collection. 
-    ' With CreateGlfBallDevice("scoop")
-    '     .BallSwitches = Array("s_Scoop")
-    '     .EjectTimeout = 2000
-    '     .MechanicalEject = True
-	' 	.EjectCallback = "ScoopEjectCallback"
-    ' End With
+    With CreateGlfBallDevice("kicker1")
+        .BallSwitches = Array("s_Kicker1")
+        .EjectTimeout = 2000
+        .MechanicalEject = True
+		.EjectCallback = "Kicker1EjectCallback"
+    End With
+
+    With CreateGlfBallDevice("kicker2")
+        .BallSwitches = Array("s_Kicker2")
+        .EjectTimeout = 2000
+        .MechanicalEject = True
+		.EjectCallback = "Kicker2EjectCallback"
+    End With
 
 
 

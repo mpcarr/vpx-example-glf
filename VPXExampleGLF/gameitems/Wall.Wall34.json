@@ -28,7 +28,7 @@
     "is_side_visible": true,
     "disable_lighting_top_old": null,
     "disable_lighting_top": 0.0,
-    "disable_lighting_below": 0.0,
+    "disable_lighting_below": 0.00999999,
     "is_reflection_enabled": true,
     "physics_material": "",
     "overwrite_physics": true,
@@ -99,8 +99,8 @@
         "editor_layer_visibility": true
       },
       {
-        "x": 822.9301,
-        "y": 1338.3795,
+        "x": 816.2974,
+        "y": 1355.6818,
         "z": 0.0,
         "smooth": false,
         "is_slingshot": false,
@@ -112,8 +112,8 @@
         "editor_layer_visibility": true
       },
       {
-        "x": 837.18835,
-        "y": 1355.287,
+        "x": 826.6627,
+        "y": 1365.3798,
         "z": 0.0,
         "smooth": true,
         "is_slingshot": false,
@@ -125,8 +125,8 @@
         "editor_layer_visibility": true
       },
       {
-        "x": 853.42737,
-        "y": 1354.6901,
+        "x": 846.0739,
+        "y": 1363.918,
         "z": 0.0,
         "smooth": true,
         "is_slingshot": false,

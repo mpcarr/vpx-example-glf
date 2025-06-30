@@ -28,7 +28,7 @@
     "is_side_visible": true,
     "disable_lighting_top_old": null,
     "disable_lighting_top": 0.0,
-    "disable_lighting_below": 0.0,
+    "disable_lighting_below": 0.00999999,
     "is_reflection_enabled": true,
     "physics_material": "",
     "overwrite_physics": true,

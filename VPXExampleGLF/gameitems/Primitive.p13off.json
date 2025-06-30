@@ -1,14 +1,14 @@
 {
   "Primitive": {
     "position": {
-      "x": 171.14828,
-      "y": 1205.2675,
+      "x": 531.4369,
+      "y": 1141.1213,
       "z": 0.0
     },
     "size": {
-      "x": 170.0,
+      "x": 150.0,
       "y": 100.0,
-      "z": 170.0
+      "z": 150.0
     },
     "rot_and_tra": [
       90.0,
@@ -25,7 +25,7 @@
     "normal_map": "",
     "sides": 4,
     "name": "p13off",
-    "material": "InsertBlueOff",
+    "material": "InsertWhiteOffTri",
     "side_color": "#96009696",
     "is_visible": true,
     "draw_textures_inside": false,
@@ -37,13 +37,13 @@
     "scatter": 0.0,
     "edge_factor_ui": 0.25,
     "collision_reduction_factor": 0.0,
-    "is_collidable": true,
+    "is_collidable": false,
     "is_toy": true,
     "use_3d_mesh": true,
     "static_rendering": false,
     "disable_lighting_top_old": null,
     "disable_lighting_top": 0.0,
-    "disable_lighting_below": 0.0,
+    "disable_lighting_below": 1.0,
     "is_reflection_enabled": false,
     "backfaces_enabled": false,
     "physics_material": "",
@@ -54,7 +54,7 @@
     "max_aa_bound": null,
     "mesh_file_name": "",
     "depth_bias": 1000.0,
-    "add_blend": false,
+    "add_blend": true,
     "use_depth_mask": true,
     "alpha": 100.0,
     "color": "#ff00ffff",

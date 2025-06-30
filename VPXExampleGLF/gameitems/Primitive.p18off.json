@@ -1,35 +1,35 @@
 {
   "Primitive": {
     "position": {
-      "x": 395.81436,
-      "y": 1576.8392,
+      "x": 737.6281,
+      "y": 789.42163,
       "z": 0.0
     },
     "size": {
-      "x": 6.3,
-      "y": 6.1,
-      "z": 6.0
+      "x": 143.0,
+      "y": 70.0,
+      "z": 143.0
     },
     "rot_and_tra": [
+      90.0,
+      -60.0,
       0.0,
       0.0,
       0.0,
       0.0,
       0.0,
-      0.0,
-      180.0,
       0.0,
       0.0
     ],
-    "image": "Insert_RectangleDDOff",
+    "image": "Insert_Arrow1off4_180",
     "normal_map": "",
     "sides": 4,
     "name": "p18off",
-    "material": "InsertGreenOffTri",
+    "material": "InsertWhiteOffTri",
     "side_color": "#96009696",
     "is_visible": true,
     "draw_textures_inside": false,
-    "hit_event": false,
+    "hit_event": true,
     "threshold": 2.0,
     "elasticity": 0.3,
     "elasticity_falloff": 0.5,
@@ -43,7 +43,7 @@
     "static_rendering": false,
     "disable_lighting_top_old": null,
     "disable_lighting_top": 0.0,
-    "disable_lighting_below": 0.0,
+    "disable_lighting_below": 1.0,
     "is_reflection_enabled": false,
     "backfaces_enabled": false,
     "physics_material": "",
@@ -54,7 +54,7 @@
     "max_aa_bound": null,
     "mesh_file_name": "",
     "depth_bias": 1000.0,
-    "add_blend": false,
+    "add_blend": true,
     "use_depth_mask": true,
     "alpha": 100.0,
     "color": "#ff00ffff",

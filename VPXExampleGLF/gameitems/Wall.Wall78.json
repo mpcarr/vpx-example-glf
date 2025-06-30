@@ -25,7 +25,7 @@
     "scatter": 5.0,
     "is_top_bottom_visible": false,
     "slingshot_animation": true,
-    "is_side_visible": true,
+    "is_side_visible": false,
     "disable_lighting_top_old": null,
     "disable_lighting_top": 0.0,
     "disable_lighting_below": 0.0,
@@ -126,7 +126,7 @@
       },
       {
         "x": 319.10648,
-        "y": 1936.2925,
+        "y": 1938.395,
         "z": 0.0,
         "smooth": false,
         "is_slingshot": false,
@@ -138,8 +138,8 @@
         "editor_layer_visibility": true
       },
       {
-        "x": 22.692879,
-        "y": 1731.7642,
+        "x": 20.590279,
+        "y": 1743.3285,
         "z": 0.0,
         "smooth": false,
         "is_slingshot": false,

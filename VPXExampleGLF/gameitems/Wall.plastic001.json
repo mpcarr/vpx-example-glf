@@ -35,7 +35,7 @@
     "drag_points": [
       {
         "x": 633.40717,
-        "y": 204.56201,
+        "y": 209.3483,
         "z": 0.0,
         "smooth": false,
         "is_slingshot": false,
@@ -48,7 +48,7 @@
       },
       {
         "x": 633.40717,
-        "y": 268.06213,
+        "y": 272.84842,
         "z": 0.0,
         "smooth": false,
         "is_slingshot": false,
@@ -61,7 +61,7 @@
       },
       {
         "x": 673.65717,
-        "y": 268.06213,
+        "y": 272.84842,
         "z": 0.0,
         "smooth": false,
         "is_slingshot": false,
@@ -74,7 +74,7 @@
       },
       {
         "x": 673.65717,
-        "y": 204.56201,
+        "y": 209.3483,
         "z": 0.0,
         "smooth": false,
         "is_slingshot": false,

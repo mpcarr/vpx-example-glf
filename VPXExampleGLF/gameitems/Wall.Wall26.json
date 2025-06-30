@@ -20,7 +20,7 @@
     "slingshot_force": 80.0,
     "slingshot_threshold": 0.0,
     "elasticity": 0.3,
-    "elasticity_falloff": 0.0,
+    "elasticity_falloff": 0.9,
     "friction": 0.3,
     "scatter": 0.0,
     "is_top_bottom_visible": false,

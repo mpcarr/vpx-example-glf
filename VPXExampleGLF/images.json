@@ -2730,34 +2730,6 @@
     "bits": false
   },
   {
-    "name": "PFInsertOverlay",
-    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\InsertOverlay.png",
-    "width": 1804,
-    "height": 4096,
-    "alpha_test_value": 1.0,
-    "is_opaque": false,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\InsertOverlay.png",
-      "name": "InsertOverlay"
-    },
-    "bits": false
-  },
-  {
-    "name": "PF",
-    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\PF.png",
-    "width": 1804,
-    "height": 4096,
-    "alpha_test_value": 1.0,
-    "is_opaque": false,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\PF.png",
-      "name": "PF"
-    },
-    "bits": false
-  },
-  {
     "name": "vpwinstrcard",
     "path": "C:\\Users\\boss2\\Desktop\\vpwinstrcard.png",
     "width": 698,
@@ -2768,62 +2740,6 @@
     "jpeg": {
       "path": "C:\\Users\\boss2\\Desktop\\vpwinstrcard.png",
       "name": "vpwinstrcard"
-    },
-    "bits": false
-  },
-  {
-    "name": "PF-shadows",
-    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\PF-shadows.png",
-    "width": 1706,
-    "height": 3875,
-    "alpha_test_value": -1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\PF-shadows.png",
-      "name": "PF-shadows"
-    },
-    "bits": false
-  },
-  {
-    "name": "PF-shadows-DT1",
-    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\shadows\\PF-shadows-DT1.png",
-    "width": 1073,
-    "height": 1073,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\shadows\\PF-shadows-DT1.png",
-      "name": "PF-shadows-DT1"
-    },
-    "bits": false
-  },
-  {
-    "name": "PF-shadows-DT2",
-    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\shadows\\PF-shadows-DT2.png",
-    "width": 1073,
-    "height": 1073,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\shadows\\PF-shadows-DT2.png",
-      "name": "PF-shadows-DT2"
-    },
-    "bits": false
-  },
-  {
-    "name": "PF-shadows-DT3",
-    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\shadows\\PF-shadows-DT3.png",
-    "width": 1073,
-    "height": 1073,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\shadows\\PF-shadows-DT3.png",
-      "name": "PF-shadows-DT3"
     },
     "bits": false
   },
@@ -3048,6 +2964,20 @@
     "jpeg": {
       "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\NeoSegMap.png",
       "name": "NeoSegMap"
+    },
+    "bits": false
+  },
+  {
+    "name": "PF",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\PF.png",
+    "width": 1843,
+    "height": 4096,
+    "alpha_test_value": -1.0,
+    "is_opaque": false,
+    "is_signed": false,
+    "jpeg": {
+      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\PF.png",
+      "name": "PF"
     },
     "bits": false
   }

@@ -30,7 +30,7 @@
     "disable_lighting_top": 0.0,
     "disable_lighting_below": 1.0,
     "is_reflection_enabled": true,
-    "physics_material": "zCol_Metal",
+    "physics_material": "zCol_MetalFO",
     "overwrite_physics": false,
     "drag_points": [
       {
