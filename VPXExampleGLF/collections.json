@@ -816,7 +816,11 @@
       "L26",
       "L27",
       "L22",
-      "L21"
+      "L21",
+      "FL2",
+      "FL3",
+      "FL1",
+      "FL4"
     ],
     "fire_events": false,
     "stop_single_events": false,
