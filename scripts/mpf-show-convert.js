@@ -26,10 +26,15 @@ function convertFile(filePath, showName) {
         const entries = Object.entries(lights);
         entries.forEach(([name, color], index) => {
           const lineEnd = (index === entries.length - 1) ? '\n' : ', _\n';
-          output += `      "${name}|100|${color}"` + lineEnd;
+          if(lineEnd=='\n')
+          {
+            output += `      "${name}|100|${color}")\n`;
+          }else
+          {
+            output += `      "${name}|100|${color}"` + lineEnd;
+          }
+          
         });
-
-        output += `    )\n`; // Correct closing of the array
       }
 
       output += `  End With\n`;

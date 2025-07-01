@@ -345,6 +345,7 @@ Sub ConfigureGlfDevices
 
 
     ' Modes
+    CreateAttractMode()
     CreateBaseMode()
 
 
