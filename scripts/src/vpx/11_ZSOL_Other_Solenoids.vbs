@@ -64,12 +64,17 @@ End Sub
 
 
 
-'  Grab Magnet
-'******************************************* 
+'  Kickback Plunger
+'*******************************************
 
-Sub GrabMagnetAction(Enabled)
-	GrabMag.MagnetOn = Enabled
-end sub
+Sub SolKickback(enabled)
+	If enabled Then
+		PlungerKickback.Fire
+		SoundSaucerKick 1, s_LeftInOutlane
+	Else
+		PlungerKickback.PullBack
+	End If
+End Sub
 
 
 
@@ -89,6 +94,16 @@ Sub OpenDiverter(Enabled)
 	End If
 	DOF 111, DOFPulse
 End Sub
+
+
+
+
+'  Grab Magnet
+'******************************************* 
+
+Sub GrabMagnetAction(Enabled)
+	GrabMag.MagnetOn = Enabled
+end sub
 
 
 

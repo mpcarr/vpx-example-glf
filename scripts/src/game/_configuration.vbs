@@ -205,6 +205,15 @@ Sub ConfigureGlfDevices
     End With
 
 
+    ' Kickback
+    With CreateGlfDiverter("kickback1")
+        .EnableEvents = Array("ball_started","reset_complete","enable_kickback")
+        .ActivateEvents = Array("fire_kickback") 
+        .DeactivateEvents = Array("reset_kickback","ball_ended") 
+        .ActionCallback = "SolKickback"
+    End With
+    
+
     ' Diverter
     With CreateGlfDiverter("diverter1")
         .EnableEvents = Array("ball_started","reset_complete","enable_diverter")

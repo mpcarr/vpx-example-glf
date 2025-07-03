@@ -8,12 +8,13 @@ Sub CreateBaseMode()
 
         With .EventPlayer()
             'new ball
-            .Add "mode_base_started", Array("stop_attract_mode","close_diverter")
+            .Add "mode_base_started", Array("stop_attract_mode","close_diverter","reset_kickback")
             .Add "mode_base_started{current_player.number == 1}", Array("flash_player1_score")  'Events for flashing active player's score at start of mode
             .Add "mode_base_started{current_player.number == 2}", Array("flash_player2_score")
             .Add "mode_base_started{current_player.number == 3}", Array("flash_player3_score")
             .Add "mode_base_started{current_player.number == 4}", Array("flash_player4_score")
             .Add "s_Plunger1_inactive", Array("stop_flash_player1_score","stop_flash_player2_score","stop_flash_player3_score","stop_flash_player4_score")
+            '.Add "s_LeftInOutlane_inactive", Array("fire_kickback")
         End With
 
         With .LightPlayer()

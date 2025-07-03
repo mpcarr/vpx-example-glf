@@ -823,7 +823,13 @@
       "BL3",
       "BL2",
       "BL1",
-      "BL3a"
+      "BL3a",
+      "L33",
+      "L34",
+      "L35",
+      "L36",
+      "L37",
+      "L38"
     ],
     "fire_events": false,
     "stop_single_events": false,
