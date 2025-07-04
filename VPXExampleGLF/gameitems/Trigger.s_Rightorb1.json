@@ -1,0 +1,78 @@
+{
+  "Trigger": {
+    "center": {
+      "x": 864.8916,
+      "y": 579.4588
+    },
+    "radius": 25.0,
+    "rotation": 30.0,
+    "wire_thickness": 0.0,
+    "scale_x": 1.0,
+    "scale_y": 1.0,
+    "is_timer_enabled": false,
+    "timer_interval": 100,
+    "material": "Metal",
+    "surface": "",
+    "is_visible": true,
+    "is_enabled": true,
+    "hit_height": 50.0,
+    "name": "s_Rightorb1",
+    "shape": "wire_d",
+    "anim_speed": 1.0,
+    "is_reflection_enabled": true,
+    "drag_points": [
+      {
+        "x": 842.8926,
+        "y": 544.412,
+        "z": 0.0,
+        "smooth": false,
+        "is_slingshot": false,
+        "has_auto_texture": true,
+        "tex_coord": 0.0,
+        "is_locked": false,
+        "editor_layer": 0,
+        "editor_layer_name": "",
+        "editor_layer_visibility": true
+      },
+      {
+        "x": 819.18915,
+        "y": 592.21173,
+        "z": 0.0,
+        "smooth": false,
+        "is_slingshot": false,
+        "has_auto_texture": true,
+        "tex_coord": 0.0,
+        "is_locked": false,
+        "editor_layer": 0,
+        "editor_layer_name": "",
+        "editor_layer_visibility": true
+      },
+      {
+        "x": 884.1572,
+        "y": 624.6066,
+        "z": 0.0,
+        "smooth": false,
+        "is_slingshot": false,
+        "has_auto_texture": true,
+        "tex_coord": 0.0,
+        "is_locked": false,
+        "editor_layer": 0,
+        "editor_layer_name": "",
+        "editor_layer_visibility": true
+      },
+      {
+        "x": 906.2805,
+        "y": 575.2266,
+        "z": 0.0,
+        "smooth": false,
+        "is_slingshot": false,
+        "has_auto_texture": true,
+        "tex_coord": 0.0,
+        "is_locked": false,
+        "editor_layer": 0,
+        "editor_layer_name": "",
+        "editor_layer_visibility": true
+      }
+    ]
+  }
+}

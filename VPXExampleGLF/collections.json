@@ -142,7 +142,7 @@
     "name": "Rollovers",
     "items": [
       "s_Plunger1",
-      "s_Rightorb",
+      "s_Rightorb1",
       "s_LeftOrb2",
       "s_LeftOrb1",
       "s_LeftInOutlane",
@@ -845,7 +845,7 @@
       "s_Bumper2",
       "s_Bumper1",
       "s_Plunger1",
-      "s_Rightorb",
+      "s_Rightorb1",
       "s_LeftOrb2",
       "s_LeftOrb1",
       "s_LeftInOutlane",

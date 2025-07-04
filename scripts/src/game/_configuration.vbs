@@ -18,7 +18,7 @@ Sub ConfigureGlfDevices
     CreateGeneralShows()
 
     ' Load shared shot profiles
-    CreateSharedShotProfiles
+    CreateSharedShotProfiles()
 
 
     '*********** DEVICE CONFIGS ***********
