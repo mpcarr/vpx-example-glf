@@ -153,7 +153,8 @@
       "s_TopLane1",
       "GrabMagnet",
       "s_RightInlane",
-      "s_LeftInlane"
+      "s_LeftInlane",
+      "s_Rightorb2"
     ],
     "fire_events": true,
     "stop_single_events": false,
@@ -858,7 +859,8 @@
       "s_RightInlane",
       "s_LeftInlane",
       "s_Kicker2",
-      "s_Kicker1"
+      "s_Kicker1",
+      "s_Rightorb2"
     ],
     "fire_events": false,
     "stop_single_events": false,
