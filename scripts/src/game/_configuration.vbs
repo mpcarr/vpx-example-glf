@@ -6,16 +6,22 @@
 ' NOTE: switch and light names are case sensitive, so be aware of their names in VPX.
 
 
+' Color definitions used througout the game
 Const SegmentsColor = "ff0000"
 
 
 Sub ConfigureGlfDevices
 
+    '*********** SHOWS ***********
 
     ' Load up the shows
-    ' CreateGeneralShows()
+    CreateGeneralShows()
+
+    ' Load shared shot profiles
+    CreateSharedShotProfiles
 
 
+    '*********** DEVICE CONFIGS ***********
 
     ' Plunger
     'NOTE: Plunger switch SHOULD be added to the glf_switches collection (along with all other rollover switches) 
@@ -307,6 +313,8 @@ Sub ConfigureGlfDevices
     segment_display_all.ExternalFlexDmdSegmentIndex = 0
 
 
+    '*********** SOUND EFFECTS ***********
+
     ' Sound effects bus
     ' CreateSounds()
 
@@ -331,6 +339,27 @@ Sub ConfigureGlfDevices
     AddPinEventListener GLF_BALL_DRAIN, "ball_drain_sound", "BallDrainSound", 100, Null
 
 
+    '*********** MODES ***********
+
+
+    ' Ball search
+    ' With EnableGlfBallSearch()
+    '     .Timeout = 15000
+    '     .SearchInterval = 300
+    '     .BallSearchWaitAfterIteration = 5000
+    ' End With
+
+
+
+    ' Modes
+    CreateAttractMode()
+    CreateBaseMode()
+    CreateKickbackMode()
+
+
+
+    '*********** VARIABLES ***********
+
     ' High Scores
     With EnableGlfHighScores()
         With .Categories()
@@ -343,20 +372,6 @@ Sub ConfigureGlfDevices
             .Add "PUP", 500000
         End With
     End With
-
-
-    ' Ball search
-    ' With EnableGlfBallSearch()
-    '     .Timeout = 15000
-    '     .SearchInterval = 300
-    '     .BallSearchWaitAfterIteration = 5000
-    ' End With
-
-
-    ' Modes
-    CreateAttractMode()
-    CreateBaseMode()
-
 
 
     ' Machine variables
