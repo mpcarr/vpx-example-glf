@@ -60,7 +60,9 @@
       "RubberBand003",
       "Wall005",
       "RubberBand001",
-      "RubberBand006"
+      "RubberBand006",
+      "zCol_Rubber_Post025",
+      "RubberBand012"
     ],
     "fire_events": true,
     "stop_single_events": false,
@@ -198,7 +200,8 @@
       "zCol_Rubber_Post001",
       "zCol_Rubber_Peg004",
       "zCol_Rubber_Post007",
-      "zCol_Rubber_Post008"
+      "zCol_Rubber_Post008",
+      "zCol_Rubber_Post025"
     ],
     "fire_events": true,
     "stop_single_events": false,

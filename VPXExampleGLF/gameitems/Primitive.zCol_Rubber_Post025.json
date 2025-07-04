@@ -1,8 +1,8 @@
 {
   "Primitive": {
     "position": {
-      "x": 76.92427,
-      "y": 1133.8204,
+      "x": 77.16183,
+      "y": 1197.3132,
       "z": 25.0
     },
     "size": {
@@ -24,7 +24,7 @@
     "image": "",
     "normal_map": "",
     "sides": 30,
-    "name": "zCol_Rubber_Post035",
+    "name": "zCol_Rubber_Post025",
     "material": "zCol_RubberPosts",
     "side_color": "#96009696",
     "is_visible": false,
