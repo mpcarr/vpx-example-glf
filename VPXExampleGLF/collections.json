@@ -142,7 +142,7 @@
     "name": "Rollovers",
     "items": [
       "s_Plunger1",
-      "s_Rightorb1",
+      "s_RightOrb1",
       "s_LeftOrb2",
       "s_LeftOrb1",
       "s_LeftInOutlane",
@@ -154,7 +154,7 @@
       "GrabMagnet",
       "s_RightInlane",
       "s_LeftInlane",
-      "s_Rightorb2"
+      "s_RightOrb2"
     ],
     "fire_events": true,
     "stop_single_events": false,
@@ -846,7 +846,7 @@
       "s_Bumper2",
       "s_Bumper1",
       "s_Plunger1",
-      "s_Rightorb1",
+      "s_RightOrb1",
       "s_LeftOrb2",
       "s_LeftOrb1",
       "s_LeftInOutlane",
@@ -860,7 +860,7 @@
       "s_LeftInlane",
       "s_Kicker2",
       "s_Kicker1",
-      "s_Rightorb2"
+      "s_RightOrb2"
     ],
     "fire_events": false,
     "stop_single_events": false,

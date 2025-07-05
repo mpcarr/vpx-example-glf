@@ -10192,7 +10192,7 @@
     "editor_layer_visibility": true
   },
   {
-    "file_name": "Trigger.s_Rightorb1.json",
+    "file_name": "Trigger.s_RightOrb1.json",
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Triggers",
@@ -10941,7 +10941,7 @@
     "editor_layer_visibility": true
   },
   {
-    "file_name": "Trigger.s_Rightorb2.json",
+    "file_name": "Trigger.s_RightOrb2.json",
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Triggers",

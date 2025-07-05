@@ -2,23 +2,104 @@
 '******************************************************
 '	ZGCF:  GLF Configurations
 '******************************************************
-
+'
+' Initialize the following:
+'   - Shows
+'   - Modes
+'   - High Scores
+'   - Machine Variables 
+'   - Player Variables 
+'   - Device Configs
+'   - Alphanumeric Displays 
+'   - Sound effects and music
+'   - Shared Shot Profiles
+'
 ' NOTE: switch and light names are case sensitive, so be aware of their names in VPX.
 
 
 ' Color definitions used througout the game
+Const GIColorWhite = "ffffff"
+Const GIColor2700k = "ffA957"
+Const GIColor3000k = "ffb46b"
 Const SegmentsColor = "ff0000"
+Const ShootAgainColor = "00ff00"
+Const KickbackColor = "dd2211"
 
 
-Sub ConfigureGlfDevices
 
-    '*********** SHOWS ***********
+Sub ConfigureGlfDevices()
+
+    '*********** INITALIZE SHOWS ***********
 
     ' Load up the shows
     CreateGeneralShows()
 
     ' Load shared shot profiles
     CreateSharedShotProfiles()
+
+
+    '*********** INITALIZE MODES ***********
+
+    ' Modes
+    CreateAttractMode()
+    CreateBaseMode()
+    CreateKickbackMode()
+
+
+    ' Ball search
+    ' With EnableGlfBallSearch()
+    '     .Timeout = 15000
+    '     .SearchInterval = 300
+    '     .BallSearchWaitAfterIteration = 5000
+    ' End With
+
+
+
+    '*********** INITALIZE HIGH SCORES ***********
+
+    ' High Scores
+    With EnableGlfHighScores()
+        With .Categories()
+            .Add "score", Array("GRAND CHAMPION", "HIGH SCORE 1", "HIGH SCORE 2", "HIGH SCORE 3") 
+        End With
+        With .Defaults("score")
+            .Add "DAN", 5000000
+            .Add "MPC", 2000000
+            .Add "LFS", 1000000
+            .Add "PUP", 500000
+        End With
+    End With
+
+
+
+    '*********** INITALIZE MACHINE VARIABLES ***********
+
+
+    With CreateMachineVar("high_score_initials")
+        .InitialValue = ""
+        .ValueType = "string"
+        .Persist = False
+    End With
+    With CreateMachineVar("high_score_initials_index")
+        .InitialValue = 0
+        .ValueType = "int"
+        .Persist = False
+    End With
+    With CreateMachineVar("high_score_initials_chars")
+        .InitialValue = 0
+        .ValueType = "int"
+        .Persist = False
+    End With
+
+
+
+'*********** INITALIZE PLAYER VARIABLES ***********
+
+
+    Glf_SetInitialPlayerVar "ball_just_started", 1
+
+
+
 
 
     '*********** DEVICE CONFIGS ***********
@@ -240,9 +321,8 @@ Sub ConfigureGlfDevices
     End With
 
 
+  '*********** INITALIZE ALPHANUMERIC DISPLAYS ***********
 
-
-    ' Alphanumeric displays
 
     Dim segment_display_ball
     Set segment_display_ball = (New GlfLightSegmentDisplay)("ball")
@@ -313,7 +393,8 @@ Sub ConfigureGlfDevices
     segment_display_all.ExternalFlexDmdSegmentIndex = 0
 
 
-    '*********** SOUND EFFECTS ***********
+    '*********** INITALIZE SOUND EFFECTS ***********
+
 
     ' Sound effects bus
     ' CreateSounds()
@@ -339,63 +420,6 @@ Sub ConfigureGlfDevices
     AddPinEventListener GLF_BALL_DRAIN, "ball_drain_sound", "BallDrainSound", 100, Null
 
 
-    '*********** MODES ***********
-
-
-    ' Ball search
-    ' With EnableGlfBallSearch()
-    '     .Timeout = 15000
-    '     .SearchInterval = 300
-    '     .BallSearchWaitAfterIteration = 5000
-    ' End With
-
-
-
-    ' Modes
-    CreateAttractMode()
-    CreateBaseMode()
-    CreateKickbackMode()
-
-
-
-    '*********** VARIABLES ***********
-
-    ' High Scores
-    With EnableGlfHighScores()
-        With .Categories()
-            .Add "score", Array("GRAND CHAMPION", "HIGH SCORE 1", "HIGH SCORE 2", "HIGH SCORE 3") 
-        End With
-        With .Defaults("score")
-            .Add "DAN", 5000000
-            .Add "MPC", 2000000
-            .Add "LFS", 1000000
-            .Add "PUP", 500000
-        End With
-    End With
-
-
-    ' Machine variables
-    With CreateMachineVar("high_score_initials")
-        .InitialValue = ""
-        .ValueType = "string"
-        .Persist = False
-    End With
-    With CreateMachineVar("high_score_initials_index")
-        .InitialValue = 0
-        .ValueType = "int"
-        .Persist = False
-    End With
-    With CreateMachineVar("high_score_initials_chars")
-        .InitialValue = 0
-        .ValueType = "int"
-        .Persist = False
-    End With
-
-
-    ' Initial Vars
-    Glf_SetInitialPlayerVar "test_var", 0
-
-
 End Sub
 
 
@@ -417,68 +441,92 @@ End Function
 ' Shared profile examples
 Public Sub CreateSharedShotProfiles()
 
+
+    'This shot profile is used turn on a light. 
+    'The "lights" and "color" tokens must be defined in Shot.
+    ' States:
+    '  0 - unlit
+    '  1 - on
     With GlfShotProfiles("off_on_color")
         With .States("unlit")
-            .Show = "off"
+            .Show = "off"                   'defined in glf
             .Key = "key_off_on_color_unlit"
         End With
         With .States("on")
-            .Show = "led_color"
+            .Show = "led_color"             'defined in glf
             .Key = "key_off_on_color_on"
         End With
     End With
 
+
+    'This shot profile is used turn on a light with a flickering effect. 
+    'The "lights" and "color" tokens must be defined in Shot.
+    ' States:
+    '  0 - unlit
+    '  1 - on
+    With GlfShotProfiles("flicker_on")
+        With .States("unlit")
+            .Show = "off"                   'defined in glf
+            .Key = "key_flicker_on_unlit"
+        End With
+        With .States("on")
+            .Show = "flicker_color_on"      'defined in CreateGeneralShows()
+            .Key = "key_flicker_on_on"
+            .Speed = 4
+        End With
+    End With
+
+
+    'This shot profile turns a light on initially with a flickering effect then turns off with a flickering effect. 
+    'The "lights" and "color" tokens must be defined in Shot.
+    ' States:
+    '  0 - lit
+    '  1 - unlit
     With GlfShotProfiles("flicker_on_flicker_off")
         With .States("lit")
-            .Show = "flicker_color_on"
+            .Show = "flicker_color_on"      'defined in CreateGeneralShows()
             .Key = "key_flicker_on_flicker_off_lit"
             .Speed = 3
         End With
         With .States("unlit")
-            .Show = "flicker_color_off"
+            .Show = "flicker_color_off"     'defined in CreateGeneralShows()
             .Speed = 3
             .Key = "key_flicker_on_flicker_off_unlit"
         End With
     End With
 
-    With GlfShotProfiles("flicker_on")
-        With .States("unlit")
-            .Show = "off"
-            .Key = "key_flicker_on_unlit"
-        End With
-        With .States("on")
-            .Show = "flicker_color_on"
-            .Key = "key_flicker_on_on"
-            .Speed = 4
-        End With
-    End With
-    
+
+    'This shot profile is used to indicate when a ball save is active. Light L03 is always used.
+    'The "color" token must be defined in shot.
+    ' States:
+    '  0 - unlit
+    '  1 - flashing
+    '  2 - hurry
     With GlfShotProfiles("shoot_again")
       With .States("unlit")
-          .Show = "off"
+          .Show = "off"                     'defined in glf
           .Key = "key_shoot_again_unlit"
-          '.Priority = 5000
           With .Tokens()
-              .Add "lights", "LSA"
+              .Add "lights", "L03"
           End With
       End With
       With .States("flashing")
-          .Show = "flash_color_with_fade"
+          .Show = "flash_color_with_fade"   'defined in CreateGeneralShows()
           .Key = "key_shoot_again_flashing"
           .Speed = 2
           .Priority = 5000
           With .Tokens()
-              .Add "lights", "LSA"
+              .Add "lights", "L03"
               .Add "fade", 500
           End With
       End With
       With .States("hurry")
-          .Show = "flash_color"
+          .Show = "flash_color"             'defined in glf
           .Key = "key_shoot_again_hurry"
           .Speed = 7
           .Priority = 5000
           With .Tokens()
-              .Add "lights", "LSA"
+              .Add "lights", "L03"
           End With
       End With
     End With

@@ -13,7 +13,7 @@
     "side_material": "Metal0.2",
     "top_material": "Metal0.2",
     "slingshot_material": "",
-    "height_bottom": 0.0,
+    "height_bottom": -1.0,
     "height_top": 50.0,
     "name": "DiverterWall1",
     "display_texture": false,

@@ -16,7 +16,7 @@
     "is_visible": true,
     "is_enabled": true,
     "hit_height": 50.0,
-    "name": "s_Rightorb1",
+    "name": "s_RightOrb1",
     "shape": "wire_d",
     "anim_speed": 1.0,
     "is_reflection_enabled": true,
