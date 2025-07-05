@@ -35,7 +35,7 @@ Sub CreateBaseMode()
         With .EventPlayer()
 
             'handle start of mode (new ball)
-            .Add "mode_base_started", Array("stop_attract_mode","close_diverter")
+            .Add "mode_base_started", Array("new_ball_started","stop_attract_mode","close_diverter")
             .Add "s_Plunger1_inactive{current_player.ball_just_started == 1}", Array("new_ball_active")
 
             'Events for flashing active player's score at start of mode

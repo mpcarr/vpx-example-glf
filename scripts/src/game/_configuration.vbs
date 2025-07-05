@@ -24,7 +24,7 @@ Const GIColor3000k = "ffb46b"
 Const SegmentsColor = "ff0000"
 Const ShootAgainColor = "00ff00"
 Const KickbackColor = "dd2211"
-
+Const SkillshotColor = "eff542"
 
 
 Sub ConfigureGlfDevices()
@@ -43,7 +43,9 @@ Sub ConfigureGlfDevices()
     ' Modes
     CreateAttractMode()
     CreateBaseMode()
+    CreateSkillshotsMode()
     CreateKickbackMode()
+
 
 
     ' Ball search
