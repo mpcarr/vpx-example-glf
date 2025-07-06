@@ -1,0 +1,9 @@
+res://slides/attract.tscn
+res://addons/mpf-gmc/resources/textinput_highlight_material.tres
+res://addons/mpf-gmc/slides/service/service_theme.tres
+res://addons/mpf-gmc/slides/window.tscn
+res://addons/mpf-gmc/slides/service.tscn
+res://addons/mpf-gmc/slides/startup.tscn
+res://addons/mpf-gmc/slides/startup.gd
+res://addons/mpf-gmc/slides/right_click_menu.gd
+res://slides/base.tscn
