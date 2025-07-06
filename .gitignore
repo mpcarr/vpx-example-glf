@@ -10,7 +10,7 @@ mpf-vpcom-bridge.txt
 *.ini
 mpf080
 *.exe
-*.exe.lnk
+*.lnk
 *.pck
 *.log
 bcplog.txt
