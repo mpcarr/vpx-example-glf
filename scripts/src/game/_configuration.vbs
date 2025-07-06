@@ -27,6 +27,8 @@ Const ExtraBallColor = "00ff00"
 Const KickbackColor = "dd2211"
 Const SkillshotColor = "eff542"
 Const TargetBankColor = "0023cc"
+Const InlaneshotColor = "8800ff"
+
 
 Const SegmentsColor = "ff0000"
 
@@ -51,6 +53,7 @@ Sub ConfigureGlfDevices()
     CreateKickbackMode()
     CreateTargetBankMode()
     CreateExtraBallMode()
+    CreateInlaneshotsMode()
 
 
     ' Ball search

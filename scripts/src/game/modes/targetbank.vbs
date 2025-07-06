@@ -110,7 +110,7 @@ Sub CreateTargetBankMode()
             Next
             With .States("completed")
                 .Label = "Bank Targets Completed"
-                .EventsWhenStarted = Array("eb_now_lit") 
+                .EventsWhenStarted = Array("eb_now_lit","add_bonus") 
             End With
 
             'Transitions

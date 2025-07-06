@@ -38,6 +38,9 @@ Sub CreateKickbackMode()
             'Give some grace time such that the kickback can be used again right after it was fired.
             .Add "timer_kickback_cooldown_complete", Array("restart_kickback_qualify_shots")
 
+            'Add some points and bonus when top lanes completed
+            .Add "qualify_kickback_on_complete", Array("add_bonus")
+
         End With
 
 

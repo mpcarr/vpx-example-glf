@@ -33,7 +33,7 @@ Sub CreateSkillshotsMode()
             .Add "s_TopLane2_active{current_player.shot_ss2 == 1}", Array("ss_achieved")
             .Add "s_TopLane3_active{current_player.shot_ss3 == 1}", Array("ss_achieved")
             .Add "s_TopLane4_active{current_player.shot_ss4 == 1}", Array("ss_achieved")
-            .Add "ss_achieved", Array("stop_skillshots")
+            .Add "ss_achieved", Array("stop_skillshots","add_bonus")
 
             'Stop skillshots if orbit lanes are hit, or if timer runs out for some reason
             .Add "s_LeftOrb1_active", Array("stop_skillshots")

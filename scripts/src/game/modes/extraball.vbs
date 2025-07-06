@@ -54,7 +54,7 @@ Sub CreateExtraBallMode()
     
         'Define the shot that awards the extra ball
         With .Shots("eb_ready")
-            .Profile = "eb_ready"
+            .Profile = "eb_ready"  'defined below
             'Light the extra ball ready shot if there are still more EBs available
             With .ControlEvents()
                 .Events = Array("eb_now_lit{current_player.extra_ball_eb_awarded < "&MaxEBs&"}")
@@ -88,7 +88,7 @@ Sub CreateExtraBallMode()
 
         'Define the shot that is lit when EB has been achieved
         With .Shots("eb_shoot_again")
-            .Profile = "eb_shoot_again"
+            .Profile = "eb_shoot_again"   'defined below
             'Light the shoot again light once EB has been achieved, or when being initialized as lit
             With .ControlEvents()
                 .Events = Array("eb_achieved","eb_lit")
