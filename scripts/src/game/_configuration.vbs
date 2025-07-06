@@ -25,6 +25,7 @@ Const SegmentsColor = "ff0000"
 Const ShootAgainColor = "00ff00"
 Const KickbackColor = "dd2211"
 Const SkillshotColor = "eff542"
+Const TargetBankColor = "0023cc"
 
 
 Sub ConfigureGlfDevices()
@@ -45,6 +46,7 @@ Sub ConfigureGlfDevices()
     CreateBaseMode()
     CreateSkillshotsMode()
     CreateKickbackMode()
+    CreateTargetBankMode()
 
 
 
@@ -95,10 +97,11 @@ Sub ConfigureGlfDevices()
 
 
 
-'*********** INITALIZE PLAYER VARIABLES ***********
+    '*********** INITALIZE PLAYER VARIABLES ***********
 
 
     Glf_SetInitialPlayerVar "ball_just_started", 1
+    Glf_SetInitialPlayerVar "target_hit_count", 0
 
 
 
@@ -164,7 +167,7 @@ Sub ConfigureGlfDevices()
     With CreateGlfDroptarget("drop1")
         .Switch = "s_DT1"
         .KnockdownEvents = Array("DT1_knockdown")
-        .ResetEvents = Array("ball_started")
+        .ResetEvents = Array("ball_started","reset_target_bank")
         .ActionCallback = "DT1Callback"
         .UseRothDroptarget = True
         .RothDTSwitchID = 1
@@ -173,7 +176,7 @@ Sub ConfigureGlfDevices()
     With CreateGlfDroptarget("drop2")
         .Switch = "s_DT2"
         .KnockdownEvents = Array("DT2_knockdown")
-        .ResetEvents = Array("ball_started")
+        .ResetEvents = Array("ball_started","reset_target_bank")
         .ActionCallback = "DT2Callback"
         .UseRothDroptarget = True
         .RothDTSwitchID = 2
@@ -182,7 +185,7 @@ Sub ConfigureGlfDevices()
     With CreateGlfDroptarget("drop3")
         .Switch = "s_DT3"
         .KnockdownEvents = Array("DT3_knockdown")
-        .ResetEvents = Array("ball_started")
+        .ResetEvents = Array("ball_started","reset_target_bank")
         .ActionCallback = "DT3Callback"
         .UseRothDroptarget = True
         .RothDTSwitchID = 3
@@ -191,7 +194,7 @@ Sub ConfigureGlfDevices()
     With CreateGlfDroptarget("drop4")
         .Switch = "s_DT4"
         .KnockdownEvents = Array("DT4_knockdown")
-        .ResetEvents = Array("ball_started")
+        .ResetEvents = Array("ball_started","reset_target_bank")
         .ActionCallback = "DT4Callback"
         .UseRothDroptarget = True
         .RothDTSwitchID = 4
@@ -200,7 +203,7 @@ Sub ConfigureGlfDevices()
     With CreateGlfDroptarget("drop5")
         .Switch = "s_DT5"
         .KnockdownEvents = Array("DT5_knockdown")
-        .ResetEvents = Array("ball_started")
+        .ResetEvents = Array("ball_started","reset_target_bank")
         .ActionCallback = "DT5Callback"
         .UseRothDroptarget = True
         .RothDTSwitchID = 5
@@ -209,7 +212,7 @@ Sub ConfigureGlfDevices()
     With CreateGlfDroptarget("drop6")
         .Switch = "s_DT6"
         .KnockdownEvents = Array("DT6_knockdown")
-        .ResetEvents = Array("ball_started")
+        .ResetEvents = Array("ball_started","reset_target_bank")
         .ActionCallback = "DT6Callback"
         .UseRothDroptarget = True
         .RothDTSwitchID = 6
