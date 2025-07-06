@@ -20,7 +20,7 @@
 
 Sub CreateBaseMode()
 
-    With CreateGlfMode("base", 100)
+    With CreateGlfMode("base", 110)
 
         'Define the events that start and stop this mode
         .StartEvents = Array("ball_started")
@@ -43,6 +43,13 @@ Sub CreateBaseMode()
 
         End With
 
+        'Start the base mode slide on the lcd
+        With .SlidePlayer()
+            With .EventName("mode_base_started")
+                .Slide = "base"
+                .Action = "play"
+            End With
+        End With
 
         'Start a ball save at beginning of new ball. Only save one ball.
         With .BallSaves("new_ball")
