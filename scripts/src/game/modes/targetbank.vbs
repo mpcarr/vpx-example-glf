@@ -5,8 +5,8 @@
 '  - This mode provides a simple example of how to use a state machine
 '  - Drop the flashing drop target in order, starting with 1 and going up to 6. Next to drop is flashing.
 '  - If a target is dropped out of order, all targets must be dropped to reset the bank such that the flashing target is available to hit again.
-'  - An extra ball is awarded once all six lit targets are hit. Max of 3 EBs.
-'  - The process restarts once an EB is awarded
+'  - An extra ball is qualified once all six lit targets are hit. Max of 3 EBs.
+'  - The process restarts once an EB is acquired
 
 
 Dim TargetBankSwitches, TargetBankLightNames
@@ -45,7 +45,7 @@ Sub CreateTargetBankMode()
         'define the bank target shots
         For x = 1 to 6
             With .Shots("bank_target"&x)
-                .Profile = "bank"
+                .Profile = "bank_target"
                 With .Tokens()
                     .Add "lights", TargetBankLightNames(x-1)
                 End With
@@ -66,7 +66,7 @@ Sub CreateTargetBankMode()
 
 
         'Define bank target shot profile with three states (0 = unlit, 1 = flashing, 2 = lit)
-        With .ShotProfiles("bank")
+        With .ShotProfiles("bank_target")
             With .States("unlit")
                 .Key = "key_bank_target_unlit"
                 .Show = "off"
@@ -110,7 +110,7 @@ Sub CreateTargetBankMode()
             Next
             With .States("completed")
                 .Label = "Bank Targets Completed"
-                .EventsWhenStarted = Array("delay_bank_reset","award_eb") 
+                .EventsWhenStarted = Array("eb_now_lit") 
             End With
 
             'Transitions
@@ -131,17 +131,17 @@ Sub CreateTargetBankMode()
             With .Transitions()
                 .Source = Array("completed")
                 .Target = "shot1"
-                .Events = Array("timer_bank_reset_complete")   'target hit and is flashing
-                .EventsWhenTransitioning = Array("reset_target_shots")  'resets shot lights
+                .Events = Array("eb_achieved")   'eb achieved, so reset the bank and shots
+                .EventsWhenTransitioning = Array("delay_bank_reset","reset_target_shots")  'resets shot lights
             End With
         End With
 
 
         'Timer for delaying the target bank reset
         With .Timers("bank_reset")
-            .TickInterval = 1000
+            .TickInterval = 500
             .StartValue = 0
-            .EndValue = 2
+            .EndValue = 1
             With .ControlEvents()
                 .EventName = "delay_bank_reset"
                 .Action = "restart"
