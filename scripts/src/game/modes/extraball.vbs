@@ -4,7 +4,7 @@
 '
 '  - This mode handles adding and using extra balls
 '  - When "eb_now_lit" event is dispatched, and there are still EBs available to collect, then light the EB target
-'  - When EB target is lit and hit, the collect the EB
+'  - When EB target is lit and hit, then collect the EB
 
 
 Const MaxEBs = 3
@@ -119,28 +119,28 @@ Sub CreateExtraBallMode()
         End With
 
         
-        ' With .SegmentDisplayPlayer()
-        '     With .EventName("play_eb_show")
-        '         With .Display("player1")
-        '             .Text = """"""
-        '             .Expire = EBShowLength
-        '         End With
-        '         With .Display("player2")
-        '             .Text = """ EXTRA """
-        '             .Flashing = "all"
-        '             .Expire = EBShowLength
-        '         End With
-        '         With .Display("player3")
-        '             .Text = """ BALL """
-        '             .Flashing = "all"
-        '             .Expire = EBShowLength
-        '         End With
-        '         With .Display("player4")
-        '             .Text = """"""
-        '             .Expire = EBShowLength
-        '         End With
-        '     End With
-        ' End With
+        With .SegmentDisplayPlayer()
+            With .EventName("play_eb_show")
+                With .Display("player1")
+                    .Text = """"""
+                    .Expire = EBShowLength
+                End With
+                With .Display("player2")
+                    .Text = """ EXTRA """
+                    .Flashing = "all"
+                    .Expire = EBShowLength
+                End With
+                With .Display("player3")
+                    .Text = """ BALL """
+                    .Flashing = "all"
+                    .Expire = EBShowLength
+                End With
+                With .Display("player4")
+                    .Text = """"""
+                    .Expire = EBShowLength
+                End With
+            End With
+        End With
 
 
     End With

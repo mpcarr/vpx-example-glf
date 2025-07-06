@@ -114,30 +114,21 @@ Sub CreateBaseMode()
         'The segement display player sets the segement displays
         With .SegmentDisplayPlayer()
 
-            'Show the players score on segment displays at start of mode
             With .EventName("mode_base_started")
+                'Show the players score on segment displays at start of mode
                 With .Display("player1")
                     .Text = "{players[0].score:0>2,}"
                 End With
-            End With
-            With .EventName("mode_base_started")
                 With .Display("player2")
                     .Text = "{players[1].score:0>2,}"
                 End With
-            End With
-            With .EventName("mode_base_started")
                 With .Display("player3")
                     .Text = "{players[2].score:0>2,}"
                 End With
-            End With
-            With .EventName("mode_base_started")
                 With .Display("player4")
                     .Text = "{players[3].score:0>2,}"
                 End With
-            End With
-
-            'Set up the current ball number display
-            With .EventName("mode_base_started")
+                'Set up the current ball number display
                 With .Display("ball")
                     .Text = "{current_player.ball:0>2}"
                 End With
