@@ -2973,7 +2973,7 @@
     "width": 1843,
     "height": 4096,
     "alpha_test_value": -1.0,
-    "is_opaque": null,
+    "is_opaque": false,
     "is_signed": false,
     "jpeg": {
       "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\PF.png",

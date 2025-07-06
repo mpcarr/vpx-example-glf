@@ -9,7 +9,7 @@
     "z_adjust": 0.0,
     "stroke": 155.0,
     "speed_pull": 0.25,
-    "speed_fire": 130.0,
+    "speed_fire": 110.0,
     "plunger_type": "custom",
     "anim_frames": 1,
     "material": "Plastic with an image",

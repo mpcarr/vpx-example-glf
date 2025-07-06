@@ -12,12 +12,8 @@
 '   - player score segment displays
 
 
-'   - starting/stopping wizard modes
-'   - controls starting of other main modes
-'   - delayed moon ball release
 '   - scoop holds
-'   - wave shot lights across all waves
-'   - some sound effects and wave music
+'   - some sound effects and music
 '   - some light shows
 '   - some minor scoring
 
@@ -35,7 +31,7 @@ Sub CreateBaseMode()
         With .EventPlayer()
 
             'handle start of mode (new ball)
-            .Add "mode_base_started", Array("new_ball_started","stop_attract_mode","close_diverter")
+            .Add "mode_base_started", Array("new_ball_started","stop_attract_mode")
             .Add "s_Plunger1_inactive{current_player.ball_just_started == 1}", Array("new_ball_active")
 
             'Events for flashing active player's score at start of mode

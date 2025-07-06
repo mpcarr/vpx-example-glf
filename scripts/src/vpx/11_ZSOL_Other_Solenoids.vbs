@@ -24,7 +24,7 @@ End Sub
 Sub Kicker1EjectCallback(ball)
 	Dim ang, vel
 	If s_Kicker1.BallCntOver > 0 Then
-		ang = 160 + KickerAngleTol*2*(rnd-0.5)
+		ang = -85 + KickerAngleTol*2*(rnd-0.5)
 		vel = 25.0 + KickerStrengthTol*2*(rnd-0.5)
 		KickBall ball, ang, vel, 5, 25
 		SoundSaucerKick 1, s_Kicker1
@@ -34,10 +34,11 @@ Sub Kicker1EjectCallback(ball)
 	DOF 109, DOFPulse
 End Sub
 
+
 Sub Kicker2EjectCallback(ball)
 	Dim ang, vel
 	If s_Kicker2.BallCntOver > 0 Then
-		ang = -85 + KickerAngleTol*2*(rnd-0.5)
+		ang = 160 + KickerAngleTol*2*(rnd-0.5)
 		vel = 25.0 + KickerStrengthTol*2*(rnd-0.5)
 		KickBall ball, ang, vel, 5, 25
 		SoundSaucerKick 1, s_Kicker2
@@ -46,6 +47,7 @@ Sub Kicker2EjectCallback(ball)
 	End If
 	DOF 109, DOFPulse
 End Sub
+
 
 
 

@@ -28,7 +28,8 @@ Const KickbackColor = "dd2211"
 Const SkillshotColor = "eff542"
 Const TargetBankColor = "0023cc"
 Const InlaneshotColor = "8800ff"
-
+Const MultiballColor = "ffA957"
+Const JackpotColor = "fc9403"
 
 Const SegmentsColor = "ff0000"
 
@@ -54,6 +55,7 @@ Sub ConfigureGlfDevices()
     CreateTargetBankMode()
     CreateExtraBallMode()
     CreateInlaneshotsMode()
+    CreateMultiballMode()
 
 
     ' Ball search
@@ -156,6 +158,7 @@ Sub ConfigureGlfDevices()
         .BallSwitches = Array("s_Kicker1")
         .EjectTimeout = 2000
         .MechanicalEject = True
+        .EjectAllEvents = Array("eject_top_lock")
 		.EjectCallback = "Kicker1EjectCallback"
     End With
 
@@ -163,7 +166,14 @@ Sub ConfigureGlfDevices()
         .BallSwitches = Array("s_Kicker2")
         .EjectTimeout = 2000
         .MechanicalEject = True
+        .EjectAllEvents = Array("eject_bottom_lock")
 		.EjectCallback = "Kicker2EjectCallback"
+    End With
+
+
+    'Multiball locks
+    With CreateGlfBallDevice("kicker_locks")
+        .BallSwitches = Array("s_Kicker1","s_Kicker2")
     End With
 
 

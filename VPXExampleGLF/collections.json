@@ -859,8 +859,8 @@
       "GrabMagnet",
       "s_RightInlane",
       "s_LeftInlane",
-      "s_Kicker2",
       "s_Kicker1",
+      "s_Kicker2",
       "s_RightOrb2"
     ],
     "fire_events": false,
