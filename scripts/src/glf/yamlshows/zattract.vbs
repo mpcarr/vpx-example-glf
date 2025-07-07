@@ -1,6 +1,6 @@
 With CreateGlfShow("attract")
     With .AddStep(Null, Null, 1)   
-        With .Shows("sweep_down")
+        With .Shows("sweep_up")
             .Key = "key_show_sweep_down_red"
             .Speed = 1
             .Loops = 0
@@ -10,7 +10,7 @@ With CreateGlfShow("attract")
         End With
     End With
     With .AddStep(Null, Null, 1)
-        With .Shows("sweep_down")
+        With .Shows("sweep_up")
             .Key = "key_show_sweep_down_green"
             .Speed = 1
             .Loops = 0
@@ -20,7 +20,7 @@ With CreateGlfShow("attract")
         End With
     End With
     With .AddStep(Null, Null, 2)
-        With .Shows("sweep_down")
+        With .Shows("sweep_up")
             .Key = "key_show_sweep_down_blue"
             .Speed = 1
             .Loops = 0
@@ -56,6 +56,36 @@ With CreateGlfShow("attract")
             .Loops = 0
             With .Tokens()
                 .Add "color", "FFFFFF"
+            End With
+        End With
+    End With
+    With .AddStep(Null, Null, 1)
+        With .Shows("radial_out")
+            .Key = "key_show_radial_out_1"
+            .Speed = 1
+            .Loops = 0
+            With .Tokens()
+                .Add "color", "FF00FF"
+            End With
+        End With
+    End With
+    With .AddStep(Null, Null, 1)
+        With .Shows("radial_out")
+            .Key = "key_show_radial_out_2"
+            .Speed = 1
+            .Loops = 0
+            With .Tokens()
+                .Add "color", "00FFFF"
+            End With
+        End With
+    End With
+    With .AddStep(Null, Null, 4)
+        With .Shows("radial_out")
+            .Key = "key_show_radial_out_3"
+            .Speed = 1
+            .Loops = 0
+            With .Tokens()
+                .Add "color", "FFFF00"
             End With
         End With
     End With
