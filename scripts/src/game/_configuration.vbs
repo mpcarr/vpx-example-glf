@@ -178,13 +178,6 @@ Sub ConfigureGlfDevices()
     End With
 
 
-    'Multiball locks
-    With CreateGlfBallDevice("kicker_locks")
-        .BallSwitches = Array("s_Kicker1","s_Kicker2")
-    End With
-
-
-
     'Drop Targets
     'NOTE: Drop targets SHOULD NOT be added to the glf_switches collection nor any other collection. 
     With CreateGlfDroptarget("drop1")

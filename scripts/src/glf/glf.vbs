@@ -6823,7 +6823,7 @@ End Function
 Class GlfMultiballLocks
 
     Private m_name
-    Private m_lock_device
+    Private m_lock_devices
     Private m_priority
     Private m_mode
     Private m_base_device
@@ -6846,8 +6846,8 @@ Class GlfMultiballLocks
                 GetValue = m_balls_locked
         End Select
     End Property
-    Public Property Get LockDevice() : LockDevice = m_lock_device : End Property
-    Public Property Let LockDevice(value) : m_lock_device = value : End Property
+    Public Property Get LockDevices() : LockDevices = m_lock_devices : End Property
+    Public Property Let LockDevices(value) : m_lock_devices = value : End Property
     Public Property Let EnableEvents(value) : m_base_device.EnableEvents = value : End Property
     Public Property Let DisableEvents(value) : m_base_device.DisableEvents = value : End Property
     Public Property Let BallsToLock(value) : m_balls_to_lock = value : End Property
@@ -6868,7 +6868,7 @@ Class GlfMultiballLocks
         m_priority = mode.Priority
         m_lock_events = Array()
         m_reset_events = Array()
-        m_lock_device = Empty
+        m_lock_devices = Array()
         m_balls_to_lock = 0
         m_balls_to_replace = -1
         m_enabled = False
@@ -6891,9 +6891,10 @@ Class GlfMultiballLocks
     Public Sub Enable()
         Log "Enabling"
         m_enabled = True
-        If Not IsEmpty(m_lock_device) Then
-            AddPinEventListener "balldevice_" & m_lock_device & "_ball_enter", m_mode & "_" & name & "_lock", "MultiballLocksHandler", m_priority, Array("lock", me, m_lock_device)
-        End If
+        Dim lock_device
+        For Each lock_device in m_lock_devices
+            AddPinEventListener "balldevice_" & lock_device & "_ball_enter", m_mode & "_" & name & "_lock", "MultiballLocksHandler", m_priority, Array("lock", me, lock_device)
+        Next
         Dim evt
         For Each evt in m_lock_events
             AddPinEventListener evt, m_name & "_ball_locked", "MultiballLocksHandler", m_priority, Array("virtual_lock", Me, Null)
@@ -6906,9 +6907,10 @@ Class GlfMultiballLocks
     Public Sub Disable()
         Log "Disabling"
         m_enabled = False
-        If Not IsEmpty(m_lock_device) Then
-            RemovePinEventListener "balldevice_" & m_lock_device & "_ball_enter", m_mode & "_" & name & "_lock"
-        End If
+        Dim lock_device
+        For Each lock_device in m_lock_devices
+            RemovePinEventListener "balldevice_" & lock_device & "_ball_enter", m_mode & "_" & name & "_lock"
+        Next
         Dim evt
         For Each evt in m_lock_events
             RemovePinEventListener evt, m_name & "_ball_locked"
@@ -6919,7 +6921,7 @@ Class GlfMultiballLocks
     End Sub
 
     Public Function Lock(device, unclaimed_balls)
-        
+        Log "Locking for device: " & device & ". Unclaimed Balls: " & unclaimed_balls
         If unclaimed_balls <= 0 Then
             Lock = unclaimed_balls
             Exit Function
@@ -7027,7 +7029,7 @@ Class GlfMultiballs
     Private m_priority
     Private m_base_device
     Private m_ball_count
-    Private m_ball_lock
+    Private m_ball_locks
     Private m_add_a_ball_events
     Private m_add_a_ball_grace_period
     Private m_add_a_ball_hurry_up_time
@@ -7072,7 +7074,7 @@ Class GlfMultiballs
     Public Property Let AddABallHurryUpTime(value): Set m_add_a_ball_hurry_up_time = CreateGlfInput(value): End Property
     Public Property Let AddABallShootAgain(value): Set m_add_a_ball_shoot_again = CreateGlfInput(value): End Property
     Public Property Let BallCountType(value): m_ball_count_type = value: End Property
-    Public Property Let BallLock(value): m_ball_lock = value: End Property
+    Public Property Let BallLocks(value): m_ball_locks = value: End Property
     Public Property Let EnableEvents(value) : m_base_device.EnableEvents = value : End Property
     Public Property Let DisableEvents(value) : m_base_device.DisableEvents = value : End Property
     Public Property Let GracePeriod(value): Set m_grace_period = CreateGlfInput(value): End Property
@@ -7120,7 +7122,7 @@ Class GlfMultiballs
         Set m_add_a_ball_hurry_up_time = CreateGlfInput(0)
         Set m_add_a_ball_shoot_again = CreateGlfInput(5000)
         m_ball_count_type = "total"
-        m_ball_lock = Empty
+        m_ball_locks = Array()
         Set m_grace_period = CreateGlfInput(0)
         Set m_hurry_up = CreateGlfInput(0)
         m_replace_balls_in_play = False
@@ -7246,13 +7248,14 @@ Class GlfMultiballs
         Dim balls_added : balls_added = 0
 
         'eject balls from locks
-        If Not IsEmpty(m_ball_lock) Then
-            Dim available_balls : available_balls = glf_ball_devices(m_ball_lock).Balls()
+        Dim ball_lock
+        For Each ball_lock in m_ball_locks
+            Dim available_balls : available_balls = glf_ball_devices(ball_lock).Balls()
             If available_balls > 0 Then
-                glf_ball_devices(m_ball_lock).EjectAll()
+                glf_ball_devices(ball_lock).EjectAll()
             End If
             balls_added = available_balls
-        End If
+        Next
 
         glf_BIP = m_balls_live_target
 

@@ -53,10 +53,10 @@ Sub CreateMultiballMode()
             .Add "s_RampHit_active{current_player.shot_multiball == 1}", Array("start_multiball")
 
             'Kick ball out of top lock after diverter has temporarily opened (timer initiated by start_multiball)
-            .Add "timer_diverter_reclose_tick{devices.timers.diverter_reclose.ticks == 1}", Array("eject_top_lock")
+            '.Add "timer_diverter_reclose_tick{devices.timers.diverter_reclose.ticks == 1}", Array("eject_top_lock")
 
             'Kick ball out of bottom lock when multiball started
-            .Add "start_multiball", Array("eject_bottom_lock")
+            '.Add "start_multiball", Array("eject_bottom_lock")
 
             'Handle Jackpot hits
 
@@ -71,7 +71,7 @@ Sub CreateMultiballMode()
             .ShootAgain = 10000
             .HurryUp = 3000
             .GracePeriod = 2000
-            .BallLock = "mb_locks"
+            .BallLocks = Array("kicker1", "kicker2")
         End With
 
         With .MultiballLocks("mb_locks")
@@ -79,7 +79,8 @@ Sub CreateMultiballMode()
             .DisableEvents = Array("disable_locks")
             .ResetEvents = Array("start_multiball.2")
             .BallsToLock = 2
-            .LockDevice = "kicker_locks"
+            .LockDevices = Array("kicker1", "kicker2")
+            .Debug = True
         End With
 
 
