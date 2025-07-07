@@ -15,9 +15,12 @@ Sub CreateScoreMode()
     Dim x
 
     With CreateGlfMode("score", 2000)
+
+        'Define the events that start and stop this mode
         .StartEvents = Array("game_start")
         .StopEvents = Array("game_ended")
 
+        'The variable player will update machine and player varibles
         With .VariablePlayer()
 
             'Respond to score_xxx events

@@ -28,9 +28,10 @@ Const KickbackColor = "dd2211"
 Const SkillshotColor = "eff542"
 Const TargetBankColor = "0023cc"
 Const InlaneshotColor = "8800ff"
-Const MultiballColor = "ffA957"
+Const MultiballColor = "ffffff"
 Const JackpotColor = "fc9403"
 Const MagnetColor = "ffff00"
+Const BonusColor = "fc7703"
 
 Const SegmentsColor = "ff0000"
 
@@ -59,6 +60,7 @@ Sub ConfigureGlfDevices()
     CreateInlaneshotsMode()
     CreateMultiballMode()
     CreateScoreMode()
+    CreateScoreBonusMode()
 
 
     ' Ball search
