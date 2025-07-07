@@ -30,7 +30,7 @@ Sub CreateExtraBallMode()
             .Add "check_eb{current_player.extra_balls > 0}", Array("eb_lit")
 
             'handle successful eb collection
-            .Add "s_ST3_active{current_player.shot_eb_ready == 1}", Array("play_eb_show","eb_achieved") 
+            .Add "s_ST3_active{current_player.shot_eb_ready == 1}", Array("play_eb_show","eb_achieved","score_100000") 
 
         End With
 

@@ -30,7 +30,7 @@ Sub CreateKickbackMode()
             .Add "mode_kickback_started", Array("reset_kickback")
 
             'Fire the kickback if it is lit
-            .Add "s_LeftInOutlane_inactive{current_player.shot_kickback_ready > 0}", Array("fire_kickback")
+            .Add "s_LeftInOutlane_inactive{current_player.shot_kickback_ready > 0}", Array("fire_kickback","score_10000")
 
             'Reset the kickback plunger shortly after it was used (so that it may be used again)
             .Add "timer_kickback_reset_complete", Array("reset_kickback")
@@ -38,8 +38,11 @@ Sub CreateKickbackMode()
             'Give some grace time such that the kickback can be used again right after it was fired.
             .Add "timer_kickback_cooldown_complete", Array("restart_kickback_qualify_shots")
 
+            'Add some points when top lanes hit
+            .Add "qualify_kickback_hit", Array("score_5000")
+
             'Add some points and bonus when top lanes completed
-            .Add "qualify_kickback_on_complete", Array("add_bonus")
+            .Add "qualify_kickback_on_complete", Array("add_bonus","score_50000")
 
         End With
 

@@ -10,12 +10,12 @@
 '   - canceling the current game
 '   - detects main sequence shots and generates their events
 '   - player score segment displays
-
-
-'   - scoop holds
-'   - some sound effects and music
 '   - some light shows
 '   - some minor scoring
+
+
+'   - some sound effects and music
+
 
 
 Sub CreateBaseMode()
@@ -40,6 +40,12 @@ Sub CreateBaseMode()
             .Add "mode_base_started{current_player.number == 3}", Array("flash_player3_score")
             .Add "mode_base_started{current_player.number == 4}", Array("flash_player4_score")
             .Add "s_Plunger1_inactive", Array("stop_flash_player1_score","stop_flash_player2_score","stop_flash_player3_score","stop_flash_player4_score")
+
+            'Magnet activated
+            .Add "s_ST4_active", Array("magnet_activated")
+
+            'Spinner
+            .Add "s_spinner_active", Array("score_333")
 
         End With
 
@@ -102,7 +108,6 @@ Sub CreateBaseMode()
 
         'The light player sets light color
         With .LightPlayer()
-
             'Turn on GI lights at start of mode
             With .EventName("mode_base_started")
                 With .Lights("GI")
@@ -110,7 +115,19 @@ Sub CreateBaseMode()
                     .Fade = 300
                 End With
             End With
+        End With
 
+
+        'The show player will play pre-defined shows
+        With .ShowPlayer()
+            With .EventName("magnet_activated")
+                .Key = "key_magnet_show"
+                .Show = "magnet_show" 
+                .Speed = 1
+                .Loops = 1
+                .Priority = 1000
+                '.EventsWhenCompleted = Array("mag_show_complete")
+            End With
         End With
 
 
