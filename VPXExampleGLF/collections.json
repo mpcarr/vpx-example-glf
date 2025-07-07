@@ -151,7 +151,6 @@
       "s_TopLane3",
       "s_TopLane2",
       "s_TopLane1",
-      "GrabMagnet",
       "s_RightInlane",
       "s_LeftInlane",
       "s_RightOrb2"
@@ -856,7 +855,6 @@
       "s_TopLane3",
       "s_TopLane2",
       "s_TopLane1",
-      "GrabMagnet",
       "s_RightInlane",
       "s_LeftInlane",
       "s_Kicker1",

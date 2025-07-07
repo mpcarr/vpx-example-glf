@@ -28,8 +28,10 @@ Const KickbackColor = "dd2211"
 Const SkillshotColor = "eff542"
 Const TargetBankColor = "0023cc"
 Const InlaneshotColor = "8800ff"
-Const MultiballColor = "ffA957"
+Const MultiballColor = "ffffff"
 Const JackpotColor = "fc9403"
+Const MagnetColor = "ffff00"
+Const BonusColor = "fc7703"
 
 Const SegmentsColor = "ff0000"
 
@@ -40,6 +42,7 @@ Sub ConfigureGlfDevices()
 
     ' Load up the shows
     CreateGeneralShows()
+    CreateBaseShows()
 
     ' Load shared shot profiles
     CreateSharedShotProfiles()
@@ -56,6 +59,8 @@ Sub ConfigureGlfDevices()
     CreateExtraBallMode()
     CreateInlaneshotsMode()
     CreateMultiballMode()
+    CreateScoreMode()
+    CreateScoreBonusMode()
 
 
     ' Ball search
@@ -109,8 +114,9 @@ Sub ConfigureGlfDevices()
 
 
     Glf_SetInitialPlayerVar "ball_just_started", 1
-    Glf_SetInitialPlayerVar "target_hit_count", 0
-
+    Glf_SetInitialPlayerVar "target_hit_count", 0       'used in targetbank mode
+    Glf_SetInitialPlayerVar "scoring_multiplier", 1     'current playfield score multiplier
+    Glf_SetInitialPlayerVar "bonus_multiplier", 1       'current bonus score multiplier
 
 
 
@@ -328,9 +334,13 @@ Sub ConfigureGlfDevices()
     With CreateGlfMagnet("mag1")
         .EnableEvents = Array("ball_started")
         .DisableEvents = Array("ball_ended")
-        .GrabBallEvents = Array("mag1_grab")
-        .ReleaseBallEvents = Array("magnet_mag1_grabbed_ball")
-        .GrabTime = 1000
+        .GrabSwitch = "s_ST4"
+        '.GrabBallEvents = Array("mag1_grab")
+        .FlingBallEvents = Array("magnet_mag1_grabbed_ball")
+        '.ReleaseBallEvents = Array("magnet_mag1_grabbed_ball")
+        .GrabTime = 500
+        .FlingDropTime = 100
+        .FlingRegrabTime = 50
         .ActionCallback = "GrabMagnetAction"
     End With
 

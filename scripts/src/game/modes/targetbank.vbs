@@ -32,12 +32,12 @@ Sub CreateTargetBankMode()
 
             'Keep track of how many targets have been dropped since last reset
             For x = 1 to 6
-                .Add TargetBankSwitches(x-1)&"_active", Array("add_hit_count")
+                .Add TargetBankSwitches(x-1)&"_active", Array("add_hit_count","score_3000")
             Next
 
             'After hit count has been incremented, check the count. If count is equal to six (or greater) reset the bank targets
             .Add "add_hit_count.1{current_player.target_hit_count >= 6}", Array("delay_bank_reset")
-            .Add "timer_bank_reset_complete", Array("reset_target_bank")
+            .Add "timer_bank_reset_complete", Array("reset_target_bank") 
             
         End With
 
@@ -119,14 +119,14 @@ Sub CreateTargetBankMode()
                     .Source = Array("shot"&x)
                     .Target = "shot"&(x+1)
                     .Events = Array("s_DT"&x&"_active{current_player.shot_bank_target"&x&" == 1}")   'target hit and is flashing
-                    .EventsWhenTransitioning = Array("bank_target"&x&"_completed","play_sfx_bank_target")
+                    .EventsWhenTransitioning = Array("bank_target"&x&"_completed","play_sfx_bank_target","score_30000")
                 End With
             Next
             With .Transitions()
                 .Source = Array("shot6")
                 .Target = "completed"
                 .Events = Array("s_DT6_active{current_player.shot_bank_target6 == 1}")   'target hit and is flashing
-                .EventsWhenTransitioning = Array("bank_target6_completed","play_sfx_bank_target_completed")
+                .EventsWhenTransitioning = Array("bank_target6_completed","play_sfx_bank_target_completed","score_30000")
             End With
             With .Transitions()
                 .Source = Array("completed")
