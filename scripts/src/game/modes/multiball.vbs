@@ -79,7 +79,8 @@ Sub CreateMultiballMode()
             .DisableEvents = Array("disable_locks")
             .ResetEvents = Array("start_multiball.2")
             .BallsToLock = 2
-            .LockDevice = "kicker_locks"
+            .LockDevices = Array("kicker1", "kicker2")
+            .Debug = True
         End With
 
 
