@@ -61,6 +61,7 @@ Sub ConfigureGlfDevices()
     CreateMultiballMode()
     CreateScoreMode()
     CreateScoreBonusMode()
+    'CreateBonusMode()
 
 
     ' Ball search
