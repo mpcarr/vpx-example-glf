@@ -12,7 +12,7 @@
 Sub CreateSkillshotsMode()
     Dim x
 
-    With CreateGlfMode("skillshots", 600)
+    With CreateGlfMode("skillshots", 400)
 
         'Define the events that start and stop this mode
         .StartEvents = Array("new_ball_started")
@@ -33,6 +33,10 @@ Sub CreateSkillshotsMode()
             .Add "ss_achieved", Array("stop_skillshots","add_bonus","score_500000")
 
             'Stop skillshots if orbit lanes are hit, or if timer runs out for some reason
+            .Add "s_TopLane1_inactive", Array("stop_skillshots")
+            .Add "s_TopLane2_inactive", Array("stop_skillshots")
+            .Add "s_TopLane3_inactive", Array("stop_skillshots")
+            .Add "s_TopLane4_inactive", Array("stop_skillshots")
             .Add "s_LeftOrb1_active", Array("stop_skillshots")
             .Add "s_RightOrb1_active", Array("stop_skillshots")
             .Add "timer_skillshots_complete", Array("stop_skillshots") 
@@ -83,7 +87,7 @@ Sub CreateSkillshotsMode()
             With .States("ready")
                 .Key = "key_ss_ready"
                 .Show = "flash_color_with_fade"
-                .Priority = 500
+                .Priority = 1000
                 .Speed = 3
                 With .Tokens()
                     .Add "fade", 200
