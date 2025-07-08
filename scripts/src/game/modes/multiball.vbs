@@ -35,23 +35,18 @@ Sub CreateMultiballMode()
             .Add "mode_multiball_started{current_player.shot_top_lock == 1}", Array("top_lock_ready") 're-opens the diverter
 
             'Handle qualified locks
-            .Add "qualify_lock_on_complete{current_player.shot_top_lock < 2 OR current_player.shot_top_lock < 2}", Array("enable_locks")  
-            .Add "qualify_lock_on_complete{current_player.shot_top_lock < 2}", Array("top_lock_ready")
+            .Add "qualify_lock_on_complete{current_player.shot_bottom_lock < 2 OR current_player.shot_top_lock < 2}", Array("enable_locks")  
             .Add "qualify_lock_on_complete{current_player.shot_bottom_lock < 2}", Array("bottom_lock_ready")
+            .Add "qualify_lock_on_complete{current_player.shot_bottom_lock == 2 && current_player.shot_top_lock}", Array("top_lock_ready")
 
-            'Handle ball getting locked
-            .Add "balldevice_mb_locks_ball_enter", Array("disable_locks")
-            .Add "balldevice_mb_locks_ball_enter{devices.ball_devices.mb_lock.balls < 2}", Array("restart_qualify_locks")
-            .Add "balldevice_mb_locks_ball_enter{devices.ball_devices.mb_lock.balls == 2}", Array("multiball_ready")
+            'Handle bottom ball getting locked (this is the first locked ball)
+            .Add "balldevice_mb_locks_ball_enter{devices.ball_devices.mb_locks.balls < 2}", Array("restart_qualify_locks","bottom_locked")
+
+            'Handle top ball getting locked (this is the second locked ball)
+            .Add "balldevice_mb_locks_ball_enter{devices.ball_devices.mb_locks.balls == 2}", Array("multiball_ready","top_locked")
 
             'Handle start of multiball
             .Add "s_RampHit_active{current_player.shot_multiball == 1}", Array("start_multiball")
-
-            'Kick ball out of top lock after diverter has temporarily opened (timer initiated by start_multiball)
-            '.Add "timer_diverter_reclose_tick{devices.timers.diverter_reclose.ticks == 1}", Array("eject_top_lock")
-
-            'Kick ball out of bottom lock when multiball started
-            '.Add "start_multiball", Array("eject_bottom_lock")
 
             'Handle Jackpot hits
 
@@ -217,7 +212,7 @@ Sub CreateMultiballMode()
 
 
 
-        'This state machine manages the diverter
+        'The following state machine and timers manages the diverter
         '  - Default to closing the diverter
         '  - Open the diverter if top lock is ready
         '  - Temporarily close the diverter (for a couple seconds) if already opened and ball goes up the right orbit
@@ -257,7 +252,7 @@ Sub CreateMultiballMode()
             With .Transitions()
                 .Source = Array("closed")
                 .Target = "open"
-                .Events = Array("start_multiball")
+                .Events = Array("start_multiball.4")
                 .EventsWhenTransitioning = Array("temporarily_open_diverter")
             End With
 

@@ -87,7 +87,10 @@ Sub CreateSkillshotsMode()
             With .States("ready")
                 .Key = "key_ss_ready"
                 .Show = "flash_color_with_fade"
-                .Priority = 1000
+                'Note the priority set below adds to this modes priority (which is set to 400). 
+                ' This allows the other toplane lights from kickback mode (priority 500) show up under the unlit skillshot shots, 
+                ' while putting the lit skillshot light on top of the toplane lights.
+                .Priority = 1000   
                 .Speed = 3
                 With .Tokens()
                     .Add "fade", 200

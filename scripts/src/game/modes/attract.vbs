@@ -1,4 +1,8 @@
 
+' Attract Mode
+'
+' Play shows, sounds, and slides before and after a game.
+
 
 Sub CreateAttractMode()
 

@@ -2,6 +2,9 @@
 
 ' Bonus Mode
 '
+'  - Calculate the bonus based on the number of bonus lights lit during last ball. Add to player's score.
+'  - Play a little light show on the bonus inserts and segment display to show bonus tally
+'  - Allow the player to skip the show (with double flipper press), and briefly show the total bonus
 
 
 Sub CreateBonusMode()

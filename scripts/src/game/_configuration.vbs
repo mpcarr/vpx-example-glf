@@ -188,7 +188,7 @@ Sub ConfigureGlfDevices()
         .BallSwitches = Array("s_Kicker1")
         .EjectTimeout = 2000
         .MechanicalEject = True
-        .EjectAllEvents = Array("eject_top_lock")
+        .EjectAllEvents = Array("eject_kicker1")
 		.EjectCallback = "Kicker1EjectCallback"
     End With
 
@@ -196,7 +196,7 @@ Sub ConfigureGlfDevices()
         .BallSwitches = Array("s_Kicker2")
         .EjectTimeout = 2000
         .MechanicalEject = True
-        .EjectAllEvents = Array("eject_bottom_lock")
+        .EjectAllEvents = Array("eject_kicker2")
 		.EjectCallback = "Kicker2EjectCallback"
     End With
 
