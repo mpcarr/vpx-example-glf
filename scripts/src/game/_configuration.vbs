@@ -69,6 +69,7 @@ Sub ConfigureGlfDevices()
     '*********** INITALIZE MODES ***********
 
     ' Modes
+    CreateBasementMode()
     CreateAttractMode()
     CreateBaseMode()
     CreateSkillshotsMode()
@@ -81,6 +82,7 @@ Sub ConfigureGlfDevices()
     CreateScoreBonusMode()
     CreateBonusMode()
     CreateHighScoreMode()
+    CreateTiltMode()
 
 
     ' Ball search

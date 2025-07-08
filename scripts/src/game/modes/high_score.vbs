@@ -14,15 +14,19 @@ Sub CreateHighScoreMode()
         Dim i
 
         With .EventPlayer()
-            'inputs
+
+            'Handle button presses for inputting an initial
             .Add "s_right_magna_key_active{current_player.hs_input_ready == 1}", Array("text_inputted")
             .Add "s_plunger_key_active{current_player.hs_input_ready == 1}", Array("text_inputted")
             .Add "s_lockbar_key_active{current_player.hs_input_ready == 1}", Array("text_inputted")
             .Add "s_start_active{current_player.hs_input_ready == 1}", Array("text_inputted")
-            'final initial inputted
+
+            'Final initial inputted
             .Add "text_inputted.1{machine.high_score_initials_chars == 3}", Array("text_input_high_score_complete:{text: machine.high_score_initials}")
-            'timer ran out
+
+            'Handle timeout
             .Add "timer_high_score_timeout_complete", Array("text_input_high_score_complete:{text: machine.high_score_initials}")
+
         End With
 
         With .Timers("hs_cooldown")
