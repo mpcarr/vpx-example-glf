@@ -9,10 +9,6 @@
 '  - The process restarts once an EB is acquired
 
 
-Dim TargetBankSwitches, TargetBankLightNames
-TargetBankSwitches = Array("s_DT1","s_DT2","s_DT3","s_DT4","s_DT5","s_DT6")    'target bank switches, shots 1 to 6
-TargetBankLightNames = Array("L33","L34","L35","L36","L37","L38")   'target bank lights, shots 1 to 6
-
 
 Sub CreateTargetBankMode()
     Dim x

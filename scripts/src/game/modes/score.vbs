@@ -7,9 +7,6 @@
 ' There are also playfield and bonus multiplier events defined below.
 
 
-' Create the list of scores available to be awarded during the game
-Dim ScoreArray: ScoreArray = Array(1,10,100,333,500,1000,2000,3000,5000,10000,20000,30000,50000,100000,200000,500000,1000000)
-
 
 Sub CreateScoreMode()
     Dim x

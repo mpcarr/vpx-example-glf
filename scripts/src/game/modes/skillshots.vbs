@@ -9,9 +9,6 @@
 
 
 
-Dim SkillshotLightNames
-SkillshotLightNames = Array("L31","L30","L29","L28")   'top lane lights, left to right
-
 Sub CreateSkillshotsMode()
     Dim x
 

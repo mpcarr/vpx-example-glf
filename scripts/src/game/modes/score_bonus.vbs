@@ -6,9 +6,6 @@
 ' The actual bonus gets collected at the end of a ball, and that is handled by the bonus mode.
 
 
-Dim BonusLightNames
-BonusLightNames = Array("L10","L11","L12","L13","L14","L15","L16","L17") 
-
 Sub CreateScoreBonusMode()
     Dim x
 

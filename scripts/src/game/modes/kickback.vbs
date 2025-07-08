@@ -8,10 +8,6 @@
 '  - Once the kickback is used, the lane lights and kicker light reset.
 
 
-Dim KickbackQualifySwitches, KickbackQualifyLightNames
-KickbackQualifySwitches = Array("s_TopLane1","s_TopLane2","s_TopLane3","s_TopLane4")    'top lane switches, left to right
-KickbackQualifyLightNames = Array("L31","L30","L29","L28")   'top lane lights, left to right
-
 
 Sub CreateKickbackMode()
     Dim x

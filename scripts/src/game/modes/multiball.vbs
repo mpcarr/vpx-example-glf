@@ -18,11 +18,6 @@
 '  - diverter is managed using a state machine
 
 
-Dim LockQualifySwitches, LockQualifyLightNames
-LockQualifySwitches = Array("s_ST1","s_ST2","s_ST3","s_ST4")    'standup target switches, left to right
-LockQualifyLightNames = Array("L22","L21","L27","L26")   'standup target lights, left to right
-
-
 
 Sub CreateMultiballMode()
     Dim x

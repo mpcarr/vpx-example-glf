@@ -36,6 +36,24 @@ Const BonusColor = "fc7703"
 Const SegmentsColor = "ff0000"
 
 
+' Arrays used in modes
+Dim KickbackQualifySwitches: KickbackQualifySwitches = Array("s_TopLane1","s_TopLane2","s_TopLane3","s_TopLane4")    'top lane switches, left to right
+Dim KickbackQualifyLightNames: KickbackQualifyLightNames = Array("L31","L30","L29","L28")   'top lane lights, left to right
+Dim LockQualifySwitches: LockQualifySwitches = Array("s_ST1","s_ST2","s_ST3","s_ST4")    'standup target switches, left to right
+Dim LockQualifyLightNames: LockQualifyLightNames = Array("L22","L21","L27","L26")   'standup target lights, left to right
+Dim SkillshotLightNames: SkillshotLightNames = Array("L31","L30","L29","L28")   'top lane lights, left to right
+Dim TargetBankSwitches: TargetBankSwitches = Array("s_DT1","s_DT2","s_DT3","s_DT4","s_DT5","s_DT6")    'target bank switches, shots 1 to 6
+Dim TargetBankLightNames: TargetBankLightNames = Array("L33","L34","L35","L36","L37","L38")   'target bank lights, shots 1 to 6
+Dim BonusLightNames: BonusLightNames = Array("L10","L11","L12","L13","L14","L15","L16","L17") 
+
+' Create the list of scores available to be awarded during the game
+Dim ScoreArray: ScoreArray = Array(1,10,100,333,500,1000,2000,3000,5000,10000,20000,30000,50000,100000,200000,500000,1000000)
+
+' Point value per bouns light
+Const BonusValue = 250000
+
+
+
 Sub ConfigureGlfDevices()
 
     '*********** INITALIZE SHOWS ***********
@@ -61,7 +79,8 @@ Sub ConfigureGlfDevices()
     CreateMultiballMode()
     CreateScoreMode()
     CreateScoreBonusMode()
-    'CreateBonusMode()
+    CreateBonusMode()
+    CreateHighScoreMode()
 
 
     ' Ball search
@@ -118,8 +137,10 @@ Sub ConfigureGlfDevices()
     Glf_SetInitialPlayerVar "target_hit_count", 0       'used in targetbank mode
     Glf_SetInitialPlayerVar "scoring_multiplier", 1     'current playfield score multiplier
     Glf_SetInitialPlayerVar "bonus_multiplier", 1       'current bonus score multiplier
-
-
+    Glf_SetInitialPlayerVar "bonus_total", 0
+    Glf_SetInitialPlayerVar "bonus_count", 0
+    Glf_SetInitialPlayerVar "bonus_skip", 0
+    Glf_SetInitialPlayerVar "hs_input_ready", 1
 
 
     '*********** DEVICE CONFIGS ***********
