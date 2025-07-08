@@ -9058,28 +9058,7 @@
     "editor_layer_visibility": true
   },
   {
-    "file_name": "Ramp.Ramp001.json",
-    "is_locked": true,
-    "editor_layer": 6,
-    "editor_layer_name": "Collidable Ramps",
-    "editor_layer_visibility": true
-  },
-  {
     "file_name": "Ramp.Ramp1.json",
-    "is_locked": true,
-    "editor_layer": 6,
-    "editor_layer_name": "Collidable Ramps",
-    "editor_layer_visibility": true
-  },
-  {
-    "file_name": "Ramp.Ramp3.json",
-    "is_locked": true,
-    "editor_layer": 6,
-    "editor_layer_name": "Collidable Ramps",
-    "editor_layer_visibility": true
-  },
-  {
-    "file_name": "Ramp.Ramp6.json",
     "is_locked": true,
     "editor_layer": 6,
     "editor_layer_name": "Collidable Ramps",
@@ -9108,13 +9087,6 @@
   },
   {
     "file_name": "Trigger.ramptrigger003.json",
-    "is_locked": true,
-    "editor_layer": 6,
-    "editor_layer_name": "Collidable Ramps",
-    "editor_layer_visibility": true
-  },
-  {
-    "file_name": "Ramp.Ramp003.json",
     "is_locked": true,
     "editor_layer": 6,
     "editor_layer_name": "Collidable Ramps",
@@ -10973,6 +10945,34 @@
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Triggers",
+    "editor_layer_visibility": true
+  },
+  {
+    "file_name": "Ramp.Ramp3.json",
+    "is_locked": true,
+    "editor_layer": 6,
+    "editor_layer_name": "Collidable Ramps",
+    "editor_layer_visibility": true
+  },
+  {
+    "file_name": "Ramp.Ramp001.json",
+    "is_locked": true,
+    "editor_layer": 6,
+    "editor_layer_name": "Collidable Ramps",
+    "editor_layer_visibility": true
+  },
+  {
+    "file_name": "Ramp.Ramp6.json",
+    "is_locked": true,
+    "editor_layer": 6,
+    "editor_layer_name": "Collidable Ramps",
+    "editor_layer_visibility": true
+  },
+  {
+    "file_name": "Ramp.Ramp003.json",
+    "is_locked": true,
+    "editor_layer": 6,
+    "editor_layer_name": "Collidable Ramps",
     "editor_layer_visibility": true
   }
 ]

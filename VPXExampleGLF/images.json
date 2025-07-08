@@ -2758,20 +2758,6 @@
     "bits": false
   },
   {
-    "name": "VPW-ExampleTable",
-    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\VPW-ExampleTable.png",
-    "width": 1061,
-    "height": 304,
-    "alpha_test_value": -1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\VPW-ExampleTable.png",
-      "name": "VPW-ExampleTable"
-    },
-    "bits": false
-  },
-  {
     "name": "colorgradelut256x16-10",
     "path": "C:\\VirtualPinball\\VisualPinball\\dev\\LUT\\colorgradelut256x16-10.jpg",
     "width": 256,

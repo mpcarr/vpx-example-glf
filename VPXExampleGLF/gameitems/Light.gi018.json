@@ -13,7 +13,7 @@
     "color2": "#00000000",
     "is_timer_enabled": false,
     "timer_interval": 100,
-    "blink_pattern": "GI",
+    "blink_pattern": "GI,InlaneGI",
     "off_image": "pf",
     "blink_interval": 250,
     "intensity": 3.0,
