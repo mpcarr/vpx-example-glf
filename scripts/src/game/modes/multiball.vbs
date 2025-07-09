@@ -55,8 +55,8 @@ Sub CreateMultiballMode()
         'Configure the multiball
         With .Multiballs("mb")
             .StartEvents = Array("start_multiball.3")
-            .BallCount = 2
-            .BallCountType = "add"
+            .BallCount = 3
+            .BallCountType = "total"
             .ShootAgain = 10000
             .HurryUp = 3000
             .GracePeriod = 2000
@@ -174,7 +174,7 @@ Sub CreateMultiballMode()
                 .Add "lights", "L08"
             End With
             With .ControlEvents()
-                .Events = Array("start_multiball")
+                .Events = Array("start_multiball","test_ramphit")
                 .State = 1
             End With
             .RestartEvents = Array("stop_multiball")
@@ -250,7 +250,7 @@ Sub CreateMultiballMode()
             End With
             With .Transitions()
                 .Source = Array("closed")
-                .Target = "open"
+                .Target = "opened"
                 .Events = Array("start_multiball.4")
                 .EventsWhenTransitioning = Array("temporarily_open_diverter")
             End With

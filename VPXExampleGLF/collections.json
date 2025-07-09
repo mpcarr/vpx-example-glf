@@ -859,7 +859,8 @@
       "s_LeftInlane",
       "s_Kicker1",
       "s_Kicker2",
-      "s_RightOrb2"
+      "s_RightOrb2",
+      "s_RampHit"
     ],
     "fire_events": false,
     "stop_single_events": false,
