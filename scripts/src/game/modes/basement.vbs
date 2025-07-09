@@ -26,6 +26,16 @@ Sub CreateBasementMode()
         End With
 
 
+        With .VariablePlayer()
+            'All locked balls eject at end of game, so set num_balls_locked to 0
+            With .EventName("game_ended")
+				With .Variable("num_balls_locked")
+                    .Action = "set_machine"
+					.Int = 0
+				End With
+			End With
+        End With
+
         ' ' Pome sound effects (outside of normal ball play time)
         ' With .SoundPlayer() 
 

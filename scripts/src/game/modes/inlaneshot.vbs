@@ -101,7 +101,7 @@ Sub CreateInlaneshotsMode()
                 .Events = Array("light_left_orbit")
                 .State = 1
             End With
-            .RestartEvents = Array("left_orbit_success","timer_right_inlane_complete")
+            .RestartEvents = Array("left_orbit_success","timer_right_inlane_complete","mode_inlaneshot_started")
         End With
 
         With .Shots("right_orbit")
@@ -113,7 +113,7 @@ Sub CreateInlaneshotsMode()
                 .Events = Array("light_right_orbit")
                 .State = 1
             End With
-            .RestartEvents = Array("right_orbit_success","timer_left_inlane_complete")
+            .RestartEvents = Array("right_orbit_success","timer_left_inlane_complete","mode_inlaneshot_started")
         End With
 
 
