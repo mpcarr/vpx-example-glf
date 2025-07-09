@@ -13,7 +13,7 @@ Sub CreateScoreBonusMode()
 
         'Define the events that start and stop this mode
         .StartEvents = Array("ball_started")
-        .StopEvents = Array("bonus_finished")
+        .StopEvents = Array("bonus_finished","ball_ended")
 
 
         'The event player will respond to events during this mode

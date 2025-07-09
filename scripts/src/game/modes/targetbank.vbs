@@ -17,7 +17,7 @@ Sub CreateTargetBankMode()
 
         'Define the events that start and stop this mode
         .StartEvents = Array("ball_started")
-        .StopEvents = Array("ball_ended")
+        .StopEvents = Array("mode_base_stopping")
 
 
         'The event player will respond to events during this mode

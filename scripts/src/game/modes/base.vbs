@@ -12,8 +12,6 @@
 '   - player score segment displays
 '   - some light shows
 '   - some minor scoring
-
-
 '   - some sound effects and music
 
 

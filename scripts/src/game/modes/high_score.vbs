@@ -1,6 +1,8 @@
 
 
-' High Score Mode.
+' High Score Mode
+'
+' This mode handles inputting and saving the high score.
 
 
 Sub CreateHighScoreMode()

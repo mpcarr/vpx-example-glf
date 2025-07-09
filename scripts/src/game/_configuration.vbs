@@ -29,7 +29,7 @@ Const SkillshotColor = "eff542"
 Const TargetBankColor = "0023cc"
 Const InlaneshotColor = "8800ff"
 Const MultiballColor = "ffffff"
-Const JackpotColor = "fc9403"
+Const JackpotColor = "00ff6a"
 Const MagnetColor = "ffff00"
 Const BonusColor = "fc7703"
 
@@ -130,6 +130,12 @@ Sub ConfigureGlfDevices()
         .Persist = False
     End With
 
+    With CreateMachineVar("num_balls_locked")
+        .InitialValue = 0
+        .ValueType = "int"
+        .Persist = False
+    End With
+
 
 
     '*********** INITALIZE PLAYER VARIABLES ***********
@@ -143,6 +149,7 @@ Sub ConfigureGlfDevices()
     Glf_SetInitialPlayerVar "bonus_count", 0
     Glf_SetInitialPlayerVar "bonus_skip", 0
     Glf_SetInitialPlayerVar "hs_input_ready", 1
+    
 
 
     '*********** DEVICE CONFIGS ***********
@@ -188,7 +195,7 @@ Sub ConfigureGlfDevices()
         .BallSwitches = Array("s_Kicker1")
         .EjectTimeout = 2000
         .MechanicalEject = True
-        .EjectAllEvents = Array("eject_top_lock")
+        .EjectAllEvents = Array("eject_kicker1")
 		.EjectCallback = "Kicker1EjectCallback"
     End With
 
@@ -196,7 +203,7 @@ Sub ConfigureGlfDevices()
         .BallSwitches = Array("s_Kicker2")
         .EjectTimeout = 2000
         .MechanicalEject = True
-        .EjectAllEvents = Array("eject_bottom_lock")
+        .EjectAllEvents = Array("eject_kicker2")
 		.EjectCallback = "Kicker2EjectCallback"
     End With
 
@@ -348,7 +355,7 @@ Sub ConfigureGlfDevices()
     ' Diverter
     With CreateGlfDiverter("diverter1")
         .EnableEvents = Array("ball_started","reset_complete","enable_diverter")
-        .ActivateEvents = Array("open_diverter") 
+        .ActivateEvents = Array("open_diverter","game_ending") 
         .DeactivateEvents = Array("close_diverter","ball_ended") 
         .ActionCallback = "OpenDiverter"
     End With

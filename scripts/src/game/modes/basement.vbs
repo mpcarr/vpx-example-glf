@@ -3,7 +3,7 @@
 
 ' Basement Mode
 '
-' This mode runs all the time.
+' This mode runs all the time. Some tasks need to be handled outside of normal gameplay.
 
 
 Sub CreateBasementMode()
@@ -14,13 +14,27 @@ Sub CreateBasementMode()
 
         With .EventPlayer()
 
-            'DEBUG used to test shows. To test, uncomment and right magna while table running. Also need to update given show below.
+            'DEBUG used to test shows. To test, uncomment and press right magna while table running. Also need to update given show below.
             '.Add "s_right_staged_flipper_key_active", Array("test_show") 
 
+            'Some table init stuff
+            .Add "mode_basement_started", Array("close_diverter")
+
+            'Handle tilt
             .Add "tilt", Array("kill_flippers")
 
         End With
 
+
+        With .VariablePlayer()
+            'All locked balls eject at end of game, so set num_balls_locked to 0
+            With .EventName("game_ended")
+				With .Variable("num_balls_locked")
+                    .Action = "set_machine"
+					.Int = 0
+				End With
+			End With
+        End With
 
         ' ' Pome sound effects (outside of normal ball play time)
         ' With .SoundPlayer() 
@@ -119,6 +133,28 @@ Sub CreateBasementMode()
 
         With .ShowPlayer()
 
+            'DEBUG to test show. To run test, uncomment and update section for given show. 
+            ' With .EventName("test_show") 
+            '     .Key = "key_test_show1"
+            '     .Show = "ship_saver_acquired"
+            '     .Speed = 1
+            '     .Loops = 1
+            '     .Priority = 20000
+            ' End With
+            '  With .EventName("test_show") 
+            '     .Key = "key_test_show1"
+            '     .Show = "lsling_rotate4_ccw"
+            '     .Speed = 1
+            '     With .Tokens()
+            '         .Add "intensity", 50
+            '         .Add "color1", MoonColor
+            '         .Add "color2", HealthColor1
+            '         .Add "color3", ShieldsColor
+            '         .Add "color4", HealthColor3
+            '     End With
+            ' End With
+
+
             'Flicker off GI lights when tilted
             With .EventName("tilt") 
                 .Key = "key_tilted_gi"
@@ -157,29 +193,6 @@ Sub CreateBasementMode()
                 End With
             End With
 
-
-            'DEBUG to test show. To run test, uncomment and update section for given show. 
-            ' With .EventName("test_show") 
-            '     .Key = "key_test_show1"
-            '     .Show = "ship_saver_acquired"
-            '     .Speed = 1
-            '     .Loops = 1
-            '     .Priority = 20000
-            ' End With
-            '  With .EventName("test_show") 
-            '     .Key = "key_test_show1"
-            '     .Show = "lsling_rotate4_ccw"
-            '     .Speed = 1
-            '     With .Tokens()
-            '         .Add "intensity", 50
-            '         .Add "color1", MoonColor
-            '         .Add "color2", HealthColor1
-            '         .Add "color3", ShieldsColor
-            '         .Add "color4", HealthColor3
-            '     End With
-            ' End With
-
-            
             ' ' Backglass light shows (for VR backglass)
 
             ' 'Main backglass light

@@ -2,7 +2,7 @@
   "Ramp": {
     "height_bottom": 0.0,
     "height_top": 80.0,
-    "width_bottom": 110.0,
+    "width_bottom": 108.0,
     "width_top": 60.0,
     "material": "Metal",
     "is_timer_enabled": false,
@@ -32,7 +32,7 @@
     "overwrite_physics": false,
     "drag_points": [
       {
-        "x": 142.99211,
+        "x": 141.60478,
         "y": 1082.1428,
         "z": 0.0,
         "smooth": true,
@@ -45,7 +45,7 @@
         "editor_layer_visibility": true
       },
       {
-        "x": 112.61008,
+        "x": 111.22275,
         "y": 1004.7641,
         "z": 0.0,
         "smooth": true,
