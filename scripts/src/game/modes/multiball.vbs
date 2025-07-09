@@ -35,18 +35,17 @@ Sub CreateMultiballMode()
             .Add "mode_multiball_started{current_player.shot_top_lock == 1}", Array("top_lock_ready") 're-opens the diverter
 
             'Handle qualified locks
-            .Add "qualify_lock_on_complete{current_player.shot_bottom_lock < 2 OR current_player.shot_top_lock < 2}", Array("enable_locks")  
-            .Add "qualify_lock_on_complete{current_player.shot_bottom_lock < 2}", Array("bottom_lock_ready")
-            .Add "qualify_lock_on_complete{current_player.shot_bottom_lock == 2 && current_player.shot_top_lock}", Array("top_lock_ready")
+            .Add "qualify_lock_on_complete{current_player.shot_top_lock == 0}", Array("enable_locks","top_lock_ready")   'ready top lock first
+            .Add "qualify_lock_on_complete{current_player.shot_top_lock == 2 && current_player.shot_bottom_lock == 0}", Array("enable_locks","bottom_lock_ready") 'ready bottom lock next
 
-            'Handle bottom ball getting locked (this is the first locked ball)
-            .Add "balldevice_mb_locks_ball_enter{devices.ball_devices.mb_locks.balls < 2}", Array("restart_qualify_locks","bottom_locked")
+            'Handle top ball getting locked (this is the first locked ball)
+            .Add "multiball_lock_mb_locks_locked_ball{current_player.multiball_lock_mb_locks_balls_locked == 1}", Array("top_locked","restart_qualify_lock","disable_locks")
 
             'Handle top ball getting locked (this is the second locked ball)
-            .Add "balldevice_mb_locks_ball_enter{devices.ball_devices.mb_locks.balls == 2}", Array("multiball_ready","top_locked")
+            .Add "multiball_lock_mb_locks_locked_ball{current_player.multiball_lock_mb_locks_balls_locked == 2}", Array("bottom_locked","disable_locks","multiball_ready")
 
             'Handle start of multiball
-            .Add "s_RampHit_active{current_player.shot_multiball == 1}", Array("start_multiball")
+            .Add "s_RampHit_active{current_player.shot_mb_start == 1}", Array("start_multiball")
 
             'Handle Jackpot hits
 
@@ -130,7 +129,7 @@ Sub CreateMultiballMode()
             .RestartEvents = Array("start_multiball")
         End With
 
-        With .Shots("multiball")
+        With .Shots("mb_start")
             .Profile = "lock"   'defined below
             With .Tokens()
                 .Add "lights", "L09"
