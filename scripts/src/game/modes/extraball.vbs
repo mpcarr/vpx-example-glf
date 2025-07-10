@@ -111,6 +111,7 @@ Sub CreateExtraBallMode()
             With .States("lit")
                 .Show = "led_color"     'defined in glf
                 .Key = "key_eb_lit"
+                .Priority = 1000
                 With .Tokens()
                     .Add "lights", "L03"
                     .Add "color", ExtraBallColor
