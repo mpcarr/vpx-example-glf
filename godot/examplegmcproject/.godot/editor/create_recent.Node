@@ -1,10 +1,11 @@
-AnimationPlayer
+VBoxContainer
 Label
+HBoxContainer
+MPFVariable
+AnimationPlayer
 Control
 ColorRect
-HBoxContainer
 MPFWidget
-MPFVariable
 MPFSlide
 AspectRatioContainer
 PopupMenu

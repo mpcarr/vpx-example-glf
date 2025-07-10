@@ -3,7 +3,7 @@ extends PopupMenu
 const CONFIG_FILE = "user://settings.cfg"
 
 func _ready():
-	self.add_item("Save Window Position", 0)
+	self.add_item("Save Window Settings", 0)
 
 	var submenu = PopupMenu.new()
 	submenu.name = "resolution_submenu"
@@ -20,6 +20,9 @@ func _ready():
 	self.add_submenu_item("Window Resolution", "resolution_submenu")
 	self.connect("id_pressed", Callable(self, "_on_self_item_pressed"))
 
+	self.add_item("Toggle Borderless Window", 3)
+
+
 	self.add_separator()
 	self.add_item("Exit", 2)
 
@@ -29,6 +32,10 @@ func _on_self_item_pressed(id):
 			self.save_window_settings()
 		2:
 			get_tree().quit()
+		3:
+			var is_borderless := DisplayServer.window_get_flag(DisplayServer.WINDOW_FLAG_BORDERLESS)
+			DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, !is_borderless)
+
 
 func _on_resolution_selected(id):
 	match id:
@@ -54,10 +61,13 @@ func _on_resolution_selected(id):
 func save_window_settings():
 	var config = ConfigFile.new()
 
-	var window = get_window()
+	var window := get_tree().root.get_window()
 
+	print(window.size)
+	print(window.position)
 	config.set_value("window", "size", window.size)
 	config.set_value("window", "position", window.position)
+	config.set_value("window", "borderless", DisplayServer.window_get_flag(DisplayServer.WINDOW_FLAG_BORDERLESS))
 
 	var error = config.save(CONFIG_FILE)
 	if error != OK:

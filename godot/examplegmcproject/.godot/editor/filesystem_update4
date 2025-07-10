@@ -1,7 +1,9 @@
-res://widgets/new_ball.tscn
-res://addons/mpf-gmc/resources/textinput_highlight_material.tres
 res://slides/attract.tscn
+res://addons/mpf-gmc/resources/textinput_highlight_material.tres
 res://slides/base.tscn
-res://addons/mpf-gmc/classes/mpf_widget.gd
-res://addons/mpf-gmc/classes/mpf_slide.gd
 res://widgets/ball_save.tscn
+res://addons/mpf-gmc/slides/right_click_menu.gd
+res://settings.gd
+res://resources/Score.tres
+res://widgets/right_spinner.tscn
+res://widgets/left_spinner.tscn

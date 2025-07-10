@@ -26,10 +26,14 @@ func load_window_settings():
 	var error = config.load(CONFIG_FILE)
 
 	if error == OK:
-		var size = config.get_value("window", "size", Vector2(800, 600))  # Default size if not set
-		var position = config.get_value("window", "position", Vector2(100, 100))  # Default position if not set
+		var size = config.get_value("window", "size", Vector2i(800, 600))  # Default size
+		var position = config.get_value("window", "position", Vector2i(100, 100))  # Default position
+		var borderless = config.get_value("window", "borderless", false)  # Default to false
+
 		var window = get_window()
 		window.size = size
 		window.position = position
+		DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, borderless)
+
 	else:
 		print("No settings file found or other error: ", error)
