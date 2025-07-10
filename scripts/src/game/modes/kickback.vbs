@@ -53,6 +53,10 @@ Sub CreateKickbackMode()
                     .Add "lights", KickbackQualifyLightNames(x-1)
                     .Add "color", KickbackColor
                 End With
+                With .ControlEvents()
+                    .Events = Array("ss_achieved")  'successful skill shot will complete kickback lanes and award kickback
+                    .State = 1
+                End With
             End With
         Next
 
@@ -80,7 +84,7 @@ Sub CreateKickbackMode()
             End With
             'Flash the kickback after it is used
             With .ControlEvents()
-                .Events = Array("fire_kickback")  '
+                .Events = Array("fire_kickback")
                 .State = 2
             End With
             'Reset the kicback
