@@ -130,7 +130,7 @@ Sub Bumper1Action(args)
         s_Bumper1.PlayHit()
     End If
 	If enabled Then
-		RandomSoundBumperMiddle s_Bumper1
+		RandomSoundBumperTop s_Bumper1
 		DOF 105, DOFPulse
 	End If
 End Sub
@@ -150,7 +150,7 @@ Sub Bumper2Action(args)
         s_Bumper2.PlayHit()
     End If
 	If enabled Then
-		RandomSoundBumperTop s_Bumper2
+		RandomSoundBumperMiddle s_Bumper2
 		DOF 108, DOFPulse
 	End If
 End Sub
@@ -170,7 +170,7 @@ Sub Bumper3Action(args)
         s_Bumper3.PlayHit()
     End If
 	If enabled Then
-		RandomSoundBumperTop s_Bumper3
+		RandomSoundBumperBottom s_Bumper3
 		DOF 106, DOFPulse
 	End If
 End Sub
