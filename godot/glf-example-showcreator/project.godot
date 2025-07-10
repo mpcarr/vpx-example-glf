@@ -1,0 +1,33 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="glf-example-showcreator"
+run/main_scene="res://monitor/playfield.tscn"
+config/features=PackedStringArray("4.3", "Mobile")
+config/icon="res://icon.svg"
+
+[autoload]
+
+MPF="*res://addons/mpf-gmc/mpf_gmc.gd"
+
+[display]
+
+window/size/viewport_width=486
+window/size/viewport_height=1080
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gmc-toolbox/plugin.cfg", "res://addons/mpf-gmc/plugin.cfg")
+
+[rendering]
+
+renderer/rendering_method="mobile"

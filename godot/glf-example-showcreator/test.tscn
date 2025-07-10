@@ -1,0 +1,73 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgqdpo0k6yfm8"]
+
+[ext_resource type="PackedScene" uid="uid://dx41in1wt58dr" path="res://monitor/playfield.tscn" id="1_o75kk"]
+
+[sub_resource type="GDScript" id="GDScript_tlw2f"]
+script/source = "extends AspectRatioContainer
+class_name Test
+
+const CONFIG_PATH = \"res://gmc_toolbox.cfg\"
+
+var server
+var scene
+var config: ConfigFile
+
+var players = []
+var machine_vars = {}
+var lights = {}
+var switches = {}
+var modes = []
+
+func _enter_tree() -> void:
+	config = ConfigFile.new()
+	var err = config.load(CONFIG_PATH)
+	if err != OK and err != ERR_FILE_NOT_FOUND:
+		printerr(\"Error loading config file '%s': %s\" % [CONFIG_PATH, error_string(err)])
+		return
+	if not config.has_section(\"show_creator\"):
+		assert(false, \"Unable to read correct fields from config file: %s\" % error_string(err))
+
+	var scene_path = config.get_value(\"show_creator\", \"show_scene\")
+	#scene = load(scene_path).instantiate()
+	#self.add_child(scene)
+	#server = preload(\"monitor_server.gd\").new()
+	#self.add_child(server)
+	print(\"HERE\")
+	# Everything from here on out is for runtime
+	if Engine.is_editor_hint():
+		return
+
+	# Ignore the project settings, use the playfield scene
+	# as the basis for the window size
+	#var window = get_window()
+	#var resize = scene.size
+	#if scene.monitor_size != Vector2(0,0):
+		#resize = scene.monitor_size
+	#print(resize)
+	#window.size = resize
+	#window.content_scale_size = scene.size
+	#window.unresizable = false
+	#window.title = \"MPF Monitor - %s\" % ProjectSettings.get_setting(\"application/config/name\")
+	#var icon = preload(\"../icons/icon-osx.png\")
+	#DisplayServer.set_icon(icon.get_image())
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="AspectRatioContainer" type="AspectRatioContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_tlw2f")
+
+[node name="Playfield" parent="." instance=ExtResource("1_o75kk")]
+layout_mode = 2

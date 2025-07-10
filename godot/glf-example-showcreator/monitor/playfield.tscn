@@ -1,0 +1,4321 @@
+[gd_scene load_steps=14 format=3 uid="uid://dx41in1wt58dr"]
+
+[ext_resource type="Texture2D" uid="uid://crkak7do1d24y" path="res://monitor/PF-1080.png" id="1_6b7q3"]
+[ext_resource type="Script" path="res://addons/gmc-toolbox/playfield/GMCPlayfield.gd" id="1_ujwwi"]
+[ext_resource type="Texture2D" uid="uid://u5hp0m0sfd0a" path="res://addons/gmc-toolbox/playfield/inserts/circle-insert.svg" id="4_5lr1j"]
+[ext_resource type="Script" path="res://addons/gmc-toolbox/playfield/GMCLight.gd" id="4_yy1oo"]
+[ext_resource type="Texture2D" uid="uid://d35kgm4p0mjj0" path="res://shapes/gradient_square.png" id="5_is4i2"]
+[ext_resource type="Texture2D" uid="uid://iwgde7k33wxy" path="res://shapes/gradient_circle.png" id="6_1tb8c"]
+
+[sub_resource type="Animation" id="Animation_h05v7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SweepLeft/GradientSquare3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-48.9999, 552)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SweepRight/GradientSquare4:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(535, 552)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SweepUp/GradientSquare3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(246, -40)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SweepDown/GradientSquare3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(246, 1116)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("RadialOut/GradientCircle:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(229, 537)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("RadialOut/GradientCircle:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(6.60156, 6.60156)]
+}
+
+[sub_resource type="Animation" id="Animation_p3fmy"]
+resource_name = "sweep_down"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SweepDown/GradientSquare3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(246, -40), Vector2(246, 1116)]
+}
+
+[sub_resource type="Animation" id="Animation_8ami6"]
+resource_name = "sweep_left"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SweepLeft/GradientSquare3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(616.095, 552), Vector2(-145, 552)]
+}
+
+[sub_resource type="Animation" id="Animation_tch8g"]
+resource_name = "sweep_right"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SweepRight/GradientSquare4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-147.995, 552), Vector2(642, 552)]
+}
+
+[sub_resource type="Animation" id="Animation_o4ewh"]
+resource_name = "sweep_up"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SweepUp/GradientSquare3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(233, 1212), Vector2(246, -112)]
+}
+
+[sub_resource type="Animation" id="Animation_4xp5j"]
+resource_name = "radial_out"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RadialOut/GradientCircle:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(229, 537)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RadialOut/GradientCircle:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.382812, 0.382812), Vector2(6.60156, 6.60156)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_epack"]
+_data = {
+"RESET": SubResource("Animation_h05v7"),
+"radial_out": SubResource("Animation_4xp5j"),
+"sweep_down": SubResource("Animation_p3fmy"),
+"sweep_left": SubResource("Animation_8ami6"),
+"sweep_right": SubResource("Animation_tch8g"),
+"sweep_up": SubResource("Animation_o4ewh")
+}
+
+[node name="Playfield" type="TextureRect" node_paths=PackedStringArray("animation_player")]
+offset_right = 476.0
+offset_bottom = 1080.0
+texture = ExtResource("1_6b7q3")
+script = ExtResource("1_ujwwi")
+animation_player = NodePath("AnimationPlayer")
+monitor_size = Vector2(475, 1080)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_epack")
+}
+
+[node name="SweepRight" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GradientSquare4" type="Sprite2D" parent="SweepRight"]
+position = Vector2(535, 552)
+rotation = 1.5708
+scale = Vector2(4.29649, 1.03301)
+texture = ExtResource("5_is4i2")
+
+[node name="SweepLeft" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GradientSquare3" type="Sprite2D" parent="SweepLeft"]
+position = Vector2(-48.9999, 552)
+rotation = -1.5708
+scale = Vector2(4.29649, 0.955667)
+texture = ExtResource("5_is4i2")
+
+[node name="SweepDown" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GradientSquare3" type="Sprite2D" parent="SweepDown"]
+position = Vector2(246, 1116)
+rotation = 3.14159
+scale = Vector2(2.58594, 0.186611)
+texture = ExtResource("5_is4i2")
+
+[node name="SweepUp" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GradientSquare3" type="Sprite2D" parent="SweepUp"]
+position = Vector2(246, -40)
+scale = Vector2(2.58594, 0.800337)
+texture = ExtResource("5_is4i2")
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="lights" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ball_seg18" type="Sprite2D" parent="lights"]
+position = Vector2(34.4914, 96.1998)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="p4_seg120" type="Sprite2D" parent="lights"]
+position = Vector2(96.8637, 72.455)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg119" type="Sprite2D" parent="lights"]
+position = Vector2(93.6231, 69.9198)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg118" type="Sprite2D" parent="lights"]
+position = Vector2(92.1792, 69.8189)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg117" type="Sprite2D" parent="lights"]
+position = Vector2(90.4534, 70.2388)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg116" type="Sprite2D" parent="lights"]
+position = Vector2(94.5466, 65.0843)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg115" type="Sprite2D" parent="lights"]
+position = Vector2(93.0019, 65.2857)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg114" type="Sprite2D" parent="lights"]
+position = Vector2(91.5094, 64.9667)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg113" type="Sprite2D" parent="lights"]
+position = Vector2(94.2444, 67.5691)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg112" type="Sprite2D" parent="lights"]
+position = Vector2(90.9871, 67.6364)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg111" type="Sprite2D" parent="lights"]
+position = Vector2(89.9797, 65.3192)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg110" type="Sprite2D" parent="lights"]
+position = Vector2(89.0059, 70.3059)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg109" type="Sprite2D" parent="lights"]
+position = Vector2(91.9609, 72.7573)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg108" type="Sprite2D" parent="lights"]
+position = Vector2(95.4197, 70.3395)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg107" type="Sprite2D" parent="lights"]
+position = Vector2(96.3953, 65.2689)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg106" type="Sprite2D" parent="lights"]
+position = Vector2(93.5392, 62.6327)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg120" type="Sprite2D" parent="lights"]
+position = Vector2(96.8169, 56.4754)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg119" type="Sprite2D" parent="lights"]
+position = Vector2(93.5764, 53.9401)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg118" type="Sprite2D" parent="lights"]
+position = Vector2(92.1324, 53.8393)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg117" type="Sprite2D" parent="lights"]
+position = Vector2(90.4066, 54.2591)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg116" type="Sprite2D" parent="lights"]
+position = Vector2(94.4998, 49.1044)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg115" type="Sprite2D" parent="lights"]
+position = Vector2(92.9552, 49.3059)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg114" type="Sprite2D" parent="lights"]
+position = Vector2(91.4626, 48.987)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg113" type="Sprite2D" parent="lights"]
+position = Vector2(94.1976, 51.5895)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg112" type="Sprite2D" parent="lights"]
+position = Vector2(90.9403, 51.6566)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg111" type="Sprite2D" parent="lights"]
+position = Vector2(89.9329, 49.3395)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg110" type="Sprite2D" parent="lights"]
+position = Vector2(88.9591, 54.3262)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg109" type="Sprite2D" parent="lights"]
+position = Vector2(91.9141, 56.7776)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg108" type="Sprite2D" parent="lights"]
+position = Vector2(95.3729, 54.3598)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg107" type="Sprite2D" parent="lights"]
+position = Vector2(96.3485, 49.2892)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg106" type="Sprite2D" parent="lights"]
+position = Vector2(93.4924, 46.653)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg120" type="Sprite2D" parent="lights"]
+position = Vector2(96.727, 40.4926)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg119" type="Sprite2D" parent="lights"]
+position = Vector2(93.4865, 37.9573)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg118" type="Sprite2D" parent="lights"]
+position = Vector2(92.0425, 37.8566)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg117" type="Sprite2D" parent="lights"]
+position = Vector2(90.3167, 38.2763)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg116" type="Sprite2D" parent="lights"]
+position = Vector2(94.4099, 33.1217)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg115" type="Sprite2D" parent="lights"]
+position = Vector2(92.8653, 33.3232)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg114" type="Sprite2D" parent="lights"]
+position = Vector2(91.3727, 33.0042)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg113" type="Sprite2D" parent="lights"]
+position = Vector2(94.1077, 35.6067)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg112" type="Sprite2D" parent="lights"]
+position = Vector2(90.8504, 35.6739)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg111" type="Sprite2D" parent="lights"]
+position = Vector2(89.843, 33.3568)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg110" type="Sprite2D" parent="lights"]
+position = Vector2(88.8692, 38.3435)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg109" type="Sprite2D" parent="lights"]
+position = Vector2(91.8243, 40.7948)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg108" type="Sprite2D" parent="lights"]
+position = Vector2(95.283, 38.377)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg107" type="Sprite2D" parent="lights"]
+position = Vector2(96.2586, 33.3064)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg106" type="Sprite2D" parent="lights"]
+position = Vector2(93.4025, 30.6703)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg120" type="Sprite2D" parent="lights"]
+position = Vector2(96.6574, 24.534)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg119" type="Sprite2D" parent="lights"]
+position = Vector2(93.4169, 21.9987)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg118" type="Sprite2D" parent="lights"]
+position = Vector2(91.9729, 21.898)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg117" type="Sprite2D" parent="lights"]
+position = Vector2(90.2471, 22.3178)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg116" type="Sprite2D" parent="lights"]
+position = Vector2(94.3403, 17.1631)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg115" type="Sprite2D" parent="lights"]
+position = Vector2(92.7956, 17.3646)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg114" type="Sprite2D" parent="lights"]
+position = Vector2(91.3031, 17.0456)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg113" type="Sprite2D" parent="lights"]
+position = Vector2(94.0381, 19.6481)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg112" type="Sprite2D" parent="lights"]
+position = Vector2(90.7808, 19.7153)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg111" type="Sprite2D" parent="lights"]
+position = Vector2(89.7734, 17.3982)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg110" type="Sprite2D" parent="lights"]
+position = Vector2(88.7996, 22.3849)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg109" type="Sprite2D" parent="lights"]
+position = Vector2(91.7547, 24.8363)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg108" type="Sprite2D" parent="lights"]
+position = Vector2(95.2134, 22.4185)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg107" type="Sprite2D" parent="lights"]
+position = Vector2(96.189, 17.3478)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg106" type="Sprite2D" parent="lights"]
+position = Vector2(93.3329, 14.7117)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg105" type="Sprite2D" parent="lights"]
+position = Vector2(86.7742, 72.455)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg105" type="Sprite2D" parent="lights"]
+position = Vector2(86.6505, 56.4754)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg105" type="Sprite2D" parent="lights"]
+position = Vector2(86.6175, 40.4926)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg104" type="Sprite2D" parent="lights"]
+position = Vector2(83.5337, 69.9198)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg104" type="Sprite2D" parent="lights"]
+position = Vector2(83.41, 53.9401)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg104" type="Sprite2D" parent="lights"]
+position = Vector2(83.377, 37.9573)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg103" type="Sprite2D" parent="lights"]
+position = Vector2(82.0898, 69.8189)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg103" type="Sprite2D" parent="lights"]
+position = Vector2(81.9661, 53.8393)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg103" type="Sprite2D" parent="lights"]
+position = Vector2(81.9331, 37.8566)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg102" type="Sprite2D" parent="lights"]
+position = Vector2(80.364, 70.2388)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg102" type="Sprite2D" parent="lights"]
+position = Vector2(80.2403, 54.2591)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg102" type="Sprite2D" parent="lights"]
+position = Vector2(80.2073, 38.2763)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg101" type="Sprite2D" parent="lights"]
+position = Vector2(84.4572, 65.0843)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg101" type="Sprite2D" parent="lights"]
+position = Vector2(84.3335, 49.1044)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg101" type="Sprite2D" parent="lights"]
+position = Vector2(84.3005, 33.1217)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg100" type="Sprite2D" parent="lights"]
+position = Vector2(82.9125, 65.2857)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg100" type="Sprite2D" parent="lights"]
+position = Vector2(82.7888, 49.3059)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg100" type="Sprite2D" parent="lights"]
+position = Vector2(82.7558, 33.3232)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg99" type="Sprite2D" parent="lights"]
+position = Vector2(81.42, 64.9667)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg99" type="Sprite2D" parent="lights"]
+position = Vector2(81.2962, 48.987)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg99" type="Sprite2D" parent="lights"]
+position = Vector2(81.2632, 33.0042)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg98" type="Sprite2D" parent="lights"]
+position = Vector2(84.1549, 67.5691)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg98" type="Sprite2D" parent="lights"]
+position = Vector2(84.0313, 51.5895)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg98" type="Sprite2D" parent="lights"]
+position = Vector2(83.9982, 35.6067)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg97" type="Sprite2D" parent="lights"]
+position = Vector2(80.8977, 67.6364)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg97" type="Sprite2D" parent="lights"]
+position = Vector2(80.7739, 51.6566)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg97" type="Sprite2D" parent="lights"]
+position = Vector2(80.741, 35.6739)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg96" type="Sprite2D" parent="lights"]
+position = Vector2(79.8903, 65.3192)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg96" type="Sprite2D" parent="lights"]
+position = Vector2(79.7665, 49.3395)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg96" type="Sprite2D" parent="lights"]
+position = Vector2(79.7336, 33.3568)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg95" type="Sprite2D" parent="lights"]
+position = Vector2(78.9164, 70.3059)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg95" type="Sprite2D" parent="lights"]
+position = Vector2(78.7927, 54.3262)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg95" type="Sprite2D" parent="lights"]
+position = Vector2(78.7598, 38.3435)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg94" type="Sprite2D" parent="lights"]
+position = Vector2(81.8715, 72.7573)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg94" type="Sprite2D" parent="lights"]
+position = Vector2(81.7478, 56.7776)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg94" type="Sprite2D" parent="lights"]
+position = Vector2(81.7148, 40.7948)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg93" type="Sprite2D" parent="lights"]
+position = Vector2(85.3303, 70.3395)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg93" type="Sprite2D" parent="lights"]
+position = Vector2(85.2065, 54.3598)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg93" type="Sprite2D" parent="lights"]
+position = Vector2(85.1736, 38.377)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg92" type="Sprite2D" parent="lights"]
+position = Vector2(86.3059, 65.2689)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg92" type="Sprite2D" parent="lights"]
+position = Vector2(86.1822, 49.2892)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg92" type="Sprite2D" parent="lights"]
+position = Vector2(86.1492, 33.3064)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg91" type="Sprite2D" parent="lights"]
+position = Vector2(83.4498, 62.6327)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg91" type="Sprite2D" parent="lights"]
+position = Vector2(83.3261, 46.653)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg91" type="Sprite2D" parent="lights"]
+position = Vector2(83.2931, 30.6703)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg90" type="Sprite2D" parent="lights"]
+position = Vector2(76.7336, 72.455)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg90" type="Sprite2D" parent="lights"]
+position = Vector2(76.6098, 56.4754)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg90" type="Sprite2D" parent="lights"]
+position = Vector2(76.577, 40.4926)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg89" type="Sprite2D" parent="lights"]
+position = Vector2(73.4931, 69.9198)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg89" type="Sprite2D" parent="lights"]
+position = Vector2(73.3693, 53.9401)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg89" type="Sprite2D" parent="lights"]
+position = Vector2(73.3365, 37.9573)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg88" type="Sprite2D" parent="lights"]
+position = Vector2(72.0492, 69.8189)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg88" type="Sprite2D" parent="lights"]
+position = Vector2(71.9255, 53.8393)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg88" type="Sprite2D" parent="lights"]
+position = Vector2(71.8926, 37.8566)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg87" type="Sprite2D" parent="lights"]
+position = Vector2(70.3234, 70.2388)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg87" type="Sprite2D" parent="lights"]
+position = Vector2(70.1997, 54.2591)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg87" type="Sprite2D" parent="lights"]
+position = Vector2(70.1668, 38.2763)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg86" type="Sprite2D" parent="lights"]
+position = Vector2(74.4166, 65.0843)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg86" type="Sprite2D" parent="lights"]
+position = Vector2(74.2928, 49.1044)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg86" type="Sprite2D" parent="lights"]
+position = Vector2(74.26, 33.1217)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg85" type="Sprite2D" parent="lights"]
+position = Vector2(72.8719, 65.2857)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg85" type="Sprite2D" parent="lights"]
+position = Vector2(72.7481, 49.3059)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg85" type="Sprite2D" parent="lights"]
+position = Vector2(72.7153, 33.3232)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg84" type="Sprite2D" parent="lights"]
+position = Vector2(71.3794, 64.9667)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg84" type="Sprite2D" parent="lights"]
+position = Vector2(71.2556, 48.987)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg84" type="Sprite2D" parent="lights"]
+position = Vector2(71.2228, 33.0042)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg83" type="Sprite2D" parent="lights"]
+position = Vector2(74.1143, 67.5691)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg83" type="Sprite2D" parent="lights"]
+position = Vector2(73.9906, 51.5895)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg83" type="Sprite2D" parent="lights"]
+position = Vector2(73.9577, 35.6067)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg82" type="Sprite2D" parent="lights"]
+position = Vector2(70.8571, 67.6364)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg82" type="Sprite2D" parent="lights"]
+position = Vector2(70.7333, 51.6566)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg82" type="Sprite2D" parent="lights"]
+position = Vector2(70.7005, 35.6739)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg81" type="Sprite2D" parent="lights"]
+position = Vector2(69.8497, 65.3192)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg81" type="Sprite2D" parent="lights"]
+position = Vector2(69.7259, 49.3395)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg81" type="Sprite2D" parent="lights"]
+position = Vector2(69.6931, 33.3568)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg80" type="Sprite2D" parent="lights"]
+position = Vector2(68.8759, 70.3059)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg80" type="Sprite2D" parent="lights"]
+position = Vector2(68.7521, 54.3262)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg80" type="Sprite2D" parent="lights"]
+position = Vector2(68.7193, 38.3435)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg79" type="Sprite2D" parent="lights"]
+position = Vector2(71.8308, 72.7573)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg79" type="Sprite2D" parent="lights"]
+position = Vector2(71.7072, 56.7776)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg79" type="Sprite2D" parent="lights"]
+position = Vector2(71.6743, 40.7948)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg78" type="Sprite2D" parent="lights"]
+position = Vector2(75.2896, 70.3395)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg78" type="Sprite2D" parent="lights"]
+position = Vector2(75.1659, 54.3598)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg78" type="Sprite2D" parent="lights"]
+position = Vector2(75.133, 38.377)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg77" type="Sprite2D" parent="lights"]
+position = Vector2(76.2653, 65.2689)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg77" type="Sprite2D" parent="lights"]
+position = Vector2(76.1415, 49.2892)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg77" type="Sprite2D" parent="lights"]
+position = Vector2(76.1086, 33.3064)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg76" type="Sprite2D" parent="lights"]
+position = Vector2(73.4091, 62.6327)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg76" type="Sprite2D" parent="lights"]
+position = Vector2(73.2854, 46.653)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg76" type="Sprite2D" parent="lights"]
+position = Vector2(73.2526, 30.6703)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg75" type="Sprite2D" parent="lights"]
+position = Vector2(66.6931, 72.455)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg75" type="Sprite2D" parent="lights"]
+position = Vector2(66.5693, 56.4754)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg75" type="Sprite2D" parent="lights"]
+position = Vector2(66.5365, 40.4926)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg74" type="Sprite2D" parent="lights"]
+position = Vector2(63.4525, 69.9198)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg74" type="Sprite2D" parent="lights"]
+position = Vector2(63.3288, 53.9401)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg74" type="Sprite2D" parent="lights"]
+position = Vector2(63.296, 37.9573)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg73" type="Sprite2D" parent="lights"]
+position = Vector2(62.0086, 69.8189)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg73" type="Sprite2D" parent="lights"]
+position = Vector2(61.8848, 53.8393)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg73" type="Sprite2D" parent="lights"]
+position = Vector2(61.852, 37.8566)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg72" type="Sprite2D" parent="lights"]
+position = Vector2(60.2828, 70.2388)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg72" type="Sprite2D" parent="lights"]
+position = Vector2(60.159, 54.2591)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg72" type="Sprite2D" parent="lights"]
+position = Vector2(60.1262, 38.2763)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg71" type="Sprite2D" parent="lights"]
+position = Vector2(64.376, 65.0843)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg71" type="Sprite2D" parent="lights"]
+position = Vector2(64.2522, 49.1044)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg71" type="Sprite2D" parent="lights"]
+position = Vector2(64.2195, 33.1217)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg70" type="Sprite2D" parent="lights"]
+position = Vector2(62.8313, 65.2857)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg70" type="Sprite2D" parent="lights"]
+position = Vector2(62.7075, 49.3059)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg70" type="Sprite2D" parent="lights"]
+position = Vector2(62.6748, 33.3232)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg69" type="Sprite2D" parent="lights"]
+position = Vector2(61.3388, 64.9667)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg69" type="Sprite2D" parent="lights"]
+position = Vector2(61.215, 48.987)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg69" type="Sprite2D" parent="lights"]
+position = Vector2(61.1822, 33.0042)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg68" type="Sprite2D" parent="lights"]
+position = Vector2(64.0738, 67.5691)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg68" type="Sprite2D" parent="lights"]
+position = Vector2(63.95, 51.5895)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg68" type="Sprite2D" parent="lights"]
+position = Vector2(63.9172, 35.6067)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg67" type="Sprite2D" parent="lights"]
+position = Vector2(60.8164, 67.6364)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg67" type="Sprite2D" parent="lights"]
+position = Vector2(60.6926, 51.6566)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg67" type="Sprite2D" parent="lights"]
+position = Vector2(60.6599, 35.6739)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg66" type="Sprite2D" parent="lights"]
+position = Vector2(59.8091, 65.3192)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg66" type="Sprite2D" parent="lights"]
+position = Vector2(59.6853, 49.3395)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg66" type="Sprite2D" parent="lights"]
+position = Vector2(59.6525, 33.3568)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg65" type="Sprite2D" parent="lights"]
+position = Vector2(58.8353, 70.3059)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg65" type="Sprite2D" parent="lights"]
+position = Vector2(58.7115, 54.3262)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg65" type="Sprite2D" parent="lights"]
+position = Vector2(58.6787, 38.3435)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg64" type="Sprite2D" parent="lights"]
+position = Vector2(61.7903, 72.7573)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg64" type="Sprite2D" parent="lights"]
+position = Vector2(61.6665, 56.7776)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg64" type="Sprite2D" parent="lights"]
+position = Vector2(61.6337, 40.7948)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg63" type="Sprite2D" parent="lights"]
+position = Vector2(65.2491, 70.3395)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg63" type="Sprite2D" parent="lights"]
+position = Vector2(65.1253, 54.3598)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg63" type="Sprite2D" parent="lights"]
+position = Vector2(65.0926, 38.377)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg62" type="Sprite2D" parent="lights"]
+position = Vector2(66.2247, 65.2689)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg62" type="Sprite2D" parent="lights"]
+position = Vector2(66.101, 49.2892)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg62" type="Sprite2D" parent="lights"]
+position = Vector2(66.0682, 33.3064)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg61" type="Sprite2D" parent="lights"]
+position = Vector2(63.3686, 62.6327)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg61" type="Sprite2D" parent="lights"]
+position = Vector2(63.2448, 46.653)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg61" type="Sprite2D" parent="lights"]
+position = Vector2(63.212, 30.6703)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg60" type="Sprite2D" parent="lights"]
+position = Vector2(56.6524, 72.455)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg60" type="Sprite2D" parent="lights"]
+position = Vector2(56.5286, 56.4754)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg60" type="Sprite2D" parent="lights"]
+position = Vector2(56.4958, 40.4926)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg59" type="Sprite2D" parent="lights"]
+position = Vector2(53.4118, 69.9198)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg59" type="Sprite2D" parent="lights"]
+position = Vector2(53.2881, 53.9401)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg59" type="Sprite2D" parent="lights"]
+position = Vector2(53.2555, 37.9573)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg58" type="Sprite2D" parent="lights"]
+position = Vector2(51.9679, 69.8189)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg58" type="Sprite2D" parent="lights"]
+position = Vector2(51.8441, 53.8393)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg58" type="Sprite2D" parent="lights"]
+position = Vector2(51.8116, 37.8566)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg57" type="Sprite2D" parent="lights"]
+position = Vector2(50.2421, 70.2388)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg57" type="Sprite2D" parent="lights"]
+position = Vector2(50.1183, 54.2591)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg57" type="Sprite2D" parent="lights"]
+position = Vector2(50.0859, 38.2763)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg56" type="Sprite2D" parent="lights"]
+position = Vector2(54.3354, 65.0843)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg56" type="Sprite2D" parent="lights"]
+position = Vector2(54.2115, 49.1044)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg56" type="Sprite2D" parent="lights"]
+position = Vector2(54.1789, 33.1217)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg55" type="Sprite2D" parent="lights"]
+position = Vector2(52.7906, 65.2857)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg55" type="Sprite2D" parent="lights"]
+position = Vector2(52.6668, 49.3059)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg55" type="Sprite2D" parent="lights"]
+position = Vector2(52.6343, 33.3232)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg54" type="Sprite2D" parent="lights"]
+position = Vector2(51.2981, 64.9667)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg54" type="Sprite2D" parent="lights"]
+position = Vector2(51.1743, 48.987)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg54" type="Sprite2D" parent="lights"]
+position = Vector2(51.1418, 33.0042)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg53" type="Sprite2D" parent="lights"]
+position = Vector2(54.0331, 67.5691)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg53" type="Sprite2D" parent="lights"]
+position = Vector2(53.9093, 51.5895)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg53" type="Sprite2D" parent="lights"]
+position = Vector2(53.8767, 35.6067)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg52" type="Sprite2D" parent="lights"]
+position = Vector2(50.7758, 67.6364)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg52" type="Sprite2D" parent="lights"]
+position = Vector2(50.6519, 51.6566)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg52" type="Sprite2D" parent="lights"]
+position = Vector2(50.6196, 35.6739)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg51" type="Sprite2D" parent="lights"]
+position = Vector2(49.7684, 65.3192)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg51" type="Sprite2D" parent="lights"]
+position = Vector2(49.6446, 49.3395)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg51" type="Sprite2D" parent="lights"]
+position = Vector2(49.6122, 33.3568)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg50" type="Sprite2D" parent="lights"]
+position = Vector2(48.7945, 70.3059)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg50" type="Sprite2D" parent="lights"]
+position = Vector2(48.6707, 54.3262)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg50" type="Sprite2D" parent="lights"]
+position = Vector2(48.6384, 38.3435)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg49" type="Sprite2D" parent="lights"]
+position = Vector2(51.7496, 72.7573)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg49" type="Sprite2D" parent="lights"]
+position = Vector2(51.6258, 56.7776)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg49" type="Sprite2D" parent="lights"]
+position = Vector2(51.5934, 40.7948)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg48" type="Sprite2D" parent="lights"]
+position = Vector2(55.2084, 70.3395)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg48" type="Sprite2D" parent="lights"]
+position = Vector2(55.0847, 54.3598)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg48" type="Sprite2D" parent="lights"]
+position = Vector2(55.0519, 38.377)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg47" type="Sprite2D" parent="lights"]
+position = Vector2(56.1841, 65.2689)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg47" type="Sprite2D" parent="lights"]
+position = Vector2(56.0602, 49.2892)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg47" type="Sprite2D" parent="lights"]
+position = Vector2(56.0275, 33.3064)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg46" type="Sprite2D" parent="lights"]
+position = Vector2(53.3279, 62.6327)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg46" type="Sprite2D" parent="lights"]
+position = Vector2(53.2041, 46.653)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg46" type="Sprite2D" parent="lights"]
+position = Vector2(53.1716, 30.6703)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg45" type="Sprite2D" parent="lights"]
+position = Vector2(46.6117, 72.455)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg45" type="Sprite2D" parent="lights"]
+position = Vector2(46.4878, 56.4754)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg45" type="Sprite2D" parent="lights"]
+position = Vector2(46.4556, 40.4926)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg44" type="Sprite2D" parent="lights"]
+position = Vector2(43.3712, 69.9198)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg44" type="Sprite2D" parent="lights"]
+position = Vector2(43.2473, 53.9401)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg44" type="Sprite2D" parent="lights"]
+position = Vector2(43.215, 37.9573)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg43" type="Sprite2D" parent="lights"]
+position = Vector2(41.9273, 69.8189)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg43" type="Sprite2D" parent="lights"]
+position = Vector2(41.8034, 53.8393)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg43" type="Sprite2D" parent="lights"]
+position = Vector2(41.7711, 37.8566)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg42" type="Sprite2D" parent="lights"]
+position = Vector2(40.2014, 70.2388)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg42" type="Sprite2D" parent="lights"]
+position = Vector2(40.0777, 54.2591)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg42" type="Sprite2D" parent="lights"]
+position = Vector2(40.0453, 38.2763)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg41" type="Sprite2D" parent="lights"]
+position = Vector2(44.2947, 65.0843)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg41" type="Sprite2D" parent="lights"]
+position = Vector2(44.1708, 49.1044)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg41" type="Sprite2D" parent="lights"]
+position = Vector2(44.1385, 33.1217)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg40" type="Sprite2D" parent="lights"]
+position = Vector2(42.75, 65.2857)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg40" type="Sprite2D" parent="lights"]
+position = Vector2(42.6262, 49.3059)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg40" type="Sprite2D" parent="lights"]
+position = Vector2(42.5938, 33.3232)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg39" type="Sprite2D" parent="lights"]
+position = Vector2(41.2574, 64.9667)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg39" type="Sprite2D" parent="lights"]
+position = Vector2(41.1336, 48.987)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg39" type="Sprite2D" parent="lights"]
+position = Vector2(41.1013, 33.0042)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg38" type="Sprite2D" parent="lights"]
+position = Vector2(43.9924, 67.5691)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg38" type="Sprite2D" parent="lights"]
+position = Vector2(43.8686, 51.5895)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg38" type="Sprite2D" parent="lights"]
+position = Vector2(43.8363, 35.6067)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg37" type="Sprite2D" parent="lights"]
+position = Vector2(40.7351, 67.6364)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg37" type="Sprite2D" parent="lights"]
+position = Vector2(40.6114, 51.6566)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg37" type="Sprite2D" parent="lights"]
+position = Vector2(40.579, 35.6739)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg36" type="Sprite2D" parent="lights"]
+position = Vector2(39.7277, 65.3192)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg36" type="Sprite2D" parent="lights"]
+position = Vector2(39.6039, 49.3395)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg36" type="Sprite2D" parent="lights"]
+position = Vector2(39.5716, 33.3568)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg35" type="Sprite2D" parent="lights"]
+position = Vector2(38.7539, 70.3059)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg35" type="Sprite2D" parent="lights"]
+position = Vector2(38.6301, 54.3262)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg35" type="Sprite2D" parent="lights"]
+position = Vector2(38.5978, 38.3435)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg34" type="Sprite2D" parent="lights"]
+position = Vector2(41.709, 72.7573)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg34" type="Sprite2D" parent="lights"]
+position = Vector2(41.5851, 56.7776)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg34" type="Sprite2D" parent="lights"]
+position = Vector2(41.5528, 40.7948)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg33" type="Sprite2D" parent="lights"]
+position = Vector2(45.1678, 70.3395)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg33" type="Sprite2D" parent="lights"]
+position = Vector2(45.0439, 54.3598)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg33" type="Sprite2D" parent="lights"]
+position = Vector2(45.0116, 38.377)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg32" type="Sprite2D" parent="lights"]
+position = Vector2(46.1434, 65.2689)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg32" type="Sprite2D" parent="lights"]
+position = Vector2(46.0195, 49.2892)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg32" type="Sprite2D" parent="lights"]
+position = Vector2(45.9872, 33.3064)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg31" type="Sprite2D" parent="lights"]
+position = Vector2(43.2873, 62.6327)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg31" type="Sprite2D" parent="lights"]
+position = Vector2(43.1634, 46.653)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg31" type="Sprite2D" parent="lights"]
+position = Vector2(43.1311, 30.6703)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg30" type="Sprite2D" parent="lights"]
+position = Vector2(36.571, 72.455)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg30" type="Sprite2D" parent="lights"]
+position = Vector2(36.4472, 56.4754)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg30" type="Sprite2D" parent="lights"]
+position = Vector2(36.4149, 40.4926)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg29" type="Sprite2D" parent="lights"]
+position = Vector2(33.3306, 69.9198)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg29" type="Sprite2D" parent="lights"]
+position = Vector2(33.2067, 53.9401)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg29" type="Sprite2D" parent="lights"]
+position = Vector2(33.1744, 37.9573)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg28" type="Sprite2D" parent="lights"]
+position = Vector2(31.8866, 69.8189)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg28" type="Sprite2D" parent="lights"]
+position = Vector2(31.7628, 53.8393)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg28" type="Sprite2D" parent="lights"]
+position = Vector2(31.7305, 37.8566)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg27" type="Sprite2D" parent="lights"]
+position = Vector2(30.1608, 70.2388)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg27" type="Sprite2D" parent="lights"]
+position = Vector2(30.037, 54.2591)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg27" type="Sprite2D" parent="lights"]
+position = Vector2(30.0047, 38.2763)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg26" type="Sprite2D" parent="lights"]
+position = Vector2(34.254, 65.0843)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg26" type="Sprite2D" parent="lights"]
+position = Vector2(34.1302, 49.1044)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg26" type="Sprite2D" parent="lights"]
+position = Vector2(34.0979, 33.1217)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg25" type="Sprite2D" parent="lights"]
+position = Vector2(32.7093, 65.2857)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg25" type="Sprite2D" parent="lights"]
+position = Vector2(32.5855, 49.3059)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg25" type="Sprite2D" parent="lights"]
+position = Vector2(32.5532, 33.3232)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg24" type="Sprite2D" parent="lights"]
+position = Vector2(31.2168, 64.9667)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg24" type="Sprite2D" parent="lights"]
+position = Vector2(31.093, 48.987)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg24" type="Sprite2D" parent="lights"]
+position = Vector2(31.0607, 33.0042)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg23" type="Sprite2D" parent="lights"]
+position = Vector2(33.9518, 67.5691)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg23" type="Sprite2D" parent="lights"]
+position = Vector2(33.828, 51.5895)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg23" type="Sprite2D" parent="lights"]
+position = Vector2(33.7957, 35.6067)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg22" type="Sprite2D" parent="lights"]
+position = Vector2(30.6945, 67.6364)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg22" type="Sprite2D" parent="lights"]
+position = Vector2(30.5707, 51.6566)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg22" type="Sprite2D" parent="lights"]
+position = Vector2(30.5384, 35.6739)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg21" type="Sprite2D" parent="lights"]
+position = Vector2(29.6871, 65.3192)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg21" type="Sprite2D" parent="lights"]
+position = Vector2(29.5633, 49.3395)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg21" type="Sprite2D" parent="lights"]
+position = Vector2(29.531, 33.3568)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg20" type="Sprite2D" parent="lights"]
+position = Vector2(28.7133, 70.3059)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg20" type="Sprite2D" parent="lights"]
+position = Vector2(28.5895, 54.3262)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg20" type="Sprite2D" parent="lights"]
+position = Vector2(28.5572, 38.3435)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg19" type="Sprite2D" parent="lights"]
+position = Vector2(31.6683, 72.7573)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg19" type="Sprite2D" parent="lights"]
+position = Vector2(31.5445, 56.7776)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg19" type="Sprite2D" parent="lights"]
+position = Vector2(31.5122, 40.7948)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg18" type="Sprite2D" parent="lights"]
+position = Vector2(35.1271, 70.3395)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg18" type="Sprite2D" parent="lights"]
+position = Vector2(35.0033, 54.3598)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg18" type="Sprite2D" parent="lights"]
+position = Vector2(34.971, 38.377)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg17" type="Sprite2D" parent="lights"]
+position = Vector2(36.1027, 65.2689)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg17" type="Sprite2D" parent="lights"]
+position = Vector2(35.9789, 49.2892)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg17" type="Sprite2D" parent="lights"]
+position = Vector2(35.9466, 33.3064)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg16" type="Sprite2D" parent="lights"]
+position = Vector2(33.2466, 62.6327)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg16" type="Sprite2D" parent="lights"]
+position = Vector2(33.1228, 46.653)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg16" type="Sprite2D" parent="lights"]
+position = Vector2(33.0905, 30.6703)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg15" type="Sprite2D" parent="lights"]
+position = Vector2(26.5304, 72.455)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg15" type="Sprite2D" parent="lights"]
+position = Vector2(26.4067, 56.4754)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg15" type="Sprite2D" parent="lights"]
+position = Vector2(26.3744, 40.4926)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg14" type="Sprite2D" parent="lights"]
+position = Vector2(23.2899, 69.9198)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg14" type="Sprite2D" parent="lights"]
+position = Vector2(23.1661, 53.9401)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg14" type="Sprite2D" parent="lights"]
+position = Vector2(23.1339, 37.9573)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg13" type="Sprite2D" parent="lights"]
+position = Vector2(21.846, 69.8189)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg13" type="Sprite2D" parent="lights"]
+position = Vector2(21.7222, 53.8393)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg13" type="Sprite2D" parent="lights"]
+position = Vector2(21.69, 37.8566)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg12" type="Sprite2D" parent="lights"]
+position = Vector2(20.1202, 70.2388)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg12" type="Sprite2D" parent="lights"]
+position = Vector2(19.9963, 54.2591)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg12" type="Sprite2D" parent="lights"]
+position = Vector2(19.9642, 38.2763)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg11" type="Sprite2D" parent="lights"]
+position = Vector2(24.2134, 65.0843)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg11" type="Sprite2D" parent="lights"]
+position = Vector2(24.0896, 49.1044)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg11" type="Sprite2D" parent="lights"]
+position = Vector2(24.0574, 33.1217)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg10" type="Sprite2D" parent="lights"]
+position = Vector2(22.6687, 65.2857)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg10" type="Sprite2D" parent="lights"]
+position = Vector2(22.5449, 49.3059)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg10" type="Sprite2D" parent="lights"]
+position = Vector2(22.5127, 33.3232)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg9" type="Sprite2D" parent="lights"]
+position = Vector2(21.1762, 64.9667)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg9" type="Sprite2D" parent="lights"]
+position = Vector2(21.0524, 48.987)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg9" type="Sprite2D" parent="lights"]
+position = Vector2(21.0202, 33.0042)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg8" type="Sprite2D" parent="lights"]
+position = Vector2(23.9111, 67.5691)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg8" type="Sprite2D" parent="lights"]
+position = Vector2(23.7873, 51.5895)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg8" type="Sprite2D" parent="lights"]
+position = Vector2(23.7551, 35.6067)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg7" type="Sprite2D" parent="lights"]
+position = Vector2(20.6539, 67.6364)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg7" type="Sprite2D" parent="lights"]
+position = Vector2(20.5301, 51.6566)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg7" type="Sprite2D" parent="lights"]
+position = Vector2(20.4979, 35.6739)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg6" type="Sprite2D" parent="lights"]
+position = Vector2(19.6465, 65.3192)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg6" type="Sprite2D" parent="lights"]
+position = Vector2(19.5226, 49.3395)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg6" type="Sprite2D" parent="lights"]
+position = Vector2(19.4905, 33.3568)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg5" type="Sprite2D" parent="lights"]
+position = Vector2(18.6726, 70.3059)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg5" type="Sprite2D" parent="lights"]
+position = Vector2(18.5488, 54.3262)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg5" type="Sprite2D" parent="lights"]
+position = Vector2(18.5167, 38.3435)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg4" type="Sprite2D" parent="lights"]
+position = Vector2(21.6277, 72.7573)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg4" type="Sprite2D" parent="lights"]
+position = Vector2(21.5039, 56.7776)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg4" type="Sprite2D" parent="lights"]
+position = Vector2(21.4717, 40.7948)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg3" type="Sprite2D" parent="lights"]
+position = Vector2(25.0865, 70.3395)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg3" type="Sprite2D" parent="lights"]
+position = Vector2(24.9627, 54.3598)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg3" type="Sprite2D" parent="lights"]
+position = Vector2(24.9305, 38.377)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg2" type="Sprite2D" parent="lights"]
+position = Vector2(26.0621, 65.2689)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg2" type="Sprite2D" parent="lights"]
+position = Vector2(25.9383, 49.2892)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg2" type="Sprite2D" parent="lights"]
+position = Vector2(25.9061, 33.3064)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p4_seg1" type="Sprite2D" parent="lights"]
+position = Vector2(23.206, 62.6327)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p3_seg1" type="Sprite2D" parent="lights"]
+position = Vector2(23.0821, 46.653)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p2_seg1" type="Sprite2D" parent="lights"]
+position = Vector2(23.05, 30.6703)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="ball_seg30" type="Sprite2D" parent="lights"]
+position = Vector2(35.9354, 98.3154)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg29" type="Sprite2D" parent="lights"]
+position = Vector2(32.6949, 95.7802)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg28" type="Sprite2D" parent="lights"]
+position = Vector2(31.2509, 95.6794)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg27" type="Sprite2D" parent="lights"]
+position = Vector2(29.5251, 96.0991)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg26" type="Sprite2D" parent="lights"]
+position = Vector2(33.6183, 90.9446)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg25" type="Sprite2D" parent="lights"]
+position = Vector2(32.0737, 91.146)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg24" type="Sprite2D" parent="lights"]
+position = Vector2(30.5811, 90.827)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg23" type="Sprite2D" parent="lights"]
+position = Vector2(33.3161, 93.4295)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg22" type="Sprite2D" parent="lights"]
+position = Vector2(30.0588, 93.4967)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg21" type="Sprite2D" parent="lights"]
+position = Vector2(29.0514, 91.1796)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg20" type="Sprite2D" parent="lights"]
+position = Vector2(28.0776, 96.1663)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg19" type="Sprite2D" parent="lights"]
+position = Vector2(31.0326, 98.6176)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg17" type="Sprite2D" parent="lights"]
+position = Vector2(35.4671, 91.1292)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg16" type="Sprite2D" parent="lights"]
+position = Vector2(32.6109, 88.4932)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg15" type="Sprite2D" parent="lights"]
+position = Vector2(25.8947, 98.3154)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg14" type="Sprite2D" parent="lights"]
+position = Vector2(22.6543, 95.7802)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg13" type="Sprite2D" parent="lights"]
+position = Vector2(21.2103, 95.6794)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg12" type="Sprite2D" parent="lights"]
+position = Vector2(19.4845, 96.0991)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg11" type="Sprite2D" parent="lights"]
+position = Vector2(23.5777, 90.9446)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg10" type="Sprite2D" parent="lights"]
+position = Vector2(22.0331, 91.146)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg9" type="Sprite2D" parent="lights"]
+position = Vector2(20.5405, 90.827)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg8" type="Sprite2D" parent="lights"]
+position = Vector2(23.2754, 93.4295)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg7" type="Sprite2D" parent="lights"]
+position = Vector2(20.0182, 93.4967)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg6" type="Sprite2D" parent="lights"]
+position = Vector2(19.0108, 91.1796)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg5" type="Sprite2D" parent="lights"]
+position = Vector2(18.037, 96.1663)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg4" type="Sprite2D" parent="lights"]
+position = Vector2(20.992, 98.6176)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg3" type="Sprite2D" parent="lights"]
+position = Vector2(24.4508, 96.1998)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg2" type="Sprite2D" parent="lights"]
+position = Vector2(25.4264, 91.1292)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="ball_seg1" type="Sprite2D" parent="lights"]
+position = Vector2(22.5703, 88.4932)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tBallSegs"]
+
+[node name="p1_seg105" type="Sprite2D" parent="lights"]
+position = Vector2(86.5918, 24.534)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg104" type="Sprite2D" parent="lights"]
+position = Vector2(83.3513, 21.9987)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg103" type="Sprite2D" parent="lights"]
+position = Vector2(81.9074, 21.898)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg102" type="Sprite2D" parent="lights"]
+position = Vector2(80.1815, 22.3178)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg101" type="Sprite2D" parent="lights"]
+position = Vector2(84.2747, 17.1631)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg100" type="Sprite2D" parent="lights"]
+position = Vector2(82.7301, 17.3646)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg99" type="Sprite2D" parent="lights"]
+position = Vector2(81.2375, 17.0456)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg98" type="Sprite2D" parent="lights"]
+position = Vector2(83.9725, 19.6481)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg97" type="Sprite2D" parent="lights"]
+position = Vector2(80.7152, 19.7153)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg96" type="Sprite2D" parent="lights"]
+position = Vector2(79.7078, 17.3982)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg95" type="Sprite2D" parent="lights"]
+position = Vector2(78.734, 22.3849)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg94" type="Sprite2D" parent="lights"]
+position = Vector2(81.6891, 24.8363)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg93" type="Sprite2D" parent="lights"]
+position = Vector2(85.1478, 22.4185)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg92" type="Sprite2D" parent="lights"]
+position = Vector2(86.1235, 17.3478)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg91" type="Sprite2D" parent="lights"]
+position = Vector2(83.2673, 14.7117)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg90" type="Sprite2D" parent="lights"]
+position = Vector2(76.5511, 24.534)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg89" type="Sprite2D" parent="lights"]
+position = Vector2(73.3107, 21.9987)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg88" type="Sprite2D" parent="lights"]
+position = Vector2(71.8667, 21.898)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg87" type="Sprite2D" parent="lights"]
+position = Vector2(70.1409, 22.3178)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg86" type="Sprite2D" parent="lights"]
+position = Vector2(74.2341, 17.1631)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg85" type="Sprite2D" parent="lights"]
+position = Vector2(72.6895, 17.3646)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg84" type="Sprite2D" parent="lights"]
+position = Vector2(71.1969, 17.0456)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg83" type="Sprite2D" parent="lights"]
+position = Vector2(73.9319, 19.6481)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg82" type="Sprite2D" parent="lights"]
+position = Vector2(70.6746, 19.7153)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg81" type="Sprite2D" parent="lights"]
+position = Vector2(69.6672, 17.3982)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg80" type="Sprite2D" parent="lights"]
+position = Vector2(68.6934, 22.3849)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg79" type="Sprite2D" parent="lights"]
+position = Vector2(71.6484, 24.8363)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg78" type="Sprite2D" parent="lights"]
+position = Vector2(75.1072, 22.4185)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg77" type="Sprite2D" parent="lights"]
+position = Vector2(76.0828, 17.3478)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg76" type="Sprite2D" parent="lights"]
+position = Vector2(73.2267, 14.7117)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg75" type="Sprite2D" parent="lights"]
+position = Vector2(66.5105, 24.534)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg74" type="Sprite2D" parent="lights"]
+position = Vector2(63.27, 21.9987)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg73" type="Sprite2D" parent="lights"]
+position = Vector2(61.8261, 21.898)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg72" type="Sprite2D" parent="lights"]
+position = Vector2(60.1003, 22.3178)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg71" type="Sprite2D" parent="lights"]
+position = Vector2(64.1935, 17.1631)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg70" type="Sprite2D" parent="lights"]
+position = Vector2(62.6488, 17.3646)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg69" type="Sprite2D" parent="lights"]
+position = Vector2(61.1562, 17.0456)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg68" type="Sprite2D" parent="lights"]
+position = Vector2(63.8913, 19.6481)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg67" type="Sprite2D" parent="lights"]
+position = Vector2(60.6339, 19.7153)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg66" type="Sprite2D" parent="lights"]
+position = Vector2(59.6266, 17.3982)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg65" type="Sprite2D" parent="lights"]
+position = Vector2(58.6527, 22.3849)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg64" type="Sprite2D" parent="lights"]
+position = Vector2(61.6078, 24.8363)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg63" type="Sprite2D" parent="lights"]
+position = Vector2(65.0666, 22.4185)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg62" type="Sprite2D" parent="lights"]
+position = Vector2(66.0422, 17.3478)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg61" type="Sprite2D" parent="lights"]
+position = Vector2(63.1861, 14.7117)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg60" type="Sprite2D" parent="lights"]
+position = Vector2(56.4698, 24.534)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg59" type="Sprite2D" parent="lights"]
+position = Vector2(53.2293, 21.9987)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg58" type="Sprite2D" parent="lights"]
+position = Vector2(51.7854, 21.898)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg57" type="Sprite2D" parent="lights"]
+position = Vector2(50.0596, 22.3178)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg56" type="Sprite2D" parent="lights"]
+position = Vector2(54.1528, 17.1631)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg55" type="Sprite2D" parent="lights"]
+position = Vector2(52.6081, 17.3646)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg54" type="Sprite2D" parent="lights"]
+position = Vector2(51.1156, 17.0456)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg53" type="Sprite2D" parent="lights"]
+position = Vector2(53.8505, 19.6481)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg52" type="Sprite2D" parent="lights"]
+position = Vector2(50.5933, 19.7153)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg51" type="Sprite2D" parent="lights"]
+position = Vector2(49.5858, 17.3982)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg50" type="Sprite2D" parent="lights"]
+position = Vector2(48.6121, 22.3849)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg49" type="Sprite2D" parent="lights"]
+position = Vector2(51.5671, 24.8363)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg48" type="Sprite2D" parent="lights"]
+position = Vector2(55.0259, 22.4185)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg47" type="Sprite2D" parent="lights"]
+position = Vector2(56.0015, 17.3478)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg46" type="Sprite2D" parent="lights"]
+position = Vector2(53.1454, 14.7117)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg45" type="Sprite2D" parent="lights"]
+position = Vector2(46.4292, 24.534)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg44" type="Sprite2D" parent="lights"]
+position = Vector2(43.1887, 21.9987)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg43" type="Sprite2D" parent="lights"]
+position = Vector2(41.7447, 21.898)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg42" type="Sprite2D" parent="lights"]
+position = Vector2(40.0189, 22.3178)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg41" type="Sprite2D" parent="lights"]
+position = Vector2(44.1121, 17.1631)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg40" type="Sprite2D" parent="lights"]
+position = Vector2(42.5674, 17.3646)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg39" type="Sprite2D" parent="lights"]
+position = Vector2(41.0749, 17.0456)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg38" type="Sprite2D" parent="lights"]
+position = Vector2(43.8099, 19.6481)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg37" type="Sprite2D" parent="lights"]
+position = Vector2(40.5526, 19.7153)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg36" type="Sprite2D" parent="lights"]
+position = Vector2(39.5452, 17.3982)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg35" type="Sprite2D" parent="lights"]
+position = Vector2(38.5714, 22.3849)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg34" type="Sprite2D" parent="lights"]
+position = Vector2(41.5265, 24.8363)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg33" type="Sprite2D" parent="lights"]
+position = Vector2(44.9852, 22.4185)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg32" type="Sprite2D" parent="lights"]
+position = Vector2(45.9608, 17.3478)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg31" type="Sprite2D" parent="lights"]
+position = Vector2(43.1047, 14.7117)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg30" type="Sprite2D" parent="lights"]
+position = Vector2(36.3885, 24.534)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg29" type="Sprite2D" parent="lights"]
+position = Vector2(33.148, 21.9987)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg28" type="Sprite2D" parent="lights"]
+position = Vector2(31.7041, 21.898)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg27" type="Sprite2D" parent="lights"]
+position = Vector2(29.9783, 22.3178)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg26" type="Sprite2D" parent="lights"]
+position = Vector2(34.0715, 17.1631)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg25" type="Sprite2D" parent="lights"]
+position = Vector2(32.5268, 17.3646)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg24" type="Sprite2D" parent="lights"]
+position = Vector2(31.0343, 17.0456)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg23" type="Sprite2D" parent="lights"]
+position = Vector2(33.7693, 19.6481)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg22" type="Sprite2D" parent="lights"]
+position = Vector2(30.512, 19.7153)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg21" type="Sprite2D" parent="lights"]
+position = Vector2(29.5046, 17.3982)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg20" type="Sprite2D" parent="lights"]
+position = Vector2(28.5308, 22.3849)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg19" type="Sprite2D" parent="lights"]
+position = Vector2(31.4858, 24.8363)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg18" type="Sprite2D" parent="lights"]
+position = Vector2(34.9446, 22.4185)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg17" type="Sprite2D" parent="lights"]
+position = Vector2(35.9202, 17.3478)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg16" type="Sprite2D" parent="lights"]
+position = Vector2(33.0641, 14.7117)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg15" type="Sprite2D" parent="lights"]
+position = Vector2(26.3479, 24.534)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg14" type="Sprite2D" parent="lights"]
+position = Vector2(23.1075, 21.9987)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg13" type="Sprite2D" parent="lights"]
+position = Vector2(21.6636, 21.898)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg12" type="Sprite2D" parent="lights"]
+position = Vector2(19.9377, 22.3178)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg11" type="Sprite2D" parent="lights"]
+position = Vector2(24.0309, 17.1631)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg10" type="Sprite2D" parent="lights"]
+position = Vector2(22.4863, 17.3646)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg9" type="Sprite2D" parent="lights"]
+position = Vector2(20.9938, 17.0456)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg8" type="Sprite2D" parent="lights"]
+position = Vector2(23.7287, 19.6481)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg7" type="Sprite2D" parent="lights"]
+position = Vector2(20.4714, 19.7153)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg6" type="Sprite2D" parent="lights"]
+position = Vector2(19.4641, 17.3982)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg5" type="Sprite2D" parent="lights"]
+position = Vector2(18.4902, 22.3849)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg4" type="Sprite2D" parent="lights"]
+position = Vector2(21.4453, 24.8363)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg3" type="Sprite2D" parent="lights"]
+position = Vector2(24.904, 22.4185)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg2" type="Sprite2D" parent="lights"]
+position = Vector2(25.8796, 17.3478)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="p1_seg1" type="Sprite2D" parent="lights"]
+position = Vector2(23.0235, 14.7117)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["tScoreSegs"]
+
+[node name="gi018" type="Sprite2D" parent="lights"]
+position = Vector2(337.942, 891.283)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["GI"]
+
+[node name="gi001" type="Sprite2D" parent="lights"]
+position = Vector2(429.83, 488.207)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["GI"]
+
+[node name="gi022" type="Sprite2D" parent="lights"]
+position = Vector2(92.2372, 760.238)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["GI"]
+
+[node name="gi024" type="Sprite2D" parent="lights"]
+position = Vector2(26.8034, 557.613)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["GI"]
+
+[node name="gi021" type="Sprite2D" parent="lights"]
+position = Vector2(112.273, 828.431)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["GI"]
+
+[node name="gi020" type="Sprite2D" parent="lights"]
+position = Vector2(75.4313, 869.054)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["GI"]
+
+[node name="gi019" type="Sprite2D" parent="lights"]
+position = Vector2(106.614, 890.7)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["GI"]
+
+[node name="gi017" type="Sprite2D" parent="lights"]
+position = Vector2(369.075, 868.407)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["GI"]
+
+[node name="gi016" type="Sprite2D" parent="lights"]
+position = Vector2(331.449, 830.225)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["GI"]
+
+[node name="gi015" type="Sprite2D" parent="lights"]
+position = Vector2(352.748, 760.132)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["GI"]
+
+[node name="gi014" type="Sprite2D" parent="lights"]
+position = Vector2(428.003, 626.318)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["GI"]
+
+[node name="gi013" type="Sprite2D" parent="lights"]
+position = Vector2(429.061, 562.398)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["GI"]
+
+[node name="gi012" type="Sprite2D" parent="lights"]
+position = Vector2(32.5454, 33.3576)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["GI"]
+
+[node name="gi011" type="Sprite2D" parent="lights"]
+position = Vector2(454.448, 89.2689)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["GI"]
+
+[node name="gi010" type="Sprite2D" parent="lights"]
+position = Vector2(21.2124, 250.202)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["GI"]
+
+[node name="gi009" type="Sprite2D" parent="lights"]
+position = Vector2(117.47, 85.1889)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["GI"]
+
+[node name="gi008" type="Sprite2D" parent="lights"]
+position = Vector2(164.466, 88.0601)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["GI"]
+
+[node name="gi007" type="Sprite2D" parent="lights"]
+position = Vector2(282.181, 109.971)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["GI"]
+
+[node name="gi006" type="Sprite2D" parent="lights"]
+position = Vector2(332.955, 120.851)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["GI"]
+
+[node name="gi050" type="Sprite2D" parent="lights"]
+position = Vector2(420.146, 41.5178)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["GI"]
+
+[node name="BL1a" type="Sprite2D" parent="lights"]
+position = Vector2(172.43, 182.926)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["GI"]
+
+[node name="L18" type="Sprite2D" parent="lights"]
+position = Vector2(376.962, 401.507)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L14" type="Sprite2D" parent="lights"]
+position = Vector2(229.968, 598.978)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L15" type="Sprite2D" parent="lights"]
+position = Vector2(187.874, 580.087)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L17" type="Sprite2D" parent="lights"]
+position = Vector2(188.208, 499.564)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L13" type="Sprite2D" parent="lights"]
+position = Vector2(271.003, 580.492)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L12" type="Sprite2D" parent="lights"]
+position = Vector2(287.299, 540.201)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L11" type="Sprite2D" parent="lights"]
+position = Vector2(271.184, 499.491)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L19" type="Sprite2D" parent="lights"]
+position = Vector2(270.167, 399.251)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L24" type="Sprite2D" parent="lights"]
+position = Vector2(325.169, 370.585)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L09" type="Sprite2D" parent="lights"]
+position = Vector2(90.4209, 596.079)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L25" type="Sprite2D" parent="lights"]
+position = Vector2(362.69, 321.751)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L20" type="Sprite2D" parent="lights"]
+position = Vector2(237.213, 373.7)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L04" type="Sprite2D" parent="lights"]
+position = Vector2(197.162, 799.787)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L01" type="Sprite2D" parent="lights"]
+position = Vector2(245.535, 811.934)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L02" type="Sprite2D" parent="lights"]
+position = Vector2(211.48, 830.613)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L03" type="Sprite2D" parent="lights"]
+position = Vector2(223.425, 949.266)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L07" type="Sprite2D" parent="lights"]
+position = Vector2(28.233, 700.837)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L08" type="Sprite2D" parent="lights"]
+position = Vector2(111.926, 654.748)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L23" type="Sprite2D" parent="lights"]
+position = Vector2(87.2762, 348.495)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L32" type="Sprite2D" parent="lights"]
+position = Vector2(194.027, 30.9457)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L10" type="Sprite2D" parent="lights"]
+position = Vector2(228.923, 483.552)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L16" type="Sprite2D" parent="lights"]
+position = Vector2(171.327, 540.333)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L28" type="Sprite2D" parent="lights"]
+position = Vector2(307.626, 85.3281)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L29" type="Sprite2D" parent="lights"]
+position = Vector2(258.097, 73.3546)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L30" type="Sprite2D" parent="lights"]
+position = Vector2(192.442, 57.9424)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L31" type="Sprite2D" parent="lights"]
+position = Vector2(140.477, 49.4304)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L05" type="Sprite2D" parent="lights"]
+position = Vector2(377.747, 739.094)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L06" type="Sprite2D" parent="lights"]
+position = Vector2(65.2807, 737.902)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L26" type="Sprite2D" parent="lights"]
+position = Vector2(347.286, 276.103)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L27" type="Sprite2D" parent="lights"]
+position = Vector2(225.728, 152.66)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L22" type="Sprite2D" parent="lights"]
+position = Vector2(131.496, 384.941)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L21" type="Sprite2D" parent="lights"]
+position = Vector2(172.016, 385.412)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="FL2" type="Sprite2D" parent="lights"]
+position = Vector2(443.83, 84.8114)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["10"]
+
+[node name="FL3" type="Sprite2D" parent="lights"]
+position = Vector2(425.508, 29.1481)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["10"]
+
+[node name="FL1" type="Sprite2D" parent="lights"]
+position = Vector2(78.2597, 102.228)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["10"]
+
+[node name="FL4" type="Sprite2D" parent="lights"]
+position = Vector2(54.3631, 19.4636)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["10"]
+
+[node name="BL2a" type="Sprite2D" parent="lights"]
+position = Vector2(280.143, 212.978)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["GI"]
+
+[node name="BL3" type="Sprite2D" parent="lights"]
+position = Vector2(180.811, 290.747)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["10"]
+
+[node name="BL2" type="Sprite2D" parent="lights"]
+position = Vector2(280.134, 212.402)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["10"]
+
+[node name="BL1" type="Sprite2D" parent="lights"]
+position = Vector2(169.491, 183.269)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["10"]
+
+[node name="BL3a" type="Sprite2D" parent="lights"]
+position = Vector2(182.041, 291.905)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["GI"]
+
+[node name="L33" type="Sprite2D" parent="lights"]
+position = Vector2(374.231, 603.531)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L34" type="Sprite2D" parent="lights"]
+position = Vector2(374.502, 576.701)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L35" type="Sprite2D" parent="lights"]
+position = Vector2(374.125, 550.664)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L36" type="Sprite2D" parent="lights"]
+position = Vector2(373.748, 524.627)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L37" type="Sprite2D" parent="lights"]
+position = Vector2(374.125, 499.344)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L38" type="Sprite2D" parent="lights"]
+position = Vector2(374.125, 473.684)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="L39" type="Sprite2D" parent="lights"]
+position = Vector2(226.176, 184.637)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_5lr1j")
+script = ExtResource("4_yy1oo")
+tags = ["Inserts"]
+
+[node name="RadialOut" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GradientCircle" type="Sprite2D" parent="RadialOut"]
+position = Vector2(229, 537)
+scale = Vector2(6.60156, 6.60156)
+texture = ExtResource("6_1tb8c")

@@ -1,0 +1,1005 @@
+#show_version=6
+- time: 0.00000
+  lights:
+    l21: "000000"
+    gi006: "000000"
+    gi007: "000000"
+    gi008: "000000"
+    gi009: "000000"
+    gi010: "000000"
+    gi011: "000000"
+    gi012: "000000"
+    gi013: "000000"
+    gi014: "000000"
+    gi015: "000000"
+    gi016: "000000"
+    gi017: "000000"
+    gi018: "000000"
+    gi019: "000000"
+    gi020: "000000"
+    gi021: "000000"
+    gi022: "000000"
+    gi023: "000000"
+    gi024: "000000"
+    gi050: "000000"
+    bumperbiglight5: "000000"
+    bumperbiglight4: "000000"
+    bumperbiglight2: "000000"
+    bumperbiglight1: "000000"
+    bumperbiglight3: "000000"
+- time: 0.83333
+  lights:
+    gi018: "c12d92"
+    gi019: "c12d92"
+- time: 0.86667
+  lights:
+    gi018: "ae3997"
+    gi019: "ae3997"
+- time: 0.90000
+  lights:
+    gi018: "94419d"
+    gi019: "94419d"
+    gi020: "c42a91"
+- time: 0.93333
+  lights:
+    gi017: "b93294"
+    gi018: "7846a3"
+    gi019: "7846a3"
+    gi020: "b33695"
+- time: 0.96667
+  lights:
+    gi017: "a23d99"
+    gi018: "5b4ba6"
+    gi019: "5b4ba6"
+    gi020: "993f9c"
+- time: 1.00000
+  lights:
+    l21: "bc3093"
+    gi017: "8644a0"
+    gi018: "4151a5"
+    gi019: "4151a5"
+    gi020: "7d45a2"
+- time: 1.03333
+  lights:
+    l21: "a73c99"
+    gi017: "6949a5"
+    gi018: "295ba0"
+    gi019: "295ba0"
+    gi020: "604aa6"
+- time: 1.06667
+  lights:
+    l21: "8c439f"
+    gi017: "4e4ea5"
+    gi018: "026793"
+    gi019: "026793"
+    gi020: "4650a5"
+    gi021: "c52991"
+- time: 1.10000
+  lights:
+    l21: "6e48a4"
+    gi016: "b73494"
+    gi017: "3655a4"
+    gi018: "007581"
+    gi019: "007581"
+    gi020: "2e58a2"
+    gi021: "b53595"
+- time: 1.13333
+  lights:
+    l21: "534ca6"
+    gi016: "a03e9a"
+    gi017: "1b609a"
+    gi018: "00826e"
+    gi019: "00826e"
+    gi020: "0c6496"
+    gi021: "9d3e9b"
+- time: 1.16667
+  lights:
+    l21: "3a53a5"
+    gi016: "8444a0"
+    gi017: "006d8b"
+    gi018: "008f5a"
+    gi019: "008f5a"
+    gi020: "007285"
+    gi021: "8145a1"
+- time: 1.20000
+  lights:
+    l21: "215e9d"
+    gi016: "6749a5"
+    gi017: "007b78"
+    gi018: "1c9c49"
+    gi019: "1c9c49"
+    gi020: "008071"
+    gi021: "6449a5"
+- time: 1.23333
+  lights:
+    l21: "006b8e"
+    gi016: "4c4ea5"
+    gi017: "008864"
+    gi018: "4bac3d"
+    gi019: "4bac3d"
+    gi020: "008d5d"
+    gi021: "4a4ea5"
+- time: 1.26667
+  lights:
+    l21: "00797c"
+    gi015: "c32b92"
+    gi016: "3456a3"
+    gi017: "009651"
+    gi018: "78bf33"
+    gi019: "78bf33"
+    gi020: "0f9a4b"
+    gi021: "3257a2"
+- time: 1.30000
+  lights:
+    l21: "008668"
+    gi015: "b13796"
+    gi016: "186199"
+    gi017: "34a342"
+    gi018: "a4d12c"
+    gi019: "a4d12c"
+    gi020: "43a83f"
+    gi021: "136398"
+    gi022: "ba3294"
+- time: 1.33333
+  lights:
+    l21: "009354"
+    gi015: "97409c"
+    gi016: "006f89"
+    gi017: "60b538"
+    gi018: "cbe125"
+    gi019: "cbe125"
+    gi020: "6fbc35"
+    gi021: "007087"
+    gi022: "a33d99"
+- time: 1.36667
+  lights:
+    l21: "2ca045"
+    gi015: "7b46a2"
+    gi016: "007c77"
+    gi017: "8dc830"
+    gi018: "ebea1d"
+    gi019: "ebea1d"
+    gi020: "9cce2d"
+    gi021: "007e74"
+    gi022: "8844a0"
+- time: 1.40000
+  lights:
+    l21: "58b13a"
+    gi015: "5f4aa6"
+    gi016: "008962"
+    gi017: "b8d929"
+    gi018: "fbe915"
+    gi019: "fbe915"
+    gi020: "c5de27"
+    gi021: "008b60"
+    gi022: "6b48a5"
+- time: 1.43333
+  lights:
+    l21: "85c531"
+    gi015: "4450a5"
+    gi016: "00974f"
+    gi017: "dce622"
+    gi018: "ffe004"
+    gi019: "ffe004"
+    gi020: "e6e91f"
+    gi021: "04984d"
+    gi022: "4f4da5"
+- time: 1.46667
+  lights:
+    l21: "b0d72a"
+    gi015: "2d59a1"
+    gi016: "37a541"
+    gi017: "f5eb17"
+    gi018: "ffd003"
+    gi019: "ffd003"
+    gi020: "f9ea16"
+    gi021: "3ca640"
+    gi022: "3754a5"
+- time: 1.50000
+  lights:
+    l21: "d6e523"
+    gi015: "086595"
+    gi016: "64b637"
+    gi017: "ffe614"
+    gi018: "ffbe0f"
+    gi019: "ffbe0f"
+    gi020: "ffe20d"
+    gi021: "69b836"
+    gi022: "1d609b"
+- time: 1.53333
+  lights:
+    l21: "f2eb19"
+    gi015: "007383"
+    gi016: "91c92f"
+    gi017: "ffd900"
+    gi018: "faaa17"
+    gi019: "faaa17"
+    gi020: "ffd302"
+    gi021: "96cb2e"
+    gi022: "006d8b"
+- time: 1.56667
+  lights:
+    l21: "ffe715"
+    gi015: "008170"
+    gi016: "bbdb28"
+    gi017: "ffc708"
+    gi018: "f8991d"
+    gi019: "f8991d"
+    gi020: "ffc10c"
+    gi021: "c0dd27"
+    gi022: "007b79"
+- time: 1.60000
+  lights:
+    l21: "ffdc00"
+    gi015: "008e5c"
+    gi016: "dfe722"
+    gi017: "fdb413"
+    gi018: "f98a21"
+    gi019: "f98a21"
+    gi020: "fbae16"
+    gi021: "e2e821"
+    gi022: "008865"
+- time: 1.63333
+  lights:
+    l21: "ffcb06"
+    gi015: "149a4b"
+    gi016: "f6eb16"
+    gi017: "f9a21a"
+    gi018: "fb7927"
+    gi019: "fb7927"
+    gi020: "f89d1c"
+    gi021: "f8ea16"
+    gi022: "009552"
+- time: 1.66667
+  lights:
+    l21: "feb811"
+    gi015: "46aa3e"
+    gi016: "ffe613"
+    gi017: "f8921f"
+    gi018: "fc662c"
+    gi019: "fc662c"
+    gi020: "f98d20"
+    gi021: "ffe411"
+    gi022: "32a343"
+- time: 1.70000
+  lights:
+    l21: "f9a519"
+    gi015: "72bd34"
+    gi016: "ffd800"
+    gi017: "fa8224"
+    gi018: "fe522f"
+    gi019: "fe522f"
+    gi020: "fa7c26"
+    gi021: "ffd600"
+    gi022: "5eb438"
+- time: 1.73333
+  lights:
+    l21: "f8951e"
+    gi015: "9ecf2c"
+    gi016: "ffc609"
+    gi017: "fc702a"
+    gi018: "ff3f32"
+    gi019: "ff3f32"
+    gi020: "fc6a2b"
+    gi021: "ffc40b"
+    gi022: "8bc730"
+- time: 1.76667
+  lights:
+    l21: "fa8423"
+    gi015: "c7df26"
+    gi016: "fcb214"
+    gi017: "fd5c2e"
+    gi018: "000000"
+    gi019: "000000"
+    gi020: "fe562f"
+    gi021: "fcb015"
+    gi022: "b6d929"
+    gi023: "c22c92"
+- time: 1.80000
+  lights:
+    l21: "fb7329"
+    gi015: "e8e91e"
+    gi016: "f8a01b"
+    gi017: "fe4931"
+    gi020: "ff4232"
+    gi021: "f89e1b"
+    gi022: "dbe622"
+    gi023: "b03796"
+- time: 1.83333
+  lights:
+    l21: "fd602d"
+    gi014: "b73494"
+    gi015: "fae916"
+    gi016: "f8911f"
+    gi017: "ff3733"
+    gi020: "000000"
+    gi021: "f98f20"
+    gi022: "f5eb17"
+    gi023: "97409c"
+- time: 1.86667
+  lights:
+    l21: "fe4d30"
+    gi014: "9f3e9a"
+    gi015: "ffe20a"
+    gi016: "fa8124"
+    gi017: "000000"
+    gi021: "fa7f25"
+    gi022: "ffe715"
+    gi023: "7a46a2"
+- time: 1.90000
+  lights:
+    l21: "ff3932"
+    gi014: "8344a0"
+    gi015: "ffd202"
+    gi016: "fc6e2a"
+    gi021: "fc6c2a"
+    gi022: "ffda00"
+    gi023: "5e4aa6"
+- time: 1.93333
+  lights:
+    l21: "000000"
+    gi014: "6649a5"
+    gi015: "ffc00d"
+    gi016: "fd5b2e"
+    gi021: "fe592f"
+    gi022: "ffc807"
+    gi023: "4350a5"
+- time: 1.96667
+  lights:
+    gi014: "4c4ea5"
+    gi015: "fbad17"
+    gi016: "ff4831"
+    gi021: "ff4631"
+    gi022: "fdb513"
+    gi023: "2c59a1"
+- time: 2.00000
+  lights:
+    gi014: "3456a3"
+    gi015: "f89b1c"
+    gi016: "ff3533"
+    gi021: "000000"
+    gi022: "f9a21a"
+    gi023: "076694"
+- time: 2.03333
+  lights:
+    gi014: "176299"
+    gi015: "f98c21"
+    gi016: "000000"
+    gi022: "f8931f"
+    gi023: "007383"
+- time: 2.06667
+  lights:
+    gi014: "006f89"
+    gi015: "fb7b26"
+    gi022: "fa8324"
+    gi023: "008170"
+    gi024: "b93294"
+- time: 2.10000
+  lights:
+    gi013: "bf2e92"
+    gi014: "007c76"
+    gi015: "fc682b"
+    gi022: "fc7029"
+    gi023: "008e5c"
+    gi024: "a23d99"
+- time: 2.13333
+  lights:
+    gi013: "aa3a97"
+    gi014: "008a62"
+    gi015: "fe552f"
+    gi022: "fd5d2d"
+    gi023: "169b4a"
+    gi024: "8644a0"
+- time: 2.16667
+  lights:
+    gi013: "8f429e"
+    gi014: "00974f"
+    gi015: "ff4132"
+    gi022: "fe4a31"
+    gi023: "47aa3d"
+    gi024: "6949a5"
+- time: 2.20000
+  lights:
+    gi013: "7247a4"
+    gi014: "38a541"
+    gi015: "000000"
+    gi022: "ff3733"
+    gi023: "73bd34"
+    gi024: "4e4ea5"
+- time: 2.23333
+  lights:
+    gi013: "564ca6"
+    gi014: "65b737"
+    gi022: "000000"
+    gi023: "9fd02c"
+    gi024: "3655a4"
+- time: 2.26667
+  lights:
+    gi013: "3d52a5"
+    gi014: "92ca2f"
+    gi023: "c8e026"
+    gi024: "1b609a"
+- time: 2.30000
+  lights:
+    gi013: "255c9e"
+    gi014: "bcdb28"
+    gi023: "e8e91e"
+    gi024: "006d8b"
+- time: 2.33333
+  lights:
+    gi013: "006990"
+    gi014: "e0e722"
+    gi023: "fae916"
+    gi024: "007b78"
+- time: 2.36667
+  lights:
+    gi013: "00777e"
+    gi014: "f7eb16"
+    gi023: "ffe209"
+    gi024: "008864"
+- time: 2.40000
+  lights:
+    gi013: "00856a"
+    gi014: "ffe513"
+    gi023: "ffd203"
+    gi024: "009651"
+- time: 2.43333
+  lights:
+    gi013: "009257"
+    gi014: "ffd800"
+    gi023: "ffc00d"
+    gi024: "33a342"
+- time: 2.46667
+  lights:
+    gi013: "259f46"
+    gi014: "ffc50a"
+    gi023: "fbac17"
+    gi024: "60b538"
+- time: 2.50000
+  lights:
+    gi013: "52af3b"
+    gi014: "fcb214"
+    gi023: "f89b1c"
+    gi024: "8dc830"
+- time: 2.53333
+  lights:
+    gi013: "80c232"
+    gi014: "f8a01b"
+    gi023: "f98c21"
+    gi024: "b8d929"
+- time: 2.56667
+  lights:
+    gi013: "abd52b"
+    gi014: "f8901f"
+    gi023: "fb7a26"
+    gi024: "dce622"
+- time: 2.60000
+  lights:
+    gi013: "d2e325"
+    gi014: "fa8024"
+    gi023: "fc682b"
+    gi024: "f5eb17"
+- time: 2.63333
+  lights:
+    gi013: "efeb1b"
+    gi014: "fc6e2a"
+    gi023: "fe542f"
+    gi024: "ffe614"
+    bumperbiglight2: "b63595"
+    bumperbiglight1: "b63595"
+- time: 2.66667
+  lights:
+    gi013: "fee815"
+    gi014: "fd5b2e"
+    gi023: "ff4032"
+    gi024: "ffd900"
+    bumperbiglight2: "9e3e9b"
+    bumperbiglight1: "9e3e9b"
+- time: 2.70000
+  lights:
+    gi013: "ffde00"
+    gi014: "ff4731"
+    gi023: "000000"
+    gi024: "ffc708"
+    bumperbiglight2: "8145a1"
+    bumperbiglight1: "8145a1"
+- time: 2.73333
+  lights:
+    gi013: "ffce05"
+    gi014: "ff3533"
+    gi024: "fdb413"
+    bumperbiglight2: "6549a5"
+    bumperbiglight1: "6549a5"
+    bumperbiglight3: "bd3093"
+- time: 2.76667
+  lights:
+    gi013: "ffbb10"
+    gi014: "000000"
+    gi024: "f9a21a"
+    bumperbiglight2: "4a4ea5"
+    bumperbiglight1: "4a4ea5"
+    bumperbiglight3: "a83b98"
+- time: 2.80000
+  lights:
+    gi013: "faa718"
+    gi024: "f8921f"
+    bumperbiglight2: "3256a3"
+    bumperbiglight1: "3256a3"
+    bumperbiglight3: "8d429e"
+- time: 2.83333
+  lights:
+    gi013: "f8971d"
+    gi024: "fa8224"
+    bumperbiglight2: "156298"
+    bumperbiglight1: "156298"
+    bumperbiglight3: "7047a4"
+- time: 2.86667
+  lights:
+    gi013: "f98723"
+    gi024: "fc702a"
+    bumperbiglight2: "007088"
+    bumperbiglight1: "007088"
+    bumperbiglight3: "544ca6"
+- time: 2.90000
+  lights:
+    gi013: "fb7528"
+    gi024: "fd5c2e"
+    bumperbiglight2: "007e75"
+    bumperbiglight1: "007e75"
+    bumperbiglight3: "3b53a5"
+- time: 2.93333
+  lights:
+    gi013: "fd622d"
+    gi024: "fe4931"
+    bumperbiglight2: "008b60"
+    bumperbiglight1: "008b60"
+    bumperbiglight3: "225d9d"
+- time: 2.96667
+  lights:
+    gi012: "c42a91"
+    gi013: "fe4f30"
+    gi024: "ff3733"
+    bumperbiglight2: "01984e"
+    bumperbiglight1: "01984e"
+    bumperbiglight3: "006a8f"
+- time: 3.00000
+  lights:
+    gi012: "b23695"
+    gi013: "ff3c32"
+    gi024: "000000"
+    bumperbiglight2: "3ba641"
+    bumperbiglight1: "3ba641"
+    bumperbiglight3: "00787d"
+- time: 3.03333
+  lights:
+    gi012: "993f9c"
+    gi013: "000000"
+    bumperbiglight5: "b63494"
+    bumperbiglight4: "c02d92"
+    bumperbiglight2: "68b837"
+    bumperbiglight1: "68b837"
+    bumperbiglight3: "008568"
+- time: 3.06667
+  lights:
+    gi012: "7d45a2"
+    bumperbiglight5: "9f3e9a"
+    bumperbiglight4: "ad3997"
+    bumperbiglight2: "94cb2f"
+    bumperbiglight1: "94cb2f"
+    bumperbiglight3: "009255"
+- time: 3.10000
+  lights:
+    gi012: "604aa6"
+    bumperbiglight5: "8245a1"
+    bumperbiglight4: "92429e"
+    bumperbiglight2: "bfdc27"
+    bumperbiglight1: "bfdc27"
+    bumperbiglight3: "2aa045"
+- time: 3.13333
+  lights:
+    gi012: "4650a5"
+    bumperbiglight5: "6649a5"
+    bumperbiglight4: "7647a3"
+    bumperbiglight2: "e1e821"
+    bumperbiglight1: "e1e821"
+    bumperbiglight3: "56b13a"
+- time: 3.16667
+  lights:
+    gi012: "2e58a2"
+    bumperbiglight5: "4b4ea5"
+    bumperbiglight4: "594ba6"
+    bumperbiglight2: "f8ea16"
+    bumperbiglight1: "f8ea16"
+    bumperbiglight3: "84c431"
+- time: 3.20000
+  lights:
+    gi010: "c52991"
+    gi012: "0c6496"
+    bumperbiglight5: "3356a3"
+    bumperbiglight4: "4051a5"
+    bumperbiglight2: "ffe512"
+    bumperbiglight1: "ffe512"
+    bumperbiglight3: "aed62a"
+- time: 3.23333
+  lights:
+    gi010: "b53595"
+    gi012: "007285"
+    bumperbiglight5: "166299"
+    bumperbiglight4: "275b9f"
+    bumperbiglight2: "ffd700"
+    bumperbiglight1: "ffd700"
+    bumperbiglight3: "d5e424"
+- time: 3.26667
+  lights:
+    gi010: "9c3e9b"
+    gi012: "008071"
+    bumperbiglight5: "006f88"
+    bumperbiglight4: "006892"
+    bumperbiglight2: "ffc40a"
+    bumperbiglight1: "ffc40a"
+    bumperbiglight3: "f1eb1a"
+- time: 3.30000
+  lights:
+    gi010: "7f45a1"
+    gi012: "008d5d"
+    bumperbiglight5: "007d75"
+    bumperbiglight4: "007580"
+    bumperbiglight2: "fcb114"
+    bumperbiglight1: "fcb114"
+    bumperbiglight3: "ffe715"
+- time: 3.33333
+  lights:
+    gi010: "634aa6"
+    gi012: "109a4b"
+    bumperbiglight5: "008a61"
+    bumperbiglight4: "00836d"
+    bumperbiglight2: "f89f1b"
+    bumperbiglight1: "f89f1b"
+    bumperbiglight3: "ffdd00"
+- time: 3.36667
+  lights:
+    gi010: "494fa5"
+    gi012: "43a93e"
+    bumperbiglight5: "01984e"
+    bumperbiglight4: "009158"
+    bumperbiglight2: "f98f20"
+    bumperbiglight1: "f98f20"
+    bumperbiglight3: "ffcc06"
+- time: 3.40000
+  lights:
+    gi010: "3157a2"
+    gi012: "70bc35"
+    bumperbiglight5: "3aa641"
+    bumperbiglight4: "219d48"
+    bumperbiglight2: "fa7f25"
+    bumperbiglight1: "fa7f25"
+    bumperbiglight3: "feb911"
+- time: 3.43333
+  lights:
+    gi010: "116397"
+    gi011: "bf2e92"
+    gi012: "9cce2d"
+    bumperbiglight5: "66b737"
+    bumperbiglight4: "4ead3c"
+    bumperbiglight2: "fc6d2a"
+    bumperbiglight1: "fc6d2a"
+    bumperbiglight3: "f9a619"
+- time: 3.46667
+  lights:
+    gi010: "007086"
+    gi011: "aa3a97"
+    gi012: "c5df27"
+    bumperbiglight5: "93ca2f"
+    bumperbiglight4: "7bc033"
+    bumperbiglight2: "fd592e"
+    bumperbiglight1: "fd592e"
+    bumperbiglight3: "f8951e"
+- time: 3.50000
+  lights:
+    gi010: "007e73"
+    gi011: "90429e"
+    gi012: "e6e91f"
+    bumperbiglight5: "bedc28"
+    bumperbiglight4: "a7d32c"
+    bumperbiglight2: "ff4631"
+    bumperbiglight1: "ff4631"
+    bumperbiglight3: "f98523"
+- time: 3.53333
+  lights:
+    gi006: "be2f92"
+    gi007: "c12d92"
+    gi008: "be2f92"
+    gi009: "be2f92"
+    gi010: "008c5f"
+    gi011: "7347a4"
+    gi012: "fae916"
+    bumperbiglight5: "e1e821"
+    bumperbiglight4: "cee125"
+    bumperbiglight2: "000000"
+    bumperbiglight1: "000000"
+    bumperbiglight3: "fb7429"
+- time: 3.56667
+  lights:
+    gi006: "a93b98"
+    gi007: "af3897"
+    gi008: "a93b98"
+    gi009: "a93b98"
+    gi010: "07994d"
+    gi011: "574ca6"
+    gi012: "ffe20c"
+    bumperbiglight5: "f7ea16"
+    bumperbiglight4: "edea1c"
+    bumperbiglight3: "fd612d"
+- time: 3.60000
+  lights:
+    gi006: "8e429e"
+    gi007: "94419d"
+    gi008: "8e429e"
+    gi009: "8e429e"
+    gi010: "3ea740"
+    gi011: "3d52a5"
+    gi012: "ffd302"
+    gi050: "c22c92"
+    bumperbiglight5: "ffe512"
+    bumperbiglight4: "fde815"
+    bumperbiglight3: "fe4d30"
+- time: 3.63333
+  lights:
+    gi006: "7147a4"
+    gi007: "7846a3"
+    gi008: "7147a4"
+    gi009: "7147a4"
+    gi010: "6bb936"
+    gi011: "255c9e"
+    gi012: "ffc10c"
+    gi050: "b03796"
+    bumperbiglight5: "ffd700"
+    bumperbiglight4: "ffdf01"
+    bumperbiglight3: "ff3a32"
+- time: 3.66667
+  lights:
+    gi006: "564ca6"
+    gi007: "5c4ba6"
+    gi008: "564ca6"
+    gi009: "564ca6"
+    gi010: "98cc2e"
+    gi011: "006991"
+    gi012: "fbae16"
+    gi050: "97409c"
+    bumperbiglight5: "ffc50a"
+    bumperbiglight4: "ffd004"
+    bumperbiglight3: "000000"
+- time: 3.70000
+  lights:
+    gi006: "3c52a5"
+    gi007: "4151a5"
+    gi008: "3c52a5"
+    gi009: "3c52a5"
+    gi010: "c1dd27"
+    gi011: "00777e"
+    gi012: "f89c1c"
+    gi050: "7a46a2"
+    bumperbiglight5: "fcb114"
+    bumperbiglight4: "ffbc0f"
+- time: 3.73333
+  lights:
+    gi006: "245c9e"
+    gi007: "2a5aa0"
+    gi008: "245c9e"
+    gi009: "245c9e"
+    gi010: "e3e821"
+    gi011: "00846b"
+    gi012: "f98d20"
+    gi050: "5e4aa6"
+    bumperbiglight5: "f89f1b"
+    bumperbiglight4: "faa917"
+- time: 3.76667
+  lights:
+    gi006: "006a90"
+    gi007: "036793"
+    gi008: "006a90"
+    gi009: "006a90"
+    gi010: "f9ea16"
+    gi011: "009257"
+    gi012: "fb7c26"
+    gi050: "4351a5"
+    bumperbiglight5: "f99020"
+    bumperbiglight4: "f8981d"
+- time: 3.80000
+  lights:
+    gi006: "00777e"
+    gi007: "007482"
+    gi008: "00777e"
+    gi009: "00777e"
+    gi010: "ffe410"
+    gi011: "259e47"
+    gi012: "fc6a2b"
+    gi050: "2c59a1"
+    bumperbiglight5: "fa8025"
+    bumperbiglight4: "f98922"
+- time: 3.83333
+  lights:
+    gi006: "008569"
+    gi007: "00826e"
+    gi008: "008569"
+    gi009: "008569"
+    gi010: "ffd501"
+    gi011: "51af3b"
+    gi012: "fe562f"
+    gi050: "076694"
+    bumperbiglight5: "fc6d2a"
+    bumperbiglight4: "fb7727"
+- time: 3.86667
+  lights:
+    gi006: "009256"
+    gi007: "008f5a"
+    gi008: "009256"
+    gi009: "009256"
+    gi010: "ffc30b"
+    gi011: "7fc232"
+    gi012: "ff4232"
+    gi050: "007383"
+    bumperbiglight5: "fd5a2e"
+    bumperbiglight4: "fd642c"
+- time: 3.90000
+  lights:
+    gi006: "279f46"
+    gi007: "1b9c49"
+    gi008: "279f46"
+    gi009: "279f46"
+    gi010: "fcb015"
+    gi011: "abd42b"
+    gi012: "000000"
+    gi050: "008170"
+    bumperbiglight5: "ff4731"
+    bumperbiglight4: "fe5130"
+- time: 3.93333
+  lights:
+    gi006: "53b03b"
+    gi007: "4bac3d"
+    gi008: "53b03b"
+    gi009: "53b03b"
+    gi010: "f89e1b"
+    gi011: "d1e325"
+    gi050: "008e5b"
+    bumperbiglight5: "ff3533"
+    bumperbiglight4: "ff3d32"
+- time: 3.96667
+  lights:
+    gi006: "81c331"
+    gi007: "77bf34"
+    gi008: "81c331"
+    gi009: "81c331"
+    gi010: "f98f20"
+    gi011: "efea1c"
+    gi050: "169b4a"
+    bumperbiglight5: "000000"
+    bumperbiglight4: "000000"
+- time: 4.00000
+  lights:
+    gi006: "acd52a"
+    gi007: "a3d12c"
+    gi008: "acd52a"
+    gi009: "acd52a"
+    gi010: "fa7e26"
+    gi011: "fee815"
+    gi050: "47aa3d"
+- time: 4.03333
+  lights:
+    gi006: "d3e324"
+    gi007: "cbe125"
+    gi008: "d3e324"
+    gi009: "d3e324"
+    gi010: "fc6b2b"
+    gi011: "ffde00"
+    gi050: "74bd34"
+- time: 4.06667
+  lights:
+    gi006: "f0eb1b"
+    gi007: "ebea1d"
+    gi008: "f0eb1b"
+    gi009: "f0eb1b"
+    gi010: "fe582f"
+    gi011: "ffce05"
+    gi050: "a0d02c"
+- time: 4.10000
+  lights:
+    gi006: "fee815"
+    gi007: "fbe915"
+    gi008: "fee815"
+    gi009: "fee815"
+    gi010: "ff4531"
+    gi011: "ffbb10"
+    gi050: "c8e026"
+- time: 4.13333
+  lights:
+    gi006: "ffde00"
+    gi007: "ffe105"
+    gi008: "ffde00"
+    gi009: "ffde00"
+    gi010: "000000"
+    gi011: "faa818"
+    gi050: "e9e91e"
+- time: 4.16667
+  lights:
+    gi006: "ffcd05"
+    gi007: "ffd103"
+    gi008: "ffcd05"
+    gi009: "ffcd05"
+    gi011: "f8971d"
+    gi050: "fae916"
+- time: 4.20000
+  lights:
+    gi006: "ffba10"
+    gi007: "ffbe0e"
+    gi008: "ffba10"
+    gi009: "ffba10"
+    gi011: "f98722"
+    gi050: "ffe109"
+- time: 4.23333
+  lights:
+    gi006: "f9a719"
+    gi007: "faab17"
+    gi008: "f9a719"
+    gi009: "f9a719"
+    gi011: "fb7628"
+    gi050: "ffd203"
+- time: 4.26667
+  lights:
+    gi006: "f8961e"
+    gi007: "f8991d"
+    gi008: "f8961e"
+    gi009: "f8961e"
+    gi011: "fd622d"
+    gi050: "ffbf0e"
+- time: 4.30000
+  lights:
+    gi006: "f98623"
+    gi007: "f98a21"
+    gi008: "f98623"
+    gi009: "f98623"
+    gi011: "fe4f30"
+    gi050: "fbac17"
+- time: 4.33333
+  lights:
+    gi006: "fb7528"
+    gi007: "fb7927"
+    gi008: "fb7528"
+    gi009: "fb7528"
+    gi011: "ff3c32"
+    gi050: "f89b1c"
+- time: 4.36667
+  lights:
+    gi006: "fd622d"
+    gi007: "fc662c"
+    gi008: "fd622d"
+    gi009: "fd622d"
+    gi011: "000000"
+    gi050: "f98c21"
+- time: 4.40000
+  lights:
+    gi006: "fe4e30"
+    gi007: "fe522f"
+    gi008: "fe4e30"
+    gi009: "fe4e30"
+    gi050: "fb7a26"
+- time: 4.43333
+  lights:
+    gi006: "ff3b32"
+    gi007: "ff3f32"
+    gi008: "ff3b32"
+    gi009: "ff3b32"
+    gi050: "fc682b"
+- time: 4.46667
+  lights:
+    gi006: "000000"
+    gi007: "000000"
+    gi008: "000000"
+    gi009: "000000"
+    gi050: "fe542f"
+- time: 4.50000
+  lights:
+    gi050: "ff4032"
+- time: 4.53333
+  lights:
+    gi050: "000000"
