@@ -30,34 +30,46 @@ Sub CreateMultiballMode()
 
 
         'The event player will respond to events during this mode
+        'Note that the multiball mode is managed mostly through the event player. However, a better design might be to use a state machine.
         With .EventPlayer()
 
-            'Handle enabling locks if locks are ready on new ball
+            'Enable locks if locks are ready on new ball
             .Add "mode_multiball_started{current_player.shot_top_lock == 1}", Array("enable_locks","top_lock_ready") 're-opens the diverter
-            .Add "mode_multiball_started{current_player.shot_bottom_lock == 1}", Array("enable_locks") 're-opens the diverter
+            .Add "mode_multiball_started{current_player.shot_bottom_lock == 1}", Array("enable_locks")
 
             'Handle allowing players to steal locked balls
-            .Add "mode_multiball_started", Array("check_top_lock")
-            .Add "check_top_lock{machine.num_balls_locked > 0}", Array("top_locked","disable_locks","restart_qualify_lock","check_bottom_lock")
-            .Add "check_bottom_lock{machine.num_balls_locked == 2}", Array("bottom_locked","disable_locks","multiball_ready")
-
+            .Add "mode_multiball_started", Array("check_locks")
+            .Add "check_locks{machine.top_ball_locked == 1}", Array("top_locked")
+            .Add "check_locks{machine.bottom_ball_locked == 1}", Array("bottom_locked")
+            .Add "check_locks{current_player.shot_bottom_lock == 1 OR current_player.shot_top_lock == 1}", Array("enable_locks")
+            .Add "check_locks{current_player.shot_bottom_lock <> 1 && current_player.shot_top_lock <> 1}", Array("disable_locks")
+            .Add "check_locks{machine.top_ball_locked == 1 && machine.bottom_ball_locked == 1}", Array("multiball_ready")
+            
             'Handle qualified locks
-            .Add "qualify_lock_on_complete{current_player.shot_top_lock == 0}", Array("enable_locks","top_lock_ready")   'ready top lock first
-            .Add "qualify_lock_on_complete{current_player.shot_top_lock == 2 && current_player.shot_bottom_lock == 0}", Array("enable_locks","bottom_lock_ready") 'ready bottom lock next
+            .Add "qualify_lock_on_complete{current_player.shot_bottom_lock == 0 OR current_player.shot_top_lock == 0}", Array("enable_locks")
+            .Add "qualify_lock_on_complete{current_player.shot_bottom_lock == 0}", Array("bottom_lock_ready") 
+            .Add "qualify_lock_on_complete{current_player.shot_top_lock == 0}", Array("top_lock_ready")
 
-            'Handle top ball getting locked (this is the first locked ball)
-            .Add "multiball_lock_mb_locks_locked_ball{current_player.multiball_lock_mb_locks_balls_locked == 1}", Array("add_lock","top_locked","restart_qualify_lock","disable_locks")
+            'Top saucer locked
+            .Add "balldevice_kicker1_ball_entered{current_player.shot_top_lock == 1}", Array("top_locked","disable_locks","check_bottom_lock")
+            .Add "check_bottom_lock{current_player.shot_bottom_lock == 1}", Array("reset_bottom_lock")
 
-            'Handle top ball getting locked (this is the second locked ball)
-            .Add "multiball_lock_mb_locks_locked_ball{current_player.multiball_lock_mb_locks_balls_locked == 2}", Array("add_lock","bottom_locked","disable_locks","multiball_ready")
+            'Bottom saucer locked
+            .Add "balldevice_kicker2_ball_entered{current_player.shot_bottom_lock == 1}", Array("bottom_locked","disable_locks","check_top_lock")
+            .Add "check_top_lock{current_player.shot_top_lock == 1}", Array("reset_top_lock")
 
-            'Handle start of multiball
-            .Add "s_RampHit_active{current_player.shot_mb_start == 1}", Array("start_multiball")
+            'Restart lock qualification if another lock is needed, otherwise light multiball ready
+            .Add "multiball_lock_mb_locks_locked_ball{current_player.multiball_lock_mb_locks_balls_locked < 2}", Array("restart_qualify_lock")
+            .Add "multiball_lock_mb_locks_locked_ball{current_player.multiball_lock_mb_locks_balls_locked == 2}", Array("multiball_ready")
 
-            'Handle Jackpot hits
-            .Add "s_RampHit_active{current_player.left_jackpot == 1}", Array("award_jackpot","score_1000000")
-            .Add "s_Kicker2_active{current_player.right_jackpot == 1}", Array("award_jackpot","score_1000000")
+            'Start and stop of multiball
+            .Add "s_RampHit_active{current_player.shot_mb_start == 1}", Array("start_multiball","restart_qualify_lock")
+            .Add "start_multiball", Array("disable_qualify_lock")
+            .Add "multiball_mb_ended", Array("enable_qualify_lock")
 
+            'Jackpot hits
+            .Add "s_RampHit_active{current_player.left_jackpot == 1}", Array("award_jackpot","score_1000000","add_bonus")
+            .Add "s_Kicker2_active{current_player.right_jackpot == 1}", Array("award_jackpot","score_1000000","add_bonus")
 
         End With
 
@@ -138,7 +150,7 @@ Sub CreateMultiballMode()
                 .Events = Array("top_locked")
                 .State = 2
             End With
-            .RestartEvents = Array("start_multiball")
+            .RestartEvents = Array("start_multiball","reset_top_lock")
         End With
 
         With .Shots("bottom_lock")
@@ -154,7 +166,7 @@ Sub CreateMultiballMode()
                 .Events = Array("bottom_locked")
                 .State = 2
             End With
-            .RestartEvents = Array("start_multiball")
+            .RestartEvents = Array("start_multiball","reset_bottom_lock")
         End With
 
         With .Shots("mb_start")
@@ -243,19 +255,30 @@ Sub CreateMultiballMode()
             With .EventName("mode_multiball_started")
 				With .Variable("multiball_lock_mb_locks_balls_locked")
                     .Action = "set"
-					.Int = "machine.num_balls_locked"
+					.Int = "machine.bottom_ball_locked + machine.top_ball_locked"
 				End With
 			End With
 
-            'Manage value of machine.num_balls_locked for purpose of allowing players to steal locked balls
-            With .EventName("add_lock")
-				With .Variable("num_balls_locked")
-                    .Action = "add_machine"
+            'Manage value of balls locked for purpose of allowing players to steal locked balls
+            With .EventName("bottom_locked")
+				With .Variable("bottom_ball_locked")
+                    .Action = "set_machine"
 					.Int = 1
 				End With
 			End With
+            With .EventName("top_locked")
+				With .Variable("top_ball_locked")
+                    .Action = "set_machine"
+					.Int = 1
+				End With
+			End With
+
             With .EventName("start_multiball")
-				With .Variable("num_balls_locked")
+				With .Variable("bottom_ball_locked")
+                    .Action = "set_machine"
+					.Int = 0
+				End With
+                With .Variable("top_ball_locked")
                     .Action = "set_machine"
 					.Int = 0
 				End With
@@ -268,7 +291,7 @@ Sub CreateMultiballMode()
         '  - Default to closing the diverter
         '  - Open the diverter if top lock is ready
         '  - Temporarily close the diverter (for a couple seconds) if already opened and ball goes up the right orbit
-        '  - Close the diverter when the ball gets locked.
+        '  - Close the diverter when the ball gets locked, or when it gets reset
         '  - Temporarily open the diverter (for a couple seconds) when it's time to kick out the ball for multiball
         With .StateMachines("diverter")
             .PersistState = false   'when mode start, always initialize to the staring state
@@ -293,7 +316,7 @@ Sub CreateMultiballMode()
             With .Transitions()
                 .Source = Array("opened")
                 .Target = "closed"
-                .Events = Array("top_locked","timer_diverter_reclose_complete")
+                .Events = Array("top_locked","timer_diverter_reclose_complete","reset_top_lock")
             End With
             With .Transitions()
                 .Source = Array("opened")

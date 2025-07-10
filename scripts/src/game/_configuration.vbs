@@ -130,7 +130,12 @@ Sub ConfigureGlfDevices()
         .Persist = False
     End With
 
-    With CreateMachineVar("num_balls_locked")
+    With CreateMachineVar("bottom_ball_locked")
+        .InitialValue = 0
+        .ValueType = "int"
+        .Persist = False
+    End With
+    With CreateMachineVar("top_ball_locked")
         .InitialValue = 0
         .ValueType = "int"
         .Persist = False
