@@ -440,17 +440,29 @@ Sub ConfigureGlfDevices()
     segment_display_p4.ExternalFlexDmdSegmentIndex = 24
     segment_display_p4.ExternalB2SSegmentIndex = 24
 
-    Dim segment_display_all
-    Set segment_display_all = (New GlfLightSegmentDisplay)("all")
+    ' Dim segment_display_all
+    ' Set segment_display_all = (New GlfLightSegmentDisplay)("all")
     
-    segment_display_all.SegmentType = "14Segment"
-    segment_display_all.SegmentSize = 32
-    segment_display_all.LightGroups = Array("p1_seg", "p2_seg", "p3_seg", "p4_seg")
-    segment_display_all.UpdateMethod = "stack"
-    segment_display_all.DefaultColor = SegmentsColor
-    segment_display_all.UseDotsForCommas = True
-    segment_display_all.DefaultTransitionUpdateHz = 10
-    segment_display_all.ExternalFlexDmdSegmentIndex = 0
+    ' segment_display_all.SegmentType = "14Segment"
+    ' segment_display_all.SegmentSize = 32
+    ' segment_display_all.LightGroups = Array("p1_seg", "p2_seg", "p3_seg", "p4_seg")
+    ' segment_display_all.UpdateMethod = "stack"
+    ' segment_display_all.DefaultColor = SegmentsColor
+    ' segment_display_all.UseDotsForCommas = True
+    ' segment_display_all.DefaultTransitionUpdateHz = 10
+    ' segment_display_all.ExternalFlexDmdSegmentIndex = 0
+
+
+    ' Dim segment_display_p1p2
+    ' Set segment_display_p1p2 = (New GlfLightSegmentDisplay)("p1p2")
+    ' segment_display_p1p2.SegmentType = "14Segment"
+    ' segment_display_p1p2.SegmentSize = 16
+    ' segment_display_p1p2.LightGroups = Array("p1_seg", "p2_seg")
+    ' segment_display_p1p2.UpdateMethod = "stack"
+    ' segment_display_p1p2.DefaultColor = SegmentsColor
+    ' segment_display_p1p2.UseDotsForCommas = True
+    ' segment_display_p1p2.DefaultTransitionUpdateHz = 10
+    ' segment_display_p1p2.ExternalFlexDmdSegmentIndex = 0
 
 
     '*********** INITALIZE SOUND EFFECTS ***********
