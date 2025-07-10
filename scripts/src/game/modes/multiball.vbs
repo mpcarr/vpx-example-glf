@@ -67,7 +67,7 @@ Sub CreateMultiballMode()
         End With
 
 
-        'The following state machine and timers manages the multiball mode
+        'The following state machine manages the multiball mode
 
         With .StateMachines("multiball")
             .PersistState = false   'when mode starts, always initialize in the starting state
@@ -113,7 +113,7 @@ Sub CreateMultiballMode()
                 .Source = Array("init1")
                 .Target = "init2"
                 .Events = Array("check_locks{machine.top_ball_locked == 0 OR machine.bottom_ball_locked == 0}")
-                .EventsWhenTransitioning = Array("update_lock_shots")
+                .EventsWhenTransitioning = Array("update_lock_shots","reset_mb_start")
             End With
             With .Transitions()
                 .Source = Array("init1")
@@ -163,26 +163,26 @@ Sub CreateMultiballMode()
                 .Source = Array("locking_both")
                 .Target = "qualifying"
                 .Events = Array("balldevice_kicker1_ball_entered") 'top locked
-                .EventsWhenTransitioning = Array("top_locked","reset_bottom_lock","restart_qualify_lock")
+                .EventsWhenTransitioning = Array("top_locked","reset_bottom_lock","restart_qualify_lock","score_100000")
             End With
             With .Transitions()
                 .Source = Array("locking_both")
                 .Target = "qualifying"
                 .Events = Array("balldevice_kicker2_ball_entered") 'bottom locked
-                .EventsWhenTransitioning = Array("bottom_locked","reset_top_lock","restart_qualify_lock")
+                .EventsWhenTransitioning = Array("bottom_locked","reset_top_lock","restart_qualify_lock","score_100000")
             End With
 
             With .Transitions()
                 .Source = Array("locking_top")
                 .Target = "mb_ready"
                 .Events = Array("balldevice_kicker1_ball_entered")
-                .EventsWhenTransitioning = Array("top_locked")
+                .EventsWhenTransitioning = Array("top_locked","restart_qualify_lock","score_100000")
             End With
             With .Transitions()
                 .Source = Array("locking_bottom")
                 .Target = "mb_ready"
                 .Events = Array("balldevice_kicker2_ball_entered")
-                .EventsWhenTransitioning = Array("bottom_locked")
+                .EventsWhenTransitioning = Array("bottom_locked","restart_qualify_lock","score_100000")
             End With
 
             With .Transitions()
@@ -356,7 +356,7 @@ Sub CreateMultiballMode()
                 .Events = Array("multiball_ready")
                 .State = 1
             End With
-            .RestartEvents = Array("start_multiball")
+            .RestartEvents = Array("start_multiball","reset_mb_start")
         End With
 
 
