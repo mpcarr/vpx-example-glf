@@ -65,6 +65,14 @@ Sub CreateBaseMode()
             .EnableEvents = Array("new_ball_active")
         End With
 
+        With .WidgetPlayer()
+            With .EventName("ball_save_new_ball_saving_ball")
+                .Widget = "ball_save"
+                .Action = "play"
+                .Expire = 2
+            End With
+        End With
+
         'Shot created for the ball save light. 
         With .Shots("base_shoot_again")
             .Profile = "shoot_again"  'This is a shared shot profile created in CreateSharedShotProfiles()

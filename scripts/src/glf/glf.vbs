@@ -2903,9 +2903,9 @@ Class GlfVpxBcpController
         End If
 	End Sub
 
-    Public Sub PlayWidget(widget, context, calling_context, priorty)
+    Public Sub PlayWidget(widget, context, calling_context, priorty, expire)
 		If m_connected Then
-            m_bcpController.Send "trigger?json={""name"": ""widgets_play"", ""settings"": {""" & widget & """: {""action"": ""play"", ""expire"": 0, ""x"": 0, ""y"": 0}}, ""context"": """ & context & """, ""calling_context"": """ & calling_context & """, ""priority"": " & priorty & "}"
+            m_bcpController.Send "trigger?json={""name"": ""widgets_play"", ""settings"": {""" & widget & """: {""action"": ""play"", ""expire"": " & expire & " , ""x"": 0, ""y"": 0}}, ""context"": """ & context & """, ""calling_context"": """ & calling_context & """, ""priority"": " & priorty & "}"
         End If
 	End Sub
 
@@ -12262,7 +12262,7 @@ Class GlfWidgetPlayer
         If m_events(evt).Evaluate() Then
             'Fire Widget
             If useBcp = True Then
-                bcpController.PlayWidget m_eventValues(evt).Widget, m_mode, m_events(evt).EventName, m_priority+m_eventValues(evt).Priority
+                bcpController.PlayWidget m_eventValues(evt).Widget, m_mode, m_events(evt).EventName, m_priority+m_eventValues(evt).Priority, m_eventValues(evt).Expire
             End If
         End If
     End Function
