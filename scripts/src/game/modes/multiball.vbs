@@ -43,6 +43,10 @@ Sub CreateMultiballMode()
             .Add "s_RampHit_active{current_player.shot_left_jackpot == 1}", Array("score_1000000","add_bonus","jackpot_show")
             .Add "balldevice_kicker2_ball_entered{current_player.shot_right_jackpot == 1}", Array("score_1000000","add_bonus","jackpot_show")
 
+            'Handle music
+            .Add "start_multiball", Array("stop_mus_ambient_loop","play_mus_multiball_loop")
+            .Add "multiball_mb_ended", Array("play_mus_ambient_loop","stop_mus_multiball_loop")
+
         End With
 
 

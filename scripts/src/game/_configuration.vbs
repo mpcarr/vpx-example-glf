@@ -468,8 +468,15 @@ Sub ConfigureGlfDevices()
     '*********** INITALIZE SOUND EFFECTS ***********
 
 
-    ' Sound effects bus
-    ' CreateSounds()
+    ' Tracks
+    CreateSounds()
+
+
+    ' Sound buses
+    With CreateGlfSoundBus("mus")
+        .SimultaneousSounds = 4
+        .Volume = 0.8
+    End With
 
     ' With CreateGlfSoundBus("sfx")
     '     .SimultaneousSounds = 8
@@ -481,10 +488,7 @@ Sub ConfigureGlfDevices()
     '     .Volume = 1
     ' End With
 
-    ' With CreateGlfSoundBus("mus")
-    '     .SimultaneousSounds = 4
-    '     .Volume = 0.8
-    ' End With
+ 
 
 
     ' Trough sound effects

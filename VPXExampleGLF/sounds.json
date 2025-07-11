@@ -2518,5 +2518,23 @@
     "volume": 0,
     "balance": 0,
     "output_target": 0
+  },
+  {
+    "name": "mus_ambient_loop",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\music and sfx\\mus_ambient_loop.mp3",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": 1
+  },
+  {
+    "name": "mus_multiball_loop",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\music and sfx\\mus_multiball_loop.mp3",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": 1
   }
 ]
