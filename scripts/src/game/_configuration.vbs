@@ -68,10 +68,8 @@ Sub ConfigureGlfDevices()
 
     '*********** INITALIZE SOUND EFFECTS ***********
 
-
     ' Tracks
     CreateSounds()
-
 
     ' Sound buses
     With CreateGlfSoundBus("mus")
@@ -89,7 +87,9 @@ Sub ConfigureGlfDevices()
     '     .Volume = 1
     ' End With
 
+
     '*********** INITALIZE MODES ***********
+    'Note, modes must be created after sounds and shows
 
     ' Modes
     CreateBasementMode()

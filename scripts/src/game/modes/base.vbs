@@ -32,6 +32,9 @@ Sub CreateBaseMode()
             .Add "mode_base_started", Array("new_ball_started","stop_attract_mode","play_mus_ambient_loop")
             .Add "s_Plunger1_inactive{current_player.ball_just_started == 1}", Array("new_ball_active")
 
+            'handle mode stopping
+            .Add "mode_base_stopping", Array("stop_mus_ambient_loop")
+
             'Events for flashing active player's score at start of mode
             .Add "mode_base_started{current_player.number == 1}", Array("flash_player1_score")  
             .Add "mode_base_started{current_player.number == 2}", Array("flash_player2_score")
@@ -258,6 +261,31 @@ Sub CreateBaseMode()
 			End With
 
 		End With
+
+
+        ' Plays sounds during this mode
+        With .SoundPlayer()
+            'Music
+            With .EventName("play_mus_ambient_loop")
+                .Key = "key_mus_ambient_loop"
+                .Sound = "mus_ambient_loop"
+            End With
+            With .EventName("stop_mus_ambient_loop")
+                .Key = "key_mus_ambient_loop"
+                .Sound = "mus_ambient_loop"
+                .Action = "stop"
+            End With
+
+            With .EventName("play_mus_multiball_loop")
+                .Key = "key_mus_multiball_loop"
+                .Sound = "mus_multiball_loop"
+            End With
+            With .EventName("stop_mus_multiball_loop")
+                .Key = "key_mus_multiball_loop"
+                .Sound = "mus_multiball_loop"
+                .Action = "stop"
+            End With
+        End With
 
         
     End With

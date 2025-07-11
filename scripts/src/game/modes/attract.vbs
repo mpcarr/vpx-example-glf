@@ -12,9 +12,6 @@ Sub CreateAttractMode()
 
         With .EventPlayer()
 
-            'Stop music
-            .Add "mode_attract_started", Array("stop_mus_ambient_loop","stop_mus_multiball_loop") 
-
             'Show the attract messages in a loop
             .Add "timer_attract_display_tick{devices.timers.attract_display.ticks == 1}", Array("show_attract_title")   '5 + 1 sec
             .Add "timer_attract_display_tick{devices.timers.attract_display.ticks == 7}", Array("show_attract_hs1")    '3 + 1 sec

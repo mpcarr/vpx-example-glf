@@ -40,30 +40,7 @@ Sub CreateBasementMode()
 			End With
         End With
 
-        
 
-        With .SoundPlayer()
-            'Music
-            With .EventName("play_mus_ambient_loop")
-                .Key = "key_mus_ambient_loop"
-                .Sound = "mus_ambient_loop"
-            End With
-            With .EventName("stop_mus_ambient_loop")
-                .Key = "key_mus_ambient_loop"
-                .Sound = "mus_ambient_loop"
-                .Action = "stop"
-            End With
-
-            With .EventName("play_mus_multiball_loop")
-                .Key = "key_mus_multiball_loop"
-                .Sound = "mus_multiball_loop"
-            End With
-            With .EventName("stop_mus_multiball_loop")
-                .Key = "key_mus_multiball_loop"
-                .Sound = "mus_multiball_loop"
-                .Action = "stop"
-            End With
-        End With
 
         ' ' Pome sound effects (outside of normal ball play time)
         ' With .SoundPlayer() 
