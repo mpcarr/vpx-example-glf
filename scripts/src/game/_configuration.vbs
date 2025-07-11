@@ -66,6 +66,29 @@ Sub ConfigureGlfDevices()
     CreateSharedShotProfiles()
 
 
+    '*********** INITALIZE SOUND EFFECTS ***********
+
+
+    ' Tracks
+    CreateSounds()
+
+
+    ' Sound buses
+    With CreateGlfSoundBus("mus")
+        .SimultaneousSounds = 4
+        .Volume = 0.8
+    End With
+
+    ' With CreateGlfSoundBus("sfx")
+    '     .SimultaneousSounds = 8
+    '     .Volume = 0.5
+    ' End With
+
+    ' With CreateGlfSoundBus("voc")
+    '     .SimultaneousSounds = 2
+    '     .Volume = 1
+    ' End With
+
     '*********** INITALIZE MODES ***********
 
     ' Modes
@@ -465,28 +488,7 @@ Sub ConfigureGlfDevices()
     ' segment_display_p1p2.ExternalFlexDmdSegmentIndex = 0
 
 
-    '*********** INITALIZE SOUND EFFECTS ***********
 
-
-    ' Tracks
-    CreateSounds()
-
-
-    ' Sound buses
-    With CreateGlfSoundBus("mus")
-        .SimultaneousSounds = 4
-        .Volume = 0.8
-    End With
-
-    ' With CreateGlfSoundBus("sfx")
-    '     .SimultaneousSounds = 8
-    '     .Volume = 0.5
-    ' End With
-
-    ' With CreateGlfSoundBus("voc")
-    '     .SimultaneousSounds = 2
-    '     .Volume = 1
-    ' End With
 
  
 
