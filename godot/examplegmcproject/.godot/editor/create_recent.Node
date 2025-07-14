@@ -1,11 +1,14 @@
+Control
+TextureRect
+VideoStreamPlayer
+AspectRatioContainer
+MarginContainer
 VBoxContainer
 Label
 HBoxContainer
 MPFVariable
 AnimationPlayer
-Control
 ColorRect
 MPFWidget
 MPFSlide
-AspectRatioContainer
 PopupMenu

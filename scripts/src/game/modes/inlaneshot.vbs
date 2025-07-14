@@ -36,7 +36,7 @@ Sub CreateInlaneshotsMode()
 
         With .WidgetPlayer()
             With .EventName("light_right_orbit")
-                .Widget = "right_spinner"
+                .Widget = "left_spinner"
                 .Action = "play"
                 .Expire = InlaneOrbitShotTime
             End With

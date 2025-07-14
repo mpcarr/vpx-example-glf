@@ -72,7 +72,7 @@ Sub CreateBaseMode()
             With .EventName("ball_save_new_ball_saving_ball")
                 .Widget = "ball_save"
                 .Action = "play"
-                .Expire = 2
+                .Expire = 4
             End With
         End With
 
