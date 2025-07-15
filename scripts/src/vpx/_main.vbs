@@ -46,6 +46,18 @@
 '   ZGCF: GLF Configurations
 '
 '
+' B2S Backglass IDs
+' ------------
+'   E001 0/1 logo image 
+'   E002 0/1 GAME
+'   E003 0/1 LOGIC
+'   E004 0/1 FRAMEWORK
+'   E005 0/1 upper left
+'   E006 0/1 lower right
+'   E007 0/1 lower left
+'   E008 0/1 upper right
+'
+'
 ' DOF IDs
 ' ------------
 '   E101 0/1 LeftFlipper

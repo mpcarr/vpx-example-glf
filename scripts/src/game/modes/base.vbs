@@ -29,7 +29,7 @@ Sub CreateBaseMode()
         With .EventPlayer()
 
             'handle start of mode (new ball)
-            .Add "mode_base_started", Array("new_ball_started","stop_attract_mode","play_mus_ambient_loop")
+            .Add "mode_base_started", Array("new_ball_started","stop_attract_mode","backglass_on","play_mus_ambient_loop")
             .Add "s_Plunger1_inactive{current_player.ball_just_started == 1}", Array("new_ball_active")
 
             'handle mode stopping

@@ -15,10 +15,14 @@ Sub CreateBasementMode()
         With .EventPlayer()
 
             'Some table init stuff
-            .Add "mode_basement_started", Array("close_diverter")
+            .Add "mode_basement_started", Array("close_diverter","backglass_on")
+
+            'Backglass stuff
+            .Add "backglass_on", Array("backglass_logo_on","backglass_game_on","backglass_logic_on","backglass_framework_on")
+            .Add "backglass_off", Array("backglass_logo_off","backglass_game_off","backglass_logic_off","backglass_framework_off")
 
             'Handle tilt
-            .Add "tilt", Array("kill_flippers")
+            .Add "tilt", Array("kill_flippers","backglass_off")
 
         End With
 
@@ -228,14 +232,84 @@ Sub CreateBasementMode()
         ' Backglass lights (for B2S backglass)
         With .DOFPlayer()
 
-            'Main backglass light
-            With .EventName("backglass_on")
+            'Logo backglass light
+            With .EventName("backglass_logo_on")
                 .Action = "DOF_ON"
                 .DOFEvent = 1
             End With
-            With .EventName("backglass_off")
+            With .EventName("backglass_logo_off")
                 .Action = "DOF_OFF"
                 .DOFEvent = 1
+            End With
+
+            'GAME backglass light
+            With .EventName("backglass_game_on")
+                .Action = "DOF_ON"
+                .DOFEvent = 2
+            End With
+            With .EventName("backglass_game_off")
+                .Action = "DOF_OFF"
+                .DOFEvent = 2
+            End With
+
+            'LOGIC backglass light
+            With .EventName("backglass_logic_on")
+                .Action = "DOF_ON"
+                .DOFEvent = 3
+            End With
+            With .EventName("backglass_logic_off")
+                .Action = "DOF_OFF"
+                .DOFEvent = 3
+            End With
+
+            'FRAMEWORK backglass light
+            With .EventName("backglass_framework_on")
+                .Action = "DOF_ON"
+                .DOFEvent = 4
+            End With
+            With .EventName("backglass_framework_off")
+                .Action = "DOF_OFF"
+                .DOFEvent = 4
+            End With
+
+            'Flash1 backglass light
+            With .EventName("backglass_flash1_on")
+                .Action = "DOF_ON"
+                .DOFEvent = 5
+            End With
+            With .EventName("backglass_flash1_off")
+                .Action = "DOF_OFF"
+                .DOFEvent = 5
+            End With
+
+            'Flash2 backglass light
+            With .EventName("backglass_flash2_on")
+                .Action = "DOF_ON"
+                .DOFEvent = 6
+            End With
+            With .EventName("backglass_flash2_off")
+                .Action = "DOF_OFF"
+                .DOFEvent = 6
+            End With
+
+            'Flash3 backglass light
+            With .EventName("backglass_flash3_on")
+                .Action = "DOF_ON"
+                .DOFEvent = 7
+            End With
+            With .EventName("backglass_flash3_off")
+                .Action = "DOF_OFF"
+                .DOFEvent = 7
+            End With
+
+            'Flash4 backglass light
+            With .EventName("backglass_flash4_on")
+                .Action = "DOF_ON"
+                .DOFEvent = 8
+            End With
+            With .EventName("backglass_flash4_off")
+                .Action = "DOF_OFF"
+                .DOFEvent = 8
             End With
 
         End With
