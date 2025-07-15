@@ -330,7 +330,6 @@ Sub CreateMultiballMode()
                     .Add "lights", LockQualifyLightNames(x-1)
                     .Add "color", MultiballColor
                 End With
-                .RestartEvents = Array("reset_target_shots")
             End With
         Next
 

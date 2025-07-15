@@ -33,13 +33,15 @@ Sub CreateSkillshotsMode()
             .Add "ss_achieved", Array("score_500000","play_voc_skill_shot")
 
             'Stop skillshots if orbit lanes are hit, or if timer runs out for some reason
-            ' .Add "s_TopLane1_inactive", Array("stop_skillshots")
-            ' .Add "s_TopLane2_inactive", Array("stop_skillshots")
-            ' .Add "s_TopLane3_inactive", Array("stop_skillshots")
-            ' .Add "s_TopLane4_inactive", Array("stop_skillshots")
             .Add "s_LeftOrb1_active", Array("stop_skillshots")
             .Add "s_RightOrb1_active", Array("stop_skillshots")
             .Add "timer_skillshots_complete", Array("stop_skillshots") 
+
+            'Clear skill shot light if hit
+            .Add "s_TopLane1_inactive", Array("clear_skillshots")
+            .Add "s_TopLane2_inactive", Array("clear_skillshots")
+            .Add "s_TopLane3_inactive", Array("clear_skillshots")
+            .Add "s_TopLane4_inactive", Array("clear_skillshots")
 
         End With
 
@@ -66,7 +68,7 @@ Sub CreateSkillshotsMode()
                     .Add "lights", SkillshotLightNames(x-1)
                 End With
                 With .ControlEvents()
-                    .Events = Array("stop_skillshots")
+                    .Events = Array("stop_skillshots","clear_skillshots")
                     .State = 0
                 End With
                 With .ControlEvents()
