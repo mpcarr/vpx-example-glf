@@ -33,7 +33,7 @@ Const JackpotColor = "00ff6a"
 Const MagnetColor = "ffff00"
 Const BonusColor = "fc7703"
 
-Const SegmentsColor = "ff0000"
+Const SegmentsColor = "00ffff"
 
 
 ' Arrays used in modes
@@ -61,6 +61,7 @@ Sub ConfigureGlfDevices()
     ' Load up the shows
     CreateGeneralShows()
     CreateBaseShows()
+    CreateMultiballShows()
 
     ' Load shared shot profiles
     CreateSharedShotProfiles()

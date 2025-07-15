@@ -44,9 +44,11 @@ Sub CreateMultiballMode()
             .Add "balldevice_kicker2_ball_entered{current_player.shot_right_jackpot == 1}", Array("score_1000000","add_bonus","jackpot_show","play_sfx_jackpot")
 
             'Handle music and callouts
-            .Add "start_multiball", Array("stop_mus_ambient_loop","play_mus_multiball_loop")
-            .Add "multiball_mb_ended", Array("play_mus_ambient_loop","stop_mus_multiball_loop")
+            .Add "start_multiball", Array("stop_mus_ambient_loop","play_mus_multiball_loop","play_mb_bg_show")
+            .Add "multiball_mb_ended", Array("play_mus_ambient_loop","stop_mus_multiball_loop","stop_mb_bg_show")
             .Add "sfx_jackpot_stopped", Array("play_voc_jackpot")   'play callout after the sfx
+
+            .Add "stop_mb_bg_show", Array("backglass_on")
 
         End With
 
@@ -89,6 +91,24 @@ Sub CreateMultiballMode()
             With .EventName("play_sfx_jackpot")
                 .Key = "key_sfx_jackpot"
                 .Sound = "sfx_jackpot"
+            End With
+        End With
+
+
+        'Play shows specific to this mode
+        With .ShowPlayer()
+            With .EventName("play_mb_bg_show")
+                .Key = "key_mb_bg_show"
+                .Show = "mb_backglass_show"
+                .Priority = 15
+                .Speed = 1
+            End With
+            With .EventName("stop_mb_bg_show")
+                .Key = "key_mb_bg_show"
+                .Show = "mb_backglass_show"
+                .Priority = 15
+                .Speed = 1
+                .Action = "stop"
             End With
         End With
 
