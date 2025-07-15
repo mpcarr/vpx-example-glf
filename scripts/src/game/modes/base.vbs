@@ -265,7 +265,9 @@ Sub CreateBaseMode()
 
         ' Plays sounds during this mode
         With .SoundPlayer()
+
             'Music
+
             With .EventName("play_mus_ambient_loop")
                 .Key = "key_mus_ambient_loop"
                 .Sound = "mus_ambient_loop"
@@ -285,6 +287,50 @@ Sub CreateBaseMode()
                 .Sound = "mus_multiball_loop"
                 .Action = "stop"
             End With
+
+            'Callouts
+
+            With .EventName("play_voc_extra_ball")
+                .Key = "key_voc_extra_ball"
+                .Sound = "voc_extra_ball"
+            End With
+
+            With .EventName("play_voc_extra_ball_is_ready")
+                .Key = "key_voc_extra_ball_is_ready"
+                .Sound = "voc_extra_ball_is_ready"
+            End With
+
+            With .EventName("play_voc_jackpot2")
+                .Key = "key_voc_jackpot1"
+                .Sound = "voc_jackpot1"
+            End With
+
+            With .EventName("play_voc_jackpot1")
+                .Key = "key_voc_jackpot2"
+                .Sound = "voc_jackpot1"
+            End With
+
+            With .EventName("play_voc_kickback_ready")
+                .Key = "key_voc_kickback_ready"
+                .Sound = "voc_kickback_ready"
+            End With
+
+            With .EventName("play_voc_lock_is_lit")
+                .Key = "key_voc_lock_is_lit"
+                .Sound = "voc_lock_is_lit"
+            End With
+
+            With .EventName("play_voc_multiball_ready")
+                .Key = "key_voc_multiball_ready"
+                .Sound = "voc_multiball_ready"
+            End With
+
+            With .EventName("play_voc_skill_shot")
+                .Key = "key_voc_skill_shot"
+                .Sound = "voc_skill_shot"
+            End With
+
+
         End With
 
         

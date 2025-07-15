@@ -43,10 +43,22 @@ Sub CreateMultiballMode()
             .Add "s_RampHit_active{current_player.shot_left_jackpot == 1}", Array("score_1000000","add_bonus","jackpot_show")
             .Add "balldevice_kicker2_ball_entered{current_player.shot_right_jackpot == 1}", Array("score_1000000","add_bonus","jackpot_show")
 
-            'Handle music
+            'Handle music and callouts
             .Add "start_multiball", Array("stop_mus_ambient_loop","play_mus_multiball_loop")
             .Add "multiball_mb_ended", Array("play_mus_ambient_loop","stop_mus_multiball_loop")
 
+        End With
+
+
+        'The random event player will dispatch an event at random (wieghted) from a list of possible events
+        With .RandomEventPlayer()
+            'When a jackpot is hit, play one of the callouts at random
+            With .EventName("jackpot_show")
+                .Add "play_voc_jackpot1", 1
+                .Add "play_voc_jackpot2", 1
+                .ForceAll = False
+                .ForceDifferent = False
+            End With
         End With
 
 
@@ -55,7 +67,7 @@ Sub CreateMultiballMode()
             .StartEvents = Array("start_multiball.3")
             .BallCount = 3
             .BallCountType = "total"
-            .ShootAgain = 10000
+            .ShootAgain = 15000
             .HurryUp = 3000
             .GracePeriod = 2000
             .BallLocks = Array("kicker1", "kicker2")
@@ -104,7 +116,7 @@ Sub CreateMultiballMode()
             End With
             With .States("mb_ready")
                 .Label = "Multiball Ready"
-                .EventsWhenStarted = Array("multiball_ready","disable_qualify_lock","disable_locks") 
+                .EventsWhenStarted = Array("multiball_ready","play_voc_multiball_ready","disable_qualify_lock","disable_locks") 
             End With
             With .States("mb_running")
                 .Label = "Multiball Running"
@@ -151,16 +163,19 @@ Sub CreateMultiballMode()
                 .Source = Array("qualifying")
                 .Target = "locking_both"
                 .Events = Array("qualify_lock_on_complete{current_player.shot_bottom_lock == 0 && current_player.shot_top_lock == 0}")
+                .EventsWhenTransitioning = Array("play_voc_lock_is_lit")
             End With
             With .Transitions()
                 .Source = Array("qualifying")
                 .Target = "locking_top"
                 .Events = Array("qualify_lock_on_complete{current_player.shot_bottom_lock == 2 && current_player.shot_top_lock == 0}")
+                .EventsWhenTransitioning = Array("play_voc_lock_is_lit")
             End With
             With .Transitions()
                 .Source = Array("qualifying")
                 .Target = "locking_bottom"
                 .Events = Array("qualify_lock_on_complete{current_player.shot_bottom_lock == 0 && current_player.shot_top_lock == 2}")
+                .EventsWhenTransitioning = Array("play_voc_lock_is_lit")
             End With
 
             With .Transitions()

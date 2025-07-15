@@ -2536,5 +2536,77 @@
     "volume": 0,
     "balance": 0,
     "output_target": 1
+  },
+  {
+    "name": "voc_extra_ball",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\music and sfx\\voc_extra_ball.mp3",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": 1
+  },
+  {
+    "name": "voc_extra_ball_is_ready",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\music and sfx\\voc_extra_ball_is_ready.mp3",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": 1
+  },
+  {
+    "name": "voc_jackpot1",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\music and sfx\\voc_jackpot1.mp3",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": 1
+  },
+  {
+    "name": "voc_jackpot2",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\music and sfx\\voc_jackpot2.mp3",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": 1
+  },
+  {
+    "name": "voc_kickback_ready",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\music and sfx\\voc_kickback_ready.mp3",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": 1
+  },
+  {
+    "name": "voc_multiball_ready",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\music and sfx\\voc_multiball_ready.mp3",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": 1
+  },
+  {
+    "name": "voc_skill_shot",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\music and sfx\\voc_skill_shot.mp3",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": 1
+  },
+  {
+    "name": "voc_lock_is_lit",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\music and sfx\\voc_lock_is_lit.mp3",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": 1
   }
 ]

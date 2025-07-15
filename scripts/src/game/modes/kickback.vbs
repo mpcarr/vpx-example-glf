@@ -40,8 +40,11 @@ Sub CreateKickbackMode()
             'Add some points and bonus when top lanes completed
             .Add "qualify_kickback_on_complete", Array("add_bonus","score_50000")
 
-        End With
+            'Play sound effect
+            .Add "qualify_kickback_on_complete{current_player.ss_running == 0}", Array("play_voc_kickback_ready")  'if skillshot not running, immediately play callout
+            .Add "voc_skill_shot_stopped", Array("play_voc_kickback_ready")  'otherwise, play callout after the skill shot callout
 
+        End With
 
         'Define the kickback qualification shots
         'Note, the shots are activated by corresponding switch and reset by the shot group

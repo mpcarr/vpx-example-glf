@@ -32,6 +32,10 @@ Sub CreateExtraBallMode()
             'handle successful eb collection
             .Add "s_ST3_active{current_player.shot_eb_ready == 1}", Array("play_eb_show","eb_achieved","score_100000") 
 
+            'handle callouts
+            .Add "eb_now_lit{current_player.extra_ball_eb_awarded < "&MaxEBs&"}", Array("play_voc_extra_ball_is_ready") 
+            .Add "eb_achieved", Array("play_voc_extra_ball") 
+
         End With
 
 
@@ -40,18 +44,7 @@ Sub CreateExtraBallMode()
             .AwardEvents = Array("eb_achieved")
             .MaxPerGame = MaxEBs
         End With
-
-
-        ' 'The sound player will play sounds
-        ' With .SoundPlayer()
-        '     With .EventName("eb_now_lit")
-        '         .Key = "key_sfx_extra_ball_ready"
-        '         .Sound = "sfx_extra_ball_ready"
-        '     End With
-        ' End With
-
-
-    
+   
         'Define the shot that awards the extra ball
         With .Shots("eb_ready")
             .Profile = "eb_ready"  'defined below

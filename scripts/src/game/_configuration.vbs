@@ -82,10 +82,10 @@ Sub ConfigureGlfDevices()
     '     .Volume = 0.5
     ' End With
 
-    ' With CreateGlfSoundBus("voc")
-    '     .SimultaneousSounds = 2
-    '     .Volume = 1
-    ' End With
+    With CreateGlfSoundBus("voc")
+        .SimultaneousSounds = 2
+        .Volume = 1
+    End With
 
 
     '*********** INITALIZE MODES ***********
@@ -177,6 +177,7 @@ Sub ConfigureGlfDevices()
     Glf_SetInitialPlayerVar "bonus_count", 0
     Glf_SetInitialPlayerVar "bonus_skip", 0
     Glf_SetInitialPlayerVar "hs_input_ready", 1
+    Glf_SetInitialPlayerVar "ss_running", 0
     
 
 

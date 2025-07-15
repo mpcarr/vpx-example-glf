@@ -53,8 +53,14 @@ Sub CreateSounds()
     'AddSoundEffect "sfx_name", 5.000
 
     'Add callout tracks here. Provied track name and duration (seconds)
-    'AddCallout "voc_name", 5.000
-
+    AddCallout "voc_extra_ball", 1.349
+    AddCallout "voc_extra_ball_is_ready", 1.665
+    AddCallout "voc_jackpot1", 0.995
+    AddCallout "voc_jackpot2", 0.884
+    AddCallout "voc_kickback_ready", 1.386
+    AddCallout "voc_lock_is_lit", 1.330
+    AddCallout "voc_multiball_ready", 1.442
+    AddCallout "voc_skill_shot", 1.154
 
 
     'GLF Music Setup
@@ -82,17 +88,17 @@ Sub CreateSounds()
     '     End With
     ' Next
 
-    ' ' Callouts
-    ' BusName = "voc"
-    ' For x = 0 to UBound(VOCNames)
-    '     With CreateGlfSound(VOCNames(x))
-    '         .File = VOCNames(x) 'Name in VPX Sound Manager
-    '         .Bus = BusName ' Sound bus to play on
-    '         '.Volume = 0.6 'Override bus volume
-    '         .Duration = VOCDurations(x) * 1000
-    '         .EventsWhenStopped = Array(VOCNames(x)&"_stopped")
-    '     End With
-    ' Next
+    ' Callouts
+    BusName = "voc"
+    For x = 0 to UBound(VOCNames)
+        With CreateGlfSound(VOCNames(x))
+            .File = VOCNames(x) 'Name in VPX Sound Manager
+            .Bus = BusName ' Sound bus to play on
+            '.Volume = 0.6 'Override bus volume
+            .Duration = VOCDurations(x) * 1000
+            .EventsWhenStopped = Array(VOCNames(x)&"_stopped")
+        End With
+    Next
 
 End Sub
 

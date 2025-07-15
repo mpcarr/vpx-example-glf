@@ -30,13 +30,13 @@ Sub CreateSkillshotsMode()
             .Add "s_TopLane2_active{current_player.shot_ss2 == 1}", Array("ss_achieved")
             .Add "s_TopLane3_active{current_player.shot_ss3 == 1}", Array("ss_achieved")
             .Add "s_TopLane4_active{current_player.shot_ss4 == 1}", Array("ss_achieved")
-            .Add "ss_achieved", Array("stop_skillshots","score_500000")
+            .Add "ss_achieved", Array("score_500000","play_voc_skill_shot")
 
             'Stop skillshots if orbit lanes are hit, or if timer runs out for some reason
-            .Add "s_TopLane1_inactive", Array("stop_skillshots")
-            .Add "s_TopLane2_inactive", Array("stop_skillshots")
-            .Add "s_TopLane3_inactive", Array("stop_skillshots")
-            .Add "s_TopLane4_inactive", Array("stop_skillshots")
+            ' .Add "s_TopLane1_inactive", Array("stop_skillshots")
+            ' .Add "s_TopLane2_inactive", Array("stop_skillshots")
+            ' .Add "s_TopLane3_inactive", Array("stop_skillshots")
+            ' .Add "s_TopLane4_inactive", Array("stop_skillshots")
             .Add "s_LeftOrb1_active", Array("stop_skillshots")
             .Add "s_RightOrb1_active", Array("stop_skillshots")
             .Add "timer_skillshots_complete", Array("stop_skillshots") 
@@ -99,6 +99,8 @@ Sub CreateSkillshotsMode()
             End With
         End With
 
+
+
         'Skillshot will time out after 5 seconds
         With .Timers("skillshots")
             .TickInterval = 1000
@@ -108,6 +110,23 @@ Sub CreateSkillshotsMode()
                 .EventName = "new_ball_active"
                 .Action = "restart"
             End With
+        End With
+
+
+        With .VariablePlayer()
+            'maintain a flag that tracks if skill shot is currently running
+            With .EventName("mode_skillshots_started")
+				With .Variable("ss_running")
+                    .Action = "set"
+					.Int = 1
+				End With
+			End With
+            With .EventName("mode_skillshots_stopping")
+				With .Variable("ss_running")
+                    .Action = "set"
+					.Int = 0
+				End With
+			End With
         End With
 
     End With
