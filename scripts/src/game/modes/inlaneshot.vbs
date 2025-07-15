@@ -29,8 +29,8 @@ Sub CreateInlaneshotsMode()
             .Add "s_RightInlane_active{current_player.shot_right_inlane == 1}", Array("hit_right_inlane","light_left_orbit")
 
             'Handle successful orbit shot hits (based on sequence shots defined in base mode)
-            .Add "left_orbit_hit{current_player.shot_left_orbit == 1}", Array("left_orbit_success","light_right_inlane","add_bonus","score_200000")
-            .Add "right_orbit_hit{current_player.shot_right_orbit == 1}", Array("right_orbit_success","light_left_inlane","add_bonus","score_200000")
+            .Add "left_orbit_hit{current_player.shot_left_orbit == 1}", Array("left_orbit_success","light_right_inlane","add_bonus","score_200000","play_sfx_entry")
+            .Add "right_orbit_hit{current_player.shot_right_orbit == 1}", Array("right_orbit_success","light_left_inlane","add_bonus","score_200000","play_sfx_entry")
 
         End With
 
@@ -44,6 +44,14 @@ Sub CreateInlaneshotsMode()
                 .Widget = "left_spinner"
                 .Action = "play"
                 .Expire = InlaneOrbitShotTime
+            End With
+        End With
+
+        'Play sounds specific to this mode
+        With .SoundPlayer()
+            With .EventName("play_sfx_entry")
+                .Key = "key_sfx_entry"
+                .Sound = "sfx_entry"
             End With
         End With
 

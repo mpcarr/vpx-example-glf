@@ -42,19 +42,37 @@ Sub CreateBonusMode()
             .Add "score_bonus_total", Array("start_bonus_delay")
 
             'Play bonus show. Skip if/when commanded to skip
-            .Add "play_bonus_show1{current_player.shot_bonus_light1 == 1 && current_player.bonus_skip == 0}", Array("bonus_light1_show","play_sfx_bonus_tally")
-            .Add "play_bonus_show2{current_player.shot_bonus_light2 == 1 && current_player.bonus_skip == 0}", Array("bonus_light2_show","play_sfx_bonus_tally")
-            .Add "play_bonus_show3{current_player.shot_bonus_light3 == 1 && current_player.bonus_skip == 0}", Array("bonus_light3_show","play_sfx_bonus_tally")
-            .Add "play_bonus_show4{current_player.shot_bonus_light4 == 1 && current_player.bonus_skip == 0}", Array("bonus_light4_show","play_sfx_bonus_tally")
-            .Add "play_bonus_show5{current_player.shot_bonus_light5 == 1 && current_player.bonus_skip == 0}", Array("bonus_light5_show","play_sfx_bonus_tally")
-            .Add "play_bonus_show6{current_player.shot_bonus_light6 == 1 && current_player.bonus_skip == 0}", Array("bonus_light6_show","play_sfx_bonus_tally")
-            .Add "play_bonus_show7{current_player.shot_bonus_light7 == 1 && current_player.bonus_skip == 0}", Array("bonus_light7_show","play_sfx_bonus_tally")
-            .Add "play_bonus_show8{current_player.shot_bonus_light8 == 1 && current_player.bonus_skip == 0}", Array("bonus_light8_show","play_sfx_bonus_tally")
+            .Add "play_bonus_show1{current_player.shot_bonus_light1 == 1 && current_player.bonus_skip == 0}", Array("bonus_light1_show","do_sfx_bonus")
+            .Add "play_bonus_show2{current_player.shot_bonus_light2 == 1 && current_player.bonus_skip == 0}", Array("bonus_light2_show","do_sfx_bonus")
+            .Add "play_bonus_show3{current_player.shot_bonus_light3 == 1 && current_player.bonus_skip == 0}", Array("bonus_light3_show","do_sfx_bonus")
+            .Add "play_bonus_show4{current_player.shot_bonus_light4 == 1 && current_player.bonus_skip == 0}", Array("bonus_light4_show","do_sfx_bonus")
+            .Add "play_bonus_show5{current_player.shot_bonus_light5 == 1 && current_player.bonus_skip == 0}", Array("bonus_light5_show","do_sfx_bonus")
+            .Add "play_bonus_show6{current_player.shot_bonus_light6 == 1 && current_player.bonus_skip == 0}", Array("bonus_light6_show","do_sfx_bonus")
+            .Add "play_bonus_show7{current_player.shot_bonus_light7 == 1 && current_player.bonus_skip == 0}", Array("bonus_light7_show","do_sfx_bonus")
+            .Add "play_bonus_show8{current_player.shot_bonus_light8 == 1 && current_player.bonus_skip == 0}", Array("bonus_light8_show","do_sfx_bonus")
 
             'finish up bonus mode
             .Add "timer_bonus_skip_complete", Array("bonus_finished")
             .Add "timer_bonus_complete", Array("bonus_finished")
+
+            'handle sound effects
+            .Add "do_sfx_bonus", Array("stop_sfx_bonus") 'first stop the sfx if it is already playing
+            .Add "stop_sfx_bonus", Array("play_sfx_bonus") 'then play the sfx
             
+        End With
+
+
+        'Play sounds specific to this mode
+        With .SoundPlayer()
+            With .EventName("play_sfx_bonus")
+                .Key = "key_sfx_bonus"
+                .Sound = "sfx_bonus"
+            End With
+            With .EventName("stop_sfx_bonus")
+                .Key = "key_sfx_bonus"
+                .Sound = "sfx_bonus"
+                .Action = "stop"
+            End With
         End With
 
 
@@ -186,7 +204,7 @@ Sub CreateBonusMode()
 
         'Play bonus score tally sound effects
         ' With .SoundPlayer()
-        '     With .EventName("play_sfx_bonus_tally")
+        '     With .EventName("play_sfx_bonus")
         '         .Key = "key_sfx_tally"
         '         .Sound = "sfx_bonus_tally_alt"
         '     End With

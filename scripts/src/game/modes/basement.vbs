@@ -14,9 +14,6 @@ Sub CreateBasementMode()
 
         With .EventPlayer()
 
-            'DEBUG used to test shows. To test, uncomment and press right magna while table running. Also need to update given show below.
-            '.Add "s_right_staged_flipper_key_active", Array("test_show") 
-
             'Some table init stuff
             .Add "mode_basement_started", Array("close_diverter")
 
@@ -43,43 +40,43 @@ Sub CreateBasementMode()
 
 
         ' ' Pome sound effects (outside of normal ball play time)
-        ' With .SoundPlayer() 
+        With .SoundPlayer() 
 
-        '     'When players get added
-        '     With .EventName("player_added{kwargs.num==1}")
-        '         .Key = "key_voc_p1"
-        '         .Sound = "voc_p1"
-        '     End With
-        '     With .EventName("player_added{kwargs.num==2}")
-        '         .Key = "key_voc_p2"
-        '         .Sound = "voc_p2"
-        '     End With
-        '     With .EventName("player_added{kwargs.num==3}")
-        '         .Key = "key_voc_p3"
-        '         .Sound = "voc_p3"
-        '     End With
-        '     With .EventName("player_added{kwargs.num==4}")
-        '         .Key = "key_voc_p4"
-        '         .Sound = "voc_p4"
-        '     End With
+            'When players get added
+            With .EventName("player_added{kwargs.num==1}")
+                .Key = "key_sfx_p1"
+                .Sound = "sfx_button"
+            End With
+            With .EventName("player_added{kwargs.num==2}")
+                .Key = "key_sfx_p2"
+                .Sound = "sfx_button"
+            End With
+            With .EventName("player_added{kwargs.num==3}")
+                .Key = "key_sfx_p3"
+                .Sound = "sfx_button"
+            End With
+            With .EventName("player_added{kwargs.num==4}")
+                .Key = "key_sfx_p4"
+                .Sound = "sfx_button"
+            End With
 
-        '     'When ball drains
-        '     With .EventName("ball_ended")
-        '         .Key = "key_ball_drain"
-        '         .Sound = "sfx_ball_drain"
-        '     End With
+            'When ball drains
+            With .EventName("mode_bonus_started")
+                .Key = "key_sfx_drain"
+                .Sound = "sfx_drain"
+            End With
 
-        '     'When tilting
-        '     With .EventName("tilt_warning")
-        '         .Key = "key_sfx_tilt_warning"
-        '         .Sound = "sfx_tilt_warning"
-        '     End With
-        '     With .EventName("tilt")
-        '         .Key = "key_sfx_tilt"
-        '         .Sound = "sfx_tilt"
-        '     End With
+            'When tilting
+            With .EventName("tilt_warning")
+                .Key = "key_sfx_tilt_warning"
+                .Sound = "sfx_tilt_warning"
+            End With
+            With .EventName("tilt")
+                .Key = "key_sfx_tilt"
+                .Sound = "sfx_tilt"
+            End With
             
-        ' End With
+        End With
 
 
         With .SegmentDisplayPlayer()

@@ -40,12 +40,13 @@ Sub CreateMultiballMode()
             .Add "update_lock_shots{machine.bottom_ball_locked == 0 && current_player.shot_bottom_lock == 2}", Array("reset_bottom_lock")
             
             'Jackpot hits
-            .Add "s_RampHit_active{current_player.shot_left_jackpot == 1}", Array("score_1000000","add_bonus","jackpot_show")
-            .Add "balldevice_kicker2_ball_entered{current_player.shot_right_jackpot == 1}", Array("score_1000000","add_bonus","jackpot_show")
+            .Add "s_RampHit_active{current_player.shot_left_jackpot == 1}", Array("score_1000000","add_bonus","jackpot_show","play_sfx_jackpot")
+            .Add "balldevice_kicker2_ball_entered{current_player.shot_right_jackpot == 1}", Array("score_1000000","add_bonus","jackpot_show","play_sfx_jackpot")
 
             'Handle music and callouts
             .Add "start_multiball", Array("stop_mus_ambient_loop","play_mus_multiball_loop")
             .Add "multiball_mb_ended", Array("play_mus_ambient_loop","stop_mus_multiball_loop")
+            .Add "sfx_jackpot_stopped", Array("play_voc_jackpot")   'play callout after the sfx
 
         End With
 
@@ -53,7 +54,7 @@ Sub CreateMultiballMode()
         'The random event player will dispatch an event at random (wieghted) from a list of possible events
         With .RandomEventPlayer()
             'When a jackpot is hit, play one of the callouts at random
-            With .EventName("jackpot_show")
+            With .EventName("play_voc_jackpot")
                 .Add "play_voc_jackpot1", 1
                 .Add "play_voc_jackpot2", 1
                 .ForceAll = False
@@ -79,7 +80,16 @@ Sub CreateMultiballMode()
             .ResetEvents = Array("start_multiball.2","restart_qualify_lock")
             .BallsToLock = 2
             .LockDevices = Array("kicker1", "kicker2")
-            .Debug = True
+            '.Debug = True
+        End With
+
+
+        'Play sounds specific to this mode
+        With .SoundPlayer()
+            With .EventName("play_sfx_jackpot")
+                .Key = "key_sfx_jackpot"
+                .Sound = "sfx_jackpot"
+            End With
         End With
 
 

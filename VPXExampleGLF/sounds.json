@@ -2608,5 +2608,113 @@
     "volume": 0,
     "balance": 0,
     "output_target": 1
+  },
+  {
+    "name": "sfx_button",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\music and sfx\\sfx_button.mp3",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": 1
+  },
+  {
+    "name": "sfx_drain",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\music and sfx\\sfx_drain.mp3",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": 1
+  },
+  {
+    "name": "sfx_drop_target",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\music and sfx\\sfx_drop_target.mp3",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": 1
+  },
+  {
+    "name": "sfx_entry",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\music and sfx\\sfx_entry.mp3",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": 1
+  },
+  {
+    "name": "sfx_hs_initial",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\music and sfx\\sfx_hs_initial.mp3",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": 1
+  },
+  {
+    "name": "sfx_jackpot",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\music and sfx\\sfx_jackpot.mp3",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": 1
+  },
+  {
+    "name": "sfx_mag_cap",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\music and sfx\\sfx_mag_cap.mp3",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": 1
+  },
+  {
+    "name": "sfx_tilt_warning",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\music and sfx\\sfx_tilt_warning.mp3",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": 1
+  },
+  {
+    "name": "sfx_alert1",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\music and sfx\\sfx_alert1.mp3",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": 1
+  },
+  {
+    "name": "sfx_bonus",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\music and sfx\\sfx_bonus.mp3",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": 1
+  },
+  {
+    "name": "sfx_spin",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\music and sfx\\sfx_spin.mp3",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": 1
+  },
+  {
+    "name": "sfx_tilt",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\music and sfx\\sfx_tilt.mp3",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": 1
   }
 ]

@@ -41,16 +41,16 @@ Sub CreateHighScoreMode()
             End With
         End With
 
-        ' With .SoundPlayer
-        '     With .EventName("mode_high_score_started")
-        '         .Key = "key_mus_highscore"
-        '         .Sound = "mus_victory"
-        '     End With
-        '     With .EventName("text_inputted.4")
-        '         .Key = "key_sfx_hs_initial"
-        '         .Sound = "sfx_hs_initial"
-        '     End With
-        ' End With
+        With .SoundPlayer
+            ' With .EventName("mode_high_score_started")
+            '     .Key = "key_mus_highscore"
+            '     .Sound = "mus_victory"
+            ' End With
+            With .EventName("text_inputted.4")
+                .Key = "key_sfx_hs_initial"
+                .Sound = "sfx_hs_initial"
+            End With
+        End With
 
         With .ShowPlayer()
             With .EventName("mode_high_score_started")

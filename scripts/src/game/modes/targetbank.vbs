@@ -38,6 +38,15 @@ Sub CreateTargetBankMode()
         End With
 
 
+        'Play sounds specific to this mode
+        With .SoundPlayer()
+            With .EventName("play_sfx_drop_target")
+                .Key = "key_sfx_drop_target"
+                .Sound = "sfx_drop_target"
+            End With
+        End With
+
+
         'define the bank target shots
         For x = 1 to 6
             With .Shots("bank_target"&x)
@@ -115,14 +124,14 @@ Sub CreateTargetBankMode()
                     .Source = Array("shot"&x)
                     .Target = "shot"&(x+1)
                     .Events = Array("s_DT"&x&"_active{current_player.shot_bank_target"&x&" == 1}")   'target hit and is flashing
-                    .EventsWhenTransitioning = Array("bank_target"&x&"_completed","play_sfx_bank_target","score_30000")
+                    .EventsWhenTransitioning = Array("bank_target"&x&"_completed","play_sfx_drop_target","score_30000")
                 End With
             Next
             With .Transitions()
                 .Source = Array("shot6")
                 .Target = "completed"
                 .Events = Array("s_DT6_active{current_player.shot_bank_target6 == 1}")   'target hit and is flashing
-                .EventsWhenTransitioning = Array("bank_target6_completed","play_sfx_bank_target_completed","score_30000")
+                .EventsWhenTransitioning = Array("bank_target6_completed","play_sfx_drop_target","score_30000")
             End With
             With .Transitions()
                 .Source = Array("completed")

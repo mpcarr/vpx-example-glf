@@ -6,6 +6,12 @@
 Sub Table1_KeyDown(ByVal keycode)
 	Glf_KeyDown(keycode)
 
+	'DEBUG used to test shows, where the show is defined in the "basement" mode.
+	' This also gives an example of how to directly dispatch GLF events.
+	If keycode = 33 Then  'F key
+		DispatchPinEvent "test_show", NULL
+	End If
+
 	'Normal buttons
 	If keycode = AddCreditKey or keycode = AddCreditKey2 Then RandomCoinSound
 	If keycode = StartGameKey Then SoundStartButton
