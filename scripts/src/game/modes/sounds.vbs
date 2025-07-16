@@ -29,8 +29,10 @@ Sub CreateSounds()
     AddSoundEffect "sfx_entry", 2.270
     AddSoundEffect "sfx_hs_initial", 0.139
     AddSoundEffect "sfx_jackpot", 1.386
+    AddSoundEffect "sfx_laser_blast", 0.442
     AddSoundEffect "sfx_mag_cap", 2.972
     AddSoundEffect "sfx_spin", 0.206
+    AddSoundEffect "sfx_spin2", 0.166
     AddSoundEffect "sfx_tilt", 1.960
     AddSoundEffect "sfx_tilt_warning", 1.050
 

@@ -1,10 +1,10 @@
 {
   "Spinner": {
     "center": {
-      "x": 110.47562,
-      "y": 490.7521
+      "x": 796.4756,
+      "y": 700.7521
     },
-    "rotation": -20.0,
+    "rotation": 28.0,
     "is_timer_enabled": false,
     "timer_interval": 100,
     "height": 60.0,
@@ -18,7 +18,7 @@
     "material": "Plastic",
     "image": "spinner",
     "surface": "",
-    "name": "s_spinner",
+    "name": "s_spinner2",
     "is_reflection_enabled": true
   }
 }

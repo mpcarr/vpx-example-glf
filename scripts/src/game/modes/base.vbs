@@ -45,11 +45,6 @@ Sub CreateBaseMode()
             'Magnet activated
             .Add "s_ST4_active", Array("magnet_activated","play_sfx_mag_cap")
 
-            'Spinner
-            .Add "s_spinner_active", Array("score_333","do_sfx_spin")
-            .Add "do_sfx_spin", Array("stop_sfx_spin") 'first stop the sfx if it is already playing
-            .Add "stop_sfx_spin", Array("play_sfx_spin") 'then play the sfx
-
         End With
 
         'Start the base mode slide on the lcd
@@ -298,15 +293,6 @@ Sub CreateBaseMode()
                 .Sound = "sfx_mag_cap"
             End With
 
-            With .EventName("play_sfx_spin")
-                .Key = "key_sfx_spin"
-                .Sound = "sfx_spin"
-            End With
-            With .EventName("stop_sfx_spin")
-                .Key = "key_sfx_spin"
-                .Sound = "sfx_spin"
-                .Action = "stop"
-            End With
 
             With .EventName("play_sfx_alert1")
                 .Key = "key_sfx_alert1"

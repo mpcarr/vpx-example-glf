@@ -1,18 +1,18 @@
 
 
-' Inlane Shot Mode
+' Ramp Shot Mode
 '
 '  - When a ball goes down an inlane, and the inlane shot light is lit, then the opposite orbit shot and spinner is lit for a few seconds
 '  - If the orbit shot is made, points and bonus awarded
 '  - The associated spinner value is 10x when shot is lit
 
 
-Const InlaneOrbitShotTime = 4   'seconds
+Const RampShotTime = 4   'seconds
 
-Sub CreateInlaneshotsMode()
+Sub CreateRampshotsMode()
     Dim x
 
-    With CreateGlfMode("inlaneshot", 650)
+    With CreateGlfMode("rampshot", 650)
 
         'Define the events that start and stop this mode
         .StartEvents = Array("ball_started")

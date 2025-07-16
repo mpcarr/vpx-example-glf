@@ -47,7 +47,7 @@ Dim TargetBankLightNames: TargetBankLightNames = Array("L33","L34","L35","L36","
 Dim BonusLightNames: BonusLightNames = Array("L10","L11","L12","L13","L14","L15","L16","L17") 
 
 ' Create the list of scores available to be awarded during the game
-Dim ScoreArray: ScoreArray = Array(1,10,100,333,500,1000,2000,3000,5000,10000,20000,30000,50000,100000,200000,500000,1000000)
+Dim ScoreArray: ScoreArray = Array(1,10,100,333,500,1000,2000,3000,3333,5000,10000,20000,30000,33333,50000,100000,200000,500000,1000000)
 
 ' Point value per bouns light
 Const BonusValue = 250000
@@ -88,7 +88,7 @@ Sub ConfigureGlfDevices()
         .Volume = 1
     End With
 
-    
+
     ' Trough sound effects
     AddPinEventListener "trough_eject",  "on_trough_eject",  "OnTroughEject", 2000, Null
     AddPinEventListener GLF_BALL_DRAIN, "ball_drain_sound", "BallDrainSound", 100, Null
@@ -124,6 +124,8 @@ Sub ConfigureGlfDevices()
 
 
     '*********** INITALIZE HIGH SCORES ***********
+    ' These high scores are tracked for this machine. 
+    ' Initial values are set first time the machine turns on. After that, values are read from the machines ini file.
 
     ' High Scores
     With EnableGlfHighScores()
@@ -141,7 +143,8 @@ Sub ConfigureGlfDevices()
 
 
     '*********** INITALIZE MACHINE VARIABLES ***********
-
+    ' These variables are tracked for this machine. 
+    ' Initial values are set first time the machine turns on. After that, values are read from the machines ini file.
 
     With CreateMachineVar("high_score_initials")
         .InitialValue = ""
@@ -173,9 +176,11 @@ Sub ConfigureGlfDevices()
 
 
     '*********** INITALIZE PLAYER VARIABLES ***********
-
+    ' These variables are tracked per player. 
+    'Initial values set at the beginning of each game.
 
     Glf_SetInitialPlayerVar "ball_just_started", 1
+    Glf_SetInitialPlayerVar "ss_running", 0             '0 when skillshots are not active, 1 when active
     Glf_SetInitialPlayerVar "target_hit_count", 0       'used in targetbank mode
     Glf_SetInitialPlayerVar "scoring_multiplier", 1     'current playfield score multiplier
     Glf_SetInitialPlayerVar "bonus_multiplier", 1       'current bonus score multiplier
@@ -183,7 +188,7 @@ Sub ConfigureGlfDevices()
     Glf_SetInitialPlayerVar "bonus_count", 0
     Glf_SetInitialPlayerVar "bonus_skip", 0
     Glf_SetInitialPlayerVar "hs_input_ready", 1
-    Glf_SetInitialPlayerVar "ss_running", 0
+
     
 
 
@@ -497,13 +502,11 @@ Sub ConfigureGlfDevices()
     segment_display_p1p2.ExternalB2SSegmentIndex = 0
 
 
-
-
 End Sub
 
 
 
-' Event callbacks
+' Event callbacks used for trough sound effects and DOF
 Function OnTroughEject(args)
 	RandomSoundBallRelease swTrough1
 	DOF 110, DOFPulse
@@ -517,7 +520,7 @@ End Function
 
 
 
-' Shared profile examples
+' Shared shot profile examples. These profiles can be used by shots in any mode.
 Public Sub CreateSharedShotProfiles()
 
 
