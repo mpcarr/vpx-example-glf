@@ -4,10 +4,14 @@ const CONFIG_FILE = "user://settings.cfg"
 
 func _ready():
 	load_window_settings()
+	MPF.server.add_event_handler("windowtitle", self._on_hello)
 
 func _notification(what):
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
 		save_window_settings()
+
+func _on_hello(payload: Dictionary) -> void:
+	DisplayServer.window_set_title("pygame")
 
 func save_window_settings():
 	var config = ConfigFile.new()

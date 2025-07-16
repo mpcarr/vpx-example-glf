@@ -2894,6 +2894,7 @@ Class GlfVpxBcpController
     Public Sub Reset()
 		If m_connected Then
             m_bcpController.Send "reset"
+            m_bcpController.Send "trigger?name=windowtitle"
         End If
 	End Sub
     
