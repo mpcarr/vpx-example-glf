@@ -28,6 +28,7 @@ Const KickbackColor = "dd2211"
 Const SkillshotColor = "eff542"
 Const TargetBankColor = "0023cc"
 Const InlaneshotColor = "8800ff"
+Const RampshotColor = "8800ff"
 Const MultiballColor = "ffffff"
 Const JackpotColor = "00ff6a"
 Const MagnetColor = "ffff00"
@@ -50,7 +51,7 @@ Dim BonusLightNames: BonusLightNames = Array("L10","L11","L12","L13","L14","L15"
 Dim ScoreArray: ScoreArray = Array(1,10,100,333,500,1000,2000,3000,3333,5000,10000,20000,30000,33333,50000,100000,200000,500000,1000000)
 
 ' Point value per bouns light
-Const BonusValue = 250000
+Const BonusValue = 500000
 
 
 
@@ -106,6 +107,7 @@ Sub ConfigureGlfDevices()
     CreateTargetBankMode()
     CreateExtraBallMode()
     CreateInlaneshotsMode()
+    CreateRampshotsMode()
     CreateMultiballMode()
     CreateScoreMode()
     CreateScoreBonusMode()

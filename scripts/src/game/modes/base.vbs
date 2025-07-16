@@ -294,12 +294,6 @@ Sub CreateBaseMode()
             End With
 
 
-            With .EventName("play_sfx_alert1")
-                .Key = "key_sfx_alert1"
-                .Sound = "sfx_alert1"
-            End With
-
-
             'Callouts
 
             With .EventName("play_voc_extra_ball")
