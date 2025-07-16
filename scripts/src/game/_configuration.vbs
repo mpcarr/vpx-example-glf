@@ -88,6 +88,11 @@ Sub ConfigureGlfDevices()
         .Volume = 1
     End With
 
+    
+    ' Trough sound effects
+    AddPinEventListener "trough_eject",  "on_trough_eject",  "OnTroughEject", 2000, Null
+    AddPinEventListener GLF_BALL_DRAIN, "ball_drain_sound", "BallDrainSound", 100, Null
+
 
     '*********** INITALIZE MODES ***********
     'Note, modes must be created after sounds and shows
@@ -465,39 +470,33 @@ Sub ConfigureGlfDevices()
     segment_display_p4.ExternalFlexDmdSegmentIndex = 24
     segment_display_p4.ExternalB2SSegmentIndex = 24
 
-    ' Dim segment_display_all
-    ' Set segment_display_all = (New GlfLightSegmentDisplay)("all")
+    Dim segment_display_all
+    Set segment_display_all = (New GlfLightSegmentDisplay)("all")
     
-    ' segment_display_all.SegmentType = "14Segment"
-    ' segment_display_all.SegmentSize = 32
-    ' segment_display_all.LightGroups = Array("p1_seg", "p2_seg", "p3_seg", "p4_seg")
-    ' segment_display_all.UpdateMethod = "stack"
-    ' segment_display_all.DefaultColor = SegmentsColor
-    ' segment_display_all.UseDotsForCommas = True
-    ' segment_display_all.DefaultTransitionUpdateHz = 10
-    ' segment_display_all.ExternalFlexDmdSegmentIndex = 0
+    segment_display_all.SegmentType = "14Segment"
+    segment_display_all.SegmentSize = 32
+    segment_display_all.LightGroups = Array("p1_seg", "p2_seg", "p3_seg", "p4_seg")
+    segment_display_all.UpdateMethod = "stack"
+    segment_display_all.DefaultColor = SegmentsColor
+    segment_display_all.UseDotsForCommas = True
+    segment_display_all.DefaultTransitionUpdateHz = 10
+    segment_display_all.ExternalFlexDmdSegmentIndex = 0
+    segment_display_all.ExternalB2SSegmentIndex = 0
 
 
-    ' Dim segment_display_p1p2
-    ' Set segment_display_p1p2 = (New GlfLightSegmentDisplay)("p1p2")
-    ' segment_display_p1p2.SegmentType = "14Segment"
-    ' segment_display_p1p2.SegmentSize = 16
-    ' segment_display_p1p2.LightGroups = Array("p1_seg", "p2_seg")
-    ' segment_display_p1p2.UpdateMethod = "stack"
-    ' segment_display_p1p2.DefaultColor = SegmentsColor
-    ' segment_display_p1p2.UseDotsForCommas = True
-    ' segment_display_p1p2.DefaultTransitionUpdateHz = 10
-    ' segment_display_p1p2.ExternalFlexDmdSegmentIndex = 0
+    Dim segment_display_p1p2
+    Set segment_display_p1p2 = (New GlfLightSegmentDisplay)("p1p2")
+    segment_display_p1p2.SegmentType = "14Segment"
+    segment_display_p1p2.SegmentSize = 16
+    segment_display_p1p2.LightGroups = Array("p1_seg", "p2_seg")
+    segment_display_p1p2.UpdateMethod = "stack"
+    segment_display_p1p2.DefaultColor = SegmentsColor
+    segment_display_p1p2.UseDotsForCommas = True
+    segment_display_p1p2.DefaultTransitionUpdateHz = 10
+    segment_display_p1p2.ExternalFlexDmdSegmentIndex = 0
+    segment_display_p1p2.ExternalB2SSegmentIndex = 0
 
 
-
-
- 
-
-
-    ' Trough sound effects
-    AddPinEventListener "trough_eject",  "on_trough_eject",  "OnTroughEject", 2000, Null
-    AddPinEventListener GLF_BALL_DRAIN, "ball_drain_sound", "BallDrainSound", 100, Null
 
 
 End Sub

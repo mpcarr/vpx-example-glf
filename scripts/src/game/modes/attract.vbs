@@ -94,21 +94,9 @@ Sub CreateAttractMode()
             End With
 
             With .EventName("show_attract_hs1")
-                ' With .Display("p1p2")
-                '     .Key = "key_score_1_label"
-                '     .Text = "machine.score_1_label"
-                '     .Expire = 3000
-                '     .Priority = 2
-                ' End With
-                With .Display("player1")
-                    .Key = "key_score_1_label_a"
-                    .Text = """GRAND """
-                    .Expire = 3000
-                    .Priority = 2
-                End With
-                With .Display("player2")
-                    .Key = "key_score_1_label_b"
-                    .Text = """CHAMPION"""
+                With .Display("p1p2")
+                    .Key = "key_score_1_label"
+                    .Text = "machine.score_1_label"
                     .Expire = 3000
                     .Priority = 2
                 End With
@@ -127,21 +115,9 @@ Sub CreateAttractMode()
             End With
 
             With .EventName("show_attract_hs2")
-                ' With .Display("p1p2")
-                '     .Key = "key_score_2_label"
-                '     .Text = "machine.score_2_label"
-                '     .Expire = 3000
-                '     .Priority = 3
-                ' End With
-                With .Display("player1")
-                    .Key = "key_score_2_label_a"
-                    .Text = """HIGH"""
-                    .Expire = 3000
-                    .Priority = 3
-                End With
-                With .Display("player2")
-                    .Key = "key_score_2_label_b"
-                    .Text = """SCORE 1"""
+                With .Display("p1p2")
+                    .Key = "key_score_2_label"
+                    .Text = "machine.score_2_label"
                     .Expire = 3000
                     .Priority = 3
                 End With
@@ -160,21 +136,9 @@ Sub CreateAttractMode()
             End With
 
             With .EventName("show_attract_hs3")
-                ' With .Display("p1p2")
-                '     .Key = "key_score_3_label"
-                '     .Text = "machine.score_3_label"
-                '     .Expire = 3000
-                '     .Priority = 4
-                ' End With
-                With .Display("player1")
-                    .Key = "key_score_3_label_a"
-                    .Text = """HIGH"""
-                    .Expire = 3000
-                    .Priority = 4
-                End With
-                With .Display("player2")
-                    .Key = "key_score_3_label_b"
-                    .Text = """SCORE 2"""
+                With .Display("p1p2")
+                    .Key = "key_score_3_label"
+                    .Text = "machine.score_3_label"
                     .Expire = 3000
                     .Priority = 4
                 End With
@@ -193,21 +157,9 @@ Sub CreateAttractMode()
             End With
 
             With .EventName("show_attract_hs4")
-                ' With .Display("p1p2")
-                '     .Key = "key_score_4_label"
-                '     .Text = "machine.score_4_label"
-                '     .Expire = 3000
-                '     .Priority = 5
-                ' End With
-                With .Display("player1")
-                    .Key = "key_score_4_label_a"
-                    .Text = """HIGH"""
-                    .Expire = 3000
-                    .Priority = 5
-                End With
-                With .Display("player2")
-                    .Key = "key_score_4_label_b"
-                    .Text = """SCORE 3"""
+                With .Display("p1p2")
+                    .Key = "key_score_4_label"
+                    .Text = "machine.score_4_label"
                     .Expire = 3000
                     .Priority = 5
                 End With
