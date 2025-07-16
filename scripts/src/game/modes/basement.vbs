@@ -200,31 +200,95 @@ Sub CreateBasementMode()
                 End With
             End With
 
-            ' ' Backglass light shows (for VR backglass)
+            ' Backglass light shows (for VR backglass)
+            With .EventName("backglass_logo_on")
+                .Key = "key_backglass_logo_on_show"
+                .Show = "backglass_logo_on_show" 
+                .Speed = 1
+                .Loops = 1
+                .Priority = 1000
+            End With
+            With .EventName("backglass_logo_off")
+                .Key = "key_backglass_logo_off_show"
+                .Show = "backglass_logo_off_show" 
+                .Speed = 1
+                .Loops = 1
+                .Priority = 1000
+            End With
 
-            ' 'Main backglass light
-            ' With .EventName("backglass_on")
-            '     .Key = "key_backglass_on"
-            '     .Show = "flicker_color_on"
-            '     .Speed = 3
-            '     .Loops = 1
-            '     With .Tokens()
-            '         .Add "lights", "LBG01"
-            '         .Add "color", GIColor3000k
-            '         .Add "fade", 800
-            '     End With
-            ' End With
-            ' With .EventName("backglass_off")
-            '     .Key = "key_backglass_off"
-            '     .Show = "flicker_color_off"
-            '     .Speed = 3
-            '     .Loops = 1
-            '     With .Tokens()
-            '         .Add "lights", "LBG01"
-            '         .Add "color", GIColor3000k
-            '         .Add "fade", 800
-            '     End With
-            ' End With
+            With .EventName("backglass_game_on")
+                .Key = "key_backglass_game_on_show"
+                .Show = "backglass_game_on_show" 
+                .Speed = 1
+                .Loops = 1
+                .Priority = 1000
+            End With
+            With .EventName("backglass_game_off")
+                .Key = "key_backglass_game_off_show"
+                .Show = "backglass_game_off_show" 
+                .Speed = 1
+                .Loops = 1
+                .Priority = 1000
+            End With
+
+            With .EventName("backglass_logic_on")
+                .Key = "key_backglass_logic_on_show"
+                .Show = "backglass_logic_on_show" 
+                .Speed = 1
+                .Loops = 1
+                .Priority = 1000
+            End With
+            With .EventName("backglass_logic_off")
+                .Key = "key_backglass_logic_off_show"
+                .Show = "backglass_logic_off_show" 
+                .Speed = 1
+                .Loops = 1
+                .Priority = 1000
+            End With
+
+            With .EventName("backglass_framework_on")
+                .Key = "key_backglass_framework_on_show"
+                .Show = "backglass_framework_on_show" 
+                .Speed = 1
+                .Loops = 1
+                .Priority = 1000
+            End With
+            With .EventName("backglass_framework_off")
+                .Key = "key_backglass_framework_off_show"
+                .Show = "backglass_framework_off_show" 
+                .Speed = 1
+                .Loops = 1
+                .Priority = 1000
+            End With
+
+            With .EventName("backglass_flash1")
+                .Key = "key_backglass_flash1_show"
+                .Show = "backglass_flash1_show" 
+                .Speed = 1
+                .Loops = 1
+                .Priority = 1000
+            End With
+            With .EventName("backglass_flash2")
+                .Key = "key_backglass_flash2_show"
+                .Show = "backglass_flash2_show" 
+                .Speed = 1
+                .Loops = 1
+                .Priority = 1000
+            End With
+            With .EventName("backglass_flash3")
+                .Key = "key_backglass_flash3_show"
+                .Show = "backglass_flash3_show" 
+                .Speed = 1
+                .Loops = 1
+                .Priority = 1000
+            End With
+            With .EventName("backglass_flash4")
+                .Key = "key_backglass_flash4_show"
+                .Show = "backglass_flash4_show" 
+                .Speed = 1
+                .Loops = 1
+                .Priority = 1000
+            End With
 
         End With
 

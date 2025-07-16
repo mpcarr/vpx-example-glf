@@ -2,7 +2,6 @@
 Sub CreateBaseShows()
 
     With CreateGlfShow("magnet_show")
- 
         With .AddStep(0.01, Null, Null)
             With .Shows("flash_color")
                 .Key = "key_magnet_show1"
@@ -14,8 +13,7 @@ Sub CreateBaseShows()
                 End With
             End With
         End With
-
-        With .AddStep(0.02, Null, Null)
+        With .AddStep(0.05, Null, Null)
             With .Shows("flash_color")
                 .Key = "key_magnet_show2"
                 .Speed = 20
@@ -26,7 +24,7 @@ Sub CreateBaseShows()
                 End With
             End With
         End With
-
     End With
+
 
 End Sub

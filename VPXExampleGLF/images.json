@@ -813,15 +813,15 @@
   },
   {
     "name": "Backglassimage",
-    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\Pincab_Backglass.png",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\Backglassimage.png",
     "width": 1566,
     "height": 1080,
     "alpha_test_value": 1.0,
     "is_opaque": true,
     "is_signed": false,
     "jpeg": {
-      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\Pincab_Backglass.png",
-      "name": "Pincab_Backglass"
+      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\Backglassimage.png",
+      "name": "Backglassimage"
     },
     "bits": false
   },

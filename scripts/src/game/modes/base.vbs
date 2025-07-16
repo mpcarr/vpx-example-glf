@@ -45,6 +45,12 @@ Sub CreateBaseMode()
             'Magnet activated
             .Add "s_ST4_active", Array("magnet_activated","play_sfx_mag_cap")
 
+            'Flash some lights on the backglass when stuff happens
+            .Add "s_Bumper1_active", Array("backglass_flash1")
+            .Add "s_Bumper2_active", Array("backglass_flash2")
+            .Add "s_LeftSlingshot_active", Array("backglass_flash3")
+            .Add "s_RightSlingshot_active", Array("backglass_flash4")
+
         End With
 
         'Start the base mode slide on the lcd
