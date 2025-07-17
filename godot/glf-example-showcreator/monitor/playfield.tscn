@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=3 uid="uid://dx41in1wt58dr"]
 
 [ext_resource type="Texture2D" uid="uid://crkak7do1d24y" path="res://monitor/PF-1080.png" id="1_6b7q3"]
-[ext_resource type="Script" path="res://addons/gmc-toolbox/playfield/GMCPlayfield.gd" id="1_ujwwi"]
+[ext_resource type="Script" uid="uid://d1w73p1wpy8sm" path="res://addons/gmc-toolbox/playfield/GMCPlayfield.gd" id="1_ujwwi"]
 [ext_resource type="Texture2D" uid="uid://u5hp0m0sfd0a" path="res://addons/gmc-toolbox/playfield/inserts/circle-insert.svg" id="4_5lr1j"]
-[ext_resource type="Script" path="res://addons/gmc-toolbox/playfield/GMCLight.gd" id="4_yy1oo"]
+[ext_resource type="Script" uid="uid://cegi24pljiqqr" path="res://addons/gmc-toolbox/playfield/GMCLight.gd" id="4_yy1oo"]
 [ext_resource type="Texture2D" uid="uid://d35kgm4p0mjj0" path="res://shapes/gradient_square.png" id="5_is4i2"]
 [ext_resource type="Texture2D" uid="uid://iwgde7k33wxy" path="res://shapes/gradient_circle.png" id="6_1tb8c"]
 
@@ -82,6 +82,34 @@ tracks/5/keys = {
 "values": [Vector2(6.60156, 6.60156)]
 }
 
+[sub_resource type="Animation" id="Animation_4xp5j"]
+resource_name = "radial_out"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RadialOut/GradientCircle:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(229, 537)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RadialOut/GradientCircle:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.382812, 0.382812), Vector2(6.60156, 6.60156)]
+}
+
 [sub_resource type="Animation" id="Animation_p3fmy"]
 resource_name = "sweep_down"
 length = 2.0
@@ -146,42 +174,14 @@ tracks/0/keys = {
 "values": [Vector2(233, 1212), Vector2(246, -112)]
 }
 
-[sub_resource type="Animation" id="Animation_4xp5j"]
-resource_name = "radial_out"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("RadialOut/GradientCircle:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(229, 537)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("RadialOut/GradientCircle:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0.382812, 0.382812), Vector2(6.60156, 6.60156)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_epack"]
 _data = {
-"RESET": SubResource("Animation_h05v7"),
-"radial_out": SubResource("Animation_4xp5j"),
-"sweep_down": SubResource("Animation_p3fmy"),
-"sweep_left": SubResource("Animation_8ami6"),
-"sweep_right": SubResource("Animation_tch8g"),
-"sweep_up": SubResource("Animation_o4ewh")
+&"RESET": SubResource("Animation_h05v7"),
+&"radial_out": SubResource("Animation_4xp5j"),
+&"sweep_down": SubResource("Animation_p3fmy"),
+&"sweep_left": SubResource("Animation_8ami6"),
+&"sweep_right": SubResource("Animation_tch8g"),
+&"sweep_up": SubResource("Animation_o4ewh")
 }
 
 [node name="Playfield" type="TextureRect" node_paths=PackedStringArray("animation_player")]
@@ -194,7 +194,7 @@ monitor_size = Vector2(475, 1080)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_epack")
+&"": SubResource("AnimationLibrary_epack")
 }
 
 [node name="SweepRight" type="Control" parent="."]
@@ -256,6 +256,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ball_seg18" type="Sprite2D" parent="lights"]
 position = Vector2(34.4914, 96.1998)

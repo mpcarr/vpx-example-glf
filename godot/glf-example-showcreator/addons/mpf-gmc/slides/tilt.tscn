@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://k06kokgbf56c"]
 
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_gc685"]
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_tuxrv"]
+[ext_resource type="Script" uid="uid://bftqecrobxrqa" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_gc685"]
+[ext_resource type="Script" uid="uid://b47sl85da88h3" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_tuxrv"]
 
 [node name="Tilt" type="Control"]
 layout_mode = 3

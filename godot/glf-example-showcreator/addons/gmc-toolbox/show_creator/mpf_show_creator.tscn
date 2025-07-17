@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dibbl3slebtcj"]
 
-[ext_resource type="Script" path="res://addons/gmc-toolbox/show_creator/MPFShowCreator.gd" id="1_nysxh"]
+[ext_resource type="Script" uid="uid://bqv85nkt446ls" path="res://addons/gmc-toolbox/show_creator/MPFShowCreator.gd" id="1_nysxh"]
 
 [node name="MPFShowCreator" type="AspectRatioContainer"]
 anchors_preset = 15

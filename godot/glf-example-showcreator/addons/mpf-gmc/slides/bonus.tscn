@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cado054cg40cv"]
 
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_524xj"]
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_6rn1m"]
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_conditional_children.gd" id="3_ted12"]
+[ext_resource type="Script" uid="uid://bftqecrobxrqa" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_524xj"]
+[ext_resource type="Script" uid="uid://b47sl85da88h3" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_6rn1m"]
+[ext_resource type="Script" uid="uid://f7y6llaar3ot" path="res://addons/mpf-gmc/classes/mpf_conditional_children.gd" id="3_ted12"]
 
 [node name="Bonus" type="Control"]
 layout_mode = 3

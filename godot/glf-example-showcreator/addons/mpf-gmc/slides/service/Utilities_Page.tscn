@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b6hafueawwvxw"]
 
-[ext_resource type="Script" path="res://addons/mpf-gmc/slides/service/Utilities_Page.gd" id="2"]
+[ext_resource type="Script" uid="uid://cu18i4h4ymk6" path="res://addons/mpf-gmc/slides/service/Utilities_Page.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://b0exigwv3clut" path="res://addons/mpf-gmc/slides/service/List_Button.tscn" id="3"]
 
 [node name="Utilities" type="ScrollContainer"]

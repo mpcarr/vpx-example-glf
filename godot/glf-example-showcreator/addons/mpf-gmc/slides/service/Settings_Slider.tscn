@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ctkmknkqetc56"]
 
-[ext_resource type="Script" path="res://addons/mpf-gmc/slides/service/Settings_Slider.gd" id="1"]
+[ext_resource type="Script" uid="uid://dswib4v0wp03p" path="res://addons/mpf-gmc/slides/service/Settings_Slider.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://b0exigwv3clut" path="res://addons/mpf-gmc/slides/service/List_Button.tscn" id="2"]
 
 [node name="Settings_Slider" type="HBoxContainer"]

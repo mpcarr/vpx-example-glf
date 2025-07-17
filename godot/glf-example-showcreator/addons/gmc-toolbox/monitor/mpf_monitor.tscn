@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ckgv8og28grv0"]
 
-[ext_resource type="Script" path="res://addons/gmc-toolbox/monitor/mpf_monitor.gd" id="1_tafqy"]
+[ext_resource type="Script" uid="uid://b2u7dvdu2nl5c" path="res://addons/gmc-toolbox/monitor/mpf_monitor.gd" id="1_tafqy"]
 
 [node name="MpfMonitor" type="AspectRatioContainer"]
 anchors_preset = 15

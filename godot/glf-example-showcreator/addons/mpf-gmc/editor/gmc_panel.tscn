@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://csppfia2avlxp"]
 
-[ext_resource type="Script" path="res://addons/mpf-gmc/editor/gmc_panel.gd" id="1_7ovm7"]
+[ext_resource type="Script" uid="uid://deen4xn8snq7s" path="res://addons/mpf-gmc/editor/gmc_panel.gd" id="1_7ovm7"]
 
 [node name="GMC" type="Control"]
 layout_mode = 3

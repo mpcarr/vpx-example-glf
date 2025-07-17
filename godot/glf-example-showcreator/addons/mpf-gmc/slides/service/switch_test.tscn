@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://booq71g6iyumj"]
 
-[ext_resource type="Script" path="res://addons/mpf-gmc/slides/service/switch_test.gd" id="1"]
+[ext_resource type="Script" uid="uid://dv5jemltokyqm" path="res://addons/mpf-gmc/slides/service/switch_test.gd" id="1"]
 
 [node name="switch_test" type="HBoxContainer"]
 anchors_preset = 15

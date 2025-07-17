@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bht1yxmyw4hmq"]
 
-[ext_resource type="Script" path="res://addons/mpf-gmc/slides/service/coil_test.gd" id="1"]
+[ext_resource type="Script" uid="uid://kehhyl8wwp2u" path="res://addons/mpf-gmc/slides/service/coil_test.gd" id="1"]
 
 [node name="coil_test" type="VBoxContainer"]
 focus_mode = 2

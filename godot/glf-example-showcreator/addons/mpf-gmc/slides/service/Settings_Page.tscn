@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://devjc6glsblde"]
 
-[ext_resource type="Script" path="res://addons/mpf-gmc/slides/service/Settings_Page.gd" id="2"]
+[ext_resource type="Script" uid="uid://cblyi4v8acatc" path="res://addons/mpf-gmc/slides/service/Settings_Page.gd" id="2"]
 
 [node name="Settings" type="ScrollContainer"]
 anchors_preset = 15

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b4tyyjcjwxj7d"]
 
-[ext_resource type="Script" path="res://addons/gmc-toolbox/show_creator_dock.gd" id="1_k2nso"]
+[ext_resource type="Script" uid="uid://brbx82dfxrn1g" path="res://addons/gmc-toolbox/show_creator_dock.gd" id="1_k2nso"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ln2sr"]
 bg_color = Color(0.188235, 0.188235, 0.188235, 1)

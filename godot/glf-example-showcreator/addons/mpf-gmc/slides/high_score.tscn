@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://lqeoxevsy0ex"]
 
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_adeqt"]
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_text_input.gd" id="2_6uslk"]
+[ext_resource type="Script" uid="uid://bftqecrobxrqa" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_adeqt"]
+[ext_resource type="Script" uid="uid://c3xujfcmiuvjk" path="res://addons/mpf-gmc/classes/mpf_text_input.gd" id="2_6uslk"]
 
 [node name="HighScore" type="Control"]
 layout_mode = 3
