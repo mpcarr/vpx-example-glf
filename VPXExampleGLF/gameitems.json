@@ -994,7 +994,7 @@
     "editor_layer_visibility": false
   },
   {
-    "file_name": "Primitive.p_bumpertop_BL1.json",
+    "file_name": "Primitive.p_bumpertop_BL1_.json",
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Bumpers",
@@ -1036,14 +1036,14 @@
     "editor_layer_visibility": false
   },
   {
-    "file_name": "Primitive.p_bumpertop_BL3.json",
+    "file_name": "Primitive.p_bumpertop_BL3_.json",
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Bumpers",
     "editor_layer_visibility": false
   },
   {
-    "file_name": "Primitive.p_bumpertop_BL2.json",
+    "file_name": "Primitive.p_bumpertop_BL2_.json",
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Bumpers",
@@ -11148,6 +11148,69 @@
     "is_locked": true,
     "editor_layer": 1,
     "editor_layer_name": "Misc Primitives",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.f_bumpershadow_BL1.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Bumpers",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.f_bumperhighlight_BL1_.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Bumpers",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.f_bumperhighlight_BL2_.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Bumpers",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.f_bumpershadow_BL2.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Bumpers",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.f_bumperhighlight_BL3_.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Bumpers",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.f_bumpershadow_BL3.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Bumpers",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Primitive.p_bumpertop_BL2.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Bumpers",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Primitive.p_bumpertop_BL1.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Bumpers",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Primitive.p_bumpertop_BL3.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Bumpers",
     "editor_layer_visibility": false
   }
 ]

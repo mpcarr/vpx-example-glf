@@ -6,9 +6,9 @@
       "z": -21.0
     },
     "size": {
-      "x": 1.0,
-      "y": 1.0,
-      "z": 1.0
+      "x": 1.02,
+      "y": 1.02,
+      "z": 1.02
     },
     "rot_and_tra": [
       0.0,
@@ -24,7 +24,7 @@
     "image": "Flbumpertop",
     "normal_map": "",
     "sides": 4,
-    "name": "p_bumpertop_BL2",
+    "name": "p_bumpertop_BL2_",
     "material": "bumpertopmat2",
     "side_color": "#96009696",
     "is_visible": true,
@@ -45,7 +45,7 @@
     "disable_lighting_top": 0.0,
     "disable_lighting_below": 0.0,
     "is_reflection_enabled": false,
-    "backfaces_enabled": false,
+    "backfaces_enabled": true,
     "physics_material": "",
     "overwrite_physics": true,
     "display_texture": false,
@@ -53,15 +53,15 @@
     "min_aa_bound": null,
     "max_aa_bound": null,
     "mesh_file_name": "",
-    "depth_bias": 150.0,
-    "add_blend": false,
+    "depth_bias": -1000.0,
+    "add_blend": true,
     "use_depth_mask": true,
-    "alpha": 100.0,
+    "alpha": 1000.0,
     "color": "#ff00ffff",
     "light_map": "",
     "reflection_probe": "",
     "reflection_strength": 1.0,
-    "refraction_probe": "<None>",
+    "refraction_probe": "",
     "refraction_thickness": 10.0
   }
 }
