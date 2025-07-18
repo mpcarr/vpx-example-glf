@@ -22,7 +22,7 @@
     "rot_y": 0.0,
     "rot_z": 0.0,
     "is_reflection_enabled": true,
-    "physics_material": "a_physics_Rubbers",
+    "physics_material": "",
     "overwrite_physics": false,
     "drag_points": [
       {

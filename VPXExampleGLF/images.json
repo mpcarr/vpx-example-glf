@@ -14,34 +14,6 @@
     "bits": false
   },
   {
-    "name": "bumper-cap-t5",
-    "path": "C:\\UPin\\bumper-cap-t5.png",
-    "width": 128,
-    "height": 128,
-    "alpha_test_value": 128.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\UPin\\bumper-cap-t5.png",
-      "name": "bumper-cap-t5"
-    },
-    "bits": false
-  },
-  {
-    "name": "bumper-cap-t2(2)",
-    "path": "C:\\UPin\\bumper-cap-t2(2).png",
-    "width": 256,
-    "height": 256,
-    "alpha_test_value": 128.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\UPin\\bumper-cap-t2(2).png",
-      "name": "bumper-cap-t2(2)"
-    },
-    "bits": false
-  },
-  {
     "name": "spinner",
     "path": "C:\\UPin\\spinner.png",
     "width": 256,
@@ -112,20 +84,6 @@
     "bits": false
   },
   {
-    "name": "bumper-cap-t3",
-    "path": "C:\\UPin\\bumper-cap-t3.png",
-    "width": 256,
-    "height": 256,
-    "alpha_test_value": 128.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\UPin\\bumper-cap-t3.png",
-      "name": "bumper-cap-t3"
-    },
-    "bits": false
-  },
-  {
     "name": "ColorGradeLUT256x16_ConSat",
     "path": "C:\\ColorGradeLUT256x16_ConSat.png",
     "width": 256,
@@ -154,20 +112,6 @@
     "bits": false
   },
   {
-    "name": "bumper-cap-t2",
-    "path": "C:\\UPin\\bumper-cap-t2.png",
-    "width": 256,
-    "height": 256,
-    "alpha_test_value": 128.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\UPin\\bumper-cap-t2.png",
-      "name": "bumper-cap-t2"
-    },
-    "bits": false
-  },
-  {
     "name": "sidewood",
     "path": "C:\\UPin\\sidewood.png",
     "width": 44,
@@ -192,20 +136,6 @@
     "jpeg": {
       "path": "E:\\Pinball\\Tables\\!Fire\\Images\\Red peg.png",
       "name": "Red peg"
-    },
-    "bits": false
-  },
-  {
-    "name": "bumper-cap-t4",
-    "path": "C:\\UPin\\bumper-cap-t4.png",
-    "width": 256,
-    "height": 256,
-    "alpha_test_value": 128.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\UPin\\bumper-cap-t4.png",
-      "name": "bumper-cap-t4"
     },
     "bits": false
   },
@@ -280,35 +210,6 @@
     "bits": false
   },
   {
-    "name": "Rail_Right_Brighter",
-    "path": "E:\\Pinball\\Tables\\Materials\\Left_rail_brighter.png",
-    "width": 49,
-    "height": 2048,
-    "alpha_test_value": 128.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "E:\\Pinball\\Tables\\Materials\\Left_rail_brighter.png",
-      "name": "Left_rail_brighter"
-    },
-    "bits": false
-  },
-  {
-    "name": "Rail_Right_Brighter",
-    "path": "E:\\Pinball\\Tables\\Materials\\Right_rail_brighter.png",
-    "width": 49,
-    "height": 2048,
-    "alpha_test_value": 128.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "E:\\Pinball\\Tables\\Materials\\Right_rail_brighter.png",
-      "name": "Right_rail_brighter"
-    },
-    "bits": false,
-    "name_dedup": "Rail_Right_Brighter_dedup1"
-  },
-  {
     "name": "DropTargetSimple",
     "path": "E:\\Tables\\Models\\DropTargetSimple.png",
     "width": 128,
@@ -351,62 +252,6 @@
     "bits": false
   },
   {
-    "name": "LockdownBarreal-JR",
-    "path": "E:\\Pinball\\Tables\\Materials\\LockdownBarreal-JR.png",
-    "width": 1024,
-    "height": 125,
-    "alpha_test_value": 128.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "E:\\Pinball\\Tables\\Materials\\LockdownBarreal-JR.png",
-      "name": "LockdownBarreal-JR"
-    },
-    "bits": false
-  },
-  {
-    "name": "PlungerCover",
-    "path": "E:\\Pinball\\Tables\\!Fire\\Images\\PlungerCover.png",
-    "width": 512,
-    "height": 512,
-    "alpha_test_value": 128.0,
-    "is_opaque": false,
-    "is_signed": false,
-    "jpeg": {
-      "path": "E:\\Pinball\\Tables\\!Fire\\Images\\PlungerCover.png",
-      "name": "PlungerCover"
-    },
-    "bits": false
-  },
-  {
-    "name": "angle",
-    "path": "C:\\Users\\borgd\\Documents\\OneDrive\\Pinball\\_Resources\\angle.png",
-    "width": 1200,
-    "height": 1200,
-    "alpha_test_value": -1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\borgd\\Documents\\OneDrive\\Pinball\\_Resources\\angle.png",
-      "name": "angle"
-    },
-    "bits": false
-  },
-  {
-    "name": "p1-beachwood",
-    "path": "E:\\pinballArtwork\\PBTextures\\p1-beachwood.jpg",
-    "width": 512,
-    "height": 1024,
-    "alpha_test_value": 128.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "E:\\pinballArtwork\\PBTextures\\p1-beachwood.jpg",
-      "name": "p1-beachwood"
-    },
-    "bits": false
-  },
-  {
     "name": "ball_HDR",
     "path": "C:\\ball_HDR.hdr",
     "width": 256,
@@ -417,34 +262,6 @@
     "jpeg": {
       "path": "C:\\ball_HDR.hdr",
       "name": "ball_HDR"
-    },
-    "bits": false
-  },
-  {
-    "name": "ApronGenericWilliams",
-    "path": "E:\\Pinball\\Tables\\!Fire\\Images\\ApronGenericWilliams.png",
-    "width": 1024,
-    "height": 1024,
-    "alpha_test_value": 128.0,
-    "is_opaque": true,
-    "is_signed": false,
-    "jpeg": {
-      "path": "E:\\Pinball\\Tables\\!Fire\\Images\\ApronGenericWilliams.png",
-      "name": "ApronGenericWilliams"
-    },
-    "bits": false
-  },
-  {
-    "name": "mm",
-    "path": "C:\\mm.png",
-    "width": 1024,
-    "height": 1024,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\mm.png",
-      "name": "mm"
     },
     "bits": false
   },
@@ -477,20 +294,6 @@
     "bits": false
   },
   {
-    "name": "bally_miniflipper_right",
-    "path": "C:\\Users\\borgd\\Documents\\OneDrive\\Pinball\\_Resources\\flippers\\bally_miniflipper\\bally_miniflipper_right.jpg",
-    "width": 1024,
-    "height": 1024,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\borgd\\Documents\\OneDrive\\Pinball\\_Resources\\flippers\\bally_miniflipper\\bally_miniflipper_right.jpg",
-      "name": "bally_miniflipper_right"
-    },
-    "bits": false
-  },
-  {
     "name": "inches",
     "path": "C:\\inches.png",
     "width": 1024,
@@ -503,89 +306,6 @@
       "name": "inches"
     },
     "bits": false
-  },
-  {
-    "name": "kickerHoleWood",
-    "path": "F:\\vp\\res\\kickerHoleWood.bmp",
-    "width": 512,
-    "height": 64,
-    "alpha_test_value": 1.0,
-    "is_opaque": true,
-    "is_signed": false,
-    "jpeg": null,
-    "bits": true
-  },
-  {
-    "name": "kickerGottlieb",
-    "path": "F:\\vp\\res\\kickerGottlieb.bmp",
-    "width": 256,
-    "height": 256,
-    "alpha_test_value": 1.0,
-    "is_opaque": true,
-    "is_signed": false,
-    "jpeg": null,
-    "bits": true
-  },
-  {
-    "name": "kickerWilliams",
-    "path": "F:\\vp\\res\\kickerWilliams.bmp",
-    "width": 256,
-    "height": 128,
-    "alpha_test_value": 1.0,
-    "is_opaque": true,
-    "is_signed": false,
-    "jpeg": null,
-    "bits": true
-  },
-  {
-    "name": "kickerCup",
-    "path": "F:\\vp\\res\\kickerCup.bmp",
-    "width": 512,
-    "height": 256,
-    "alpha_test_value": 1.0,
-    "is_opaque": true,
-    "is_signed": false,
-    "jpeg": null,
-    "bits": true
-  },
-  {
-    "name": "bally_miniflipper_left",
-    "path": "C:\\Users\\borgd\\Documents\\OneDrive\\Pinball\\_Resources\\flippers\\bally_miniflipper\\bally_miniflipper_left.jpg",
-    "width": 1024,
-    "height": 1024,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\borgd\\Documents\\OneDrive\\Pinball\\_Resources\\flippers\\bally_miniflipper\\bally_miniflipper_left.jpg",
-      "name": "bally_miniflipper_left"
-    },
-    "bits": false
-  },
-  {
-    "name": "bsrtx7",
-    "path": "E:\\VP Resources\\Images\\RtxBS\\bsrtx7.png",
-    "width": 216,
-    "height": 720,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "E:\\VP Resources\\Images\\RtxBS\\bsrtx7.png",
-      "name": "bsrtx7"
-    },
-    "bits": false
-  },
-  {
-    "name": "kickerT1",
-    "path": "F:\\vp\\res\\kickerT1.bmp",
-    "width": 512,
-    "height": 256,
-    "alpha_test_value": 1.0,
-    "is_opaque": true,
-    "is_signed": false,
-    "jpeg": null,
-    "bits": true
   },
   {
     "name": "flipper_williams_logo_Right",
@@ -813,15 +533,15 @@
   },
   {
     "name": "Backglassimage",
-    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\Backglassimage.png",
-    "width": 1566,
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\Backglassimage_16x9.png",
+    "width": 1920,
     "height": 1080,
     "alpha_test_value": 1.0,
-    "is_opaque": true,
+    "is_opaque": null,
     "is_signed": false,
     "jpeg": {
-      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\Backglassimage.png",
-      "name": "Backglassimage"
+      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\Backglassimage_16x9.png",
+      "name": "Backglassimage_16x9"
     },
     "bits": false
   },
@@ -1148,34 +868,6 @@
     "bits": false
   },
   {
-    "name": "Sideblades_Black",
-    "path": "C:\\Visual Pinball\\Tables VR\\VR Room WIP\\__Template Tables\\PinCab_Blades.png",
-    "width": 2048,
-    "height": 2048,
-    "alpha_test_value": 1.0,
-    "is_opaque": true,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Visual Pinball\\Tables VR\\VR Room WIP\\__Template Tables\\PinCab_Blades.png",
-      "name": "PinCab_Blades"
-    },
-    "bits": false
-  },
-  {
-    "name": "kruiskopcolor",
-    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Flupper Domes\\Flasher Textures\\kruiskopcolor.jpg",
-    "width": 256,
-    "height": 256,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Flupper Domes\\Flasher Textures\\kruiskopcolor.jpg",
-      "name": "kruiskopcolor"
-    },
-    "bits": false
-  },
-  {
     "name": "domeearlityellow",
     "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Flupper Domes\\Flasher Textures\\domeearlityellow.png",
     "width": 256,
@@ -1359,15 +1051,15 @@
   },
   {
     "name": "Pincab_Cabinet",
-    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\Eample_Pincab_Cabinet.png",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\images\\Pincab_Cabinet.png",
     "width": 2048,
     "height": 2048,
     "alpha_test_value": 1.0,
-    "is_opaque": true,
+    "is_opaque": false,
     "is_signed": false,
     "jpeg": {
-      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\Eample_Pincab_Cabinet.png",
-      "name": "Eample_Pincab_Cabinet"
+      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\images\\Pincab_Cabinet.png",
+      "name": "Pincab_Cabinet"
     },
     "bits": false
   },
@@ -1424,20 +1116,6 @@
     "jpeg": {
       "path": "C:\\Visual Pinball\\Tables VR\\VR Room WIP\\_Assets\\Room\\VR_Wall_Right.jpg",
       "name": "VR_Wall_Right"
-    },
-    "bits": false
-  },
-  {
-    "name": "Pincab_Backbox",
-    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\Example_Pincab_Backbox.png",
-    "width": 2048,
-    "height": 4096,
-    "alpha_test_value": 1.0,
-    "is_opaque": true,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\Example_Pincab_Backbox.png",
-      "name": "Example_Pincab_Backbox"
     },
     "bits": false
   },
@@ -2534,48 +2212,6 @@
     "bits": false
   },
   {
-    "name": "dtshadow2",
-    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\dtshadow2.png",
-    "width": 1024,
-    "height": 1024,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\dtshadow2.png",
-      "name": "dtshadow2"
-    },
-    "bits": false
-  },
-  {
-    "name": "dtshadow1",
-    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\dtshadow1.png",
-    "width": 1024,
-    "height": 1024,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\dtshadow1.png",
-      "name": "dtshadow1"
-    },
-    "bits": false
-  },
-  {
-    "name": "dtshadow3",
-    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\dtshadow3.png",
-    "width": 1024,
-    "height": 1024,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\dtshadow3.png",
-      "name": "dtshadow3"
-    },
-    "bits": false
-  },
-  {
     "name": "Insert_lightningsmalloff3",
     "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\3D Inserts\\Images\\Insert_lightningsmalloff3.png",
     "width": 300,
@@ -2726,34 +2362,6 @@
     "jpeg": {
       "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\3D Inserts\\Images\\Insert_lightninglargeon.png",
       "name": "Insert_lightninglargeon"
-    },
-    "bits": false
-  },
-  {
-    "name": "vpwinstrcard",
-    "path": "C:\\Users\\boss2\\Desktop\\vpwinstrcard.png",
-    "width": 698,
-    "height": 390,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\boss2\\Desktop\\vpwinstrcard.png",
-      "name": "vpwinstrcard"
-    },
-    "bits": false
-  },
-  {
-    "name": "bsrtx8",
-    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\shadows\\bsrtx8.png",
-    "width": 216,
-    "height": 720,
-    "alpha_test_value": 1.0,
-    "is_opaque": false,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\shadows\\bsrtx8.png",
-      "name": "bsrtx8"
     },
     "bits": false
   },
@@ -2964,6 +2572,104 @@
     "jpeg": {
       "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\PF.png",
       "name": "PF"
+    },
+    "bits": false
+  },
+  {
+    "name": "Pincab_Backbox",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\images\\Pincab_Backbox.png",
+    "width": 2048,
+    "height": 4096,
+    "alpha_test_value": -1.0,
+    "is_opaque": true,
+    "is_signed": false,
+    "jpeg": {
+      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\images\\Pincab_Backbox.png",
+      "name": "Pincab_Backbox"
+    },
+    "bits": false
+  },
+  {
+    "name": "PinCab_Blades",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\images\\PinCab_Blades2.png",
+    "width": 2048,
+    "height": 2048,
+    "alpha_test_value": -1.0,
+    "is_opaque": true,
+    "is_signed": false,
+    "jpeg": {
+      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\images\\PinCab_Blades2.png",
+      "name": "PinCab_Blades2"
+    },
+    "bits": false
+  },
+  {
+    "name": "Pincab_DMD",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\images\\Pincab_DMD.png",
+    "width": 1005,
+    "height": 416,
+    "alpha_test_value": -1.0,
+    "is_opaque": false,
+    "is_signed": false,
+    "jpeg": {
+      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\images\\Pincab_DMD.png",
+      "name": "Pincab_DMD"
+    },
+    "bits": false
+  },
+  {
+    "name": "Pincab_startbutton",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\images\\Pincab_startbutton.png",
+    "width": 230,
+    "height": 228,
+    "alpha_test_value": -1.0,
+    "is_opaque": false,
+    "is_signed": false,
+    "jpeg": {
+      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\images\\Pincab_startbutton.png",
+      "name": "Pincab_startbutton"
+    },
+    "bits": false
+  },
+  {
+    "name": "PinCab_Quarters",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\images\\PinCab_Quarters.png",
+    "width": 550,
+    "height": 640,
+    "alpha_test_value": -1.0,
+    "is_opaque": true,
+    "is_signed": false,
+    "jpeg": {
+      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\images\\PinCab_Quarters.png",
+      "name": "PinCab_Quarters"
+    },
+    "bits": false
+  },
+  {
+    "name": "Pincab_Cards",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\images\\Pincab_Cards.png",
+    "width": 1024,
+    "height": 1024,
+    "alpha_test_value": -1.0,
+    "is_opaque": null,
+    "is_signed": false,
+    "jpeg": {
+      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\images\\Pincab_Cards.png",
+      "name": "Pincab_Cards"
+    },
+    "bits": false
+  },
+  {
+    "name": "Pincab_Apron",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\images\\Pincab_Apron.png",
+    "width": 2048,
+    "height": 1024,
+    "alpha_test_value": -1.0,
+    "is_opaque": false,
+    "is_signed": false,
+    "jpeg": {
+      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\images\\Pincab_Apron.png",
+      "name": "Pincab_Apron"
     },
     "bits": false
   }

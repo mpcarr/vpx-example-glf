@@ -3,38 +3,42 @@
 '   ZVRS: VR Stuff
 '******************************************************
 
+Const VRBG_height = 425
+Const VRBG_y = -90
+Const VRBG_rot = -86
+
 Sub InitVR
     dim obj
     
 	For Each obj in VR_Backglass
 		obj.x = obj.x + 0
-		obj.height = -obj.y + 375
-		obj.y = 10    'adjusts the distance from the backglass towards the user
-		obj.rotx = -86.5
+		obj.height = -obj.y + VRBG_height
+		obj.y = VRBG_y 
+		obj.rotx = VRBG_rot
 	Next
 
 	For Each obj in VR_Flashers
 		obj.x = obj.x + 0
-		obj.height = -obj.y + 375
-		obj.y = 15    'adjusts the distance from the backglass towards the user
-		obj.rotx = -86.5
+		obj.height = -obj.y + VRBG_height
+		obj.y = VRBG_y + 5 
+		obj.rotx = VRBG_rot
 	Next
 
 	For Each obj in VR_DisplayBall
 		obj.x = obj.x + 0
-		obj.z = -obj.y + 375
-		obj.y = 25    'adjusts the distance from the backglass towards the user
-		obj.rotx = -86.5
+		obj.z = -obj.y + VRBG_height
+		obj.y = VRBG_y + 10 
+		obj.rotx = VRBG_rot
 	Next
-	BGDisplayBall.y = 20
+	BGDisplayBall.y = VRBG_y + 5
 
 	For Each obj in VR_Display
 		obj.x = obj.x + 0
-		obj.z = -obj.y + 375
-		obj.y = 100    'adjusts the distance from the backglass towards the user
-		obj.rotx = -86.5
+		obj.z = -obj.y + VRBG_height
+		obj.y = VRBG_y+40 
+		obj.rotx = -90
 	Next
-	BGDisplay.y = 95
+	BGDisplay.y = VRBG_y+35
 End Sub
 
 

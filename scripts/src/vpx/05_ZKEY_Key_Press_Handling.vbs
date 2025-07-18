@@ -25,19 +25,24 @@ Sub Table1_KeyDown(ByVal keycode)
 		PinCab_Shooter.TransZ = 0
 	End If
 
-	' 'VR Button animations
-	' If keycode = LeftFlipperKey Then 
-	' 	PinCab_LeftFlipperButton.TransX = -10
-	' End if
-    ' If keycode = RightFlipperKey Then 
-	' 	PinCab_RightFlipperButton.TransX = 10
-	' End if
-	' If keycode = LeftMagnaSave Then 
-	' 	PinCab_LeftMagnaButton.TransX = -10
-	' End if
-    ' If keycode = RightMagnaSave Then 
-	' 	PinCab_RightMagnaButton.TransX = 10
-	' End if
+	'VR Button animations
+	If keycode = LeftFlipperKey Then 
+		PinCab_FlipperButtonLeft.TransX = 7
+	End if
+    If keycode = RightFlipperKey Then 
+		PinCab_FlipperButtonRight.TransX = -7
+	End if
+	If keycode = LeftMagnaSave Then 
+		PinCab_MagnaButtonLeft.TransX = 7
+	End if
+    If keycode = RightMagnaSave Then 
+		PinCab_MagnaButtonRight.TransX = -7
+	End if
+	If keycode = StartGameKey Then 
+		PinCab_StartButton.TransY = 7
+		PinCab_StartButton2.TransY = 7
+	End if
+
 
 	'Nudging
 	If keycode = LeftTiltKey Then 
@@ -67,17 +72,22 @@ Sub Table1_KeyUp(ByVal keycode)
 		TimerPlunger2.Enabled = True
 	End If
 
-	' 'VR Button animations 
-	' If keycode = LeftFlipperKey Then 
-	' 	PinCab_LeftFlipperButton.TransX = 0
-	' End if
-    ' If keycode = RightFlipperKey Then 
-	' 	PinCab_RightFlipperButton.TransX = 0
-	' End if
-	' If keycode = LeftMagnaSave Then 
-	' 	PinCab_LeftMagnaButton.TransX = 0
-	' End if
-    ' If keycode = RightMagnaSave Then 
-	' 	PinCab_RightMagnaButton.TransX = 0
-	' End if
+	'VR Button animations 
+	If keycode = LeftFlipperKey Then 
+		PinCab_FlipperButtonLeft.TransX = 0
+	End if
+    If keycode = RightFlipperKey Then 
+		PinCab_FlipperButtonRight.TransX = 0
+	End if
+	If keycode = LeftMagnaSave Then 
+		PinCab_MagnaButtonLeft.TransX = 0
+	End if
+    If keycode = RightMagnaSave Then 
+		PinCab_MagnaButtonRight.TransX = 0
+	End if
+	If keycode = StartGameKey Then 
+		PinCab_StartButton.TransY = 0
+		PinCab_StartButton2.TransY = 0
+	End if
+
 End Sub

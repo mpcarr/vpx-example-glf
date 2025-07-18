@@ -74,9 +74,6 @@
 '   E112 2   Knocker
 
 
-' TODO
-' - Check/fix all DOF calls
-
 
 
 Option Explicit

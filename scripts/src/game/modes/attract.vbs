@@ -82,7 +82,7 @@ Sub CreateAttractMode()
                 End With
                 With .Display("player3")
                     .Key = "key_show_attract_title3"
-                    .Text = """TABLE """
+                    .Text = """TABLE  """
                     .Expire = 5000
                     .Priority = 1
                     With .Transition()
