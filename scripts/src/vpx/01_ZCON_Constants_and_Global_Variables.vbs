@@ -6,7 +6,7 @@
 
 Const cGameName = "VPXExampleGLF"	'The unique alphanumeric name for this table
 
-Const TestVR = True 				'For testing VR on desktop during development
+Const TestVR = False 				'For testing VR on desktop during development
 Const BallSize = 50				 	'Ball diameter in VPX units; must be 50
 Const BallMass = 1				  	'Ball mass must be 1
 Const tnob = 5					  	'Total number of balls the table can hold
