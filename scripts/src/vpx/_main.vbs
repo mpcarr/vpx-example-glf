@@ -62,11 +62,16 @@
 ' ------------
 '   E101 0/1 LeftFlipper
 '   E102 0/1 RightFlipper
-'   E103 2 Leftslingshot
-'   E104 2 Rightslingshot
-'   E105 2 Bumper1
-'   E106 2 Bumper2
-'   E107 2 Bumper3
+'   E103 2   Leftslingshot
+'   E104 2   Rightslingshot
+'   E105 2   Bumper1
+'   E106 2   Bumper2
+'   E107 2   Bumper3
+'   E108 2   Kicker1
+'   E109 2   Kicker2
+'   E110 2   Trough/plunger eject
+'   E111 2   Diverter
+'   E112 2   Knocker
 
 
 ' TODO

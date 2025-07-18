@@ -31,7 +31,7 @@ Sub Kicker1EjectCallback(ball)
 	Else
 		SoundSaucerKick 0, s_Kicker1
 	End If
-	DOF 109, DOFPulse
+	DOF 108, DOFPulse
 End Sub
 
 
@@ -115,7 +115,7 @@ end sub
 Sub SolKnocker(Enabled)
 	If enabled Then
 		KnockerSolenoid  
-		DOF 113, DOFPulse
+		DOF 112, DOFPulse
 	End If
 End Sub
 
@@ -151,7 +151,7 @@ Sub Bumper2Action(args)
     End If
 	If enabled Then
 		RandomSoundBumperMiddle s_Bumper2
-		DOF 108, DOFPulse
+		DOF 106, DOFPulse
 	End If
 End Sub
 
@@ -171,7 +171,7 @@ Sub Bumper3Action(args)
     End If
 	If enabled Then
 		RandomSoundBumperBottom s_Bumper3
-		DOF 106, DOFPulse
+		DOF 107, DOFPulse
 	End If
 End Sub
 
