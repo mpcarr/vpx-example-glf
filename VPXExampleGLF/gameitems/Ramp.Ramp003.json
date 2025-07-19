@@ -1,7 +1,7 @@
 {
   "Ramp": {
-    "height_bottom": 60.0,
-    "height_top": 60.0,
+    "height_bottom": 70.0,
+    "height_top": 70.0,
     "width_bottom": 52.0,
     "width_top": 52.0,
     "material": "Metal",

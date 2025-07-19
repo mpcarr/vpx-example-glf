@@ -2672,5 +2672,33 @@
       "name": "Pincab_Apron"
     },
     "bits": false
+  },
+  {
+    "name": "ramp_holes-3",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\images\\ramp_holes-3.webp",
+    "width": 81,
+    "height": 320,
+    "alpha_test_value": -1.0,
+    "is_opaque": false,
+    "is_signed": false,
+    "jpeg": {
+      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\images\\ramp_holes-3.webp",
+      "name": "ramp_holes-3"
+    },
+    "bits": false
+  },
+  {
+    "name": "ramp_start",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\images\\ramp_start.webp",
+    "width": 512,
+    "height": 512,
+    "alpha_test_value": -1.0,
+    "is_opaque": false,
+    "is_signed": false,
+    "jpeg": {
+      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\GLF Example Table\\images\\ramp_start.webp",
+      "name": "ramp_start"
+    },
+    "bits": false
   }
 ]

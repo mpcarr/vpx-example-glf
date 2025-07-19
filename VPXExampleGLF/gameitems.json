@@ -8802,8 +8802,8 @@
     "file_name": "Ramp.Ramp002.json",
     "is_locked": true,
     "editor_layer": 0,
-    "editor_layer_name": "Collidable Ramps",
-    "editor_layer_visibility": false
+    "editor_layer_name": "Ramps",
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Wall.Wall005.json",
@@ -8816,36 +8816,29 @@
     "file_name": "Ramp.Ramp1.json",
     "is_locked": true,
     "editor_layer": 6,
-    "editor_layer_name": "Collidable Ramps",
-    "editor_layer_visibility": false
-  },
-  {
-    "file_name": "Ramp.Ramp13.json",
-    "is_locked": true,
-    "editor_layer": 6,
-    "editor_layer_name": "Collidable Ramps",
-    "editor_layer_visibility": false
+    "editor_layer_name": "Ramps",
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Trigger.ramptrigger001.json",
     "is_locked": true,
     "editor_layer": 6,
-    "editor_layer_name": "Collidable Ramps",
-    "editor_layer_visibility": false
+    "editor_layer_name": "Ramps",
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Trigger.ramptrigger002.json",
     "is_locked": true,
     "editor_layer": 6,
-    "editor_layer_name": "Collidable Ramps",
-    "editor_layer_visibility": false
+    "editor_layer_name": "Ramps",
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Trigger.ramptrigger003.json",
     "is_locked": true,
     "editor_layer": 6,
-    "editor_layer_name": "Collidable Ramps",
-    "editor_layer_visibility": false
+    "editor_layer_name": "Ramps",
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Trigger.s_TopLane1.json",
@@ -9957,15 +9950,15 @@
     "file_name": "Trigger.ramptrigger004.json",
     "is_locked": true,
     "editor_layer": 6,
-    "editor_layer_name": "Collidable Ramps",
-    "editor_layer_visibility": false
+    "editor_layer_name": "Ramps",
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Trigger.ramptrigger005.json",
     "is_locked": true,
     "editor_layer": 6,
-    "editor_layer_name": "Collidable Ramps",
-    "editor_layer_visibility": false
+    "editor_layer_name": "Ramps",
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Rubber.Rubber23.json",
@@ -10699,29 +10692,29 @@
     "file_name": "Ramp.Ramp3.json",
     "is_locked": true,
     "editor_layer": 6,
-    "editor_layer_name": "Collidable Ramps",
-    "editor_layer_visibility": false
+    "editor_layer_name": "Ramps",
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Ramp.Ramp001.json",
     "is_locked": true,
     "editor_layer": 6,
-    "editor_layer_name": "Collidable Ramps",
-    "editor_layer_visibility": false
+    "editor_layer_name": "Ramps",
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Ramp.Ramp6.json",
     "is_locked": true,
     "editor_layer": 6,
-    "editor_layer_name": "Collidable Ramps",
-    "editor_layer_visibility": false
+    "editor_layer_name": "Ramps",
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Ramp.Ramp003.json",
     "is_locked": true,
     "editor_layer": 6,
-    "editor_layer_name": "Collidable Ramps",
-    "editor_layer_visibility": false
+    "editor_layer_name": "Ramps",
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Trigger.s_RampHit.json",
@@ -11212,5 +11205,376 @@
     "editor_layer": 0,
     "editor_layer_name": "Bumpers",
     "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L03_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L02_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L01_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L04_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L05_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L08_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L06_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L07_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L09_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L10_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L11_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L12_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L13_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L14_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L15_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L16_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L17_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L38_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L37_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L36_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L35_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L34_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L33_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L23_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L18_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L19_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L20_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L24_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L25_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L22_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L21_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L26_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L39_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L27_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L28_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L29_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L30_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L31_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Flasher.F_L329_bloom.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Insert Blooms",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Ramp.Ramp122.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Ramps",
+    "editor_layer_visibility": true
+  },
+  {
+    "file_name": "Ramp.Ramp102.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Ramps",
+    "editor_layer_visibility": true
+  },
+  {
+    "file_name": "Ramp.Ramp006.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Ramps",
+    "editor_layer_visibility": true
+  },
+  {
+    "file_name": "Ramp.Ramp107.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Ramps",
+    "editor_layer_visibility": true
+  },
+  {
+    "file_name": "Ramp.Ramp007.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Ramps",
+    "editor_layer_visibility": true
+  },
+  {
+    "file_name": "Ramp.Ramp008.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Ramps",
+    "editor_layer_visibility": true
+  },
+  {
+    "file_name": "Ramp.Ramp009.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Ramps",
+    "editor_layer_visibility": true
+  },
+  {
+    "file_name": "Ramp.Ramp010.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Ramps",
+    "editor_layer_visibility": true
+  },
+  {
+    "file_name": "Ramp.Ramp011.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Ramps",
+    "editor_layer_visibility": true
+  },
+  {
+    "file_name": "Ramp.Ramp012.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Ramps",
+    "editor_layer_visibility": true
+  },
+  {
+    "file_name": "Ramp.Ramp013.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Ramps",
+    "editor_layer_visibility": true
+  },
+  {
+    "file_name": "Ramp.Ramp014.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Ramps",
+    "editor_layer_visibility": true
+  },
+  {
+    "file_name": "Ramp.Ramp015.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Ramps",
+    "editor_layer_visibility": true
+  },
+  {
+    "file_name": "Ramp.Ramp016.json",
+    "is_locked": true,
+    "editor_layer": 0,
+    "editor_layer_name": "Ramps",
+    "editor_layer_visibility": true
   }
 ]

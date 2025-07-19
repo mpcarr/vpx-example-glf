@@ -1,7 +1,7 @@
 {
   "Ramp": {
-    "height_bottom": 60.0,
-    "height_top": 70.0,
+    "height_bottom": 70.0,
+    "height_top": 90.0,
     "width_bottom": 52.0,
     "width_top": 60.0,
     "material": "",
@@ -75,6 +75,32 @@
         "y": 814.90045,
         "z": 0.0,
         "smooth": false,
+        "is_slingshot": false,
+        "has_auto_texture": true,
+        "tex_coord": 0.0,
+        "is_locked": false,
+        "editor_layer": 0,
+        "editor_layer_name": "",
+        "editor_layer_visibility": true
+      },
+      {
+        "x": 583.2045,
+        "y": 778.05835,
+        "z": 0.0,
+        "smooth": true,
+        "is_slingshot": false,
+        "has_auto_texture": true,
+        "tex_coord": 0.0,
+        "is_locked": false,
+        "editor_layer": 0,
+        "editor_layer_name": "",
+        "editor_layer_visibility": true
+      },
+      {
+        "x": 380.52185,
+        "y": 738.55396,
+        "z": 0.0,
+        "smooth": true,
         "is_slingshot": false,
         "has_auto_texture": true,
         "tex_coord": 0.0,
