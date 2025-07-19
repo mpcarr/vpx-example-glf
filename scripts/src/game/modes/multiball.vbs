@@ -32,15 +32,14 @@ Sub CreateMultiballMode()
         With .EventPlayer()
             '.Debug = True
 
-            'Enable locks if locks are ready on new ball
-            .Add "mode_multiball_started.3{current_player.shot_top_lock == 1}", Array("top_lock_ready") 're-opens the diverter
-            .Add "mode_multiball_started.1", Array("check_locks") 'transtion out of init1 only after other stuff has initialized
-
             'Handle allowing players to steal locked balls
-            .Add "update_lock_shots{machine.top_ball_locked == 1}", Array("top_locked")
-            .Add "update_lock_shots{machine.top_ball_locked == 0 && current_player.shot_top_lock == 2}", Array("reset_top_lock")
-            .Add "update_lock_shots{machine.bottom_ball_locked == 1}", Array("bottom_locked")
-            .Add "update_lock_shots{machine.bottom_ball_locked == 0 && current_player.shot_bottom_lock == 2}", Array("reset_bottom_lock")
+            .Add "update_lock_shots{machine.top_ball_locked == 1}", Array("top_locked") 'closes diverter and sets shot to locked state
+            .Add "update_lock_shots{machine.top_ball_locked == 0 && current_player.shot_top_lock == 1}", Array("top_lock_ready") 're-opens the diverter
+            .Add "update_lock_shots{machine.top_ball_locked == 0 && current_player.shot_top_lock == 2}", Array("reset_top_lock") 'resets the top lock shot to not locked
+
+            .Add "update_lock_shots{machine.bottom_ball_locked == 1}", Array("bottom_locked") 'sets shot to locked state
+            .Add "update_lock_shots{machine.bottom_ball_locked == 0 && current_player.shot_bottom_lock == 1}", Array("bottom_lock_ready") 'this is not necessary since lock is already ready. But do it anyway.
+            .Add "update_lock_shots{machine.bottom_ball_locked == 0 && current_player.shot_bottom_lock == 2}", Array("reset_bottom_lock") 'resets the bottom lock shot to not locked
             
             'Jackpot hits
             .Add "s_RampHit_active{current_player.shot_left_jackpot == 1}", Array("score_1000000","add_bonus","jackpot_show","play_sfx_jackpot")
@@ -126,11 +125,11 @@ Sub CreateMultiballMode()
             'States
             With .States("init1")
                 .Label = "Init Phase 1"
-                .EventsWhenStarted = Array("check_locks") 
+                .EventsWhenStarted = Array("check_locks")  'check if balls are locked using machine variables. 
             End With
             With .States("init2")
                 .Label = "Init Phase 2"
-                .EventsWhenStarted = Array("check_if_locking") 
+                .EventsWhenStarted = Array("check_if_locking")  'start check_locking_delay timer to allow for shot states to update
             End With
             With .States("qualifying")
                 .Label = "Qualifying"
@@ -161,16 +160,17 @@ Sub CreateMultiballMode()
             'Transitions
             With .Transitions()
                 .Source = Array("init1")
-                .Target = "init2"
-                .Events = Array("check_locks{machine.top_ball_locked == 0 OR machine.bottom_ball_locked == 0}")
-                .EventsWhenTransitioning = Array("update_lock_shots","reset_mb_start")
+                .Target = "mb_ready"
+                .Events = Array("check_locks{machine.top_ball_locked == 1 && machine.bottom_ball_locked == 1}")
+                .EventsWhenTransitioning = Array("update_lock_shots")  'Update the player variables accordingly.
             End With
             With .Transitions()
                 .Source = Array("init1")
-                .Target = "mb_ready"
-                .Events = Array("check_locks{machine.top_ball_locked == 1 && machine.bottom_ball_locked == 1}")
-                .EventsWhenTransitioning = Array("update_lock_shots")
+                .Target = "init2"
+                .Events = Array("check_locks{machine.top_ball_locked == 0 OR machine.bottom_ball_locked == 0}")
+                .EventsWhenTransitioning = Array("update_lock_shots","reset_mb_start")  'Update the player variables accordingly.
             End With
+            
 
             With .Transitions()
                 .Source = Array("init2")
