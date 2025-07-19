@@ -34,10 +34,16 @@ function convertFile(filePath, showName) {
         entries.forEach(([name, hex], index) => {
           const intensity = grayscaleHexToIntensity(hex);
           const lineEnd = (index === entries.length - 1) ? '\n' : ', _\n';
-          output += `      "${name}|${intensity}|(color)"` + lineEnd;
+          if(lineEnd=='\n')
+          {
+            output += `      "${name}|${intensity}|(color)")\n`;
+          }else
+          {
+            output += `      "${name}|${intensity}|(color)"` + lineEnd;
+          }
         });
 
-        output += `    )\n`;
+        
       }
 
       output += `  End With\n`;
