@@ -25,7 +25,7 @@
     "normal_map": "",
     "sides": 4,
     "name": "Primitive55",
-    "material": "_noXtraShadingVR",
+    "material": "Plastic with opaque image",
     "side_color": "#96009696",
     "is_visible": true,
     "draw_textures_inside": false,
