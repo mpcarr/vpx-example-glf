@@ -148,18 +148,17 @@ Sub CreateBasementMode()
             '     .Loops = 1
             '     .Priority = 20000
             ' End With
-            '  With .EventName("test_show") 
-            '     .Key = "key_test_show1"
-            '     .Show = "lsling_rotate4_ccw"
-            '     .Speed = 1
-            '     With .Tokens()
-            '         .Add "intensity", 50
-            '         .Add "color1", MoonColor
-            '         .Add "color2", HealthColor1
-            '         .Add "color3", ShieldsColor
-            '         .Add "color4", HealthColor3
-            '     End With
-            ' End With
+            With .EventName("test_show") 
+                .Key = "key_test_show1"
+                .Show = "flash_color_with_fade" 
+                .Speed = 10
+                .Loops = 1
+                With .Tokens()
+                    .Add "lights", "FL1"
+                    .Add "fade", 500
+                    .Add "color", SpinnerLeftColor
+                End With
+            End With
 
 
             'Flicker off GI lights when tilted

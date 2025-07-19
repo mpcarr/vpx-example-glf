@@ -33,6 +33,8 @@ Const MultiballColor = "ffffff"
 Const JackpotColor = "00ff6a"
 Const MagnetColor = "ffff00"
 Const BonusColor = "fc7703"
+Const SpinnerLeftColor = "ed0000"
+Const SpinnerRightColor = "fcfc03"
 
 Const SegmentsColor = "00ffff"
 
@@ -64,6 +66,7 @@ Sub ConfigureGlfDevices()
     CreateBaseShows()
     CreateBackglassShows()
     CreateMultiballShows()
+    CreateSpinnerShows()
 
 
     ' Load shared shot profiles
@@ -192,7 +195,8 @@ Sub ConfigureGlfDevices()
     Glf_SetInitialPlayerVar "bonus_count", 0
     Glf_SetInitialPlayerVar "bonus_skip", 0
     Glf_SetInitialPlayerVar "hs_input_ready", 1
-
+    Glf_SetInitialPlayerVar "spin_show", 1
+    
     
 
 
