@@ -1,10 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://b5xgj3x7iwcts"]
+[gd_scene load_steps=3 format=3 uid="uid://b5xgj3x7iwcts"]
 
 [ext_resource type="Script" uid="uid://dwcsp83138nco" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_kcdr2"]
-[ext_resource type="Script" uid="uid://bovvfqn5tn81w" path="res://widgets/control.gd" id="2_018nl"]
-[ext_resource type="VideoStream" uid="uid://b0y0e2x11bm6v" path="res://resources/ball_saved.ogv" id="3_d5fb3"]
-[ext_resource type="Material" uid="uid://bckey3p67mngd" path="res://resources/chroma_key.tres" id="3_lycub"]
-[ext_resource type="Texture2D" uid="uid://mc2u2oumdynf" path="res://icon.svg" id="5_d5fb3"]
+[ext_resource type="VideoStream" uid="uid://cpwgbgb72qkqf" path="res://resources/ball_saved.ogv" id="3_d5fb3"]
 
 [node name="BallSave" type="Control"]
 layout_mode = 3
@@ -23,7 +20,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("2_018nl")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Control"]
 layout_mode = 1
@@ -34,15 +30,3 @@ grow_horizontal = 2
 grow_vertical = 2
 stream = ExtResource("3_d5fb3")
 autoplay = true
-
-[node name="TextureRect" type="TextureRect" parent="Control"]
-material = ExtResource("3_lycub")
-custom_minimum_size = Vector2(300, 300)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5_d5fb3")
-expand_mode = 2

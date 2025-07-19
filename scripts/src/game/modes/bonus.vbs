@@ -62,6 +62,13 @@ Sub CreateBonusMode()
         End With
 
 
+        With .SlidePlayer()
+            With .EventName("mode_bonus_started")
+                .Slide = "bonus"
+                .Action = "play"
+            End With
+        End With
+
         'Play sounds specific to this mode
         With .SoundPlayer()
             With .EventName("play_sfx_bonus")

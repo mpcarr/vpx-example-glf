@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://cg4wxtxliacfn"]
+
+[ext_resource type="Script" uid="uid://cdwas3gbf7w3g" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_4xgho"]
+[ext_resource type="VideoStream" uid="uid://fu6lwwf1guy6" path="res://resources/bonus.ogv" id="3_fyms0"]
+[ext_resource type="Theme" uid="uid://b1eua1hgsadbh" path="res://resources/Score.tres" id="3_ktofo"]
+[ext_resource type="Script" uid="uid://bojo76gkx41ow" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_vubgl"]
+
+[node name="Bonus" type="Control" node_paths=PackedStringArray("animation_player")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4xgho")
+animation_player = NodePath("")
+metadata/_custom_type_script = "uid://cdwas3gbf7w3g"
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+ratio = 1.777
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="AspectRatioContainer"]
+layout_mode = 2
+stream = ExtResource("3_fyms0")
+autoplay = true
+loop = true
+
+[node name="MPFVariable" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_ktofo")
+theme_override_colors/font_outline_color = Color(0.8944, 0.247186, 0.871801, 1)
+theme_override_font_sizes/font_size = 89
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_vubgl")
+variable_name = "bonus_total"
+comma_separate = true
+initialize_empty = false
+metadata/_custom_type_script = "uid://bojo76gkx41ow"
