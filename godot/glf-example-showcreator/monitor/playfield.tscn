@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dx41in1wt58dr"]
+[gd_scene load_steps=16 format=3 uid="uid://dx41in1wt58dr"]
 
 [ext_resource type="Texture2D" uid="uid://crkak7do1d24y" path="res://monitor/PF-1080.png" id="1_6b7q3"]
 [ext_resource type="Script" uid="uid://d1w73p1wpy8sm" path="res://addons/gmc-toolbox/playfield/GMCPlayfield.gd" id="1_ujwwi"]
@@ -80,6 +80,54 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(6.60156, 6.60156)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Spin1Burst/GradientCircle:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(427, 232)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Spin1Burst/GradientCircle:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.925781, 0.966796)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Spin2Burst/GradientCircle:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(399, 204)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Spin2Burst/GradientCircle:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.925781, 0.966796)]
 }
 
 [sub_resource type="Animation" id="Animation_4xp5j"]
@@ -174,10 +222,68 @@ tracks/0/keys = {
 "values": [Vector2(233, 1212), Vector2(246, -112)]
 }
 
+[sub_resource type="Animation" id="Animation_p2gby"]
+resource_name = "spin1_burst"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Spin1Burst/GradientCircle:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(98.0001, 218)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Spin1Burst/GradientCircle:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.925781, 0.966796), Vector2(8.619, 9)]
+}
+
+[sub_resource type="Animation" id="Animation_e2jqc"]
+resource_name = "spin2_burst"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Spin2Burst/GradientCircle:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(399, 204)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Spin2Burst/GradientCircle:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.925781, 0.966796), Vector2(8.618, 9)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_epack"]
 _data = {
 &"RESET": SubResource("Animation_h05v7"),
 &"radial_out": SubResource("Animation_4xp5j"),
+&"spin1_burst": SubResource("Animation_p2gby"),
+&"spin2_burst": SubResource("Animation_e2jqc"),
 &"sweep_down": SubResource("Animation_p3fmy"),
 &"sweep_left": SubResource("Animation_8ami6"),
 &"sweep_right": SubResource("Animation_tch8g"),
@@ -247,6 +353,7 @@ scale = Vector2(2.58594, 0.800337)
 texture = ExtResource("5_is4i2")
 
 [node name="Control" type="Control" parent="."]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -4313,6 +4420,7 @@ script = ExtResource("4_yy1oo")
 tags = ["Inserts"]
 
 [node name="RadialOut" type="Control" parent="."]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -4320,4 +4428,27 @@ offset_bottom = 40.0
 [node name="GradientCircle" type="Sprite2D" parent="RadialOut"]
 position = Vector2(229, 537)
 scale = Vector2(6.60156, 6.60156)
+texture = ExtResource("6_1tb8c")
+
+[node name="Spin1Burst" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GradientCircle" type="Sprite2D" parent="Spin1Burst"]
+position = Vector2(427, 232)
+scale = Vector2(0.925781, 0.966796)
+texture = ExtResource("6_1tb8c")
+
+[node name="Spin2Burst" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GradientCircle" type="Sprite2D" parent="Spin2Burst"]
+position = Vector2(399, 204)
+scale = Vector2(0.925781, 0.966796)
 texture = ExtResource("6_1tb8c")

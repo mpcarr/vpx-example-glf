@@ -34,16 +34,21 @@ Sub CreateInlaneshotsMode()
             .Add "right_orbit_hit{current_player.shot_right_orbit == 1}", Array("light_left_inlane","add_bonus")
 
             'Left Spinner
-            .Add "s_spinner_active{current_player.shot_left_orbit == 0}", Array("score_3333","do_sfx_spin")
-            .Add "s_spinner_active{current_player.shot_left_orbit == 1}", Array("score_33333","do_sfx_laser_blast")
+            .Add "s_spinner_active{current_player.shot_left_orbit == 0}", Array("score_3333","do_sfx_spin","play_spin1_show")
+            .Add "s_spinner_active{current_player.shot_left_orbit == 1}", Array("score_33333","do_sfx_laser_blast","do_spin1_super_show")
             .Add "do_sfx_spin", Array("stop_sfx_spin") 'first stop the sfx if it is already playing
             .Add "stop_sfx_spin", Array("play_sfx_spin") 'then play the sfx
+            .Add "do_spin1_super_show{current_player.spin_show == 1}", Array("play_spin1_super_show1") 'play spin show 1
+            .Add "do_spin1_super_show{current_player.spin_show == 2}", Array("play_spin1_super_show2") 'play spin show 2
+            
 
             'Right Spinner
-            .Add "s_spinner2_active{current_player.shot_right_orbit == 0}", Array("score_3333","do_sfx_spin2")
-            .Add "s_spinner2_active{current_player.shot_right_orbit == 1}", Array("score_33333","do_sfx_laser_blast")
+            .Add "s_spinner2_active{current_player.shot_right_orbit == 0}", Array("score_3333","do_sfx_spin2","play_spin2_show")
+            .Add "s_spinner2_active{current_player.shot_right_orbit == 1}", Array("score_33333","do_sfx_laser_blast","do_spin2_super_show")
             .Add "do_sfx_spin2", Array("stop_sfx_spin2") 'first stop the sfx if it is already playing
             .Add "stop_sfx_spin2", Array("play_sfx_spin2") 'then play the sfx
+            .Add "do_spin2_super_show{current_player.spin_show == 1}", Array("play_spin2_super_show1") 'play spin show 1
+            .Add "do_spin2_super_show{current_player.spin_show == 2}", Array("play_spin2_super_show2") 'play spin show 2
 
             'Super spinner sound effect
             .Add "do_sfx_laser_blast", Array("stop_sfx_laser_blast") 'first stop the sfx if it is already playing
@@ -200,6 +205,63 @@ Sub CreateInlaneshotsMode()
         End With
 
 
+        With .ShowPlayer
+            With .EventName("play_spin1_show") 
+                .Key = "key_spin1_show"
+                .Show = "flash_color_with_fade"    'defined in CreateGeneralShows()
+                .Speed = 10
+                .Loops = 1
+                With .Tokens()
+                    .Add "lights", "FL1"
+                    .Add "fade", 500
+                    .Add "color", SpinnerLeftColor
+                End With
+            End With
+            With .EventName("play_spin1_super_show1") 
+                .Key = "key_spin1_super_show1"
+                .Show = "spin1_super_show1"
+                .Speed = 1
+                .Loops = 1
+                .Priority = 20000
+            End With
+            With .EventName("play_spin1_super_show2") 
+                .Key = "key_spin1_super_show2"
+                .Show = "spin1_super_show2"
+                .Speed = 1
+                .Loops = 1
+                .Priority = 20000
+            End With
+            
+
+            With .EventName("play_spin2_show") 
+                .Key = "key_spin2_show"
+                .Show = "flash_color_with_fade"    'defined in CreateGeneralShows()
+                .Speed = 10
+                .Loops = 1
+                With .Tokens()
+                    .Add "lights", "FL2"
+                    .Add "fade", 500
+                    .Add "color", SpinnerRightColor
+                End With
+            End With
+            With .EventName("play_spin2_super_show1") 
+                .Key = "key_spin2_super_show1"
+                .Show = "spin2_super_show1"
+                .Speed = 1
+                .Loops = 1
+                .Priority = 20000
+            End With
+            With .EventName("play_spin2_super_show2") 
+                .Key = "key_spin2_super_show2"
+                .Show = "spin2_super_show2"
+                .Speed = 1
+                .Loops = 1
+                .Priority = 20000
+            End With
+            
+        End With
+
+
         'Inlane orbit shot timers
         With .Timers("left_inlane")
             .TickInterval = 1000
@@ -218,6 +280,35 @@ Sub CreateInlaneshotsMode()
             With .ControlEvents()
                 .EventName = "hit_right_inlane"
                 .Action = "restart"
+            End With
+        End With
+
+
+        With .VariablePlayer
+            ' spin_show is a flag used to toggle the spinner shows
+            With .EventName("play_spin1_super_show1") 
+                With .Variable("spin_show")
+                    .Action = "set"
+                    .Int = 2
+                End With
+            End With
+            With .EventName("play_spin1_super_show2") 
+                With .Variable("spin_show")
+                    .Action = "set"
+                    .Int = 1
+                End With
+            End With
+            With .EventName("play_spin2_super_show1") 
+                With .Variable("spin_show")
+                    .Action = "set"
+                    .Int = 2
+                End With
+            End With
+            With .EventName("play_spin2_super_show2") 
+                With .Variable("spin_show")
+                    .Action = "set"
+                    .Int = 1
+                End With
             End With
         End With
 
