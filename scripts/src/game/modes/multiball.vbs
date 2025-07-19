@@ -21,7 +21,8 @@ Sub CreateMultiballMode()
     Dim x
 
     With CreateGlfMode("multiball", 1000)
-
+        '.Debug = True
+        
         'Define the events that start and stop this mode
         .StartEvents = Array("ball_started")
         .StopEvents = Array("mode_base_stopping")
@@ -29,9 +30,11 @@ Sub CreateMultiballMode()
 
         'The event player will respond to events during this mode
         With .EventPlayer()
+            '.Debug = True
 
             'Enable locks if locks are ready on new ball
-            .Add "mode_multiball_started{current_player.shot_top_lock == 1}", Array("top_lock_ready") 're-opens the diverter
+            .Add "mode_multiball_started.3{current_player.shot_top_lock == 1}", Array("top_lock_ready") 're-opens the diverter
+            .Add "mode_multiball_started.1", Array("check_locks") 'transtion out of init1 only after other stuff has initialized
 
             'Handle allowing players to steal locked balls
             .Add "update_lock_shots{machine.top_ball_locked == 1}", Array("top_locked")
@@ -116,6 +119,7 @@ Sub CreateMultiballMode()
         'The following state machine manages the multiball mode
 
         With .StateMachines("multiball")
+            '.Debug = True
             .PersistState = false   'when mode starts, always initialize in the starting state
             .StartingState = "init1"
 
@@ -171,22 +175,22 @@ Sub CreateMultiballMode()
             With .Transitions()
                 .Source = Array("init2")
                 .Target = "qualifying"
-                .Events = Array("check_if_locking{current_player.shot_top_lock <> 1 && current_player.shot_bottom_lock <> 1}")
+                .Events = Array("timer_check_locking_delay_complete{current_player.shot_top_lock <> 1 && current_player.shot_bottom_lock <> 1}")
             End With
             With .Transitions()
                 .Source = Array("init2")
                 .Target = "locking_both"
-                .Events = Array("check_if_locking{current_player.shot_top_lock == 1 && current_player.shot_bottom_lock == 1}")
+                .Events = Array("timer_check_locking_delay_complete{current_player.shot_top_lock == 1 && current_player.shot_bottom_lock == 1}")
             End With
             With .Transitions()
                 .Source = Array("init2")
                 .Target = "locking_top"
-                .Events = Array("check_if_locking{current_player.shot_top_lock == 1 && current_player.shot_bottom_lock <> 1}")
+                .Events = Array("timer_check_locking_delay_complete{current_player.shot_top_lock == 1 && current_player.shot_bottom_lock <> 1}")
             End With
             With .Transitions()
                 .Source = Array("init2")
                 .Target = "locking_bottom"
-                .Events = Array("check_if_locking{current_player.shot_top_lock <> 1 && current_player.shot_bottom_lock == 1}")
+                .Events = Array("timer_check_locking_delay_complete{current_player.shot_top_lock <> 1 && current_player.shot_bottom_lock == 1}")
             End With
 
             With .Transitions()
@@ -247,6 +251,17 @@ Sub CreateMultiballMode()
                 .EventsWhenTransitioning = Array("enable_qualify_lock","restart_qualify_lock")
             End With
 
+        End With
+
+        'Give a little time for the lock checks to happen
+        With .Timers("check_locking_delay")
+            .TickInterval = 100
+            .StartValue = 0
+            .EndValue = 2
+            With .ControlEvents()
+                .EventName = "check_if_locking"
+                .Action = "restart"
+            End With
         End With
 
 
@@ -355,6 +370,7 @@ Sub CreateMultiballMode()
 
         'Define the shot group
         With .ShotGroups("qualify_lock")
+            '.Debug = True
             .Shots = Array("standup1", "standup2", "standup3", "standup4")
             .EnableEvents = Array("enable_qualify_lock")
             .DisableEvents = Array("disable_qualify_lock")
@@ -364,6 +380,8 @@ Sub CreateMultiballMode()
 
         'Define the lock and multiball shots
         With .Shots("top_lock")
+            '.Debug = True
+
             .Profile = "lock"   'defined below
             With .Tokens()
                 .Add "lights", "L32"
@@ -380,6 +398,8 @@ Sub CreateMultiballMode()
         End With
 
         With .Shots("bottom_lock")
+            '.Debug = True
+
             .Profile = "lock"   'defined below
             With .Tokens()
                 .Add "lights", "L25"
@@ -480,8 +500,10 @@ Sub CreateMultiballMode()
         'VARIABLES
         
         With .VariablePlayer()
+            '.Debug = True
+
             'Handle allowing other players to steal the locked balls
-            With .EventName("mode_multiball_started")
+            With .EventName("mode_multiball_started.2")
 				With .Variable("multiball_lock_mb_locks_balls_locked")
                     .Action = "set"
 					.Int = "machine.bottom_ball_locked + machine.top_ball_locked"
