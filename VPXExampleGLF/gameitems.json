@@ -102,91 +102,91 @@
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.Primitive16.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.screw5.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.screw6.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.Primitive17.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.screw7.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.screw8.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.Primitive18.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.screw9.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.screw10.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.Primitive19.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.screw11.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.screw12.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.Primitive45.json",
@@ -333,21 +333,21 @@
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.Primitive205.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.Primitive204.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.Primitive59.json",
@@ -396,21 +396,21 @@
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.Primitive2.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.Primitive3.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.Primitive9.json",
@@ -550,84 +550,84 @@
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.Primitive002.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.Primitive003.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.Primitive004.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.Primitive005.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.Primitive006.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.Primitive007.json",
     "is_locked": true,
     "editor_layer": 3,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.Primitive008.json",
     "is_locked": true,
     "editor_layer": 3,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.Primitive009.json",
     "is_locked": true,
     "editor_layer": 3,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.Primitive010.json",
     "is_locked": true,
     "editor_layer": 3,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.Primitive011.json",
     "is_locked": true,
     "editor_layer": 3,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.Primitive012.json",
     "is_locked": true,
     "editor_layer": 3,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "TextBox.tbWR.json",
@@ -9006,14 +9006,14 @@
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.KickerUpperPrimitive1.json",
     "is_locked": true,
     "editor_layer": 0,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Wall.Wall21.json",
@@ -9566,105 +9566,105 @@
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.screw002.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.screw003.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.screw004.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.screw005.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.screw006.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.screw007.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.screw008.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.screw009.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.screw013.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.screw014.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.screw015.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.screw016.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.screw017.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.screw018.json",
     "is_locked": true,
     "editor_layer": 4,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "HitTarget.s_ST3.json",
@@ -10910,7 +10910,7 @@
     "is_locked": true,
     "editor_layer": 1,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.PinCab_Cabinet.json",
@@ -11134,14 +11134,14 @@
     "is_locked": true,
     "editor_layer": 1,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Primitive.Primitive55.json",
     "is_locked": true,
     "editor_layer": 1,
     "editor_layer_name": "Misc Primitives",
-    "editor_layer_visibility": false
+    "editor_layer_visibility": true
   },
   {
     "file_name": "Flasher.f_bumpershadow_BL1.json",
