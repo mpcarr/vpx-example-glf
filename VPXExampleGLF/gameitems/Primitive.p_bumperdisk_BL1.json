@@ -21,11 +21,11 @@
       0.0,
       0.0
     ],
-    "image": "Flbumperdiskred",
+    "image": "",
     "normal_map": "",
     "sides": 4,
     "name": "p_bumperdisk_BL1",
-    "material": "bumperdisk",
+    "material": "Plastic White",
     "side_color": "#96009696",
     "is_visible": true,
     "draw_textures_inside": true,

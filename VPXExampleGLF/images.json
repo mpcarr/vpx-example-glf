@@ -2700,5 +2700,47 @@
       "name": "ramp_start"
     },
     "bits": false
+  },
+  {
+    "name": "Nestmap 0 - NM",
+    "path": "C:\\Users\\carr-\\Downloads\\darkchaos_24a\\darkchaos_24a - Bakes\\Export\\Nestmap 0 - NM.webp",
+    "width": 384,
+    "height": 384,
+    "alpha_test_value": -1.0,
+    "is_opaque": null,
+    "is_signed": false,
+    "jpeg": {
+      "path": "C:\\Users\\carr-\\Downloads\\darkchaos_24a\\darkchaos_24a - Bakes\\Export\\Nestmap 0 - NM.webp",
+      "name": "Nestmap 0 - NM"
+    },
+    "bits": false
+  },
+  {
+    "name": "Nestmap 0",
+    "path": "C:\\Users\\carr-\\Downloads\\darkchaos_24a\\darkchaos_24a - Bakes\\Export\\Nestmap 0.webp",
+    "width": 384,
+    "height": 384,
+    "alpha_test_value": -1.0,
+    "is_opaque": false,
+    "is_signed": false,
+    "jpeg": {
+      "path": "C:\\Users\\carr-\\Downloads\\darkchaos_24a\\darkchaos_24a - Bakes\\Export\\Nestmap 0.webp",
+      "name": "Nestmap 0"
+    },
+    "bits": false
+  },
+  {
+    "name": "bumper_lit",
+    "path": "C:\\Users\\carr-\\Downloads\\darkchaos_24a\\darkchaos_24a - Bakes\\Export\\bumper_lit.png",
+    "width": 384,
+    "height": 384,
+    "alpha_test_value": -1.0,
+    "is_opaque": false,
+    "is_signed": false,
+    "jpeg": {
+      "path": "C:\\Users\\carr-\\Downloads\\darkchaos_24a\\darkchaos_24a - Bakes\\Export\\bumper_lit.png",
+      "name": "bumper_lit"
+    },
+    "bits": false
   }
 ]

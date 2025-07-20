@@ -844,9 +844,6 @@
       "FL3",
       "FL1",
       "FL4",
-      "BL3",
-      "BL2",
-      "BL1",
       "L33",
       "L34",
       "L35",
@@ -864,9 +861,9 @@
       "LBG01",
       "L41",
       "L40",
-      "BL1a",
       "BL3a",
-      "BL2a"
+      "BL2a",
+      "BL1a"
     ],
     "fire_events": false,
     "stop_single_events": false,

@@ -21,11 +21,11 @@
       0.0,
       0.0
     ],
-    "image": "Flbumperbase",
+    "image": "",
     "normal_map": "",
     "sides": 4,
     "name": "p_bumperbase_BL2",
-    "material": "bumperbase",
+    "material": "Plastic White",
     "side_color": "#96009696",
     "is_visible": true,
     "draw_textures_inside": true,
