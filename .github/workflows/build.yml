@@ -31,6 +31,7 @@ jobs:
         run: |
           $first_commit = git rev-list --max-parents=0 HEAD
           $build_number = git rev-list $first_commit..HEAD --count
+          echo "build_number=$build_number"
           echo "build_number=$build_number" >> $env:GITHUB_OUTPUT
         shell: pwsh
 
@@ -96,7 +97,7 @@ jobs:
       - name: Export Godot Project (Windows)
         run: |
           mkdir godot_builds
-          .\godot_engine\Godot_v4.4.1-stable_win64.exe --headless --path godot/GMCDisplay --export-release "Windows Desktop" godot_builds\GMCDisplay.exe
+          .\godot_engine\Godot_v4.4.1-stable_win64.exe --headless --path godot/GMCDisplay --export-release "Windows" godot_builds\GMCDisplay.exe
         shell: pwsh
 
       - name: Upload Godot EXE Artifact
