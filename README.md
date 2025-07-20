@@ -18,7 +18,7 @@ To begin using this table and learning GLF, read the [Environment Setup Guide](h
 - **Not all features are demonstrated** — check the [GLF documentation](https://mpcarr.github.io/vpx-glf/) for the full feature set.
 - **GLF is under development** — bugs or missing features may exist.
 - **Balls must not be destroyed** — required by GLF.
-- **All game logic should go through GLF** — ensures portability to real hardware via [MPF](https://docs.missionpinball.org/).
+- **All game logic should go through GLF** — ensures portability to real hardware via [MPF](https://missionpinball.org/latest/).
 - **PUP Player is not supported** — use the included Godot media player instead.
 - **No VLM visuals included** — but easy to integrate (see the [Dark Chaos](https://github.com/apophis79/darkchaos) project for an example).
 
