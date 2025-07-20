@@ -113,8 +113,8 @@ jobs:
           Write-Host "`n📄 Export Log:"
           Get-Content godot_export.log
 
-          if (!(Test-Path "godot_builds\GMSDisplay.exe")) {
-            Write-Host "❌ Export failed: GMSDisplay.exe not found."
+          if (!(Test-Path "godot_builds\GMCDisplay.exe")) {
+            Write-Host "❌ Export failed: GMCDisplay.exe not found."
             Get-ChildItem -Recurse godot_builds
             exit 1
           }
