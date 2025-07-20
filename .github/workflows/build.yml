@@ -26,14 +26,15 @@ jobs:
           echo "game_name=$game_name" >> $env:GITHUB_OUTPUT
         shell: pwsh
 
-      - name: Calculate Build Number
+      - name: Read Version from info.json
         id: version
         run: |
-          $first_commit = git rev-list --max-parents=0 HEAD
-          echo $first_commit
-          $build_number = git rev-list $first_commit..HEAD --count
-          echo "build_number=$build_number"
-          echo "build_number=$build_number" >> $env:GITHUB_OUTPUT
+          $info = Get-Content "${{ steps.gamename.outputs.game_name }}/info.json" | ConvertFrom-Json
+          $version = $info.table_version
+          $rev = $info.table_save_rev
+          $build = "$version" + "_" + "$rev"
+          echo "Build Version: $build"
+          echo "build_number=$build" >> $env:GITHUB_OUTPUT
         shell: pwsh
 
       - name: Install Node.js and Grunt
