@@ -2,7 +2,6 @@
 .import/
 .export/
 export.cfg
-export_presets.cfg
 .godot/
 
 # Godot Mono (C#) files
