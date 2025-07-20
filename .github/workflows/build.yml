@@ -153,16 +153,19 @@ jobs:
 
 
       - name: Create Combined Artifact ZIP
-        if: steps.check_godot.outputs.exists == 'true'
         run: |
           $zipName = "${{ steps.gamename.outputs.game_name }}_${{ steps.version.outputs.build_number }}.zip"
-          mkdir packaged_build
+          $outDir = "packaged_build"
 
-          Copy-Item "${{ steps.gamename.outputs.game_name }}${{ steps.version.outputs.build_number }}.vpx" -Destination packaged_build/
-          Copy-Item "godot_builds/${{ steps.gamename.outputs.game_name }}_gmc.exe" -Destination packaged_build/
+          mkdir $outDir
 
-          Compress-Archive -Path packaged_build/* -DestinationPath $zipName
+          Copy-Item "${{ steps.gamename.outputs.game_name }}${{ steps.version.outputs.build_number }}.vpx" -Destination $outDir/
+          Copy-Item "godot_builds/${{ steps.gamename.outputs.game_name }}_gmc.exe" -Destination $outDir/
+
+          # Use full path to files to avoid nested folder issue
+          Compress-Archive -Path (Get-ChildItem $outDir -Recurse).FullName -DestinationPath $zipName
         shell: pwsh
+
 
       - name: Upload Combined Artifact
         if: steps.check_godot.outputs.exists == 'true'
