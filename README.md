@@ -8,14 +8,14 @@ This project was created to demonstrate the core features of [GLF](https://githu
 
 ## Getting Started
 
-To begin using this table and learning GLF, read the [Environment Setup Guide](https://github.com/mpcarr/vpx-glf/blob/main/docs/environment-setup.md).
+To begin using this table and learning GLF, read the [Environment Setup Guide](https://mpcarr.github.io/vpx-glf/environment-setup/).
 
 ---
 
 ## Caveats & Notes
 
 - **GLF is flexible** — there are often multiple ways to do things. This example is just one possible implementation.
-- **Not all features are demonstrated** — check the [GLF documentation](https://github.com/mpcarr/vpx-glf) for the full feature set.
+- **Not all features are demonstrated** — check the [GLF documentation](https://mpcarr.github.io/vpx-glf/) for the full feature set.
 - **GLF is under development** — bugs or missing features may exist.
 - **Balls must not be destroyed** — required by GLF.
 - **All game logic should go through GLF** — ensures portability to real hardware via [MPF](https://docs.missionpinball.org/).
