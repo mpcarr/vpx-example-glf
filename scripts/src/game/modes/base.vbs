@@ -42,14 +42,17 @@ Sub CreateBaseMode()
             .Add "mode_base_started{current_player.number == 4}", Array("flash_player4_score")
             .Add "s_Plunger1_inactive", Array("stop_flash_player1_score","stop_flash_player2_score","stop_flash_player3_score","stop_flash_player4_score")
 
-            'Magnet activated
+            'Magnet
             .Add "s_ST4_active", Array("magnet_activated","play_sfx_mag_cap")
 
-            'Flash some lights on the backglass when stuff happens
-            .Add "s_Bumper1_active", Array("backglass_flash1")
-            .Add "s_Bumper2_active", Array("backglass_flash2")
-            .Add "s_LeftSlingshot_active", Array("backglass_flash3")
-            .Add "s_RightSlingshot_active", Array("backglass_flash4")
+            'Bumpers
+            .Add "s_Bumper1_active", Array("backglass_flash1","play_bumper1_show","score_5000")
+            .Add "s_Bumper2_active", Array("backglass_flash2","play_bumper2_show","score_5000")
+            .Add "s_Bumper3_active", Array("play_bumper3_show","score_5000")
+
+            'Slingshots
+            .Add "s_LeftSlingshot_active", Array("backglass_flash3","score_5000")
+            .Add "s_RightSlingshot_active", Array("backglass_flash4","score_5000")
 
         End With
 
@@ -139,6 +142,40 @@ Sub CreateBaseMode()
                 .Loops = 1
                 .Priority = 1000
                 '.EventsWhenCompleted = Array("mag_show_complete")
+            End With
+
+            With .EventName("play_bumper1_show")
+                .Key = "key_bumper1_show"
+                .Show = "flash_color_with_fade" 
+                .Speed = 15
+                .Loops = 1
+                With .Tokens()
+                    .Add "lights", "tBL1"
+                    .Add "fade", 500
+                    .Add "color", Bumper1Color
+                End With
+            End With
+            With .EventName("play_bumper2_show")
+                .Key = "key_bumper2_show"
+                .Show = "flash_color_with_fade" 
+                .Speed = 15
+                .Loops = 1
+                With .Tokens()
+                    .Add "lights", "tBL2"
+                    .Add "fade", 500
+                    .Add "color", Bumper2Color
+                End With
+            End With
+            With .EventName("play_bumper3_show")
+                .Key = "key_bumper3_show"
+                .Show = "flash_color_with_fade" 
+                .Speed = 15
+                .Loops = 1
+                With .Tokens()
+                    .Add "lights", "tBL3"
+                    .Add "fade", 500
+                    .Add "color", Bumper3Color
+                End With
             End With
         End With
 

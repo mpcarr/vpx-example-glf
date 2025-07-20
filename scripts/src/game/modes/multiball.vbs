@@ -21,7 +21,7 @@ Sub CreateMultiballMode()
     Dim x
 
     With CreateGlfMode("multiball", 1000)
-        '.Debug = True
+        .Debug = True
         
         'Define the events that start and stop this mode
         .StartEvents = Array("ball_started")
@@ -30,7 +30,7 @@ Sub CreateMultiballMode()
 
         'The event player will respond to events during this mode
         With .EventPlayer()
-            '.Debug = True
+            .Debug = True
 
             'Handle allowing players to steal locked balls
             .Add "update_lock_shots{machine.top_ball_locked == 1}", Array("top_locked") 'closes diverter and sets shot to locked state
@@ -44,6 +44,9 @@ Sub CreateMultiballMode()
             'Jackpot hits
             .Add "s_RampHit_active{current_player.shot_left_jackpot == 1}", Array("score_1000000","add_bonus","jackpot_show","play_sfx_jackpot")
             .Add "balldevice_kicker2_ball_entered{current_player.shot_right_jackpot == 1}", Array("score_1000000","add_bonus","jackpot_show","play_sfx_jackpot")
+
+            'Start multiball
+            .Add "timer_start_multiball_delay_complete", Array("start_multiball")
 
             'Handle music and callouts
             .Add "start_multiball", Array("stop_mus_ambient_loop","play_mus_multiball_loop","play_mb_bg_show")
@@ -76,6 +79,7 @@ Sub CreateMultiballMode()
             .HurryUp = 3000
             .GracePeriod = 2000
             .BallLocks = Array("kicker1", "kicker2")
+            .Debug = True
         End With
 
         With .MultiballLocks("mb_locks")
@@ -84,7 +88,7 @@ Sub CreateMultiballMode()
             .ResetEvents = Array("start_multiball.2","restart_qualify_lock")
             .BallsToLock = 2
             .LockDevices = Array("kicker1", "kicker2")
-            '.Debug = True
+            .Debug = True
         End With
 
 
@@ -118,7 +122,7 @@ Sub CreateMultiballMode()
         'The following state machine manages the multiball mode
 
         With .StateMachines("multiball")
-            '.Debug = True
+            .Debug = True
             .PersistState = false   'when mode starts, always initialize in the starting state
             .StartingState = "init1"
 
@@ -153,7 +157,7 @@ Sub CreateMultiballMode()
             End With
             With .States("mb_running")
                 .Label = "Multiball Running"
-                .EventsWhenStarted = Array("start_multiball") 
+                .EventsWhenStarted = Array("start_multiball_delay") 
             End With
 
 
@@ -262,6 +266,19 @@ Sub CreateMultiballMode()
                 .EventName = "check_if_locking"
                 .Action = "restart"
             End With
+            .Debug = True
+        End With
+
+        'Start mulitball after a short delay (allows time for upper diverter to open)
+        With .Timers("start_multiball_delay")
+            .TickInterval = 100
+            .StartValue = 0
+            .EndValue = 3
+            With .ControlEvents()
+                .EventName = "start_multiball_delay"
+                .Action = "restart"
+            End With
+            .Debug = True
         End With
 
 
@@ -273,6 +290,7 @@ Sub CreateMultiballMode()
         '  - Close the diverter when the ball gets locked, or when it gets reset
         '  - Temporarily open the diverter (for a couple seconds) when it's time to kick out the ball for multiball
         With .StateMachines("diverter")
+            .Debug = True
             .PersistState = false   'when mode starts, always initialize in the starting state
             .StartingState = "closed"
 
@@ -306,7 +324,7 @@ Sub CreateMultiballMode()
             With .Transitions()
                 .Source = Array("closed")
                 .Target = "opened"
-                .Events = Array("start_multiball.4")
+                .Events = Array("start_multiball_delay")
                 .EventsWhenTransitioning = Array("temporarily_open_diverter")
             End With
 
@@ -370,7 +388,7 @@ Sub CreateMultiballMode()
 
         'Define the shot group
         With .ShotGroups("qualify_lock")
-            '.Debug = True
+            .Debug = True
             .Shots = Array("standup1", "standup2", "standup3", "standup4")
             .EnableEvents = Array("enable_qualify_lock")
             .DisableEvents = Array("disable_qualify_lock")
@@ -380,7 +398,7 @@ Sub CreateMultiballMode()
 
         'Define the lock and multiball shots
         With .Shots("top_lock")
-            '.Debug = True
+            .Debug = True
 
             .Profile = "lock"   'defined below
             With .Tokens()
@@ -398,7 +416,7 @@ Sub CreateMultiballMode()
         End With
 
         With .Shots("bottom_lock")
-            '.Debug = True
+            .Debug = True
 
             .Profile = "lock"   'defined below
             With .Tokens()
@@ -416,6 +434,7 @@ Sub CreateMultiballMode()
         End With
 
         With .Shots("mb_start")
+            .Debug = True
             .Profile = "lock"   'defined below
             With .Tokens()
                 .Add "lights", "L09"
@@ -500,7 +519,7 @@ Sub CreateMultiballMode()
         'VARIABLES
         
         With .VariablePlayer()
-            '.Debug = True
+            .Debug = True
 
             'Handle allowing other players to steal the locked balls
             With .EventName("mode_multiball_started.2")

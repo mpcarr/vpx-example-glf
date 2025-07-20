@@ -266,90 +266,6 @@
     "bits": false
   },
   {
-    "name": "flipperImage-testW",
-    "path": "E:\\\\flipperImage-testW.png",
-    "width": 1024,
-    "height": 1024,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "E:\\\\flipperImage-testW.png",
-      "name": "flipperImage-testW"
-    },
-    "bits": false
-  },
-  {
-    "name": "flipperImage-test",
-    "path": "E:\\\\flipperImage-test.png",
-    "width": 1024,
-    "height": 1024,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "E:\\\\flipperImage-test.png",
-      "name": "flipperImage-test"
-    },
-    "bits": false
-  },
-  {
-    "name": "inches",
-    "path": "C:\\inches.png",
-    "width": 1024,
-    "height": 1024,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\inches.png",
-      "name": "inches"
-    },
-    "bits": false
-  },
-  {
-    "name": "flipper_williams_logo_Right",
-    "path": "C:\\VPX4\\tables\\makeover stuff\\flipper_williams_logo_Right.png",
-    "width": 1024,
-    "height": 1024,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\VPX4\\tables\\makeover stuff\\flipper_williams_logo_Right.png",
-      "name": "flipper_williams_logo_Right"
-    },
-    "bits": false
-  },
-  {
-    "name": "flipper_williams_logo_Left",
-    "path": "C:\\VPX4\\tables\\makeover stuff\\flipper_williams_logo_Left.png",
-    "width": 1024,
-    "height": 1024,
-    "alpha_test_value": 1.0,
-    "is_opaque": false,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\VPX4\\tables\\makeover stuff\\flipper_williams_logo_Left.png",
-      "name": "flipper_williams_logo_Left"
-    },
-    "bits": false
-  },
-  {
-    "name": "inchesandmm",
-    "path": "C:\\inchesandmm.png",
-    "width": 2400,
-    "height": 900,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\inchesandmm.png",
-      "name": "inchesandmm"
-    },
-    "bits": false
-  },
-  {
     "name": "sidewood_h_black",
     "path": "C:\\Visual Pinball\\Tables VR\\VR Room WIP\\sidewood_h-Black.png",
     "width": 1024,
@@ -388,104 +304,6 @@
     "jpeg": {
       "path": "C:\\Visual Pinball\\Tables VR\\VR Room WIP\\sidewood_v-Black.png",
       "name": "sidewood_v-Black"
-    },
-    "bits": false
-  },
-  {
-    "name": "flipper_gottlieb_right",
-    "path": "C:\\Users\\borgd\\Documents\\OneDrive\\Pinball\\_Resources\\flippers\\Gottlieb_big_Flipper\\flipper_gottlieb_right2.png",
-    "width": 1024,
-    "height": 1024,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\borgd\\Documents\\OneDrive\\Pinball\\_Resources\\flippers\\Gottlieb_big_Flipper\\flipper_gottlieb_right2.png",
-      "name": "flipper_gottlieb_right2"
-    },
-    "bits": false
-  },
-  {
-    "name": "flipper_yellow_red_Left",
-    "path": "C:\\VPX4\\tables\\makeover stuff\\flipper_yellow_red_Left.png",
-    "width": 1024,
-    "height": 1024,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\VPX4\\tables\\makeover stuff\\flipper_yellow_red_Left.png",
-      "name": "flipper_yellow_red_Left"
-    },
-    "bits": false
-  },
-  {
-    "name": "flipper_gottlieb_left",
-    "path": "C:\\Users\\borgd\\Documents\\OneDrive\\Pinball\\_Resources\\flippers\\Gottlieb_big_Flipper\\flipper_gottlieb_left2.png",
-    "width": 1024,
-    "height": 1024,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\borgd\\Documents\\OneDrive\\Pinball\\_Resources\\flippers\\Gottlieb_big_Flipper\\flipper_gottlieb_left2.png",
-      "name": "flipper_gottlieb_left2"
-    },
-    "bits": false
-  },
-  {
-    "name": "gottlieb_flipper_red",
-    "path": "C:\\Users\\borgd\\Documents\\OneDrive\\Pinball\\_Resources\\flippers\\newer_gottlieb_flipper\\gottlieb_flipper_red.jpg",
-    "width": 1024,
-    "height": 1024,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\borgd\\Documents\\OneDrive\\Pinball\\_Resources\\flippers\\newer_gottlieb_flipper\\gottlieb_flipper_red.jpg",
-      "name": "gottlieb_flipper_red"
-    },
-    "bits": false
-  },
-  {
-    "name": "flipper_yellow_red_Right",
-    "path": "C:\\VPX4\\tables\\makeover stuff\\flipper_yellow_red_Right.png",
-    "width": 1024,
-    "height": 1024,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\VPX4\\tables\\makeover stuff\\flipper_yellow_red_Right.png",
-      "name": "flipper_yellow_red_Right"
-    },
-    "bits": false
-  },
-  {
-    "name": "gottlieb_mini_flipper_right",
-    "path": "C:\\Users\\borgd\\Documents\\OneDrive\\Pinball\\_Resources\\flippers\\gottlieb_mini_flipper\\gottlieb_mini_flipper_right.png",
-    "width": 1024,
-    "height": 1024,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\borgd\\Documents\\OneDrive\\Pinball\\_Resources\\flippers\\gottlieb_mini_flipper\\gottlieb_mini_flipper_right.png",
-      "name": "gottlieb_mini_flipper_right"
-    },
-    "bits": false
-  },
-  {
-    "name": "gottlieb_mini_flipper_left",
-    "path": "C:\\Users\\borgd\\Documents\\OneDrive\\Pinball\\_Resources\\flippers\\gottlieb_mini_flipper\\gottlieb_mini_flipper_left.png",
-    "width": 1024,
-    "height": 1024,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\borgd\\Documents\\OneDrive\\Pinball\\_Resources\\flippers\\gottlieb_mini_flipper\\gottlieb_mini_flipper_left.png",
-      "name": "gottlieb_mini_flipper_left"
     },
     "bits": false
   },
@@ -2114,20 +1932,6 @@
     "bits": false
   },
   {
-    "name": "Flbumpershadow",
-    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Flupper Bumpers\\Images\\Flbumpershadow.png",
-    "width": 256,
-    "height": 256,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Flupper Bumpers\\Images\\Flbumpershadow.png",
-      "name": "Flbumpershadow"
-    },
-    "bits": false
-  },
-  {
     "name": "Insert_RectangleDDOn",
     "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\3D Inserts\\Images\\Insert_RectangleDDOn.png",
     "width": 512,
@@ -2138,62 +1942,6 @@
     "jpeg": {
       "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\3D Inserts\\Images\\Insert_RectangleDDOn.png",
       "name": "Insert_RectangleDDOn"
-    },
-    "bits": false
-  },
-  {
-    "name": "Flbumperbulb",
-    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Flupper Bumpers\\Images\\Flbumperbulb.png",
-    "width": 256,
-    "height": 512,
-    "alpha_test_value": 1.0,
-    "is_opaque": false,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Flupper Bumpers\\Images\\Flbumperbulb.png",
-      "name": "Flbumperbulb"
-    },
-    "bits": false
-  },
-  {
-    "name": "Flbumperbase",
-    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Flupper Bumpers\\Images\\Flbumperbase.png",
-    "width": 512,
-    "height": 512,
-    "alpha_test_value": 1.0,
-    "is_opaque": false,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Flupper Bumpers\\Images\\Flbumperbase.png",
-      "name": "Flbumperbase"
-    },
-    "bits": false
-  },
-  {
-    "name": "Flhighlight",
-    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Flupper Bumpers\\Images\\Flhighlight.jpg",
-    "width": 400,
-    "height": 400,
-    "alpha_test_value": 1.0,
-    "is_opaque": null,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Flupper Bumpers\\Images\\Flhighlight.jpg",
-      "name": "Flhighlight"
-    },
-    "bits": false
-  },
-  {
-    "name": "Flbumperdiskred",
-    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Flupper Bumpers\\Images\\Flbumperdiskred.png",
-    "width": 512,
-    "height": 512,
-    "alpha_test_value": 1.0,
-    "is_opaque": false,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Flupper Bumpers\\Images\\Flbumperdiskred.png",
-      "name": "Flbumperdiskred"
     },
     "bits": false
   },
@@ -2334,20 +2082,6 @@
     "jpeg": {
       "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\3D Inserts\\Images\\Insert_lightninglargeoff2.png",
       "name": "Insert_lightninglargeoff2"
-    },
-    "bits": false
-  },
-  {
-    "name": "Flbumpertop",
-    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Flupper Bumpers\\Images\\Flbumpertop.png",
-    "width": 1024,
-    "height": 512,
-    "alpha_test_value": 1.0,
-    "is_opaque": false,
-    "is_signed": false,
-    "jpeg": {
-      "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Flupper Bumpers\\Images\\Flbumpertop.png",
-      "name": "Flbumpertop"
     },
     "bits": false
   },

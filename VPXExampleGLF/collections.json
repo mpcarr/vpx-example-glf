@@ -863,7 +863,10 @@
       "L40",
       "BL3a",
       "BL2a",
-      "BL1a"
+      "BL1a",
+      "BL1b",
+      "BL3b",
+      "BL2b"
     ],
     "fire_events": false,
     "stop_single_events": false,

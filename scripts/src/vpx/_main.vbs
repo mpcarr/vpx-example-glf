@@ -41,7 +41,6 @@
 ' 	ZRRL: Ramp Rolling Sounds
 ' 	ZFLE: Fleep Mechanical Sounds
 ' 	ZFLD: Flupper Domes
-' 	ZFLB: Flupper Bumpers
 ' 	ZVRS: VR Stuff
 '   ZGCF: GLF Configurations
 '
