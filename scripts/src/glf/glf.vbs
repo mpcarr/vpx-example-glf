@@ -528,7 +528,7 @@ Public Sub Glf_Init()
 	If glf_production_mode = False Then
 		Dim fso1, TxtFileStream1
 		Set fso1 = CreateObject("Scripting.FileSystemObject")
-		Set TxtFileStream1 = fso1.OpenTextFile("cached-functions.vbs", 2, True)
+		Set TxtFileStream1 = fso1.OpenTextFile("scripts/cached-functions.vbs", 2, True)
 		TxtFileStream1.WriteLine glf_codestr
 		TxtFileStream1.Close
 	End If
