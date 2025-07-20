@@ -29,7 +29,6 @@ build/
 *.temp
 *~
 *.swp
-*.res
 
 # OS / Editor files
 .DS_Store
