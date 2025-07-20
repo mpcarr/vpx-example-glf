@@ -79,3 +79,28 @@ jobs:
         with:
           name: ${{ steps.gamename.outputs.game_name }}_${{ steps.version.outputs.build_number }}
           path: ./${{ steps.gamename.outputs.game_name }}${{ steps.version.outputs.build_number }}.vpx
+
+      - name: Download Godot 4.4.1 Headless
+        run: |
+          Invoke-WebRequest -Uri https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_win64.exe.zip -OutFile godot.zip
+          Expand-Archive godot.zip -DestinationPath godot_engine
+        shell: pwsh
+
+      - name: Download Godot 4.4.1 Export Templates
+        run: |
+          Invoke-WebRequest -Uri https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_export_templates.tpz -OutFile templates.tpz
+          mkdir "$env:APPDATA\Godot\export_templates\4.4.1.stable" -Force
+          tar -xf templates.tpz -C "$env:APPDATA\Godot\export_templates\4.4.1.stable"
+        shell: pwsh
+
+      - name: Export Godot Project (Windows)
+        run: |
+          mkdir godot_builds
+          .\godot_engine\Godot_v4.4.1-stable_win64.exe --headless --path godot/GMCDisplay --export-release "Windows Desktop" godot_builds\GMCDisplay.exe
+        shell: pwsh
+
+      - name: Upload Godot EXE Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: godot_build_${{ steps.version.outputs.build_number }}
+          path: godot_builds/GMCDisplay.exe
