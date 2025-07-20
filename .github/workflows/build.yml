@@ -26,13 +26,10 @@ jobs:
           echo "game_name=$game_name" >> $env:GITHUB_OUTPUT
         shell: pwsh
 
-      - name: Calculate Build Number
+      - name: Set Build Number from GitHub Run
         id: version
         run: |
-          $first_commit = git rev-list --max-parents=0 HEAD
-          $build_number = git rev-list $first_commit..HEAD --count
-          echo "build_number=$build_number"
-          echo "build_number=$build_number" >> $env:GITHUB_OUTPUT
+          echo "build_number=${{ github.run_number }}" >> $env:GITHUB_OUTPUT
         shell: pwsh
 
       - name: Install Node.js and Grunt
@@ -44,13 +41,20 @@ jobs:
         run: npm install -g grunt-cli
         shell: pwsh
 
-      - name: Run Grunt to Concat VPX Files
+      - name: Run Grunt to Concat VPX Files and Set Production Mode
         run: |
           cd scripts
           npm install
-          grunt concat:vpx
+          grunt concat:prod
+
+          # Change glf_production_mode = False → True
+          (Get-Content dest/vpx/tablescript.vbs) -replace 'glf_production_mode = False', 'glf_production_mode = True' |
+            Set-Content dest/vpx/tablescript.vbs
+
+          # Move modified script into game folder
           Move-Item -Path dest/vpx/tablescript.vbs -Destination ../${{ steps.gamename.outputs.game_name }}/script.vbs -Force
         shell: pwsh
+
 
       - name: Install jq (JSON Processor)
         run: |
@@ -75,34 +79,94 @@ jobs:
           Rename-Item -Path .\${{ steps.gamename.outputs.game_name }}.vpx -NewName "${{ steps.gamename.outputs.game_name }}${{ steps.version.outputs.build_number }}.vpx"
         shell: pwsh
 
+
+      - name: Check for Godot Project Folder
+        id: check_godot
+        run: |
+          if (Test-Path ".\godot\GMCDisplay") {
+            echo "exists=true" >> $env:GITHUB_OUTPUT
+          } else {
+            echo "exists=false" >> $env:GITHUB_OUTPUT
+          }
+        shell: pwsh
+
       - name: Upload VPX Artifact
+        if: steps.check_godot.outputs.exists == 'false'
         uses: actions/upload-artifact@v4
         with:
           name: ${{ steps.gamename.outputs.game_name }}_${{ steps.version.outputs.build_number }}
           path: ./${{ steps.gamename.outputs.game_name }}${{ steps.version.outputs.build_number }}.vpx
 
+
       - name: Download Godot 4.4.1 Headless
+        if: steps.check_godot.outputs.exists == 'true'
         run: |
           Invoke-WebRequest -Uri https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_win64.exe.zip -OutFile godot.zip
           Expand-Archive godot.zip -DestinationPath godot_engine
         shell: pwsh
 
-      - name: Download Godot 4.4.1 Export Templates
+      - name: Download and Extract Godot 4.4.1 Export Templates
+        if: steps.check_godot.outputs.exists == 'true'
         run: |
+          $target = "$env:APPDATA\Godot\export_templates\4.4.1.stable"
+          $temp = "temp_templates"
+
           Invoke-WebRequest -Uri https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_export_templates.tpz -OutFile templates.tpz
-          mkdir "$env:APPDATA\Godot\export_templates\4.4.1.stable" -Force
-          tar -xf templates.tpz -C "$env:APPDATA\Godot\export_templates\4.4.1.stable"
+          mkdir $temp -Force
+          mkdir $target -Force
+
+          tar -xf templates.tpz -C $temp
+
+          # Move contents of templates/ inside temp to the real target
+          Move-Item "$temp/templates/*" $target -Force
+
+          # Clean up
+          Remove-Item $temp -Recurse -Force
         shell: pwsh
 
       - name: Export Godot Project (Windows)
+        if: steps.check_godot.outputs.exists == 'true'
         run: |
           mkdir godot_builds
-          ls -l
-          .\godot_engine\Godot_v4.4.1-stable_win64.exe --headless --path godot/GMCDisplay --export-release "Windows" godot_builds\GMCDisplay.exe
+          .\godot_engine\Godot_v4.4.1-stable_win64.exe --headless --path .\godot\GMCDisplay --export-release "Windows Desktop" 2>&1 | Tee-Object -FilePath godot_export.log
+
+          Write-Host "`n📄 Export Log:"
+          Get-Content godot_export.log
+
+          if (!(Test-Path "godot_builds\GMCDisplay.exe")) {
+            Write-Host "❌ Export failed: GMCDisplay.exe not found."
+            Get-ChildItem -Recurse godot_builds
+            exit 1
+          }
+
+          Write-Host "✅ Export succeeded. Contents of godot_builds:"
+          Get-ChildItem -Recurse godot_builds
         shell: pwsh
 
-      - name: Upload Godot EXE Artifact
+      - name: Rename Godot EXE
+        if: steps.check_godot.outputs.exists == 'true'
+        run: |
+          $original = "godot_builds\GMCDisplay.exe"
+          $renamed = "godot_builds\${{ steps.gamename.outputs.game_name }}_gmc.exe"
+          Rename-Item -Path $original -NewName (Split-Path $renamed -Leaf)
+        shell: pwsh
+
+
+      - name: Create Combined Artifact ZIP
+        if: steps.check_godot.outputs.exists == 'true'
+        run: |
+          $zipName = "${{ steps.gamename.outputs.game_name }}_${{ steps.version.outputs.build_number }}.zip"
+          mkdir packaged_build
+
+          Copy-Item "${{ steps.gamename.outputs.game_name }}${{ steps.version.outputs.build_number }}.vpx" -Destination packaged_build/
+          Copy-Item "godot_builds/${{ steps.gamename.outputs.game_name }}_gmc.exe" -Destination packaged_build/
+
+          Compress-Archive -Path packaged_build/* -DestinationPath $zipName
+        shell: pwsh
+
+      - name: Upload Combined Artifact
+        if: steps.check_godot.outputs.exists == 'true'
         uses: actions/upload-artifact@v4
         with:
-          name: godot_build_${{ steps.version.outputs.build_number }}
-          path: godot_builds/GMCDisplay.exe
+          name: ${{ steps.gamename.outputs.game_name }}_${{ steps.version.outputs.build_number }}
+          path: ./${{ steps.gamename.outputs.game_name }}_${{ steps.version.outputs.build_number }}.zip
