@@ -90,9 +90,7 @@ Dim glf_master_volume : glf_master_volume = 0.8
 Dim glf_troughSize : glf_troughSize = tnob
 Dim glf_lastTroughSw : glf_lastTroughSw = Null
 Dim glf_game
-With GlfGameSettings()
-	.BallsPerGame = 3
-End With
+
 Dim glf_debugLog : Set glf_debugLog = (new GlfDebugLogFile)()
 Dim glf_debugEnabled : glf_debugEnabled = False
 Dim glf_debug_level : glf_debug_level = "Info"
@@ -132,6 +130,9 @@ End Function
 
 Public Sub Glf_Init()
 	Glf_Options Null 'Force Options Check
+	With GlfGameSettings()
+		.BallsPerGame = 3
+	End With
 	Glf_RegisterLights()
 	glf_debugLog.WriteToLog "Init", "Start"
 	If glf_troughSize > 0 Then : swTrough1.DestroyBall : Set glf_ball1 = swTrough1.CreateSizedballWithMass(Ballsize / 2,Ballmass) : gBot = Array(glf_ball1) : Set glf_lastTroughSw = swTrough1 : End If
@@ -528,7 +529,7 @@ Public Sub Glf_Init()
 	If glf_production_mode = False Then
 		Dim fso1, TxtFileStream1
 		Set fso1 = CreateObject("Scripting.FileSystemObject")
-		Set TxtFileStream1 = fso1.OpenTextFile("scripts/cached-functions.vbs", 2, True)
+		Set TxtFileStream1 = fso1.OpenTextFile("cached-functions.vbs", 2, True)
 		TxtFileStream1.WriteLine glf_codestr
 		TxtFileStream1.Close
 	End If
