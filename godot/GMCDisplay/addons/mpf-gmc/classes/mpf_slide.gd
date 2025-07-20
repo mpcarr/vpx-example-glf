@@ -5,6 +5,9 @@ var _widgets: Control
 
 ## A scene root node for creating a Slide that can be added to a display stack using events and the slide_player.
 
+## If true, this slide will not be considered "active" in the slide stack
+@export var mask_from_active: bool = false
+
 func initialize(n: String, settings: Dictionary, c: String, p: int = 0, kwargs: Dictionary = {}) -> void:
 	# The node name attribute is the name of the root node, which could be
 	# anything or case-sensitive. Set an explicit key instead, using the name.
@@ -19,7 +22,7 @@ func process_widget(widget_name: String, action: String, settings: Dictionary, c
 	self.process_action(widget_name, self._widgets.get_children(), action, settings, c, p, kwargs)
 
 func action_play(widget_name: String, settings: Dictionary, c: String, p: int = 0, kwargs: Dictionary = {}) -> MPFWidget:
-	var widget: Control = MPF.media.get_widget_instance(widget_name)
+	var widget: Node = MPF.media.get_widget_instance(widget_name)
 	assert(widget is MPFWidget, "Widget scenes must use (or extend) the MPFWidget script on the root node.")
 	widget.initialize(widget_name, settings, c, p, kwargs)
 	self._widgets.add_child(widget)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://belkug6sa4arr"]
 
 [ext_resource type="Script" uid="uid://dhf0unkx1huc6" path="res://addons/mpf-gmc/slides/startup.gd" id="1_cfjlx"]
-[ext_resource type="Texture2D" uid="uid://cbfkr1n2jw7ow" path="res://addons/mpf-gmc/images/glf-logo.webp" id="2_q0iro"]
+[ext_resource type="Texture2D" uid="uid://eqpveflvbbap" path="res://resources/Backglassimage.png" id="2_q0iro"]
 
 [node name="MPFSlide" type="Control"]
 layout_mode = 3
@@ -36,8 +36,8 @@ layout_mode = 2
 custom_minimum_size = Vector2(2.08165e-12, 300)
 layout_mode = 2
 texture = ExtResource("2_q0iro")
-expand_mode = 2
-stretch_mode = 5
+expand_mode = 3
+stretch_mode = 4
 
 [node name="status_main" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
