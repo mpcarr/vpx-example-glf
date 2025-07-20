@@ -12,6 +12,10 @@ module.exports = function (grunt) {
     },
     concat: {
       vpx: {
+        src: ['src/vpx/**/*.vbs', 'src/game/**/*.vbs', 'src/glf/glf.vbs', 'src/glf/shows/*.vbs','src/glf/yamlshows/*.vbs', '!src/glf/yamlshows/*.yaml', '!src/unittests/**/*.vbs', '!src/**/*.test.vbs', '!src/**/*-mpf.vbs', '!src/**/*-ignore.vbs', 'src/**/cached-functions.vbs'],
+        dest: 'dest/vpx/tablescript.vbs',
+      },
+      prod: {
         src: ['src/vpx/**/*.vbs', 'src/game/**/*.vbs', 'src/glf/glf.vbs', 'src/glf/shows/*.vbs','src/glf/yamlshows/*.vbs', '!src/glf/yamlshows/*.yaml', '!src/unittests/**/*.vbs', '!src/**/*.test.vbs', '!src/**/*-mpf.vbs', '!src/**/*-ignore.vbs'],
         dest: 'dest/vpx/tablescript.vbs',
       },

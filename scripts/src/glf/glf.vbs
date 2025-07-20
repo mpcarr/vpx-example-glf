@@ -74,7 +74,7 @@ Dim glf_production_mode : glf_production_mode = False
 Dim useGlfBCPMonitor : useGlfBCPMonitor = False
 Dim useBCP : useBCP = False
 Dim bcpPort : bcpPort = 5050
-Dim bcpExeName : bcpExeName = ""
+Dim bcpExeName : bcpExeName = CGameName & "_gmc.exe"
 Dim glf_monitor_player_vars : glf_monitor_player_vars = false
 Dim glf_BIP : glf_BIP = 0
 Dim glf_FuncCount : glf_FuncCount = 0
@@ -101,7 +101,11 @@ Dim glf_debug_level : glf_debug_level = "Info"
 Dim glf_ball1, glf_ball2, glf_ball3, glf_ball4, glf_ball5, glf_ball6, glf_ball7, glf_ball8	
 
 Public Sub Glf_ConnectToBCPMediaController(args)
-    Set bcpController = (new GlfVpxBcpController)(bcpPort, bcpExeName)
+	If glf_production_mode = True Then
+    	Set bcpController = (new GlfVpxBcpController)(bcpPort, bcpExeName)
+	Else
+		Set bcpController = (new GlfVpxBcpController)(bcpPort, "")
+	End If
 End Sub
 
 Public Sub Glf_ConnectToDebugBCPMediaController(args)
@@ -520,7 +524,14 @@ Public Sub Glf_Init()
 	Glf_ReadMachineVars("MachineVars")
 	Glf_ReadMachineVars("HighScores")
 	glf_debugLog.WriteToLog "Init", "Finished Creating Machine Vars"
-	glf_debugLog.WriteToLog "Code String", glf_codestr
+	'glf_debugLog.WriteToLog "Code String", glf_codestr
+	If glf_production_mode = False Then
+		Dim fso1, TxtFileStream1
+		Set fso1 = CreateObject("Scripting.FileSystemObject")
+		Set TxtFileStream1 = fso1.OpenTextFile("cached-functions.vbs", 2, True)
+		TxtFileStream1.WriteLine glf_codestr
+		TxtFileStream1.Close
+	End If
 
 	SetDelay "reset", "Glf_Reset", Null, 1000
 End Sub

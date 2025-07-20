@@ -8,7 +8,7 @@
     "extract-vpx": "powershell -Command \"$gameName = Get-Content ../gamename.txt | Select-Object -First 1; vpxtool extract ../$gameName.vpx\"",
     "assemble-vpx": "powershell -Command \"$gameName = Get-Content ../gamename.txt | Select-Object -First 1; vpxtool assemble ../$gameName\"",
     "script-watcher": "grunt watch:vpx",
-    "concat-vpx": "grunt concat:vpx",
+    "concat-vpx": "grunt concat:prod",
     "convert-shows": "node mpf-show-convert.js src/glf/yamlshows",
     "convert-shows-tokens": "node mpf-show-convert-tokens.js src/glf/yamlshows",
     "rename-project": "node rename-reset-project.js",

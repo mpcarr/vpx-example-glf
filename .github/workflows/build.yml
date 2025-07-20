@@ -41,13 +41,20 @@ jobs:
         run: npm install -g grunt-cli
         shell: pwsh
 
-      - name: Run Grunt to Concat VPX Files
+      - name: Run Grunt to Concat VPX Files and Set Production Mode
         run: |
           cd scripts
           npm install
-          grunt concat:vpx
+          grunt concat:prod
+
+          # Change glf_production_mode = False → True
+          (Get-Content dest/vpx/tablescript.vbs) -replace 'glf_production_mode = False', 'glf_production_mode = True' |
+            Set-Content dest/vpx/tablescript.vbs
+
+          # Move modified script into game folder
           Move-Item -Path dest/vpx/tablescript.vbs -Destination ../${{ steps.gamename.outputs.game_name }}/script.vbs -Force
         shell: pwsh
+
 
       - name: Install jq (JSON Processor)
         run: |
