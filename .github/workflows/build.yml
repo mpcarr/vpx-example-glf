@@ -26,13 +26,10 @@ jobs:
           echo "game_name=$game_name" >> $env:GITHUB_OUTPUT
         shell: pwsh
 
-      - name: Calculate Build Number
+      - name: Set Build Number from GitHub Run
         id: version
         run: |
-          $first_commit = git rev-list --max-parents=0 HEAD
-          $build_number = git rev-list $first_commit..HEAD --count
-          echo "build_number=$build_number"
-          echo "build_number=$build_number" >> $env:GITHUB_OUTPUT
+          echo "build_number=${{ github.run_number }}" >> $env:GITHUB_OUTPUT
         shell: pwsh
 
       - name: Install Node.js and Grunt
@@ -123,11 +120,16 @@ jobs:
           Get-ChildItem -Recurse godot_builds
         shell: pwsh
 
-
-
+      - name: Rename Godot EXE
+        run: |
+          $original = "godot_builds\GMCDisplay.exe"
+          $renamed = "godot_builds\${{ steps.gamename.outputs.game_name }}_gmc.exe"
+          Rename-Item -Path $original -NewName (Split-Path $renamed -Leaf)
+        shell: pwsh
 
       - name: Upload Godot EXE Artifact
         uses: actions/upload-artifact@v4
         with:
           name: godot_build_${{ steps.version.outputs.build_number }}
-          path: godot_builds/GMCDisplay.exe
+          path: godot_builds/${{ steps.gamename.outputs.game_name }}_gmc.exe
+
