@@ -26,6 +26,15 @@ jobs:
           echo "game_name=$game_name" >> $env:GITHUB_OUTPUT
         shell: pwsh
 
+      - name: Calculate Build Number
+        id: version
+        run: |
+          $first_commit = git rev-list --max-parents=0 HEAD
+          $build_number = git rev-list $first_commit..HEAD --count
+          echo "build_number=$build_number"
+          echo "build_number=$build_number" >> $env:GITHUB_OUTPUT
+        shell: pwsh
+
       - name: Install Node.js and Grunt
         uses: actions/setup-node@v4
         with:
@@ -48,30 +57,11 @@ jobs:
           choco install jq -y
         shell: pwsh
 
-      - name: Modify Locked and Increment Revision
+      - name: Modify Locked Property in JSON
         run: |
-          # Set locked = 1 in gamedata.json
-          jq '.locked = 1' "${{ steps.gamename.outputs.game_name }}/gamedata.json" > temp_gamedata.json
-          mv temp_gamedata.json "${{ steps.gamename.outputs.game_name }}/gamedata.json"
-
-          # Increment table_save_rev in info.json
-          jq '.table_save_rev |= (tonumber + 1 | tostring)' "${{ steps.gamename.outputs.game_name }}/info.json" > temp_info.json
-          mv temp_info.json "${{ steps.gamename.outputs.game_name }}/info.json"
-
-          echo "🔒 Locked gamedata.json and incremented table_save_rev in info.json"
+          jq '.locked = 1' ${{ steps.gamename.outputs.game_name }}/gamedata.json > temp.json
+          mv temp.json ${{ steps.gamename.outputs.game_name }}/gamedata.json
         shell: bash
-
-
-      - name: Read Version from info.json
-        id: version
-        run: |
-          $info = Get-Content "${{ steps.gamename.outputs.game_name }}/info.json" | ConvertFrom-Json
-          $version = $info.table_version
-          $rev = $info.table_save_rev
-          $build = "$version" + "_" + "$rev"
-          echo "Build Version: $build"
-          echo "build_number=$build" >> $env:GITHUB_OUTPUT
-        shell: pwsh
 
       - name: Download vpxtool
         run: |
@@ -107,11 +97,9 @@ jobs:
       - name: Export Godot Project (Windows)
         run: |
           mkdir godot_builds
+          ls -l
           .\godot_engine\Godot_v4.4.1-stable_win64.exe --headless --path godot/GMCDisplay --export-release "Windows" godot_builds\GMCDisplay.exe
-          Write-Host "`n📁 Contents of godot_builds:"
-          Get-ChildItem -Recurse godot_builds
         shell: pwsh
-
 
       - name: Upload Godot EXE Artifact
         uses: actions/upload-artifact@v4
