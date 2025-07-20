@@ -97,10 +97,6 @@ jobs:
       - name: Export Godot Project (Windows)
         run: |
           mkdir godot_builds
-          cd ..
-          Write-Host "📁 Listing current directory contents:"
-          Get-ChildItem -Recurse | Format-List
-          
           .\godot_engine\Godot_v4.4.1-stable_win64.exe --headless --path godot/GMCDisplay --export-release "Windows" godot_builds\GMCDisplay.exe
           
           Write-Host "📁 Contents of godot_builds after export:"
