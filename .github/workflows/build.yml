@@ -30,6 +30,7 @@ jobs:
         id: version
         run: |
           $first_commit = git rev-list --max-parents=0 HEAD
+          echo $first_commit
           $build_number = git rev-list $first_commit..HEAD --count
           echo "build_number=$build_number"
           echo "build_number=$build_number" >> $env:GITHUB_OUTPUT
