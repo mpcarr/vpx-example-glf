@@ -94,6 +94,18 @@ jobs:
           tar -xf templates.tpz -C "$env:APPDATA\Godot\export_templates\4.4.1.stable"
         shell: pwsh
 
+      - name: List Godot Export Templates
+        run: |
+          $exportPath = Join-Path $env:APPDATA "Godot\export_templates\4.4.1.stable"
+          Write-Host "`n📁 Contents of $exportPath:"
+          if (Test-Path $exportPath) {
+            Get-ChildItem -Recurse $exportPath | Format-List
+          } else {
+            Write-Host "❌ Export templates folder not found."
+            exit 1
+          }
+        shell: pwsh
+
       - name: Export Godot Project (Windows)
         run: |
           mkdir godot_builds
