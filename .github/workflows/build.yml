@@ -159,12 +159,17 @@ jobs:
 
           mkdir $outDir
 
+          # Copy files into the packaging folder
           Copy-Item "${{ steps.gamename.outputs.game_name }}${{ steps.version.outputs.build_number }}.vpx" -Destination $outDir/
           Copy-Item "godot_builds/${{ steps.gamename.outputs.game_name }}_gmc.exe" -Destination $outDir/
 
-          # Use full path to files to avoid nested folder issue
+          # Add the .directb2s file from repo root (if it exists)
+          Copy-Item "${{ steps.gamename.outputs.game_name }}.directb2s" -Destination $outDir/ -ErrorAction SilentlyContinue
+
+          # Zip the contents (not the folder itself)
           Compress-Archive -Path (Get-ChildItem $outDir -Recurse).FullName -DestinationPath $zipName
         shell: pwsh
+
 
 
       - name: Upload Combined Artifact
