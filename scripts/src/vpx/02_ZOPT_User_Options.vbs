@@ -11,6 +11,7 @@ Dim BallRollVolume : BallRollVolume = 0.5   	' Level of ball rolling volume. Val
 Dim RampRollVolume : RampRollVolume = 0.5 		' Level of ramp rolling volume. Value between 0 and 1
 Dim StagedFlipper : StagedFlipper = 0         	' Staged Flipper. 0 = Disabled, 1 = Enabled
 Dim VRRoomChoice : VRRoomChoice = 0	            ' 1 - Minimal Room, 2 - Ultra Minimal Room
+Dim ShowSideRails : ShowSideRails = 1			' 0 - Hide, 1 - Show
 Dim VRRoom
 
 ' Called when options are tweaked by the player. 
@@ -52,6 +53,9 @@ Sub Table1_OptionEvent(ByVal eventId)
 
     ' Staged Flippers
     StagedFlipper = Table1.Option("Staged Flippers", 0, 1, 1, 0, 0, Array("Disabled", "Enabled"))
+
+	' Show Side Rails
+	ShowSideRails = Table1.Option("Side Rails", 0, 1, 1, 1, 0, Array("Hide", "Show"))
 
     ' VR
 	VRRoomChoice = Table1.Option("VR Room", 1, 2, 1, 1, 0, Array("Minimal", "Ultra Minimal"))
