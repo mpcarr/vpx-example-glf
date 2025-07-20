@@ -97,11 +97,18 @@ jobs:
       - name: Export Godot Project (Windows)
         run: |
           mkdir godot_builds
-          .\godot_engine\Godot_v4.4.1-stable_win64.exe --headless --path godot/GMCDisplay --export-release "Windows" godot_builds\GMCDisplay.exe
-          
-          Write-Host "📁 Contents of godot_builds after export:"
+          .\godot_engine\Godot_v4.4.1-stable_win64.exe --headless --path godot/GMCDisplay --export-release "Windows"
+
+          if (!(Test-Path "godot_builds/GMSDisplay.exe")) {
+            Write-Host "❌ Export failed: GMSDisplay.exe not found."
+            Get-ChildItem -Recurse godot_builds
+            exit 1
+          }
+
+          Write-Host "✅ Export succeeded. Contents of godot_builds:"
           Get-ChildItem -Recurse godot_builds
         shell: pwsh
+
 
 
       - name: Upload Godot EXE Artifact
