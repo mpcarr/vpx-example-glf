@@ -56,6 +56,13 @@ jobs:
               $_
             }
           }
+          $lines = $lines | ForEach-Object {
+            if ($_ -eq 'Dim glf_FuncCount : glf_FuncCount = 0') {
+              'Dim glf_FuncCount : glf_FuncCount = 9999'
+            } else {
+              $_
+            }
+          }
           $lines | Set-Content dest/vpx/tablescript.vbs
 
           # Move modified script into game folder
@@ -166,7 +173,7 @@ jobs:
           mkdir $outDir
 
           # Copy files into the packaging folder
-          Copy-Item "${{ steps.gamename.outputs.game_name }}${{ steps.version.outputs.build_number }}.vpx" -Destination $outDir/
+          Copy-Item "${{ steps.gamename.outputs.game_name }}.vpx" -Destination $outDir/
           Copy-Item "godot_builds/${{ steps.gamename.outputs.game_name }}_gmc.exe" -Destination $outDir/
 
           # Add the .directb2s file from repo root (if it exists)

@@ -129,10 +129,10 @@ Public Function SwitchHandler(handler, args)
 End Function
 
 Public Sub Glf_Init()
-	Glf_Options Null 'Force Options Check
 	With GlfGameSettings()
 		.BallsPerGame = 3
 	End With
+	Glf_Options Null 'Force Options Check
 	Glf_RegisterLights()
 	glf_debugLog.WriteToLog "Init", "Start"
 	If glf_troughSize > 0 Then : swTrough1.DestroyBall : Set glf_ball1 = swTrough1.CreateSizedballWithMass(Ballsize / 2,Ballmass) : gBot = Array(glf_ball1) : Set glf_lastTroughSw = swTrough1 : End If
