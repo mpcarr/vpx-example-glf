@@ -87,12 +87,24 @@ jobs:
           Expand-Archive godot.zip -DestinationPath godot_engine
         shell: pwsh
 
-      - name: Download Godot 4.4.1 Export Templates
+      - name: Download and Extract Godot 4.4.1 Export Templates
         run: |
+          $target = "$env:APPDATA\Godot\export_templates\4.4.1.stable"
+          $temp = "temp_templates"
+
           Invoke-WebRequest -Uri https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_export_templates.tpz -OutFile templates.tpz
-          mkdir "$env:APPDATA\Godot\export_templates\4.4.1.stable" -Force
-          tar -xf templates.tpz -C "$env:APPDATA\Godot\export_templates\4.4.1.stable"
+          mkdir $temp -Force
+          mkdir $target -Force
+
+          tar -xf templates.tpz -C $temp
+
+          # Move contents of templates/ inside temp to the real target
+          Move-Item "$temp/templates/*" $target -Force
+
+          # Clean up
+          Remove-Item $temp -Recurse -Force
         shell: pwsh
+
 
       - name: List Godot Export Templates
         run: |
