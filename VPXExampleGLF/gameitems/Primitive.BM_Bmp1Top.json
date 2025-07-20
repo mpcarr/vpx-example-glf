@@ -61,7 +61,7 @@
     "light_map": "",
     "reflection_probe": "",
     "reflection_strength": 0.3,
-    "refraction_probe": "Refraction Pass 2",
-    "refraction_thickness": 1.0
+    "refraction_probe": "Bumper Caps",
+    "refraction_thickness": 3.0
   }
 }

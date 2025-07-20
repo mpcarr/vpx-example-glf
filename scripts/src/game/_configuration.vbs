@@ -35,6 +35,9 @@ Const MagnetColor = "ffff00"
 Const BonusColor = "fc7703"
 Const SpinnerLeftColor = "ed0000"
 Const SpinnerRightColor = "fcfc03"
+Const Bumper1Color = "ffff00"
+Const Bumper2Color = "00ffff"
+Const Bumper3Color = "ff00ff"
 
 Const SegmentsColor = "00ffff"
 
@@ -153,29 +156,29 @@ Sub ConfigureGlfDevices()
     ' These variables are tracked for this machine. 
     ' Initial values are set first time the machine turns on. After that, values are read from the machines ini file.
 
-    With CreateMachineVar("high_score_initials")
+    With CreateMachineVar("high_score_initials")        'captures high score initials during high score mode
         .InitialValue = ""
         .ValueType = "string"
         .Persist = False
     End With
-    With CreateMachineVar("high_score_initials_index")
+    With CreateMachineVar("high_score_initials_index")  'used to index through high score initials
         .InitialValue = 0
         .ValueType = "int"
         .Persist = False
     End With
-    With CreateMachineVar("high_score_initials_chars")
+    With CreateMachineVar("high_score_initials_chars")  'used to count current number of high score initials
         .InitialValue = 0
         .ValueType = "int"
         .Persist = False
     End With
 
-    With CreateMachineVar("bottom_ball_locked")
-        .InitialValue = 0
+    With CreateMachineVar("bottom_ball_locked")         '0 when no ball is locked in bottom saucer, 1 when ball is locked
+        .InitialValue = 0                               'used to maintain state of lock across players
         .ValueType = "int"
         .Persist = False
     End With
-    With CreateMachineVar("top_ball_locked")
-        .InitialValue = 0
+    With CreateMachineVar("top_ball_locked")            '0 when no ball is locked in top saucer, 1 when ball is locked
+        .InitialValue = 0                               'used to maintain state of lock across players
         .ValueType = "int"
         .Persist = False
     End With
@@ -186,16 +189,16 @@ Sub ConfigureGlfDevices()
     ' These variables are tracked per player. 
     'Initial values set at the beginning of each game.
 
-    Glf_SetInitialPlayerVar "ball_just_started", 1
+    Glf_SetInitialPlayerVar "ball_just_started", 1      '1 when ball just started, 0 after it launches from plunger
     Glf_SetInitialPlayerVar "ss_running", 0             '0 when skillshots are not active, 1 when active
     Glf_SetInitialPlayerVar "target_hit_count", 0       'used in targetbank mode
     Glf_SetInitialPlayerVar "scoring_multiplier", 1     'current playfield score multiplier
     Glf_SetInitialPlayerVar "bonus_multiplier", 1       'current bonus score multiplier
-    Glf_SetInitialPlayerVar "bonus_total", 0
-    Glf_SetInitialPlayerVar "bonus_count", 0
-    Glf_SetInitialPlayerVar "bonus_skip", 0
-    Glf_SetInitialPlayerVar "hs_input_ready", 1
-    Glf_SetInitialPlayerVar "spin_show", 1
+    Glf_SetInitialPlayerVar "spin_show", 1              'flag used to toggle the spinner shows
+    Glf_SetInitialPlayerVar "bonus_total", 0            'total bonus score, calculated in bonus mode
+    Glf_SetInitialPlayerVar "bonus_count", 0            'number of bonus lights achieved, calculated in bonus mode
+    Glf_SetInitialPlayerVar "bonus_skip", 0             'flag to capture if player wants to skip the bonus tally shows in bonus mode
+    Glf_SetInitialPlayerVar "hs_input_ready", 1         'flag to capture when high score mode is ready for player input
     
     
 
