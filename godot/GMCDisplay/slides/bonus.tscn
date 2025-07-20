@@ -5,7 +5,7 @@
 [ext_resource type="Theme" uid="uid://b1eua1hgsadbh" path="res://resources/Score.tres" id="3_ktofo"]
 [ext_resource type="Script" uid="uid://bojo76gkx41ow" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_vubgl"]
 
-[node name="Bonus" type="Control" node_paths=PackedStringArray("animation_player")]
+[node name="Bonus" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,7 +13,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4xgho")
-animation_player = NodePath("")
 metadata/_custom_type_script = "uid://cdwas3gbf7w3g"
 
 [node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]

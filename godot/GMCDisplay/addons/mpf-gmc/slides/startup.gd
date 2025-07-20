@@ -28,9 +28,9 @@ func _on_status(new_status):
 		error_node.hide()
 		match new_status:
 			ServerStatus.WAITING:
-				message = "Waiting for Connection"
+				message = "Waiting to connect..."
 			ServerStatus.LAUNCHING:
-				message = "Launching"
+				message = "Launching..."
 			ServerStatus.CONNECTED:
 				message = "Connected"
 			ServerStatus.IDLE:
