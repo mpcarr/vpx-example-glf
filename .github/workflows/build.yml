@@ -105,24 +105,15 @@ jobs:
           Remove-Item $temp -Recurse -Force
         shell: pwsh
 
-
-      - name: List Godot Export Templates
-        run: |
-          $exportPath = Join-Path $env:APPDATA "Godot\export_templates\4.4.1.stable"
-          if (Test-Path $exportPath) {
-            Get-ChildItem -Recurse $exportPath | Format-List
-          } else {
-            Write-Host "❌ Export templates folder not found."
-            exit 1
-          }
-        shell: pwsh
-
       - name: Export Godot Project (Windows)
         run: |
           mkdir godot_builds
-          .\godot_engine\Godot_v4.4.1-stable_win64.exe --headless --path .\godot\GMCDisplay --export-release "Windows Desktop"
+          .\godot_engine\Godot_v4.4.1-stable_win64.exe --headless --path .\godot\GMCDisplay --export-release "Windows Desktop" 2>&1 | Tee-Object -FilePath godot_export.log
 
-          if (!(Test-Path "godot_builds/GMSDisplay.exe")) {
+          Write-Host "`n📄 Export Log:"
+          Get-Content godot_export.log
+
+          if (!(Test-Path "godot_builds\GMSDisplay.exe")) {
             Write-Host "❌ Export failed: GMSDisplay.exe not found."
             Get-ChildItem -Recurse godot_builds
             exit 1
@@ -131,6 +122,7 @@ jobs:
           Write-Host "✅ Export succeeded. Contents of godot_builds:"
           Get-ChildItem -Recurse godot_builds
         shell: pwsh
+
 
 
 
