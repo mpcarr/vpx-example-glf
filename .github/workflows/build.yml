@@ -97,7 +97,7 @@ jobs:
       - name: Export Godot Project (Windows)
         run: |
           mkdir godot_builds
-          .\godot_engine\Godot_v4.4.1-stable_win64.exe --headless --path godot/GMCDisplay --export-release "Windows Desktop"
+          .\godot_engine\Godot_v4.4.1-stable_win64.exe --headless --path .\godot\GMCDisplay --export-release "Windows Desktop"
 
           if (!(Test-Path "godot_builds/GMSDisplay.exe")) {
             Write-Host "❌ Export failed: GMSDisplay.exe not found."
