@@ -71,6 +71,7 @@ Sub SetupRoom
         For Each obj in VR_Display: obj.visible = 0: Next
 		For Each obj in VR_DisplayBall: obj.visible = 0: Next
         For Each obj In DesktopLights: obj.visible = DesktopMode: Next
+		PinCab_Rails.visible = ShowSideRails
     End If
 End Sub
 

@@ -3090,10 +3090,16 @@ Dim glf_L41_lmarr : glf_L41_lmarr = Array()
 glf_lightMaps.Add "L41", glf_L41_lmarr
 Dim glf_L40_lmarr : glf_L40_lmarr = Array()
 glf_lightMaps.Add "L40", glf_L40_lmarr
-Dim glf_BL3a_lmarr : glf_BL3a_lmarr = Array(lm_bl3a_top)
+Dim glf_BL3a_lmarr : glf_BL3a_lmarr = Array(lm_bl3a_top,f_bl3a_)
 glf_lightMaps.Add "BL3a", glf_BL3a_lmarr
-Dim glf_BL2a_lmarr : glf_BL2a_lmarr = Array(lm_bl2a_top2)
+Dim glf_BL2a_lmarr : glf_BL2a_lmarr = Array(lm_bl2a_top2,f_bl2a_)
 glf_lightMaps.Add "BL2a", glf_BL2a_lmarr
-Dim glf_BL1a_lmarr : glf_BL1a_lmarr = Array(lm_bl1a_top2)
+Dim glf_BL1a_lmarr : glf_BL1a_lmarr = Array(lm_bl1a_top2,f_bl1a_)
 glf_lightMaps.Add "BL1a", glf_BL1a_lmarr
+Dim glf_BL1b_lmarr : glf_BL1b_lmarr = Array()
+glf_lightMaps.Add "BL1b", glf_BL1b_lmarr
+Dim glf_BL3b_lmarr : glf_BL3b_lmarr = Array()
+glf_lightMaps.Add "BL3b", glf_BL3b_lmarr
+Dim glf_BL2b_lmarr : glf_BL2b_lmarr = Array()
+glf_lightMaps.Add "BL2b", glf_BL2b_lmarr
 
