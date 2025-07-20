@@ -97,7 +97,6 @@ jobs:
       - name: List Godot Export Templates
         run: |
           $exportPath = Join-Path $env:APPDATA "Godot\export_templates\4.4.1.stable"
-          Write-Host "`n📁 Contents of $exportPath:"
           if (Test-Path $exportPath) {
             Get-ChildItem -Recurse $exportPath | Format-List
           } else {
