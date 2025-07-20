@@ -72,19 +72,34 @@ jobs:
           Rename-Item -Path .\${{ steps.gamename.outputs.game_name }}.vpx -NewName "${{ steps.gamename.outputs.game_name }}${{ steps.version.outputs.build_number }}.vpx"
         shell: pwsh
 
+
+      - name: Check for Godot Project Folder
+        id: check_godot
+        run: |
+          if (Test-Path ".\godot\GMCDisplay") {
+            echo "exists=true" >> $env:GITHUB_OUTPUT
+          } else {
+            echo "exists=false" >> $env:GITHUB_OUTPUT
+          }
+        shell: pwsh
+
       - name: Upload VPX Artifact
+        if: steps.check_godot.outputs.exists == 'false'
         uses: actions/upload-artifact@v4
         with:
           name: ${{ steps.gamename.outputs.game_name }}_${{ steps.version.outputs.build_number }}
           path: ./${{ steps.gamename.outputs.game_name }}${{ steps.version.outputs.build_number }}.vpx
 
+
       - name: Download Godot 4.4.1 Headless
+        if: steps.check_godot.outputs.exists == 'true'
         run: |
           Invoke-WebRequest -Uri https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_win64.exe.zip -OutFile godot.zip
           Expand-Archive godot.zip -DestinationPath godot_engine
         shell: pwsh
 
       - name: Download and Extract Godot 4.4.1 Export Templates
+        if: steps.check_godot.outputs.exists == 'true'
         run: |
           $target = "$env:APPDATA\Godot\export_templates\4.4.1.stable"
           $temp = "temp_templates"
@@ -103,6 +118,7 @@ jobs:
         shell: pwsh
 
       - name: Export Godot Project (Windows)
+        if: steps.check_godot.outputs.exists == 'true'
         run: |
           mkdir godot_builds
           .\godot_engine\Godot_v4.4.1-stable_win64.exe --headless --path .\godot\GMCDisplay --export-release "Windows Desktop" 2>&1 | Tee-Object -FilePath godot_export.log
@@ -121,15 +137,29 @@ jobs:
         shell: pwsh
 
       - name: Rename Godot EXE
+        if: steps.check_godot.outputs.exists == 'true'
         run: |
           $original = "godot_builds\GMCDisplay.exe"
           $renamed = "godot_builds\${{ steps.gamename.outputs.game_name }}_gmc.exe"
           Rename-Item -Path $original -NewName (Split-Path $renamed -Leaf)
         shell: pwsh
 
-      - name: Upload Godot EXE Artifact
+
+      - name: Create Combined Artifact ZIP
+        if: steps.check_godot.outputs.exists == 'true'
+        run: |
+          $zipName = "${{ steps.gamename.outputs.game_name }}_${{ steps.version.outputs.build_number }}.zip"
+          mkdir packaged_build
+
+          Copy-Item "${{ steps.gamename.outputs.game_name }}${{ steps.version.outputs.build_number }}.vpx" -Destination packaged_build/
+          Copy-Item "godot_builds/${{ steps.gamename.outputs.game_name }}_gmc.exe" -Destination packaged_build/
+
+          Compress-Archive -Path packaged_build/* -DestinationPath $zipName
+        shell: pwsh
+
+      - name: Upload Combined Artifact
+        if: steps.check_godot.outputs.exists == 'true'
         uses: actions/upload-artifact@v4
         with:
-          name: godot_build_${{ steps.version.outputs.build_number }}
-          path: godot_builds/${{ steps.gamename.outputs.game_name }}_gmc.exe
-
+          name: ${{ steps.gamename.outputs.game_name }}_${{ steps.version.outputs.build_number }}
+          path: ./${{ steps.gamename.outputs.game_name }}_${{ steps.version.outputs.build_number }}.zip
