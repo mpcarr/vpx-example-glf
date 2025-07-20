@@ -1,10 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dmbdgnuhm7o42"]
+[gd_scene load_steps=3 format=3 uid="uid://dmbdgnuhm7o42"]
 
 [ext_resource type="Script" uid="uid://dwcsp83138nco" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_s4oq6"]
-[ext_resource type="Script" uid="uid://bovvfqn5tn81w" path="res://widgets/control.gd" id="2_e4g11"]
-[ext_resource type="VideoStream" uid="uid://c8jvwegbv1sae" path="res://resources/spinner.ogv" id="3_rtgyn"]
-[ext_resource type="Material" uid="uid://bckey3p67mngd" path="res://resources/chroma_key.tres" id="4_jkrc8"]
-[ext_resource type="Texture2D" uid="uid://mc2u2oumdynf" path="res://icon.svg" id="5_n17u8"]
+[ext_resource type="SpriteFrames" uid="uid://bs08bt4pywimq" path="res://resources/super_spinner/super_spinner.tres" id="2_wh4mh"]
 
 [node name="Spinner" type="Control"]
 layout_mode = 3
@@ -16,33 +13,8 @@ grow_vertical = 2
 script = ExtResource("1_s4oq6")
 metadata/_custom_type_script = "uid://dwcsp83138nco"
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("2_e4g11")
-
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Control"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-stream = ExtResource("3_rtgyn")
-autoplay = true
-
-[node name="TextureRect" type="TextureRect" parent="Control"]
-material = ExtResource("4_jkrc8")
-custom_minimum_size = Vector2(300, 300)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5_n17u8")
-expand_mode = 2
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 254)
+sprite_frames = ExtResource("2_wh4mh")
+autoplay = "default"
+centered = false
