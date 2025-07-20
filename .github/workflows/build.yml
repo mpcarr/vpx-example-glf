@@ -97,6 +97,7 @@ jobs:
       - name: Export Godot Project (Windows)
         run: |
           mkdir godot_builds
+          cd ..
           ls -l
           .\godot_engine\Godot_v4.4.1-stable_win64.exe --headless --path godot/GMCDisplay --export-release "Windows" godot_builds\GMCDisplay.exe
         shell: pwsh
