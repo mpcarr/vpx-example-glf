@@ -158,28 +158,14 @@ jobs:
         shell: pwsh
 
 
-      - name: Create Combined Artifact ZIP
-        run: |
-          $zipName = "${{ steps.gamename.outputs.game_name }}_${{ steps.version.outputs.build_number }}.zip"
-          $outDir = "packaged_build"
-
-          mkdir $outDir
-
-          # Copy files into the packaging folder
-          Copy-Item "${{ steps.gamename.outputs.game_name }}${{ steps.version.outputs.build_number }}.vpx" -Destination $outDir/
-          Copy-Item "godot_builds/${{ steps.gamename.outputs.game_name }}_gmc.exe" -Destination $outDir/
-
-          # Add the .directb2s file from repo root (if it exists)
-          Copy-Item "${{ steps.gamename.outputs.game_name }}.directb2s" -Destination $outDir/ -ErrorAction SilentlyContinue
-
-          # Compress contents only (change directory first)
-          Push-Location $outDir
-          Compress-Archive -Path * -DestinationPath "..\$zipName"
-          Pop-Location
-        shell: pwsh
-
-
-
+      - name: Upload Game Bundle Files (no zip)
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.gamename.outputs.game_name }}_${{ steps.version.outputs.build_number }}
+          path: |
+            packaged_build/*.vpx
+            packaged_build/*.exe
+            packaged_build/*.directb2s
 
       - name: Upload Combined Artifact
         if: steps.check_godot.outputs.exists == 'true'
