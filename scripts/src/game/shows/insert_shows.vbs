@@ -1,0 +1,227 @@
+
+Sub CreateInsertShows()
+
+    With CreateGlfShow("insert_swap2")
+    With .AddStep(Null, Null, 0.1)
+        .Lights = Array( _
+        "L01|(intensity)|(color1)", _
+        "L02|(intensity)|(color2)", _
+        "L03|(intensity)|(color1)", _
+        "L04|(intensity)|(color2)", _
+        "L05|(intensity)|(color1)", _
+        "L06|(intensity)|(color2)", _
+        "L07|(intensity)|(color1)", _
+        "L08|(intensity)|(color2)", _
+        "L09|(intensity)|(color1)", _
+        "L10|(intensity)|(color2)", _
+        "L11|(intensity)|(color1)", _
+        "L12|(intensity)|(color2)", _
+        "L13|(intensity)|(color1)", _
+        "L14|(intensity)|(color2)", _
+        "L15|(intensity)|(color1)", _
+        "L16|(intensity)|(color2)", _
+        "L17|(intensity)|(color1)", _
+        "L18|(intensity)|(color2)", _
+        "L19|(intensity)|(color1)", _
+        "L20|(intensity)|(color2)", _
+        "L21|(intensity)|(color1)", _
+        "L22|(intensity)|(color2)", _
+        "L23|(intensity)|(color1)", _
+        "L24|(intensity)|(color2)", _
+        "L25|(intensity)|(color1)", _
+        "L26|(intensity)|(color2)", _
+        "L27|(intensity)|(color1)", _
+        "L28|(intensity)|(color2)", _
+        "L29|(intensity)|(color1)", _
+        "L30|(intensity)|(color2)", _
+        "L31|(intensity)|(color1)", _
+        "L32|(intensity)|(color2)", _
+        "L33|(intensity)|(color1)", _
+        "L34|(intensity)|(color2)", _
+        "L35|(intensity)|(color1)", _
+        "L36|(intensity)|(color2)", _
+        "L37|(intensity)|(color1)", _
+        "L38|(intensity)|(color2)", _
+        "L39|(intensity)|(color1)" _
+        )
+    End With
+    With .AddStep(Null, Null, 0.1)
+        .Lights = Array( _
+        "L01|(intensity)|(color2)", _
+        "L02|(intensity)|(color1)", _
+        "L03|(intensity)|(color2)", _
+        "L04|(intensity)|(color1)", _
+        "L05|(intensity)|(color2)", _
+        "L06|(intensity)|(color1)", _
+        "L07|(intensity)|(color2)", _
+        "L08|(intensity)|(color1)", _
+        "L09|(intensity)|(color2)", _
+        "L10|(intensity)|(color1)", _
+        "L11|(intensity)|(color2)", _
+        "L12|(intensity)|(color1)", _
+        "L13|(intensity)|(color2)", _
+        "L14|(intensity)|(color1)", _
+        "L15|(intensity)|(color2)", _
+        "L16|(intensity)|(color1)", _
+        "L17|(intensity)|(color2)", _
+        "L18|(intensity)|(color1)", _
+        "L19|(intensity)|(color2)", _
+        "L20|(intensity)|(color1)", _
+        "L21|(intensity)|(color2)", _
+        "L22|(intensity)|(color1)", _
+        "L23|(intensity)|(color2)", _
+        "L24|(intensity)|(color1)", _
+        "L25|(intensity)|(color2)", _
+        "L26|(intensity)|(color1)", _
+        "L27|(intensity)|(color2)", _
+        "L28|(intensity)|(color1)", _
+        "L29|(intensity)|(color2)", _
+        "L30|(intensity)|(color1)", _
+        "L31|(intensity)|(color2)", _
+        "L32|(intensity)|(color1)", _
+        "L33|(intensity)|(color2)", _
+        "L34|(intensity)|(color1)", _
+        "L35|(intensity)|(color2)", _
+        "L36|(intensity)|(color1)", _
+        "L37|(intensity)|(color2)", _
+        "L38|(intensity)|(color1)", _
+        "L39|(intensity)|(color2)" _
+        )
+    End With
+End With
+
+
+With CreateGlfShow("insert_swap3")
+    With .AddStep(Null, Null, 0.1)
+        .Lights = Array( _
+        "L01|(intensity)|(color1)", _
+        "L02|(intensity)|(color2)", _
+        "L03|(intensity)|(color3)", _
+        "L04|(intensity)|(color1)", _
+        "L05|(intensity)|(color2)", _
+        "L06|(intensity)|(color3)", _
+        "L07|(intensity)|(color1)", _
+        "L08|(intensity)|(color2)", _
+        "L09|(intensity)|(color3)", _
+        "L10|(intensity)|(color1)", _
+        "L11|(intensity)|(color2)", _
+        "L12|(intensity)|(color3)", _
+        "L13|(intensity)|(color1)", _
+        "L14|(intensity)|(color2)", _
+        "L15|(intensity)|(color3)", _
+        "L16|(intensity)|(color1)", _
+        "L17|(intensity)|(color2)", _
+        "L18|(intensity)|(color3)", _
+        "L19|(intensity)|(color1)", _
+        "L20|(intensity)|(color2)", _
+        "L21|(intensity)|(color3)", _
+        "L22|(intensity)|(color1)", _
+        "L23|(intensity)|(color2)", _
+        "L24|(intensity)|(color3)", _
+        "L25|(intensity)|(color1)", _
+        "L26|(intensity)|(color2)", _
+        "L27|(intensity)|(color3)", _
+        "L28|(intensity)|(color1)", _
+        "L29|(intensity)|(color2)", _
+        "L30|(intensity)|(color3)", _
+        "L31|(intensity)|(color1)", _
+        "L32|(intensity)|(color2)", _
+        "L33|(intensity)|(color3)", _
+        "L34|(intensity)|(color1)", _
+        "L35|(intensity)|(color2)", _
+        "L36|(intensity)|(color3)", _
+        "L37|(intensity)|(color1)", _
+        "L38|(intensity)|(color2)", _
+        "L39|(intensity)|(color3)" _
+        )
+    End With
+    With .AddStep(Null, Null, 0.1)
+        .Lights = Array( _
+        "L01|(intensity)|(color3)", _
+        "L02|(intensity)|(color1)", _
+        "L03|(intensity)|(color2)", _
+        "L04|(intensity)|(color3)", _
+        "L05|(intensity)|(color1)", _
+        "L06|(intensity)|(color2)", _
+        "L07|(intensity)|(color3)", _
+        "L08|(intensity)|(color1)", _
+        "L09|(intensity)|(color2)", _
+        "L10|(intensity)|(color3)", _
+        "L11|(intensity)|(color1)", _
+        "L12|(intensity)|(color2)", _
+        "L13|(intensity)|(color3)", _
+        "L14|(intensity)|(color1)", _
+        "L15|(intensity)|(color2)", _
+        "L16|(intensity)|(color3)", _
+        "L17|(intensity)|(color1)", _
+        "L18|(intensity)|(color2)", _
+        "L19|(intensity)|(color3)", _
+        "L20|(intensity)|(color1)", _
+        "L21|(intensity)|(color2)", _
+        "L22|(intensity)|(color3)", _
+        "L23|(intensity)|(color1)", _
+        "L24|(intensity)|(color2)", _
+        "L25|(intensity)|(color3)", _
+        "L26|(intensity)|(color1)", _
+        "L27|(intensity)|(color2)", _
+        "L28|(intensity)|(color3)", _
+        "L29|(intensity)|(color1)", _
+        "L30|(intensity)|(color2)", _
+        "L31|(intensity)|(color3)", _
+        "L32|(intensity)|(color1)", _
+        "L33|(intensity)|(color2)", _
+        "L34|(intensity)|(color3)", _
+        "L35|(intensity)|(color1)", _
+        "L36|(intensity)|(color2)", _
+        "L37|(intensity)|(color3)", _
+        "L38|(intensity)|(color1)", _
+        "L39|(intensity)|(color2)" _
+        )
+    End With
+    With .AddStep(Null, Null, 0.1)
+        .Lights = Array( _
+        "L01|(intensity)|(color2)", _
+        "L02|(intensity)|(color3)", _
+        "L03|(intensity)|(color1)", _
+        "L04|(intensity)|(color2)", _
+        "L05|(intensity)|(color3)", _
+        "L06|(intensity)|(color1)", _
+        "L07|(intensity)|(color2)", _
+        "L08|(intensity)|(color3)", _
+        "L09|(intensity)|(color1)", _
+        "L10|(intensity)|(color2)", _
+        "L11|(intensity)|(color3)", _
+        "L12|(intensity)|(color1)", _
+        "L13|(intensity)|(color2)", _
+        "L14|(intensity)|(color3)", _
+        "L15|(intensity)|(color1)", _
+        "L16|(intensity)|(color2)", _
+        "L17|(intensity)|(color3)", _
+        "L18|(intensity)|(color1)", _
+        "L19|(intensity)|(color2)", _
+        "L20|(intensity)|(color3)", _
+        "L21|(intensity)|(color1)", _
+        "L22|(intensity)|(color2)", _
+        "L23|(intensity)|(color3)", _
+        "L24|(intensity)|(color1)", _
+        "L25|(intensity)|(color2)", _
+        "L26|(intensity)|(color3)", _
+        "L27|(intensity)|(color1)", _
+        "L28|(intensity)|(color2)", _
+        "L29|(intensity)|(color3)", _
+        "L30|(intensity)|(color1)", _
+        "L31|(intensity)|(color2)", _
+        "L32|(intensity)|(color3)", _
+        "L33|(intensity)|(color1)", _
+        "L34|(intensity)|(color2)", _
+        "L35|(intensity)|(color3)", _
+        "L36|(intensity)|(color1)", _
+        "L37|(intensity)|(color2)", _
+        "L38|(intensity)|(color3)", _
+        "L39|(intensity)|(color1)" _
+        )
+    End With
+End With
+
+
+End Sub

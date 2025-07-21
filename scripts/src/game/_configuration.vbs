@@ -51,6 +51,8 @@ Dim SkillshotLightNames: SkillshotLightNames = Array("L31","L30","L29","L28")   
 Dim TargetBankSwitches: TargetBankSwitches = Array("s_DT1","s_DT2","s_DT3","s_DT4","s_DT5","s_DT6")    'target bank switches, shots 1 to 6
 Dim TargetBankLightNames: TargetBankLightNames = Array("L33","L34","L35","L36","L37","L38")   'target bank lights, shots 1 to 6
 Dim BonusLightNames: BonusLightNames = Array("L10","L11","L12","L13","L14","L15","L16","L17") 
+Dim GILightNames: GILightNames = Array("gi001","gi006","gi007","gi008","gi009","gi010","gi011","gi012","gi013","gi014","gi015", _
+                                       "gi016","gi017","gi018","gi019","gi020","gi021","gi022","gi024","gi050") 
 
 ' Create the list of scores available to be awarded during the game
 Dim ScoreArray: ScoreArray = Array(1,10,100,333,500,1000,2000,3000,3333,5000,10000,20000,30000,33333,50000,100000,200000,500000,1000000)
@@ -70,6 +72,7 @@ Sub ConfigureGlfDevices()
     CreateBackglassShows()
     CreateMultiballShows()
     CreateSpinnerShows()
+    CreateInsertShows()
 
 
     ' Load shared shot profiles
