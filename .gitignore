@@ -16,7 +16,6 @@ data_*/       # Temporary build data for Mono
 bin/
 build/
 *.exe
-*.dll
 *.so
 *.dylib
 *.apk
