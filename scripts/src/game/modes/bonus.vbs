@@ -63,7 +63,7 @@ Sub CreateBonusMode()
 
 
         With .SlidePlayer()
-            With .EventName("mode_bonus_started")
+            With .EventName("run_bonus_started.2")
                 .Slide = "bonus"
                 .Action = "play"
             End With
