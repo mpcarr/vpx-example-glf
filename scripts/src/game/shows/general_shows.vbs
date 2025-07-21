@@ -1,6 +1,18 @@
 
 Sub CreateGeneralShows()
 
+    With CreateGlfShow("fade_color_on_off_on")
+        With .AddStep(Null, Null, .02)
+            .Lights = Array("(lights)|100|(color)")
+        End With
+        With .AddStep(Null, Null, .5)
+            .Lights = Array("(lights)|100|000000|800")
+        End With
+        With .AddStep(Null, Null, .5)
+            .Lights = Array("(lights)|100|(color)|800")
+        End With
+    End With
+
     With CreateGlfShow("flicker_color")
         With .AddStep(Null, Null, .16)
             .Lights = Array("(lights)|37|(color)")

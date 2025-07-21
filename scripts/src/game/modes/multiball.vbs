@@ -42,18 +42,21 @@ Sub CreateMultiballMode()
             .Add "update_lock_shots{machine.bottom_ball_locked == 0 && current_player.shot_bottom_lock == 2}", Array("reset_bottom_lock") 'resets the bottom lock shot to not locked
             
             'Jackpot hits
-            .Add "s_RampHit_active{current_player.shot_left_jackpot == 1}", Array("score_1000000","add_bonus","jackpot_show","play_sfx_jackpot")
-            .Add "balldevice_kicker2_ball_entered{current_player.shot_right_jackpot == 1}", Array("score_1000000","add_bonus","jackpot_show","play_sfx_jackpot")
+            .Add "s_RampHit_active{current_player.shot_left_jackpot == 1}", Array("score_1000000","add_bonus","play_jackpot_show","play_sfx_jackpot")
+            .Add "balldevice_kicker2_ball_entered{current_player.shot_right_jackpot == 1}", Array("score_1000000","add_bonus","play_jackpot_show","play_sfx_jackpot")
 
             'Start multiball
             .Add "timer_start_multiball_delay_complete", Array("start_multiball")
 
-            'Handle music and callouts
-            .Add "start_multiball", Array("stop_mus_ambient_loop","play_mus_multiball_loop","play_mb_bg_show")
-            .Add "multiball_mb_ended", Array("play_mus_ambient_loop","stop_mus_multiball_loop","stop_mb_bg_show")
+            'Handle start and stop of multiball
+            .Add "start_multiball", Array("stop_mus_ambient_loop","play_mus_multiball_loop","play_mb_bg_show","restart_gi_show_timer")
+            .Add "multiball_mb_ended", Array("play_mus_ambient_loop","stop_mus_multiball_loop","stop_mb_bg_show","stop_gi_show_timer")
             .Add "sfx_jackpot_stopped", Array("play_voc_jackpot")   'play callout after the sfx
-
             .Add "stop_mb_bg_show", Array("backglass_on")
+            
+            'During multiball, play GI show where randomly each GI light will fade out and back in.
+            .Add "timer_gi_show_tick", Array("play_gi_fade")
+            .Add "timer_gi_show_complete", Array("restart_gi_show_timer")
 
         End With
 
@@ -67,6 +70,15 @@ Sub CreateMultiballMode()
                 .ForceAll = False
                 .ForceDifferent = False
             End With
+
+            'Fade out and back in a GI light
+            With .EventName("play_gi_fade")
+                For x = 0 to 19
+                    .Add "play_fade_"&GILightNames(x), 1
+                Next
+                .ForceAll = True
+                .ForceDifferent = True
+            End With   
         End With
 
 
@@ -103,6 +115,7 @@ Sub CreateMultiballMode()
 
         'Play shows specific to this mode
         With .ShowPlayer()
+            'Backglass show during multiball
             With .EventName("play_mb_bg_show")
                 .Key = "key_mb_bg_show"
                 .Show = "mb_backglass_show"
@@ -116,6 +129,34 @@ Sub CreateMultiballMode()
                 .Speed = 1
                 .Action = "stop"
             End With
+
+            'Jackpot inserts show
+            With .EventName("play_jackpot_show")
+                .Key = "key_jackpot_show"
+                .Show = "insert_swap2" 
+                .Speed = 1.5
+                .Loops = 3
+                .Priority = 1000
+                With .Tokens()
+                    .Add "color1", "ffffff"
+                    .Add "color2", JackpotColor
+                    .Add "intensity", 100
+                End With
+            End With
+
+            'GI flicker
+            For x = 0 to 19
+                With .EventName("play_fade_"&GILightNames(x))   
+                    .Key = "key_fade_"&GILightNames(x)
+                    .Show = "fade_color_on_off_on"   'defined in CreateGeneralShows()
+                    .Speed = 1
+                    .Loops = 1
+                    With .Tokens()
+                        .Add "lights", GILightNames(x)
+                        .Add "color", JackpotColor
+                    End With
+                End With
+            Next
         End With
 
 
@@ -277,6 +318,22 @@ Sub CreateMultiballMode()
             With .ControlEvents()
                 .EventName = "start_multiball_delay"
                 .Action = "restart"
+            End With
+            .Debug = True
+        End With
+
+        'This timer controls the GI show during multiball
+        With .Timers("gi_show")
+            .TickInterval = 300
+            .StartValue = 0
+            .EndValue = 10
+            With .ControlEvents()
+                .EventName = "restart_gi_show_timer"
+                .Action = "restart"
+            End With
+            With .ControlEvents()
+                .EventName = "stop_gi_show_timer"
+                .Action = "stop"
             End With
             .Debug = True
         End With

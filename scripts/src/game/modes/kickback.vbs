@@ -26,7 +26,7 @@ Sub CreateKickbackMode()
             .Add "mode_kickback_started", Array("reset_kickback")
 
             'Fire the kickback if it is lit
-            .Add "s_LeftInOutlane_inactive{current_player.shot_kickback_ready > 0}", Array("fire_kickback","score_10000")
+            .Add "s_LeftInOutlane_inactive{current_player.shot_kickback_ready > 0}", Array("fire_kickback","score_10000","play_kickback_show")
 
             'Reset the kickback plunger shortly after it was used (so that it may be used again)
             .Add "timer_kickback_reset_complete", Array("reset_kickback")
@@ -116,6 +116,20 @@ Sub CreateKickbackMode()
                 With .Tokens()
                     .Add "fade", 500
                     .Add "color", KickbackColor
+                End With
+            End With
+        End With
+
+        With .ShowPlayer()
+            'kickback show
+            With .EventName("play_kickback_show")
+                .Key = "key_kickback_show"
+                .Show = "sweep_up" 
+                .Speed = 4
+                .Loops = 1
+                .Priority = 10000
+                With .Tokens()
+                    .Add "color", "ff0000"
                 End With
             End With
         End With

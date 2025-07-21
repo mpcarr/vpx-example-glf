@@ -150,13 +150,13 @@ Sub CreateBasementMode()
             ' End With
             With .EventName("test_show") 
                 .Key = "key_test_show1"
-                .Show = "flash_color_with_fade" 
-                .Speed = 10
+                .Show = "fade_color_on_off_on"   'defined in CreateGeneralShows()
+                .Speed = 1
                 .Loops = 1
+                .Priority = 20000
                 With .Tokens()
-                    .Add "lights", "FL1"
-                    .Add "fade", 500
-                    .Add "color", SpinnerLeftColor
+                    .Add "lights", "GI"
+                    .Add "color", "ff0000"
                 End With
             End With
 
