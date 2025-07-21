@@ -198,3 +198,5 @@ jobs:
             packaged_build/*.vpx
             packaged_build/*.exe
             packaged_build/*.directb2s
+            bcp-controller/**
+
