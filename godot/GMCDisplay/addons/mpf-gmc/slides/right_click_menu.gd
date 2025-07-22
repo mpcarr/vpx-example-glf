@@ -21,6 +21,7 @@ func _ready():
 	self.connect("id_pressed", Callable(self, "_on_self_item_pressed"))
 
 	self.add_item("Toggle Borderless Window", 3)
+	self.add_item("Toggle Always On Top", 4)
 
 
 	self.add_separator()
@@ -35,7 +36,9 @@ func _on_self_item_pressed(id):
 		3:
 			var is_borderless := DisplayServer.window_get_flag(DisplayServer.WINDOW_FLAG_BORDERLESS)
 			DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, !is_borderless)
-
+		4:
+			var is_always_on_top := DisplayServer.window_get_flag(DisplayServer.WINDOW_FLAG_ALWAYS_ON_TOP)
+			DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_ALWAYS_ON_TOP, !is_always_on_top)
 
 func _on_resolution_selected(id):
 	match id:
