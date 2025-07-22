@@ -59,6 +59,7 @@ func _on_resolution_selected(id):
 
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)  # Ensure not fullscreen
 	DisplayServer.window_set_size(size)  # Force the OS-level resize
+	DisplayServer.window_set_position(Vector2(0,0))
 	save_window_settings()
 
 func save_window_settings():
