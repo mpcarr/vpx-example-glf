@@ -365,7 +365,7 @@ Sub CreateMultiballMode()
             With .Transitions()
                 .Source = Array("closed")
                 .Target = "opened"
-                .Events = Array("top_lock_ready","timer_diverter_reopen_complete")
+                .Events = Array("top_lock_ready","timer_diverter_reopen_complete{devices.state_machines.multiball.state!=""mb_running""}")
             End With
             With .Transitions()
                 .Source = Array("opened")
