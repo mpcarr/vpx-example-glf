@@ -2889,6 +2889,9 @@ Class GlfVpxBcpController
         m_connected = True
         useBcp = True
         m_mode_list = ""
+        If backboxCommand = "" Then
+            m_bcpController.EnableLogging()
+        End If
         AddPinEventListener "player_added", "bcp_player_added", "GlfVpxBcpControllerEventHandler", 50, Array("player_added")
         AddPinEventListener "next_player", "bcp_player_next_player", "GlfVpxBcpControllerEventHandler", 50, Array("next_player")
         AddPinEventListener "game_started", "bcp_player_next_player", "GlfVpxBcpControllerEventHandler", 50, Array("next_player")
