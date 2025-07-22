@@ -10763,7 +10763,7 @@
     "is_locked": true,
     "editor_layer": 7,
     "editor_layer_name": "VR Cabinet",
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   },
   {
     "file_name": "Primitive.PinCab_DMD.json",
