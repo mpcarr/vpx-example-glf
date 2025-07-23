@@ -32,14 +32,17 @@ Sub CreateMultiballMode()
         With .EventPlayer()
             .Debug = True
 
-            'Handle allowing players to steal locked balls
-            .Add "update_lock_shots{machine.top_ball_locked == 1}", Array("top_locked") 'closes diverter and sets shot to locked state
-            .Add "update_lock_shots{machine.top_ball_locked == 0 && current_player.shot_top_lock == 1}", Array("top_lock_ready") 're-opens the diverter
-            .Add "update_lock_shots{machine.top_ball_locked == 0 && current_player.shot_top_lock == 2}", Array("reset_top_lock") 'resets the top lock shot to not locked
+            'At start of mode, initializing multiball state machine after other stuff has already initialized
+            .Add "mode_multiball_started.1", Array("check_locks")
 
-            .Add "update_lock_shots{machine.bottom_ball_locked == 1}", Array("bottom_locked") 'sets shot to locked state
-            .Add "update_lock_shots{machine.bottom_ball_locked == 0 && current_player.shot_bottom_lock == 1}", Array("bottom_lock_ready") 'this is not necessary since lock is already ready. But do it anyway.
-            .Add "update_lock_shots{machine.bottom_ball_locked == 0 && current_player.shot_bottom_lock == 2}", Array("reset_bottom_lock") 'resets the bottom lock shot to not locked
+            'Handle allowing players to steal locked balls
+            .Add "update_lock_shots.6{machine.top_ball_locked == 1}", Array("top_locked") 'closes diverter and sets shot to locked state
+            .Add "update_lock_shots.5{machine.top_ball_locked == 0 && current_player.locks_qualfiied == 1}", Array("top_lock_ready") 're-opens the diverter
+            .Add "update_lock_shots.4{machine.top_ball_locked == 0 && current_player.locks_qualfiied == 0 && current_player.shot_top_lock == 2}", Array("reset_top_lock") 'resets the top lock shot to not locked
+
+            .Add "update_lock_shots.3{machine.bottom_ball_locked == 1}", Array("bottom_locked") 'sets shot to locked state
+            .Add "update_lock_shots.2{machine.bottom_ball_locked == 0 && current_player.locks_qualfiied == 1}", Array("bottom_lock_ready") 'this is not necessary since lock is already ready. But do it anyway.
+            .Add "update_lock_shots.1{machine.bottom_ball_locked == 0 && current_player.locks_qualfiied == 0 && current_player.shot_bottom_lock == 2}", Array("reset_bottom_lock") 'resets the bottom lock shot to not locked
             
             'Jackpot hits
             .Add "s_RampHit_active{current_player.shot_left_jackpot == 1}", Array("score_1000000","add_bonus","play_jackpot_show","play_sfx_jackpot")
@@ -170,7 +173,7 @@ Sub CreateMultiballMode()
             'States
             With .States("init1")
                 .Label = "Init Phase 1"
-                .EventsWhenStarted = Array("check_locks")  'check if balls are locked using machine variables. 
+                '.EventsWhenStarted = Array("check_locks")  'check if balls are locked using machine variables. 
             End With
             With .States("init2")
                 .Label = "Init Phase 2"
@@ -242,19 +245,19 @@ Sub CreateMultiballMode()
                 .Source = Array("qualifying")
                 .Target = "locking_both"
                 .Events = Array("qualify_lock_on_complete{current_player.shot_bottom_lock == 0 && current_player.shot_top_lock == 0}")
-                .EventsWhenTransitioning = Array("play_voc_lock_is_lit")
+                .EventsWhenTransitioning = Array("play_voc_lock_is_lit","locks_are_qualified")
             End With
             With .Transitions()
                 .Source = Array("qualifying")
                 .Target = "locking_top"
                 .Events = Array("qualify_lock_on_complete{current_player.shot_bottom_lock == 2 && current_player.shot_top_lock == 0}")
-                .EventsWhenTransitioning = Array("play_voc_lock_is_lit")
+                .EventsWhenTransitioning = Array("play_voc_lock_is_lit","locks_are_qualified")
             End With
             With .Transitions()
                 .Source = Array("qualifying")
                 .Target = "locking_bottom"
                 .Events = Array("qualify_lock_on_complete{current_player.shot_bottom_lock == 0 && current_player.shot_top_lock == 2}")
-                .EventsWhenTransitioning = Array("play_voc_lock_is_lit")
+                .EventsWhenTransitioning = Array("play_voc_lock_is_lit","locks_are_qualified")
             End With
 
             With .Transitions()
@@ -583,6 +586,19 @@ Sub CreateMultiballMode()
 				With .Variable("multiball_lock_mb_locks_balls_locked")
                     .Action = "set"
 					.Int = "machine.bottom_ball_locked + machine.top_ball_locked"
+				End With
+			End With
+
+            With .EventName("locks_are_qualified")
+				With .Variable("locks_qualfiied")
+                    .Action = "set"
+					.Int = 1
+				End With
+			End With
+            With .EventName("restart_qualify_lock")
+				With .Variable("locks_qualfiied")
+                    .Action = "set"
+					.Int = 0
 				End With
 			End With
 
