@@ -10885,13 +10885,6 @@
     "editor_layer_visibility": false
   },
   {
-    "file_name": "Primitive.PinCab_Shooter.json",
-    "is_locked": true,
-    "editor_layer": 10,
-    "editor_layer_name": "VR Cabinet",
-    "editor_layer_visibility": false
-  },
-  {
     "file_name": "Primitive.PinCab_LegsFront.json",
     "is_locked": true,
     "editor_layer": 7,
@@ -11470,6 +11463,13 @@
     "is_locked": true,
     "editor_layer": 7,
     "editor_layer_name": "Bumpers",
+    "editor_layer_visibility": false
+  },
+  {
+    "file_name": "Primitive.PinCab_Shooter.json",
+    "is_locked": true,
+    "editor_layer": 10,
+    "editor_layer_name": "VR Cabinet",
     "editor_layer_visibility": false
   }
 ]
