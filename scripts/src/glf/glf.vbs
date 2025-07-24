@@ -95,6 +95,7 @@ Dim glf_debugLog : Set glf_debugLog = (new GlfDebugLogFile)()
 Dim glf_debugEnabled : glf_debugEnabled = False
 Dim glf_debug_level : glf_debug_level = "Info"
 
+Dim glf_table
 
 Dim glf_ball1, glf_ball2, glf_ball3, glf_ball4, glf_ball5, glf_ball6, glf_ball7, glf_ball8	
 
@@ -134,7 +135,8 @@ Public Function SwitchHandler(handler, args)
 
 End Function
 
-Public Sub Glf_Init()
+Public Sub Glf_Init(ByRef table)
+    Set glf_table = table
 	With GlfGameSettings()
 		.BallsPerGame = 3
 	End With
@@ -13660,11 +13662,13 @@ Class GlfLightSegmentDisplay
     End Sub
 
     Public Sub SetVirtualDMDLights(input)
-        If m_flex_dmd_index>-1 Then
-            Dim x
-            For x=0 to UBound(m_lights)
-                glf_lightNames(m_lights(x)).Visible = input
-            Next
+        If glf_table.ShowDT Then
+            If m_flex_dmd_index>-1 Then
+                Dim x
+                For x=0 to UBound(m_lights)
+                    glf_lightNames(m_lights(x)).Visible = input
+                Next
+            End If
         End If
     End Sub
 
