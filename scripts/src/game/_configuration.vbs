@@ -452,7 +452,7 @@ Sub ConfigureGlfDevices()
     segment_display_p1.DefaultColor = SegmentsColor
     segment_display_p1.UseDotsForCommas = True
     segment_display_p1.ExternalFlexDmdSegmentIndex = 0
-    segment_display_p1.ExternalB2SSegmentIndex = 0
+    segment_display_p1.ExternalB2SSegmentIndex = 1
 
     Dim segment_display_p2
     Set segment_display_p2 = (New GlfLightSegmentDisplay)("player2")
@@ -464,7 +464,7 @@ Sub ConfigureGlfDevices()
     segment_display_p2.DefaultColor = SegmentsColor
     segment_display_p2.UseDotsForCommas = True
     segment_display_p2.ExternalFlexDmdSegmentIndex = 8
-    segment_display_p2.ExternalB2SSegmentIndex = 8
+    segment_display_p2.ExternalB2SSegmentIndex = 9
 
     Dim segment_display_p3
     Set segment_display_p3 = (New GlfLightSegmentDisplay)("player3")
@@ -476,7 +476,7 @@ Sub ConfigureGlfDevices()
     segment_display_p3.DefaultColor = SegmentsColor
     segment_display_p3.UseDotsForCommas = True
     segment_display_p3.ExternalFlexDmdSegmentIndex = 16
-    segment_display_p3.ExternalB2SSegmentIndex = 16
+    segment_display_p3.ExternalB2SSegmentIndex = 17
 
     Dim segment_display_p4
     Set segment_display_p4 = (New GlfLightSegmentDisplay)("player4")
@@ -488,7 +488,7 @@ Sub ConfigureGlfDevices()
     segment_display_p4.DefaultColor = SegmentsColor
     segment_display_p4.UseDotsForCommas = True
     segment_display_p4.ExternalFlexDmdSegmentIndex = 24
-    segment_display_p4.ExternalB2SSegmentIndex = 24
+    segment_display_p4.ExternalB2SSegmentIndex = 25
 
     Dim segment_display_all
     Set segment_display_all = (New GlfLightSegmentDisplay)("all")
@@ -501,7 +501,7 @@ Sub ConfigureGlfDevices()
     segment_display_all.UseDotsForCommas = True
     segment_display_all.DefaultTransitionUpdateHz = 10
     segment_display_all.ExternalFlexDmdSegmentIndex = 0
-    segment_display_all.ExternalB2SSegmentIndex = 0
+    segment_display_all.ExternalB2SSegmentIndex = 1
 
 
     Dim segment_display_p1p2
@@ -514,7 +514,7 @@ Sub ConfigureGlfDevices()
     segment_display_p1p2.UseDotsForCommas = True
     segment_display_p1p2.DefaultTransitionUpdateHz = 10
     segment_display_p1p2.ExternalFlexDmdSegmentIndex = 0
-    segment_display_p1p2.ExternalB2SSegmentIndex = 0
+    segment_display_p1p2.ExternalB2SSegmentIndex = 1
 
 
 End Sub
