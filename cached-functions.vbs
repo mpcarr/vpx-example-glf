@@ -473,37 +473,37 @@ Function Glf_94(args)
 	    Glf_94 = glf_machine_vars("top_ball_locked").GetValue() = 1
 	If Err Then Glf_94 = False
 End Function
-glf_funcRefMap.Add "update_lock_shots{machine.top_ball_locked == 1}", "Glf_94"
+glf_funcRefMap.Add "update_lock_shots.6{machine.top_ball_locked == 1}", "Glf_94"
 Function Glf_95(args)
 	On Error Resume Next
-	    Glf_95 = glf_machine_vars("top_ball_locked").GetValue() = 0 And GetPlayerState("shot_top_lock") = 1
+	    Glf_95 = glf_machine_vars("top_ball_locked").GetValue() = 0 And GetPlayerState("locks_qualfiied") = 1
 	If Err Then Glf_95 = False
 End Function
-glf_funcRefMap.Add "update_lock_shots{machine.top_ball_locked == 0 && current_player.shot_top_lock == 1}", "Glf_95"
+glf_funcRefMap.Add "update_lock_shots.5{machine.top_ball_locked == 0 && current_player.locks_qualfiied == 1}", "Glf_95"
 Function Glf_96(args)
 	On Error Resume Next
-	    Glf_96 = glf_machine_vars("top_ball_locked").GetValue() = 0 And GetPlayerState("shot_top_lock") = 2
+	    Glf_96 = glf_machine_vars("top_ball_locked").GetValue() = 0 And GetPlayerState("locks_qualfiied") = 0 And GetPlayerState("shot_top_lock") = 2
 	If Err Then Glf_96 = False
 End Function
-glf_funcRefMap.Add "update_lock_shots{machine.top_ball_locked == 0 && current_player.shot_top_lock == 2}", "Glf_96"
+glf_funcRefMap.Add "update_lock_shots.4{machine.top_ball_locked == 0 && current_player.locks_qualfiied == 0 && current_player.shot_top_lock == 2}", "Glf_96"
 Function Glf_97(args)
 	On Error Resume Next
 	    Glf_97 = glf_machine_vars("bottom_ball_locked").GetValue() = 1
 	If Err Then Glf_97 = False
 End Function
-glf_funcRefMap.Add "update_lock_shots{machine.bottom_ball_locked == 1}", "Glf_97"
+glf_funcRefMap.Add "update_lock_shots.3{machine.bottom_ball_locked == 1}", "Glf_97"
 Function Glf_98(args)
 	On Error Resume Next
-	    Glf_98 = glf_machine_vars("bottom_ball_locked").GetValue() = 0 And GetPlayerState("shot_bottom_lock") = 1
+	    Glf_98 = glf_machine_vars("bottom_ball_locked").GetValue() = 0 And GetPlayerState("locks_qualfiied") = 1
 	If Err Then Glf_98 = False
 End Function
-glf_funcRefMap.Add "update_lock_shots{machine.bottom_ball_locked == 0 && current_player.shot_bottom_lock == 1}", "Glf_98"
+glf_funcRefMap.Add "update_lock_shots.2{machine.bottom_ball_locked == 0 && current_player.locks_qualfiied == 1}", "Glf_98"
 Function Glf_99(args)
 	On Error Resume Next
-	    Glf_99 = glf_machine_vars("bottom_ball_locked").GetValue() = 0 And GetPlayerState("shot_bottom_lock") = 2
+	    Glf_99 = glf_machine_vars("bottom_ball_locked").GetValue() = 0 And GetPlayerState("locks_qualfiied") = 0 And GetPlayerState("shot_bottom_lock") = 2
 	If Err Then Glf_99 = False
 End Function
-glf_funcRefMap.Add "update_lock_shots{machine.bottom_ball_locked == 0 && current_player.shot_bottom_lock == 2}", "Glf_99"
+glf_funcRefMap.Add "update_lock_shots.1{machine.bottom_ball_locked == 0 && current_player.locks_qualfiied == 0 && current_player.shot_bottom_lock == 2}", "Glf_99"
 Function Glf_100(args)
 	On Error Resume Next
 	    Glf_100 = GetPlayerState("shot_left_jackpot") = 1
@@ -593,1341 +593,1347 @@ Function Glf_115(args)
 End Function
 glf_funcRefMap.Add "10", "Glf_115"
 Function Glf_116(args)
-	Glf_116 = glf_machine_vars("bottom_ball_locked").GetValue() + glf_machine_vars("top_ball_locked").GetValue()
-End Function
-glf_funcRefMap.Add "machine.bottom_ball_locked + machine.top_ball_locked", "Glf_116"
-Function Glf_117(args)
-	Glf_117 = 1 * GetPlayerState("scoring_multiplier")
-End Function
-glf_funcRefMap.Add "1 * current_player.scoring_multiplier", "Glf_117"
-Function Glf_118(args)
-	Glf_118 = 10 * GetPlayerState("scoring_multiplier")
-End Function
-glf_funcRefMap.Add "10 * current_player.scoring_multiplier", "Glf_118"
-Function Glf_119(args)
-	Glf_119 = 100 * GetPlayerState("scoring_multiplier")
-End Function
-glf_funcRefMap.Add "100 * current_player.scoring_multiplier", "Glf_119"
-Function Glf_120(args)
-	Glf_120 = 333 * GetPlayerState("scoring_multiplier")
-End Function
-glf_funcRefMap.Add "333 * current_player.scoring_multiplier", "Glf_120"
-Function Glf_121(args)
-	Glf_121 = 500 * GetPlayerState("scoring_multiplier")
-End Function
-glf_funcRefMap.Add "500 * current_player.scoring_multiplier", "Glf_121"
-Function Glf_122(args)
-	Glf_122 = 1000 * GetPlayerState("scoring_multiplier")
-End Function
-glf_funcRefMap.Add "1000 * current_player.scoring_multiplier", "Glf_122"
-Function Glf_123(args)
-	Glf_123 = 2000 * GetPlayerState("scoring_multiplier")
-End Function
-glf_funcRefMap.Add "2000 * current_player.scoring_multiplier", "Glf_123"
-Function Glf_124(args)
-	Glf_124 = 3000 * GetPlayerState("scoring_multiplier")
-End Function
-glf_funcRefMap.Add "3000 * current_player.scoring_multiplier", "Glf_124"
-Function Glf_125(args)
-	Glf_125 = 3333 * GetPlayerState("scoring_multiplier")
-End Function
-glf_funcRefMap.Add "3333 * current_player.scoring_multiplier", "Glf_125"
-Function Glf_126(args)
-	Glf_126 = 5000 * GetPlayerState("scoring_multiplier")
-End Function
-glf_funcRefMap.Add "5000 * current_player.scoring_multiplier", "Glf_126"
-Function Glf_127(args)
-	Glf_127 = 10000 * GetPlayerState("scoring_multiplier")
-End Function
-glf_funcRefMap.Add "10000 * current_player.scoring_multiplier", "Glf_127"
-Function Glf_128(args)
-	Glf_128 = 20000 * GetPlayerState("scoring_multiplier")
-End Function
-glf_funcRefMap.Add "20000 * current_player.scoring_multiplier", "Glf_128"
-Function Glf_129(args)
-	Glf_129 = 30000 * GetPlayerState("scoring_multiplier")
-End Function
-glf_funcRefMap.Add "30000 * current_player.scoring_multiplier", "Glf_129"
-Function Glf_130(args)
-	Glf_130 = 33333 * GetPlayerState("scoring_multiplier")
-End Function
-glf_funcRefMap.Add "33333 * current_player.scoring_multiplier", "Glf_130"
-Function Glf_131(args)
-	Glf_131 = 50000 * GetPlayerState("scoring_multiplier")
-End Function
-glf_funcRefMap.Add "50000 * current_player.scoring_multiplier", "Glf_131"
-Function Glf_132(args)
-	Glf_132 = 100000 * GetPlayerState("scoring_multiplier")
-End Function
-glf_funcRefMap.Add "100000 * current_player.scoring_multiplier", "Glf_132"
-Function Glf_133(args)
-	Glf_133 = 200000 * GetPlayerState("scoring_multiplier")
-End Function
-glf_funcRefMap.Add "200000 * current_player.scoring_multiplier", "Glf_133"
-Function Glf_134(args)
-	Glf_134 = 500000 * GetPlayerState("scoring_multiplier")
-End Function
-glf_funcRefMap.Add "500000 * current_player.scoring_multiplier", "Glf_134"
-Function Glf_135(args)
-	Glf_135 = 1000000 * GetPlayerState("scoring_multiplier")
-End Function
-glf_funcRefMap.Add "1000000 * current_player.scoring_multiplier", "Glf_135"
-Function Glf_136(args)
 	On Error Resume Next
-	    Glf_136 = GetPlayerState("shot_bonus_light1") = 0
-	If Err Then Glf_136 = False
+	    Glf_116 = glf_state_machines("multiball").GetValue("state")<>"mb_running"
+	If Err Then Glf_116 = False
 End Function
-glf_funcRefMap.Add "add_bonus{current_player.shot_bonus_light1 == 0}", "Glf_136"
+glf_funcRefMap.Add "timer_diverter_reopen_complete{devices.state_machines.multiball.state!=""mb_running""}", "Glf_116"
+Function Glf_117(args)
+	Glf_117 = glf_machine_vars("bottom_ball_locked").GetValue() + glf_machine_vars("top_ball_locked").GetValue()
+End Function
+glf_funcRefMap.Add "machine.bottom_ball_locked + machine.top_ball_locked", "Glf_117"
+Function Glf_118(args)
+	Glf_118 = 1 * GetPlayerState("scoring_multiplier")
+End Function
+glf_funcRefMap.Add "1 * current_player.scoring_multiplier", "Glf_118"
+Function Glf_119(args)
+	Glf_119 = 10 * GetPlayerState("scoring_multiplier")
+End Function
+glf_funcRefMap.Add "10 * current_player.scoring_multiplier", "Glf_119"
+Function Glf_120(args)
+	Glf_120 = 100 * GetPlayerState("scoring_multiplier")
+End Function
+glf_funcRefMap.Add "100 * current_player.scoring_multiplier", "Glf_120"
+Function Glf_121(args)
+	Glf_121 = 333 * GetPlayerState("scoring_multiplier")
+End Function
+glf_funcRefMap.Add "333 * current_player.scoring_multiplier", "Glf_121"
+Function Glf_122(args)
+	Glf_122 = 500 * GetPlayerState("scoring_multiplier")
+End Function
+glf_funcRefMap.Add "500 * current_player.scoring_multiplier", "Glf_122"
+Function Glf_123(args)
+	Glf_123 = 1000 * GetPlayerState("scoring_multiplier")
+End Function
+glf_funcRefMap.Add "1000 * current_player.scoring_multiplier", "Glf_123"
+Function Glf_124(args)
+	Glf_124 = 2000 * GetPlayerState("scoring_multiplier")
+End Function
+glf_funcRefMap.Add "2000 * current_player.scoring_multiplier", "Glf_124"
+Function Glf_125(args)
+	Glf_125 = 3000 * GetPlayerState("scoring_multiplier")
+End Function
+glf_funcRefMap.Add "3000 * current_player.scoring_multiplier", "Glf_125"
+Function Glf_126(args)
+	Glf_126 = 3333 * GetPlayerState("scoring_multiplier")
+End Function
+glf_funcRefMap.Add "3333 * current_player.scoring_multiplier", "Glf_126"
+Function Glf_127(args)
+	Glf_127 = 5000 * GetPlayerState("scoring_multiplier")
+End Function
+glf_funcRefMap.Add "5000 * current_player.scoring_multiplier", "Glf_127"
+Function Glf_128(args)
+	Glf_128 = 10000 * GetPlayerState("scoring_multiplier")
+End Function
+glf_funcRefMap.Add "10000 * current_player.scoring_multiplier", "Glf_128"
+Function Glf_129(args)
+	Glf_129 = 20000 * GetPlayerState("scoring_multiplier")
+End Function
+glf_funcRefMap.Add "20000 * current_player.scoring_multiplier", "Glf_129"
+Function Glf_130(args)
+	Glf_130 = 30000 * GetPlayerState("scoring_multiplier")
+End Function
+glf_funcRefMap.Add "30000 * current_player.scoring_multiplier", "Glf_130"
+Function Glf_131(args)
+	Glf_131 = 33333 * GetPlayerState("scoring_multiplier")
+End Function
+glf_funcRefMap.Add "33333 * current_player.scoring_multiplier", "Glf_131"
+Function Glf_132(args)
+	Glf_132 = 50000 * GetPlayerState("scoring_multiplier")
+End Function
+glf_funcRefMap.Add "50000 * current_player.scoring_multiplier", "Glf_132"
+Function Glf_133(args)
+	Glf_133 = 100000 * GetPlayerState("scoring_multiplier")
+End Function
+glf_funcRefMap.Add "100000 * current_player.scoring_multiplier", "Glf_133"
+Function Glf_134(args)
+	Glf_134 = 200000 * GetPlayerState("scoring_multiplier")
+End Function
+glf_funcRefMap.Add "200000 * current_player.scoring_multiplier", "Glf_134"
+Function Glf_135(args)
+	Glf_135 = 500000 * GetPlayerState("scoring_multiplier")
+End Function
+glf_funcRefMap.Add "500000 * current_player.scoring_multiplier", "Glf_135"
+Function Glf_136(args)
+	Glf_136 = 1000000 * GetPlayerState("scoring_multiplier")
+End Function
+glf_funcRefMap.Add "1000000 * current_player.scoring_multiplier", "Glf_136"
 Function Glf_137(args)
 	On Error Resume Next
-	    Glf_137 = GetPlayerState("shot_bonus_light1") = 1 And GetPlayerState("shot_bonus_light2") = 0
+	    Glf_137 = GetPlayerState("shot_bonus_light1") = 0
 	If Err Then Glf_137 = False
 End Function
-glf_funcRefMap.Add "add_bonus{current_player.shot_bonus_light1 == 1 && current_player.shot_bonus_light2 == 0}", "Glf_137"
+glf_funcRefMap.Add "add_bonus{current_player.shot_bonus_light1 == 0}", "Glf_137"
 Function Glf_138(args)
 	On Error Resume Next
-	    Glf_138 = GetPlayerState("shot_bonus_light2") = 1 And GetPlayerState("shot_bonus_light3") = 0
+	    Glf_138 = GetPlayerState("shot_bonus_light1") = 1 And GetPlayerState("shot_bonus_light2") = 0
 	If Err Then Glf_138 = False
 End Function
-glf_funcRefMap.Add "add_bonus{current_player.shot_bonus_light2 == 1 && current_player.shot_bonus_light3 == 0}", "Glf_138"
+glf_funcRefMap.Add "add_bonus{current_player.shot_bonus_light1 == 1 && current_player.shot_bonus_light2 == 0}", "Glf_138"
 Function Glf_139(args)
 	On Error Resume Next
-	    Glf_139 = GetPlayerState("shot_bonus_light3") = 1 And GetPlayerState("shot_bonus_light4") = 0
+	    Glf_139 = GetPlayerState("shot_bonus_light2") = 1 And GetPlayerState("shot_bonus_light3") = 0
 	If Err Then Glf_139 = False
 End Function
-glf_funcRefMap.Add "add_bonus{current_player.shot_bonus_light3 == 1 && current_player.shot_bonus_light4 == 0}", "Glf_139"
+glf_funcRefMap.Add "add_bonus{current_player.shot_bonus_light2 == 1 && current_player.shot_bonus_light3 == 0}", "Glf_139"
 Function Glf_140(args)
 	On Error Resume Next
-	    Glf_140 = GetPlayerState("shot_bonus_light4") = 1 And GetPlayerState("shot_bonus_light5") = 0
+	    Glf_140 = GetPlayerState("shot_bonus_light3") = 1 And GetPlayerState("shot_bonus_light4") = 0
 	If Err Then Glf_140 = False
 End Function
-glf_funcRefMap.Add "add_bonus{current_player.shot_bonus_light4 == 1 && current_player.shot_bonus_light5 == 0}", "Glf_140"
+glf_funcRefMap.Add "add_bonus{current_player.shot_bonus_light3 == 1 && current_player.shot_bonus_light4 == 0}", "Glf_140"
 Function Glf_141(args)
 	On Error Resume Next
-	    Glf_141 = GetPlayerState("shot_bonus_light5") = 1 And GetPlayerState("shot_bonus_light6") = 0
+	    Glf_141 = GetPlayerState("shot_bonus_light4") = 1 And GetPlayerState("shot_bonus_light5") = 0
 	If Err Then Glf_141 = False
 End Function
-glf_funcRefMap.Add "add_bonus{current_player.shot_bonus_light5 == 1 && current_player.shot_bonus_light6 == 0}", "Glf_141"
+glf_funcRefMap.Add "add_bonus{current_player.shot_bonus_light4 == 1 && current_player.shot_bonus_light5 == 0}", "Glf_141"
 Function Glf_142(args)
 	On Error Resume Next
-	    Glf_142 = GetPlayerState("shot_bonus_light6") = 1 And GetPlayerState("shot_bonus_light7") = 0
+	    Glf_142 = GetPlayerState("shot_bonus_light5") = 1 And GetPlayerState("shot_bonus_light6") = 0
 	If Err Then Glf_142 = False
 End Function
-glf_funcRefMap.Add "add_bonus{current_player.shot_bonus_light6 == 1 && current_player.shot_bonus_light7 == 0}", "Glf_142"
+glf_funcRefMap.Add "add_bonus{current_player.shot_bonus_light5 == 1 && current_player.shot_bonus_light6 == 0}", "Glf_142"
 Function Glf_143(args)
 	On Error Resume Next
-	    Glf_143 = GetPlayerState("shot_bonus_light7") = 1 And GetPlayerState("shot_bonus_light8") = 0
+	    Glf_143 = GetPlayerState("shot_bonus_light6") = 1 And GetPlayerState("shot_bonus_light7") = 0
 	If Err Then Glf_143 = False
 End Function
-glf_funcRefMap.Add "add_bonus{current_player.shot_bonus_light7 == 1 && current_player.shot_bonus_light8 == 0}", "Glf_143"
+glf_funcRefMap.Add "add_bonus{current_player.shot_bonus_light6 == 1 && current_player.shot_bonus_light7 == 0}", "Glf_143"
 Function Glf_144(args)
 	On Error Resume Next
-	    Glf_144 = GetPlayerState("shot_bonus_light8") = 1
+	    Glf_144 = GetPlayerState("shot_bonus_light7") = 1 And GetPlayerState("shot_bonus_light8") = 0
 	If Err Then Glf_144 = False
 End Function
-glf_funcRefMap.Add "add_bonus{current_player.shot_bonus_light8 == 1}", "Glf_144"
+glf_funcRefMap.Add "add_bonus{current_player.shot_bonus_light7 == 1 && current_player.shot_bonus_light8 == 0}", "Glf_144"
 Function Glf_145(args)
 	On Error Resume Next
-	    Glf_145 = Glf_GameVariable("tilted") = False
+	    Glf_145 = GetPlayerState("shot_bonus_light8") = 1
 	If Err Then Glf_145 = False
 End Function
-glf_funcRefMap.Add "ball_ending{game.tilted == False}", "Glf_145"
+glf_funcRefMap.Add "add_bonus{current_player.shot_bonus_light8 == 1}", "Glf_145"
 Function Glf_146(args)
 	On Error Resume Next
-	    Glf_146 = GetPlayerState("shot_bonus_light1") = 1
+	    Glf_146 = Glf_GameVariable("tilted") = False
 	If Err Then Glf_146 = False
 End Function
-glf_funcRefMap.Add "calc_bonus1{current_player.shot_bonus_light1 == 1}", "Glf_146"
+glf_funcRefMap.Add "ball_ending{game.tilted == False}", "Glf_146"
 Function Glf_147(args)
 	On Error Resume Next
-	    Glf_147 = GetPlayerState("shot_bonus_light1") = 0
+	    Glf_147 = GetPlayerState("shot_bonus_light1") = 1
 	If Err Then Glf_147 = False
 End Function
-glf_funcRefMap.Add "calc_bonus1{current_player.shot_bonus_light1 == 0}", "Glf_147"
+glf_funcRefMap.Add "calc_bonus1{current_player.shot_bonus_light1 == 1}", "Glf_147"
 Function Glf_148(args)
 	On Error Resume Next
-	    Glf_148 = GetPlayerState("shot_bonus_light2") = 1
+	    Glf_148 = GetPlayerState("shot_bonus_light1") = 0
 	If Err Then Glf_148 = False
 End Function
-glf_funcRefMap.Add "calc_bonus2{current_player.shot_bonus_light2 == 1}", "Glf_148"
+glf_funcRefMap.Add "calc_bonus1{current_player.shot_bonus_light1 == 0}", "Glf_148"
 Function Glf_149(args)
 	On Error Resume Next
-	    Glf_149 = GetPlayerState("shot_bonus_light2") = 0
+	    Glf_149 = GetPlayerState("shot_bonus_light2") = 1
 	If Err Then Glf_149 = False
 End Function
-glf_funcRefMap.Add "calc_bonus2{current_player.shot_bonus_light2 == 0}", "Glf_149"
+glf_funcRefMap.Add "calc_bonus2{current_player.shot_bonus_light2 == 1}", "Glf_149"
 Function Glf_150(args)
 	On Error Resume Next
-	    Glf_150 = GetPlayerState("shot_bonus_light3") = 1
+	    Glf_150 = GetPlayerState("shot_bonus_light2") = 0
 	If Err Then Glf_150 = False
 End Function
-glf_funcRefMap.Add "calc_bonus3{current_player.shot_bonus_light3 == 1}", "Glf_150"
+glf_funcRefMap.Add "calc_bonus2{current_player.shot_bonus_light2 == 0}", "Glf_150"
 Function Glf_151(args)
 	On Error Resume Next
-	    Glf_151 = GetPlayerState("shot_bonus_light3") = 0
+	    Glf_151 = GetPlayerState("shot_bonus_light3") = 1
 	If Err Then Glf_151 = False
 End Function
-glf_funcRefMap.Add "calc_bonus3{current_player.shot_bonus_light3 == 0}", "Glf_151"
+glf_funcRefMap.Add "calc_bonus3{current_player.shot_bonus_light3 == 1}", "Glf_151"
 Function Glf_152(args)
 	On Error Resume Next
-	    Glf_152 = GetPlayerState("shot_bonus_light4") = 1
+	    Glf_152 = GetPlayerState("shot_bonus_light3") = 0
 	If Err Then Glf_152 = False
 End Function
-glf_funcRefMap.Add "calc_bonus4{current_player.shot_bonus_light4 == 1}", "Glf_152"
+glf_funcRefMap.Add "calc_bonus3{current_player.shot_bonus_light3 == 0}", "Glf_152"
 Function Glf_153(args)
 	On Error Resume Next
-	    Glf_153 = GetPlayerState("shot_bonus_light4") = 0
+	    Glf_153 = GetPlayerState("shot_bonus_light4") = 1
 	If Err Then Glf_153 = False
 End Function
-glf_funcRefMap.Add "calc_bonus4{current_player.shot_bonus_light4 == 0}", "Glf_153"
+glf_funcRefMap.Add "calc_bonus4{current_player.shot_bonus_light4 == 1}", "Glf_153"
 Function Glf_154(args)
 	On Error Resume Next
-	    Glf_154 = GetPlayerState("shot_bonus_light5") = 1
+	    Glf_154 = GetPlayerState("shot_bonus_light4") = 0
 	If Err Then Glf_154 = False
 End Function
-glf_funcRefMap.Add "calc_bonus5{current_player.shot_bonus_light5 == 1}", "Glf_154"
+glf_funcRefMap.Add "calc_bonus4{current_player.shot_bonus_light4 == 0}", "Glf_154"
 Function Glf_155(args)
 	On Error Resume Next
-	    Glf_155 = GetPlayerState("shot_bonus_light5") = 0
+	    Glf_155 = GetPlayerState("shot_bonus_light5") = 1
 	If Err Then Glf_155 = False
 End Function
-glf_funcRefMap.Add "calc_bonus5{current_player.shot_bonus_light5 == 0}", "Glf_155"
+glf_funcRefMap.Add "calc_bonus5{current_player.shot_bonus_light5 == 1}", "Glf_155"
 Function Glf_156(args)
 	On Error Resume Next
-	    Glf_156 = GetPlayerState("shot_bonus_light6") = 1
+	    Glf_156 = GetPlayerState("shot_bonus_light5") = 0
 	If Err Then Glf_156 = False
 End Function
-glf_funcRefMap.Add "calc_bonus6{current_player.shot_bonus_light6 == 1}", "Glf_156"
+glf_funcRefMap.Add "calc_bonus5{current_player.shot_bonus_light5 == 0}", "Glf_156"
 Function Glf_157(args)
 	On Error Resume Next
-	    Glf_157 = GetPlayerState("shot_bonus_light6") = 0
+	    Glf_157 = GetPlayerState("shot_bonus_light6") = 1
 	If Err Then Glf_157 = False
 End Function
-glf_funcRefMap.Add "calc_bonus6{current_player.shot_bonus_light6 == 0}", "Glf_157"
+glf_funcRefMap.Add "calc_bonus6{current_player.shot_bonus_light6 == 1}", "Glf_157"
 Function Glf_158(args)
 	On Error Resume Next
-	    Glf_158 = GetPlayerState("shot_bonus_light7") = 1
+	    Glf_158 = GetPlayerState("shot_bonus_light6") = 0
 	If Err Then Glf_158 = False
 End Function
-glf_funcRefMap.Add "calc_bonus7{current_player.shot_bonus_light7 == 1}", "Glf_158"
+glf_funcRefMap.Add "calc_bonus6{current_player.shot_bonus_light6 == 0}", "Glf_158"
 Function Glf_159(args)
 	On Error Resume Next
-	    Glf_159 = GetPlayerState("shot_bonus_light7") = 0
+	    Glf_159 = GetPlayerState("shot_bonus_light7") = 1
 	If Err Then Glf_159 = False
 End Function
-glf_funcRefMap.Add "calc_bonus7{current_player.shot_bonus_light7 == 0}", "Glf_159"
+glf_funcRefMap.Add "calc_bonus7{current_player.shot_bonus_light7 == 1}", "Glf_159"
 Function Glf_160(args)
 	On Error Resume Next
-	    Glf_160 = GetPlayerState("shot_bonus_light8") = 1
+	    Glf_160 = GetPlayerState("shot_bonus_light7") = 0
 	If Err Then Glf_160 = False
 End Function
-glf_funcRefMap.Add "calc_bonus8{current_player.shot_bonus_light8 == 1}", "Glf_160"
+glf_funcRefMap.Add "calc_bonus7{current_player.shot_bonus_light7 == 0}", "Glf_160"
 Function Glf_161(args)
 	On Error Resume Next
-	    Glf_161 = GetPlayerState("shot_bonus_light8") = 0
+	    Glf_161 = GetPlayerState("shot_bonus_light8") = 1
 	If Err Then Glf_161 = False
 End Function
-glf_funcRefMap.Add "calc_bonus8{current_player.shot_bonus_light8 == 0}", "Glf_161"
+glf_funcRefMap.Add "calc_bonus8{current_player.shot_bonus_light8 == 1}", "Glf_161"
 Function Glf_162(args)
 	On Error Resume Next
-	    Glf_162 = GetPlayerState("shot_bonus_light1") = 1 And GetPlayerState("bonus_skip") = 0
+	    Glf_162 = GetPlayerState("shot_bonus_light8") = 0
 	If Err Then Glf_162 = False
 End Function
-glf_funcRefMap.Add "play_bonus_show1{current_player.shot_bonus_light1 == 1 && current_player.bonus_skip == 0}", "Glf_162"
+glf_funcRefMap.Add "calc_bonus8{current_player.shot_bonus_light8 == 0}", "Glf_162"
 Function Glf_163(args)
 	On Error Resume Next
-	    Glf_163 = GetPlayerState("shot_bonus_light2") = 1 And GetPlayerState("bonus_skip") = 0
+	    Glf_163 = GetPlayerState("shot_bonus_light1") = 1 And GetPlayerState("bonus_skip") = 0
 	If Err Then Glf_163 = False
 End Function
-glf_funcRefMap.Add "play_bonus_show2{current_player.shot_bonus_light2 == 1 && current_player.bonus_skip == 0}", "Glf_163"
+glf_funcRefMap.Add "play_bonus_show1{current_player.shot_bonus_light1 == 1 && current_player.bonus_skip == 0}", "Glf_163"
 Function Glf_164(args)
 	On Error Resume Next
-	    Glf_164 = GetPlayerState("shot_bonus_light3") = 1 And GetPlayerState("bonus_skip") = 0
+	    Glf_164 = GetPlayerState("shot_bonus_light2") = 1 And GetPlayerState("bonus_skip") = 0
 	If Err Then Glf_164 = False
 End Function
-glf_funcRefMap.Add "play_bonus_show3{current_player.shot_bonus_light3 == 1 && current_player.bonus_skip == 0}", "Glf_164"
+glf_funcRefMap.Add "play_bonus_show2{current_player.shot_bonus_light2 == 1 && current_player.bonus_skip == 0}", "Glf_164"
 Function Glf_165(args)
 	On Error Resume Next
-	    Glf_165 = GetPlayerState("shot_bonus_light4") = 1 And GetPlayerState("bonus_skip") = 0
+	    Glf_165 = GetPlayerState("shot_bonus_light3") = 1 And GetPlayerState("bonus_skip") = 0
 	If Err Then Glf_165 = False
 End Function
-glf_funcRefMap.Add "play_bonus_show4{current_player.shot_bonus_light4 == 1 && current_player.bonus_skip == 0}", "Glf_165"
+glf_funcRefMap.Add "play_bonus_show3{current_player.shot_bonus_light3 == 1 && current_player.bonus_skip == 0}", "Glf_165"
 Function Glf_166(args)
 	On Error Resume Next
-	    Glf_166 = GetPlayerState("shot_bonus_light5") = 1 And GetPlayerState("bonus_skip") = 0
+	    Glf_166 = GetPlayerState("shot_bonus_light4") = 1 And GetPlayerState("bonus_skip") = 0
 	If Err Then Glf_166 = False
 End Function
-glf_funcRefMap.Add "play_bonus_show5{current_player.shot_bonus_light5 == 1 && current_player.bonus_skip == 0}", "Glf_166"
+glf_funcRefMap.Add "play_bonus_show4{current_player.shot_bonus_light4 == 1 && current_player.bonus_skip == 0}", "Glf_166"
 Function Glf_167(args)
 	On Error Resume Next
-	    Glf_167 = GetPlayerState("shot_bonus_light6") = 1 And GetPlayerState("bonus_skip") = 0
+	    Glf_167 = GetPlayerState("shot_bonus_light5") = 1 And GetPlayerState("bonus_skip") = 0
 	If Err Then Glf_167 = False
 End Function
-glf_funcRefMap.Add "play_bonus_show6{current_player.shot_bonus_light6 == 1 && current_player.bonus_skip == 0}", "Glf_167"
+glf_funcRefMap.Add "play_bonus_show5{current_player.shot_bonus_light5 == 1 && current_player.bonus_skip == 0}", "Glf_167"
 Function Glf_168(args)
 	On Error Resume Next
-	    Glf_168 = GetPlayerState("shot_bonus_light7") = 1 And GetPlayerState("bonus_skip") = 0
+	    Glf_168 = GetPlayerState("shot_bonus_light6") = 1 And GetPlayerState("bonus_skip") = 0
 	If Err Then Glf_168 = False
 End Function
-glf_funcRefMap.Add "play_bonus_show7{current_player.shot_bonus_light7 == 1 && current_player.bonus_skip == 0}", "Glf_168"
+glf_funcRefMap.Add "play_bonus_show6{current_player.shot_bonus_light6 == 1 && current_player.bonus_skip == 0}", "Glf_168"
 Function Glf_169(args)
 	On Error Resume Next
-	    Glf_169 = GetPlayerState("shot_bonus_light8") = 1 And GetPlayerState("bonus_skip") = 0
+	    Glf_169 = GetPlayerState("shot_bonus_light7") = 1 And GetPlayerState("bonus_skip") = 0
 	If Err Then Glf_169 = False
 End Function
-glf_funcRefMap.Add "play_bonus_show8{current_player.shot_bonus_light8 == 1 && current_player.bonus_skip == 0}", "Glf_169"
+glf_funcRefMap.Add "play_bonus_show7{current_player.shot_bonus_light7 == 1 && current_player.bonus_skip == 0}", "Glf_169"
 Function Glf_170(args)
-	Glf_170 = 500000 * GetPlayerState("bonus_multiplier")
-End Function
-glf_funcRefMap.Add "500000 * current_player.bonus_multiplier", "Glf_170"
-Function Glf_171(args)
-	Glf_171 = GetPlayerState("bonus_total")
-End Function
-glf_funcRefMap.Add "current_player.bonus_total", "Glf_171"
-Function Glf_172(args)
-	Glf_172 = GetPlayerState("bonus_count") + 2
-End Function
-glf_funcRefMap.Add "current_player.bonus_count + 2", "Glf_172"
-Function Glf_173(args)
-	Glf_173 = "BONUS"
-End Function
-glf_funcRefMap.Add """BONUS""", "Glf_173"
-Function Glf_174(args)
-	Glf_174 = "00"
-End Function
-glf_funcRefMap.Add """00""", "Glf_174"
-Function Glf_175(args)
-	Glf_175 = 1000000 * GetPlayerState("bonus_multiplier")
-End Function
-glf_funcRefMap.Add "1000000 * current_player.bonus_multiplier", "Glf_175"
-Function Glf_176(args)
-	Glf_176 = 1500000 * GetPlayerState("bonus_multiplier")
-End Function
-glf_funcRefMap.Add "1500000 * current_player.bonus_multiplier", "Glf_176"
-Function Glf_177(args)
-	Glf_177 = 2000000 * GetPlayerState("bonus_multiplier")
-End Function
-glf_funcRefMap.Add "2000000 * current_player.bonus_multiplier", "Glf_177"
-Function Glf_178(args)
-	Glf_178 = 2500000 * GetPlayerState("bonus_multiplier")
-End Function
-glf_funcRefMap.Add "2500000 * current_player.bonus_multiplier", "Glf_178"
-Function Glf_179(args)
-	Glf_179 = 3000000 * GetPlayerState("bonus_multiplier")
-End Function
-glf_funcRefMap.Add "3000000 * current_player.bonus_multiplier", "Glf_179"
-Function Glf_180(args)
-	Glf_180 = 3500000 * GetPlayerState("bonus_multiplier")
-End Function
-glf_funcRefMap.Add "3500000 * current_player.bonus_multiplier", "Glf_180"
-Function Glf_181(args)
-	Glf_181 = 4000000 * GetPlayerState("bonus_multiplier")
-End Function
-glf_funcRefMap.Add "4000000 * current_player.bonus_multiplier", "Glf_181"
-Function Glf_182(args)
 	On Error Resume Next
-	    Glf_182 = GetPlayerState("hs_input_ready") = 1
-	If Err Then Glf_182 = False
+	    Glf_170 = GetPlayerState("shot_bonus_light8") = 1 And GetPlayerState("bonus_skip") = 0
+	If Err Then Glf_170 = False
 End Function
-glf_funcRefMap.Add "s_right_magna_key_active{current_player.hs_input_ready == 1}", "Glf_182"
+glf_funcRefMap.Add "play_bonus_show8{current_player.shot_bonus_light8 == 1 && current_player.bonus_skip == 0}", "Glf_170"
+Function Glf_171(args)
+	Glf_171 = 500000 * GetPlayerState("bonus_multiplier")
+End Function
+glf_funcRefMap.Add "500000 * current_player.bonus_multiplier", "Glf_171"
+Function Glf_172(args)
+	Glf_172 = GetPlayerState("bonus_total")
+End Function
+glf_funcRefMap.Add "current_player.bonus_total", "Glf_172"
+Function Glf_173(args)
+	Glf_173 = GetPlayerState("bonus_count") + 2
+End Function
+glf_funcRefMap.Add "current_player.bonus_count + 2", "Glf_173"
+Function Glf_174(args)
+	Glf_174 = "BONUS"
+End Function
+glf_funcRefMap.Add """BONUS""", "Glf_174"
+Function Glf_175(args)
+	Glf_175 = "00"
+End Function
+glf_funcRefMap.Add """00""", "Glf_175"
+Function Glf_176(args)
+	Glf_176 = 1000000 * GetPlayerState("bonus_multiplier")
+End Function
+glf_funcRefMap.Add "1000000 * current_player.bonus_multiplier", "Glf_176"
+Function Glf_177(args)
+	Glf_177 = 1500000 * GetPlayerState("bonus_multiplier")
+End Function
+glf_funcRefMap.Add "1500000 * current_player.bonus_multiplier", "Glf_177"
+Function Glf_178(args)
+	Glf_178 = 2000000 * GetPlayerState("bonus_multiplier")
+End Function
+glf_funcRefMap.Add "2000000 * current_player.bonus_multiplier", "Glf_178"
+Function Glf_179(args)
+	Glf_179 = 2500000 * GetPlayerState("bonus_multiplier")
+End Function
+glf_funcRefMap.Add "2500000 * current_player.bonus_multiplier", "Glf_179"
+Function Glf_180(args)
+	Glf_180 = 3000000 * GetPlayerState("bonus_multiplier")
+End Function
+glf_funcRefMap.Add "3000000 * current_player.bonus_multiplier", "Glf_180"
+Function Glf_181(args)
+	Glf_181 = 3500000 * GetPlayerState("bonus_multiplier")
+End Function
+glf_funcRefMap.Add "3500000 * current_player.bonus_multiplier", "Glf_181"
+Function Glf_182(args)
+	Glf_182 = 4000000 * GetPlayerState("bonus_multiplier")
+End Function
+glf_funcRefMap.Add "4000000 * current_player.bonus_multiplier", "Glf_182"
 Function Glf_183(args)
 	On Error Resume Next
 	    Glf_183 = GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_183 = False
 End Function
-glf_funcRefMap.Add "s_plunger_key_active{current_player.hs_input_ready == 1}", "Glf_183"
+glf_funcRefMap.Add "s_right_magna_key_active{current_player.hs_input_ready == 1}", "Glf_183"
 Function Glf_184(args)
 	On Error Resume Next
 	    Glf_184 = GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_184 = False
 End Function
-glf_funcRefMap.Add "s_lockbar_key_active{current_player.hs_input_ready == 1}", "Glf_184"
+glf_funcRefMap.Add "s_plunger_key_active{current_player.hs_input_ready == 1}", "Glf_184"
 Function Glf_185(args)
 	On Error Resume Next
 	    Glf_185 = GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_185 = False
 End Function
-glf_funcRefMap.Add "s_start_active{current_player.hs_input_ready == 1}", "Glf_185"
+glf_funcRefMap.Add "s_lockbar_key_active{current_player.hs_input_ready == 1}", "Glf_185"
 Function Glf_186(args)
 	On Error Resume Next
-	    Glf_186 = glf_machine_vars("high_score_initials_chars").GetValue() = 3
+	    Glf_186 = GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_186 = False
 End Function
-glf_funcRefMap.Add "text_inputted.1{machine.high_score_initials_chars == 3}", "Glf_186"
-Function Glf_189(args)
+glf_funcRefMap.Add "s_start_active{current_player.hs_input_ready == 1}", "Glf_186"
+Function Glf_187(args)
 	On Error Resume Next
-	    Glf_189 = glf_machine_vars("high_score_initials_chars").GetValue() < 3
-	If Err Then Glf_189 = False
+	    Glf_187 = glf_machine_vars("high_score_initials_chars").GetValue() = 3
+	If Err Then Glf_187 = False
 End Function
-glf_funcRefMap.Add "text_inputted{machine.high_score_initials_chars < 3}", "Glf_189"
+glf_funcRefMap.Add "text_inputted.1{machine.high_score_initials_chars == 3}", "Glf_187"
 Function Glf_190(args)
 	On Error Resume Next
-	    Glf_190 = GetPlayerState("hs_input_ready") = 1
+	    Glf_190 = glf_machine_vars("high_score_initials_chars").GetValue() < 3
 	If Err Then Glf_190 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.2{current_player.hs_input_ready == 1}", "Glf_190"
+glf_funcRefMap.Add "text_inputted{machine.high_score_initials_chars < 3}", "Glf_190"
 Function Glf_191(args)
 	On Error Resume Next
 	    Glf_191 = GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_191 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.2{current_player.hs_input_ready == 1}", "Glf_191"
+glf_funcRefMap.Add "s_left_flipper_active.2{current_player.hs_input_ready == 1}", "Glf_191"
 Function Glf_192(args)
 	On Error Resume Next
-	    Glf_192 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 0
+	    Glf_192 = GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_192 = False
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 0}", "Glf_192"
+glf_funcRefMap.Add "s_right_flipper_active.2{current_player.hs_input_ready == 1}", "Glf_192"
 Function Glf_193(args)
-	Glf_193 = glf_machine_vars("high_score_initials").GetValue() & "A"
+	On Error Resume Next
+	    Glf_193 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 0
+	If Err Then Glf_193 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""A""", "Glf_193"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 0}", "Glf_193"
 Function Glf_194(args)
-	On Error Resume Next
-	    Glf_194 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 1
-	If Err Then Glf_194 = False
+	Glf_194 = glf_machine_vars("high_score_initials").GetValue() & "A"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 1}", "Glf_194"
+glf_funcRefMap.Add "machine.high_score_initials & ""A""", "Glf_194"
 Function Glf_195(args)
-	Glf_195 = glf_machine_vars("high_score_initials").GetValue() & "B"
+	On Error Resume Next
+	    Glf_195 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 1
+	If Err Then Glf_195 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""B""", "Glf_195"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 1}", "Glf_195"
 Function Glf_196(args)
-	On Error Resume Next
-	    Glf_196 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 2
-	If Err Then Glf_196 = False
+	Glf_196 = glf_machine_vars("high_score_initials").GetValue() & "B"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 2}", "Glf_196"
+glf_funcRefMap.Add "machine.high_score_initials & ""B""", "Glf_196"
 Function Glf_197(args)
-	Glf_197 = glf_machine_vars("high_score_initials").GetValue() & "C"
+	On Error Resume Next
+	    Glf_197 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 2
+	If Err Then Glf_197 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""C""", "Glf_197"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 2}", "Glf_197"
 Function Glf_198(args)
-	On Error Resume Next
-	    Glf_198 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 3
-	If Err Then Glf_198 = False
+	Glf_198 = glf_machine_vars("high_score_initials").GetValue() & "C"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 3}", "Glf_198"
+glf_funcRefMap.Add "machine.high_score_initials & ""C""", "Glf_198"
 Function Glf_199(args)
-	Glf_199 = glf_machine_vars("high_score_initials").GetValue() & "D"
+	On Error Resume Next
+	    Glf_199 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 3
+	If Err Then Glf_199 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""D""", "Glf_199"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 3}", "Glf_199"
 Function Glf_200(args)
-	On Error Resume Next
-	    Glf_200 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 4
-	If Err Then Glf_200 = False
+	Glf_200 = glf_machine_vars("high_score_initials").GetValue() & "D"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 4}", "Glf_200"
+glf_funcRefMap.Add "machine.high_score_initials & ""D""", "Glf_200"
 Function Glf_201(args)
-	Glf_201 = glf_machine_vars("high_score_initials").GetValue() & "E"
+	On Error Resume Next
+	    Glf_201 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 4
+	If Err Then Glf_201 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""E""", "Glf_201"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 4}", "Glf_201"
 Function Glf_202(args)
-	On Error Resume Next
-	    Glf_202 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 5
-	If Err Then Glf_202 = False
+	Glf_202 = glf_machine_vars("high_score_initials").GetValue() & "E"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 5}", "Glf_202"
+glf_funcRefMap.Add "machine.high_score_initials & ""E""", "Glf_202"
 Function Glf_203(args)
-	Glf_203 = glf_machine_vars("high_score_initials").GetValue() & "F"
+	On Error Resume Next
+	    Glf_203 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 5
+	If Err Then Glf_203 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""F""", "Glf_203"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 5}", "Glf_203"
 Function Glf_204(args)
-	On Error Resume Next
-	    Glf_204 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 6
-	If Err Then Glf_204 = False
+	Glf_204 = glf_machine_vars("high_score_initials").GetValue() & "F"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 6}", "Glf_204"
+glf_funcRefMap.Add "machine.high_score_initials & ""F""", "Glf_204"
 Function Glf_205(args)
-	Glf_205 = glf_machine_vars("high_score_initials").GetValue() & "G"
+	On Error Resume Next
+	    Glf_205 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 6
+	If Err Then Glf_205 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""G""", "Glf_205"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 6}", "Glf_205"
 Function Glf_206(args)
-	On Error Resume Next
-	    Glf_206 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 7
-	If Err Then Glf_206 = False
+	Glf_206 = glf_machine_vars("high_score_initials").GetValue() & "G"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 7}", "Glf_206"
+glf_funcRefMap.Add "machine.high_score_initials & ""G""", "Glf_206"
 Function Glf_207(args)
-	Glf_207 = glf_machine_vars("high_score_initials").GetValue() & "H"
+	On Error Resume Next
+	    Glf_207 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 7
+	If Err Then Glf_207 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""H""", "Glf_207"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 7}", "Glf_207"
 Function Glf_208(args)
-	On Error Resume Next
-	    Glf_208 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 8
-	If Err Then Glf_208 = False
+	Glf_208 = glf_machine_vars("high_score_initials").GetValue() & "H"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 8}", "Glf_208"
+glf_funcRefMap.Add "machine.high_score_initials & ""H""", "Glf_208"
 Function Glf_209(args)
-	Glf_209 = glf_machine_vars("high_score_initials").GetValue() & "I"
+	On Error Resume Next
+	    Glf_209 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 8
+	If Err Then Glf_209 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""I""", "Glf_209"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 8}", "Glf_209"
 Function Glf_210(args)
-	On Error Resume Next
-	    Glf_210 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 9
-	If Err Then Glf_210 = False
+	Glf_210 = glf_machine_vars("high_score_initials").GetValue() & "I"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 9}", "Glf_210"
+glf_funcRefMap.Add "machine.high_score_initials & ""I""", "Glf_210"
 Function Glf_211(args)
-	Glf_211 = glf_machine_vars("high_score_initials").GetValue() & "J"
+	On Error Resume Next
+	    Glf_211 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 9
+	If Err Then Glf_211 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""J""", "Glf_211"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 9}", "Glf_211"
 Function Glf_212(args)
-	On Error Resume Next
-	    Glf_212 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 10
-	If Err Then Glf_212 = False
+	Glf_212 = glf_machine_vars("high_score_initials").GetValue() & "J"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 10}", "Glf_212"
+glf_funcRefMap.Add "machine.high_score_initials & ""J""", "Glf_212"
 Function Glf_213(args)
-	Glf_213 = glf_machine_vars("high_score_initials").GetValue() & "K"
+	On Error Resume Next
+	    Glf_213 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 10
+	If Err Then Glf_213 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""K""", "Glf_213"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 10}", "Glf_213"
 Function Glf_214(args)
-	On Error Resume Next
-	    Glf_214 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 11
-	If Err Then Glf_214 = False
+	Glf_214 = glf_machine_vars("high_score_initials").GetValue() & "K"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 11}", "Glf_214"
+glf_funcRefMap.Add "machine.high_score_initials & ""K""", "Glf_214"
 Function Glf_215(args)
-	Glf_215 = glf_machine_vars("high_score_initials").GetValue() & "L"
+	On Error Resume Next
+	    Glf_215 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 11
+	If Err Then Glf_215 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""L""", "Glf_215"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 11}", "Glf_215"
 Function Glf_216(args)
-	On Error Resume Next
-	    Glf_216 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 12
-	If Err Then Glf_216 = False
+	Glf_216 = glf_machine_vars("high_score_initials").GetValue() & "L"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 12}", "Glf_216"
+glf_funcRefMap.Add "machine.high_score_initials & ""L""", "Glf_216"
 Function Glf_217(args)
-	Glf_217 = glf_machine_vars("high_score_initials").GetValue() & "M"
+	On Error Resume Next
+	    Glf_217 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 12
+	If Err Then Glf_217 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""M""", "Glf_217"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 12}", "Glf_217"
 Function Glf_218(args)
-	On Error Resume Next
-	    Glf_218 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 13
-	If Err Then Glf_218 = False
+	Glf_218 = glf_machine_vars("high_score_initials").GetValue() & "M"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 13}", "Glf_218"
+glf_funcRefMap.Add "machine.high_score_initials & ""M""", "Glf_218"
 Function Glf_219(args)
-	Glf_219 = glf_machine_vars("high_score_initials").GetValue() & "N"
+	On Error Resume Next
+	    Glf_219 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 13
+	If Err Then Glf_219 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""N""", "Glf_219"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 13}", "Glf_219"
 Function Glf_220(args)
-	On Error Resume Next
-	    Glf_220 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 14
-	If Err Then Glf_220 = False
+	Glf_220 = glf_machine_vars("high_score_initials").GetValue() & "N"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 14}", "Glf_220"
+glf_funcRefMap.Add "machine.high_score_initials & ""N""", "Glf_220"
 Function Glf_221(args)
-	Glf_221 = glf_machine_vars("high_score_initials").GetValue() & "O"
+	On Error Resume Next
+	    Glf_221 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 14
+	If Err Then Glf_221 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""O""", "Glf_221"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 14}", "Glf_221"
 Function Glf_222(args)
-	On Error Resume Next
-	    Glf_222 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 15
-	If Err Then Glf_222 = False
+	Glf_222 = glf_machine_vars("high_score_initials").GetValue() & "O"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 15}", "Glf_222"
+glf_funcRefMap.Add "machine.high_score_initials & ""O""", "Glf_222"
 Function Glf_223(args)
-	Glf_223 = glf_machine_vars("high_score_initials").GetValue() & "P"
+	On Error Resume Next
+	    Glf_223 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 15
+	If Err Then Glf_223 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""P""", "Glf_223"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 15}", "Glf_223"
 Function Glf_224(args)
-	On Error Resume Next
-	    Glf_224 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 16
-	If Err Then Glf_224 = False
+	Glf_224 = glf_machine_vars("high_score_initials").GetValue() & "P"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 16}", "Glf_224"
+glf_funcRefMap.Add "machine.high_score_initials & ""P""", "Glf_224"
 Function Glf_225(args)
-	Glf_225 = glf_machine_vars("high_score_initials").GetValue() & "Q"
+	On Error Resume Next
+	    Glf_225 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 16
+	If Err Then Glf_225 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""Q""", "Glf_225"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 16}", "Glf_225"
 Function Glf_226(args)
-	On Error Resume Next
-	    Glf_226 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 17
-	If Err Then Glf_226 = False
+	Glf_226 = glf_machine_vars("high_score_initials").GetValue() & "Q"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 17}", "Glf_226"
+glf_funcRefMap.Add "machine.high_score_initials & ""Q""", "Glf_226"
 Function Glf_227(args)
-	Glf_227 = glf_machine_vars("high_score_initials").GetValue() & "R"
+	On Error Resume Next
+	    Glf_227 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 17
+	If Err Then Glf_227 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""R""", "Glf_227"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 17}", "Glf_227"
 Function Glf_228(args)
-	On Error Resume Next
-	    Glf_228 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 18
-	If Err Then Glf_228 = False
+	Glf_228 = glf_machine_vars("high_score_initials").GetValue() & "R"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 18}", "Glf_228"
+glf_funcRefMap.Add "machine.high_score_initials & ""R""", "Glf_228"
 Function Glf_229(args)
-	Glf_229 = glf_machine_vars("high_score_initials").GetValue() & "S"
+	On Error Resume Next
+	    Glf_229 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 18
+	If Err Then Glf_229 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""S""", "Glf_229"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 18}", "Glf_229"
 Function Glf_230(args)
-	On Error Resume Next
-	    Glf_230 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 19
-	If Err Then Glf_230 = False
+	Glf_230 = glf_machine_vars("high_score_initials").GetValue() & "S"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 19}", "Glf_230"
+glf_funcRefMap.Add "machine.high_score_initials & ""S""", "Glf_230"
 Function Glf_231(args)
-	Glf_231 = glf_machine_vars("high_score_initials").GetValue() & "T"
+	On Error Resume Next
+	    Glf_231 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 19
+	If Err Then Glf_231 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""T""", "Glf_231"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 19}", "Glf_231"
 Function Glf_232(args)
-	On Error Resume Next
-	    Glf_232 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 20
-	If Err Then Glf_232 = False
+	Glf_232 = glf_machine_vars("high_score_initials").GetValue() & "T"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 20}", "Glf_232"
+glf_funcRefMap.Add "machine.high_score_initials & ""T""", "Glf_232"
 Function Glf_233(args)
-	Glf_233 = glf_machine_vars("high_score_initials").GetValue() & "U"
+	On Error Resume Next
+	    Glf_233 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 20
+	If Err Then Glf_233 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""U""", "Glf_233"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 20}", "Glf_233"
 Function Glf_234(args)
-	On Error Resume Next
-	    Glf_234 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 21
-	If Err Then Glf_234 = False
+	Glf_234 = glf_machine_vars("high_score_initials").GetValue() & "U"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 21}", "Glf_234"
+glf_funcRefMap.Add "machine.high_score_initials & ""U""", "Glf_234"
 Function Glf_235(args)
-	Glf_235 = glf_machine_vars("high_score_initials").GetValue() & "V"
+	On Error Resume Next
+	    Glf_235 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 21
+	If Err Then Glf_235 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""V""", "Glf_235"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 21}", "Glf_235"
 Function Glf_236(args)
-	On Error Resume Next
-	    Glf_236 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 22
-	If Err Then Glf_236 = False
+	Glf_236 = glf_machine_vars("high_score_initials").GetValue() & "V"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 22}", "Glf_236"
+glf_funcRefMap.Add "machine.high_score_initials & ""V""", "Glf_236"
 Function Glf_237(args)
-	Glf_237 = glf_machine_vars("high_score_initials").GetValue() & "W"
+	On Error Resume Next
+	    Glf_237 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 22
+	If Err Then Glf_237 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""W""", "Glf_237"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 22}", "Glf_237"
 Function Glf_238(args)
-	On Error Resume Next
-	    Glf_238 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 23
-	If Err Then Glf_238 = False
+	Glf_238 = glf_machine_vars("high_score_initials").GetValue() & "W"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 23}", "Glf_238"
+glf_funcRefMap.Add "machine.high_score_initials & ""W""", "Glf_238"
 Function Glf_239(args)
-	Glf_239 = glf_machine_vars("high_score_initials").GetValue() & "X"
+	On Error Resume Next
+	    Glf_239 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 23
+	If Err Then Glf_239 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""X""", "Glf_239"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 23}", "Glf_239"
 Function Glf_240(args)
-	On Error Resume Next
-	    Glf_240 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 24
-	If Err Then Glf_240 = False
+	Glf_240 = glf_machine_vars("high_score_initials").GetValue() & "X"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 24}", "Glf_240"
+glf_funcRefMap.Add "machine.high_score_initials & ""X""", "Glf_240"
 Function Glf_241(args)
-	Glf_241 = glf_machine_vars("high_score_initials").GetValue() & "Y"
+	On Error Resume Next
+	    Glf_241 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 24
+	If Err Then Glf_241 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""Y""", "Glf_241"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 24}", "Glf_241"
 Function Glf_242(args)
-	On Error Resume Next
-	    Glf_242 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 25
-	If Err Then Glf_242 = False
+	Glf_242 = glf_machine_vars("high_score_initials").GetValue() & "Y"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 25}", "Glf_242"
+glf_funcRefMap.Add "machine.high_score_initials & ""Y""", "Glf_242"
 Function Glf_243(args)
-	Glf_243 = glf_machine_vars("high_score_initials").GetValue() & "Z"
+	On Error Resume Next
+	    Glf_243 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 25
+	If Err Then Glf_243 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""Z""", "Glf_243"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 25}", "Glf_243"
 Function Glf_244(args)
-	On Error Resume Next
-	    Glf_244 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 26
-	If Err Then Glf_244 = False
+	Glf_244 = glf_machine_vars("high_score_initials").GetValue() & "Z"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 26}", "Glf_244"
+glf_funcRefMap.Add "machine.high_score_initials & ""Z""", "Glf_244"
 Function Glf_245(args)
-	Glf_245 = glf_machine_vars("high_score_initials").GetValue() & "0"
+	On Error Resume Next
+	    Glf_245 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 26
+	If Err Then Glf_245 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""0""", "Glf_245"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 26}", "Glf_245"
 Function Glf_246(args)
-	On Error Resume Next
-	    Glf_246 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 27
-	If Err Then Glf_246 = False
+	Glf_246 = glf_machine_vars("high_score_initials").GetValue() & "0"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 27}", "Glf_246"
+glf_funcRefMap.Add "machine.high_score_initials & ""0""", "Glf_246"
 Function Glf_247(args)
-	Glf_247 = glf_machine_vars("high_score_initials").GetValue() & "1"
+	On Error Resume Next
+	    Glf_247 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 27
+	If Err Then Glf_247 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""1""", "Glf_247"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 27}", "Glf_247"
 Function Glf_248(args)
-	On Error Resume Next
-	    Glf_248 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 28
-	If Err Then Glf_248 = False
+	Glf_248 = glf_machine_vars("high_score_initials").GetValue() & "1"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 28}", "Glf_248"
+glf_funcRefMap.Add "machine.high_score_initials & ""1""", "Glf_248"
 Function Glf_249(args)
-	Glf_249 = glf_machine_vars("high_score_initials").GetValue() & "2"
+	On Error Resume Next
+	    Glf_249 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 28
+	If Err Then Glf_249 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""2""", "Glf_249"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 28}", "Glf_249"
 Function Glf_250(args)
-	On Error Resume Next
-	    Glf_250 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 29
-	If Err Then Glf_250 = False
+	Glf_250 = glf_machine_vars("high_score_initials").GetValue() & "2"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 29}", "Glf_250"
+glf_funcRefMap.Add "machine.high_score_initials & ""2""", "Glf_250"
 Function Glf_251(args)
-	Glf_251 = glf_machine_vars("high_score_initials").GetValue() & "3"
+	On Error Resume Next
+	    Glf_251 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 29
+	If Err Then Glf_251 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""3""", "Glf_251"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 29}", "Glf_251"
 Function Glf_252(args)
-	On Error Resume Next
-	    Glf_252 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 30
-	If Err Then Glf_252 = False
+	Glf_252 = glf_machine_vars("high_score_initials").GetValue() & "3"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 30}", "Glf_252"
+glf_funcRefMap.Add "machine.high_score_initials & ""3""", "Glf_252"
 Function Glf_253(args)
-	Glf_253 = glf_machine_vars("high_score_initials").GetValue() & "4"
+	On Error Resume Next
+	    Glf_253 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 30
+	If Err Then Glf_253 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""4""", "Glf_253"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 30}", "Glf_253"
 Function Glf_254(args)
-	On Error Resume Next
-	    Glf_254 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 31
-	If Err Then Glf_254 = False
+	Glf_254 = glf_machine_vars("high_score_initials").GetValue() & "4"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 31}", "Glf_254"
+glf_funcRefMap.Add "machine.high_score_initials & ""4""", "Glf_254"
 Function Glf_255(args)
-	Glf_255 = glf_machine_vars("high_score_initials").GetValue() & "5"
+	On Error Resume Next
+	    Glf_255 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 31
+	If Err Then Glf_255 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""5""", "Glf_255"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 31}", "Glf_255"
 Function Glf_256(args)
-	On Error Resume Next
-	    Glf_256 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 32
-	If Err Then Glf_256 = False
+	Glf_256 = glf_machine_vars("high_score_initials").GetValue() & "5"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 32}", "Glf_256"
+glf_funcRefMap.Add "machine.high_score_initials & ""5""", "Glf_256"
 Function Glf_257(args)
-	Glf_257 = glf_machine_vars("high_score_initials").GetValue() & "6"
+	On Error Resume Next
+	    Glf_257 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 32
+	If Err Then Glf_257 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""6""", "Glf_257"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 32}", "Glf_257"
 Function Glf_258(args)
-	On Error Resume Next
-	    Glf_258 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 33
-	If Err Then Glf_258 = False
+	Glf_258 = glf_machine_vars("high_score_initials").GetValue() & "6"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 33}", "Glf_258"
+glf_funcRefMap.Add "machine.high_score_initials & ""6""", "Glf_258"
 Function Glf_259(args)
-	Glf_259 = glf_machine_vars("high_score_initials").GetValue() & "7"
+	On Error Resume Next
+	    Glf_259 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 33
+	If Err Then Glf_259 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""7""", "Glf_259"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 33}", "Glf_259"
 Function Glf_260(args)
-	On Error Resume Next
-	    Glf_260 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 34
-	If Err Then Glf_260 = False
+	Glf_260 = glf_machine_vars("high_score_initials").GetValue() & "7"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 34}", "Glf_260"
+glf_funcRefMap.Add "machine.high_score_initials & ""7""", "Glf_260"
 Function Glf_261(args)
-	Glf_261 = glf_machine_vars("high_score_initials").GetValue() & "8"
+	On Error Resume Next
+	    Glf_261 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 34
+	If Err Then Glf_261 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""8""", "Glf_261"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 34}", "Glf_261"
 Function Glf_262(args)
-	On Error Resume Next
-	    Glf_262 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 35
-	If Err Then Glf_262 = False
+	Glf_262 = glf_machine_vars("high_score_initials").GetValue() & "8"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 35}", "Glf_262"
+glf_funcRefMap.Add "machine.high_score_initials & ""8""", "Glf_262"
 Function Glf_263(args)
-	Glf_263 = glf_machine_vars("high_score_initials").GetValue() & "9"
+	On Error Resume Next
+	    Glf_263 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 35
+	If Err Then Glf_263 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""9""", "Glf_263"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 35}", "Glf_263"
 Function Glf_264(args)
-	On Error Resume Next
-	    Glf_264 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 36
-	If Err Then Glf_264 = False
+	Glf_264 = glf_machine_vars("high_score_initials").GetValue() & "9"
 End Function
-glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 36}", "Glf_264"
+glf_funcRefMap.Add "machine.high_score_initials & ""9""", "Glf_264"
 Function Glf_265(args)
-	Glf_265 = glf_machine_vars("high_score_initials").GetValue() & "_"
+	On Error Resume Next
+	    Glf_265 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 36
+	If Err Then Glf_265 = False
 End Function
-glf_funcRefMap.Add "machine.high_score_initials & ""_""", "Glf_265"
+glf_funcRefMap.Add "text_inputted.3{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 36}", "Glf_265"
 Function Glf_266(args)
-	Glf_266 = 60
+	Glf_266 = glf_machine_vars("high_score_initials").GetValue() & "_"
 End Function
-glf_funcRefMap.Add "60", "Glf_266"
+glf_funcRefMap.Add "machine.high_score_initials & ""_""", "Glf_266"
 Function Glf_267(args)
-	Glf_267 = Glf_FormatValue(glf_timers("high_score_timeout").GetValue("ticks"), "0>2")
+	Glf_267 = 60
 End Function
-glf_funcRefMap.Add "{devices.timers.high_score_timeout.ticks:0>2}", "Glf_267"
+glf_funcRefMap.Add "60", "Glf_267"
 Function Glf_268(args)
-	On Error Resume Next
-	    Glf_268 = glf_dispatch_current_kwargs("player_num")=1
-	If Err Then Glf_268 = False
+	Glf_268 = Glf_FormatValue(glf_timers("high_score_timeout").GetValue("ticks"), "0>2")
 End Function
-glf_funcRefMap.Add "high_score_enter_initials{kwargs.player_num==1}", "Glf_268"
+glf_funcRefMap.Add "{devices.timers.high_score_timeout.ticks:0>2}", "Glf_268"
 Function Glf_269(args)
-	Glf_269 = "P1 "
+	On Error Resume Next
+	    Glf_269 = glf_dispatch_current_kwargs("player_num")=1
+	If Err Then Glf_269 = False
 End Function
-glf_funcRefMap.Add """P1 """, "Glf_269"
+glf_funcRefMap.Add "high_score_enter_initials{kwargs.player_num==1}", "Glf_269"
 Function Glf_270(args)
-	On Error Resume Next
-	    Glf_270 = glf_dispatch_current_kwargs("player_num")=2
-	If Err Then Glf_270 = False
+	Glf_270 = "P1 "
 End Function
-glf_funcRefMap.Add "high_score_enter_initials{kwargs.player_num==2}", "Glf_270"
+glf_funcRefMap.Add """P1 """, "Glf_270"
 Function Glf_271(args)
-	Glf_271 = "P2 "
+	On Error Resume Next
+	    Glf_271 = glf_dispatch_current_kwargs("player_num")=2
+	If Err Then Glf_271 = False
 End Function
-glf_funcRefMap.Add """P2 """, "Glf_271"
+glf_funcRefMap.Add "high_score_enter_initials{kwargs.player_num==2}", "Glf_271"
 Function Glf_272(args)
-	On Error Resume Next
-	    Glf_272 = glf_dispatch_current_kwargs("player_num")=3
-	If Err Then Glf_272 = False
+	Glf_272 = "P2 "
 End Function
-glf_funcRefMap.Add "high_score_enter_initials{kwargs.player_num==3}", "Glf_272"
+glf_funcRefMap.Add """P2 """, "Glf_272"
 Function Glf_273(args)
-	Glf_273 = "P3 "
+	On Error Resume Next
+	    Glf_273 = glf_dispatch_current_kwargs("player_num")=3
+	If Err Then Glf_273 = False
 End Function
-glf_funcRefMap.Add """P3 """, "Glf_273"
+glf_funcRefMap.Add "high_score_enter_initials{kwargs.player_num==3}", "Glf_273"
 Function Glf_274(args)
-	On Error Resume Next
-	    Glf_274 = glf_dispatch_current_kwargs("player_num")=4
-	If Err Then Glf_274 = False
+	Glf_274 = "P3 "
 End Function
-glf_funcRefMap.Add "high_score_enter_initials{kwargs.player_num==4}", "Glf_274"
+glf_funcRefMap.Add """P3 """, "Glf_274"
 Function Glf_275(args)
-	Glf_275 = "P4 "
-End Function
-glf_funcRefMap.Add """P4 """, "Glf_275"
-Function Glf_276(args)
-	Glf_276 = "INITIALS"
-End Function
-glf_funcRefMap.Add """INITIALS""", "Glf_276"
-Function Glf_277(args)
-	Glf_277 = "A"
-End Function
-glf_funcRefMap.Add """A""", "Glf_277"
-Function Glf_278(args)
 	On Error Resume Next
-	    Glf_278 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 0 And GetPlayerState("hs_input_ready") = 1
-	If Err Then Glf_278 = False
+	    Glf_275 = glf_dispatch_current_kwargs("player_num")=4
+	If Err Then Glf_275 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 0 && current_player.hs_input_ready == 1}", "Glf_278"
+glf_funcRefMap.Add "high_score_enter_initials{kwargs.player_num==4}", "Glf_275"
+Function Glf_276(args)
+	Glf_276 = "P4 "
+End Function
+glf_funcRefMap.Add """P4 """, "Glf_276"
+Function Glf_277(args)
+	Glf_277 = "INITIALS"
+End Function
+glf_funcRefMap.Add """INITIALS""", "Glf_277"
+Function Glf_278(args)
+	Glf_278 = "A"
+End Function
+glf_funcRefMap.Add """A""", "Glf_278"
 Function Glf_279(args)
 	On Error Resume Next
 	    Glf_279 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 0 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_279 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 0 && current_player.hs_input_ready == 1}", "Glf_279"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 0 && current_player.hs_input_ready == 1}", "Glf_279"
 Function Glf_280(args)
 	On Error Resume Next
-	    Glf_280 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 1 And GetPlayerState("hs_input_ready") = 1
+	    Glf_280 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 0 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_280 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 1 && current_player.hs_input_ready == 1}", "Glf_280"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 0 && current_player.hs_input_ready == 1}", "Glf_280"
 Function Glf_281(args)
 	On Error Resume Next
 	    Glf_281 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 1 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_281 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 1 && current_player.hs_input_ready == 1}", "Glf_281"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 1 && current_player.hs_input_ready == 1}", "Glf_281"
 Function Glf_282(args)
 	On Error Resume Next
-	    Glf_282 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 2 And GetPlayerState("hs_input_ready") = 1
+	    Glf_282 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 1 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_282 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 2 && current_player.hs_input_ready == 1}", "Glf_282"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 1 && current_player.hs_input_ready == 1}", "Glf_282"
 Function Glf_283(args)
 	On Error Resume Next
 	    Glf_283 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 2 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_283 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 2 && current_player.hs_input_ready == 1}", "Glf_283"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 2 && current_player.hs_input_ready == 1}", "Glf_283"
 Function Glf_284(args)
 	On Error Resume Next
-	    Glf_284 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 3 And GetPlayerState("hs_input_ready") = 1
+	    Glf_284 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 2 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_284 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 3 && current_player.hs_input_ready == 1}", "Glf_284"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 2 && current_player.hs_input_ready == 1}", "Glf_284"
 Function Glf_285(args)
 	On Error Resume Next
 	    Glf_285 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 3 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_285 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 3 && current_player.hs_input_ready == 1}", "Glf_285"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 3 && current_player.hs_input_ready == 1}", "Glf_285"
 Function Glf_286(args)
 	On Error Resume Next
-	    Glf_286 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 4 And GetPlayerState("hs_input_ready") = 1
+	    Glf_286 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 3 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_286 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 4 && current_player.hs_input_ready == 1}", "Glf_286"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 3 && current_player.hs_input_ready == 1}", "Glf_286"
 Function Glf_287(args)
 	On Error Resume Next
 	    Glf_287 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 4 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_287 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 4 && current_player.hs_input_ready == 1}", "Glf_287"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 4 && current_player.hs_input_ready == 1}", "Glf_287"
 Function Glf_288(args)
 	On Error Resume Next
-	    Glf_288 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 5 And GetPlayerState("hs_input_ready") = 1
+	    Glf_288 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 4 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_288 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 5 && current_player.hs_input_ready == 1}", "Glf_288"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 4 && current_player.hs_input_ready == 1}", "Glf_288"
 Function Glf_289(args)
 	On Error Resume Next
 	    Glf_289 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 5 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_289 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 5 && current_player.hs_input_ready == 1}", "Glf_289"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 5 && current_player.hs_input_ready == 1}", "Glf_289"
 Function Glf_290(args)
 	On Error Resume Next
-	    Glf_290 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 6 And GetPlayerState("hs_input_ready") = 1
+	    Glf_290 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 5 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_290 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 6 && current_player.hs_input_ready == 1}", "Glf_290"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 5 && current_player.hs_input_ready == 1}", "Glf_290"
 Function Glf_291(args)
 	On Error Resume Next
 	    Glf_291 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 6 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_291 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 6 && current_player.hs_input_ready == 1}", "Glf_291"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 6 && current_player.hs_input_ready == 1}", "Glf_291"
 Function Glf_292(args)
 	On Error Resume Next
-	    Glf_292 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 7 And GetPlayerState("hs_input_ready") = 1
+	    Glf_292 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 6 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_292 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 7 && current_player.hs_input_ready == 1}", "Glf_292"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 6 && current_player.hs_input_ready == 1}", "Glf_292"
 Function Glf_293(args)
 	On Error Resume Next
 	    Glf_293 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 7 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_293 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 7 && current_player.hs_input_ready == 1}", "Glf_293"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 7 && current_player.hs_input_ready == 1}", "Glf_293"
 Function Glf_294(args)
 	On Error Resume Next
-	    Glf_294 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 8 And GetPlayerState("hs_input_ready") = 1
+	    Glf_294 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 7 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_294 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 8 && current_player.hs_input_ready == 1}", "Glf_294"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 7 && current_player.hs_input_ready == 1}", "Glf_294"
 Function Glf_295(args)
 	On Error Resume Next
 	    Glf_295 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 8 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_295 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 8 && current_player.hs_input_ready == 1}", "Glf_295"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 8 && current_player.hs_input_ready == 1}", "Glf_295"
 Function Glf_296(args)
 	On Error Resume Next
-	    Glf_296 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 9 And GetPlayerState("hs_input_ready") = 1
+	    Glf_296 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 8 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_296 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 9 && current_player.hs_input_ready == 1}", "Glf_296"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 8 && current_player.hs_input_ready == 1}", "Glf_296"
 Function Glf_297(args)
 	On Error Resume Next
 	    Glf_297 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 9 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_297 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 9 && current_player.hs_input_ready == 1}", "Glf_297"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 9 && current_player.hs_input_ready == 1}", "Glf_297"
 Function Glf_298(args)
 	On Error Resume Next
-	    Glf_298 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 10 And GetPlayerState("hs_input_ready") = 1
+	    Glf_298 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 9 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_298 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 10 && current_player.hs_input_ready == 1}", "Glf_298"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 9 && current_player.hs_input_ready == 1}", "Glf_298"
 Function Glf_299(args)
 	On Error Resume Next
 	    Glf_299 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 10 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_299 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 10 && current_player.hs_input_ready == 1}", "Glf_299"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 10 && current_player.hs_input_ready == 1}", "Glf_299"
 Function Glf_300(args)
 	On Error Resume Next
-	    Glf_300 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 11 And GetPlayerState("hs_input_ready") = 1
+	    Glf_300 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 10 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_300 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 11 && current_player.hs_input_ready == 1}", "Glf_300"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 10 && current_player.hs_input_ready == 1}", "Glf_300"
 Function Glf_301(args)
 	On Error Resume Next
 	    Glf_301 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 11 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_301 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 11 && current_player.hs_input_ready == 1}", "Glf_301"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 11 && current_player.hs_input_ready == 1}", "Glf_301"
 Function Glf_302(args)
 	On Error Resume Next
-	    Glf_302 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 12 And GetPlayerState("hs_input_ready") = 1
+	    Glf_302 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 11 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_302 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 12 && current_player.hs_input_ready == 1}", "Glf_302"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 11 && current_player.hs_input_ready == 1}", "Glf_302"
 Function Glf_303(args)
 	On Error Resume Next
 	    Glf_303 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 12 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_303 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 12 && current_player.hs_input_ready == 1}", "Glf_303"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 12 && current_player.hs_input_ready == 1}", "Glf_303"
 Function Glf_304(args)
 	On Error Resume Next
-	    Glf_304 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 13 And GetPlayerState("hs_input_ready") = 1
+	    Glf_304 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 12 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_304 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 13 && current_player.hs_input_ready == 1}", "Glf_304"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 12 && current_player.hs_input_ready == 1}", "Glf_304"
 Function Glf_305(args)
 	On Error Resume Next
 	    Glf_305 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 13 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_305 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 13 && current_player.hs_input_ready == 1}", "Glf_305"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 13 && current_player.hs_input_ready == 1}", "Glf_305"
 Function Glf_306(args)
 	On Error Resume Next
-	    Glf_306 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 14 And GetPlayerState("hs_input_ready") = 1
+	    Glf_306 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 13 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_306 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 14 && current_player.hs_input_ready == 1}", "Glf_306"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 13 && current_player.hs_input_ready == 1}", "Glf_306"
 Function Glf_307(args)
 	On Error Resume Next
 	    Glf_307 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 14 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_307 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 14 && current_player.hs_input_ready == 1}", "Glf_307"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 14 && current_player.hs_input_ready == 1}", "Glf_307"
 Function Glf_308(args)
 	On Error Resume Next
-	    Glf_308 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 15 And GetPlayerState("hs_input_ready") = 1
+	    Glf_308 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 14 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_308 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 15 && current_player.hs_input_ready == 1}", "Glf_308"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 14 && current_player.hs_input_ready == 1}", "Glf_308"
 Function Glf_309(args)
 	On Error Resume Next
 	    Glf_309 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 15 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_309 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 15 && current_player.hs_input_ready == 1}", "Glf_309"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 15 && current_player.hs_input_ready == 1}", "Glf_309"
 Function Glf_310(args)
 	On Error Resume Next
-	    Glf_310 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 16 And GetPlayerState("hs_input_ready") = 1
+	    Glf_310 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 15 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_310 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 16 && current_player.hs_input_ready == 1}", "Glf_310"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 15 && current_player.hs_input_ready == 1}", "Glf_310"
 Function Glf_311(args)
 	On Error Resume Next
 	    Glf_311 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 16 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_311 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 16 && current_player.hs_input_ready == 1}", "Glf_311"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 16 && current_player.hs_input_ready == 1}", "Glf_311"
 Function Glf_312(args)
 	On Error Resume Next
-	    Glf_312 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 17 And GetPlayerState("hs_input_ready") = 1
+	    Glf_312 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 16 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_312 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 17 && current_player.hs_input_ready == 1}", "Glf_312"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 16 && current_player.hs_input_ready == 1}", "Glf_312"
 Function Glf_313(args)
 	On Error Resume Next
 	    Glf_313 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 17 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_313 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 17 && current_player.hs_input_ready == 1}", "Glf_313"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 17 && current_player.hs_input_ready == 1}", "Glf_313"
 Function Glf_314(args)
 	On Error Resume Next
-	    Glf_314 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 18 And GetPlayerState("hs_input_ready") = 1
+	    Glf_314 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 17 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_314 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 18 && current_player.hs_input_ready == 1}", "Glf_314"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 17 && current_player.hs_input_ready == 1}", "Glf_314"
 Function Glf_315(args)
 	On Error Resume Next
 	    Glf_315 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 18 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_315 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 18 && current_player.hs_input_ready == 1}", "Glf_315"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 18 && current_player.hs_input_ready == 1}", "Glf_315"
 Function Glf_316(args)
 	On Error Resume Next
-	    Glf_316 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 19 And GetPlayerState("hs_input_ready") = 1
+	    Glf_316 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 18 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_316 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 19 && current_player.hs_input_ready == 1}", "Glf_316"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 18 && current_player.hs_input_ready == 1}", "Glf_316"
 Function Glf_317(args)
 	On Error Resume Next
 	    Glf_317 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 19 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_317 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 19 && current_player.hs_input_ready == 1}", "Glf_317"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 19 && current_player.hs_input_ready == 1}", "Glf_317"
 Function Glf_318(args)
 	On Error Resume Next
-	    Glf_318 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 20 And GetPlayerState("hs_input_ready") = 1
+	    Glf_318 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 19 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_318 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 20 && current_player.hs_input_ready == 1}", "Glf_318"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 19 && current_player.hs_input_ready == 1}", "Glf_318"
 Function Glf_319(args)
 	On Error Resume Next
 	    Glf_319 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 20 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_319 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 20 && current_player.hs_input_ready == 1}", "Glf_319"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 20 && current_player.hs_input_ready == 1}", "Glf_319"
 Function Glf_320(args)
 	On Error Resume Next
-	    Glf_320 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 21 And GetPlayerState("hs_input_ready") = 1
+	    Glf_320 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 20 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_320 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 21 && current_player.hs_input_ready == 1}", "Glf_320"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 20 && current_player.hs_input_ready == 1}", "Glf_320"
 Function Glf_321(args)
 	On Error Resume Next
 	    Glf_321 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 21 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_321 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 21 && current_player.hs_input_ready == 1}", "Glf_321"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 21 && current_player.hs_input_ready == 1}", "Glf_321"
 Function Glf_322(args)
 	On Error Resume Next
-	    Glf_322 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 22 And GetPlayerState("hs_input_ready") = 1
+	    Glf_322 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 21 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_322 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 22 && current_player.hs_input_ready == 1}", "Glf_322"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 21 && current_player.hs_input_ready == 1}", "Glf_322"
 Function Glf_323(args)
 	On Error Resume Next
 	    Glf_323 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 22 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_323 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 22 && current_player.hs_input_ready == 1}", "Glf_323"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 22 && current_player.hs_input_ready == 1}", "Glf_323"
 Function Glf_324(args)
 	On Error Resume Next
-	    Glf_324 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 23 And GetPlayerState("hs_input_ready") = 1
+	    Glf_324 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 22 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_324 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 23 && current_player.hs_input_ready == 1}", "Glf_324"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 22 && current_player.hs_input_ready == 1}", "Glf_324"
 Function Glf_325(args)
 	On Error Resume Next
 	    Glf_325 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 23 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_325 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 23 && current_player.hs_input_ready == 1}", "Glf_325"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 23 && current_player.hs_input_ready == 1}", "Glf_325"
 Function Glf_326(args)
 	On Error Resume Next
-	    Glf_326 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 24 And GetPlayerState("hs_input_ready") = 1
+	    Glf_326 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 23 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_326 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 24 && current_player.hs_input_ready == 1}", "Glf_326"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 23 && current_player.hs_input_ready == 1}", "Glf_326"
 Function Glf_327(args)
 	On Error Resume Next
 	    Glf_327 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 24 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_327 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 24 && current_player.hs_input_ready == 1}", "Glf_327"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 24 && current_player.hs_input_ready == 1}", "Glf_327"
 Function Glf_328(args)
 	On Error Resume Next
-	    Glf_328 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 25 And GetPlayerState("hs_input_ready") = 1
+	    Glf_328 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 24 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_328 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 25 && current_player.hs_input_ready == 1}", "Glf_328"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 24 && current_player.hs_input_ready == 1}", "Glf_328"
 Function Glf_329(args)
 	On Error Resume Next
 	    Glf_329 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 25 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_329 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 25 && current_player.hs_input_ready == 1}", "Glf_329"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 25 && current_player.hs_input_ready == 1}", "Glf_329"
 Function Glf_330(args)
 	On Error Resume Next
-	    Glf_330 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 26 And GetPlayerState("hs_input_ready") = 1
+	    Glf_330 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 25 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_330 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 26 && current_player.hs_input_ready == 1}", "Glf_330"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 25 && current_player.hs_input_ready == 1}", "Glf_330"
 Function Glf_331(args)
 	On Error Resume Next
 	    Glf_331 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 26 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_331 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 26 && current_player.hs_input_ready == 1}", "Glf_331"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 26 && current_player.hs_input_ready == 1}", "Glf_331"
 Function Glf_332(args)
 	On Error Resume Next
-	    Glf_332 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 27 And GetPlayerState("hs_input_ready") = 1
+	    Glf_332 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 26 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_332 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 27 && current_player.hs_input_ready == 1}", "Glf_332"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 26 && current_player.hs_input_ready == 1}", "Glf_332"
 Function Glf_333(args)
 	On Error Resume Next
 	    Glf_333 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 27 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_333 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 27 && current_player.hs_input_ready == 1}", "Glf_333"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 27 && current_player.hs_input_ready == 1}", "Glf_333"
 Function Glf_334(args)
 	On Error Resume Next
-	    Glf_334 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 28 And GetPlayerState("hs_input_ready") = 1
+	    Glf_334 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 27 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_334 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 28 && current_player.hs_input_ready == 1}", "Glf_334"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 27 && current_player.hs_input_ready == 1}", "Glf_334"
 Function Glf_335(args)
 	On Error Resume Next
 	    Glf_335 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 28 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_335 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 28 && current_player.hs_input_ready == 1}", "Glf_335"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 28 && current_player.hs_input_ready == 1}", "Glf_335"
 Function Glf_336(args)
 	On Error Resume Next
-	    Glf_336 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 29 And GetPlayerState("hs_input_ready") = 1
+	    Glf_336 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 28 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_336 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 29 && current_player.hs_input_ready == 1}", "Glf_336"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 28 && current_player.hs_input_ready == 1}", "Glf_336"
 Function Glf_337(args)
 	On Error Resume Next
 	    Glf_337 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 29 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_337 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 29 && current_player.hs_input_ready == 1}", "Glf_337"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 29 && current_player.hs_input_ready == 1}", "Glf_337"
 Function Glf_338(args)
 	On Error Resume Next
-	    Glf_338 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 30 And GetPlayerState("hs_input_ready") = 1
+	    Glf_338 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 29 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_338 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 30 && current_player.hs_input_ready == 1}", "Glf_338"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 29 && current_player.hs_input_ready == 1}", "Glf_338"
 Function Glf_339(args)
 	On Error Resume Next
 	    Glf_339 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 30 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_339 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 30 && current_player.hs_input_ready == 1}", "Glf_339"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 30 && current_player.hs_input_ready == 1}", "Glf_339"
 Function Glf_340(args)
 	On Error Resume Next
-	    Glf_340 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 31 And GetPlayerState("hs_input_ready") = 1
+	    Glf_340 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 30 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_340 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 31 && current_player.hs_input_ready == 1}", "Glf_340"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 30 && current_player.hs_input_ready == 1}", "Glf_340"
 Function Glf_341(args)
 	On Error Resume Next
 	    Glf_341 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 31 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_341 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 31 && current_player.hs_input_ready == 1}", "Glf_341"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 31 && current_player.hs_input_ready == 1}", "Glf_341"
 Function Glf_342(args)
 	On Error Resume Next
-	    Glf_342 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 32 And GetPlayerState("hs_input_ready") = 1
+	    Glf_342 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 31 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_342 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 32 && current_player.hs_input_ready == 1}", "Glf_342"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 31 && current_player.hs_input_ready == 1}", "Glf_342"
 Function Glf_343(args)
 	On Error Resume Next
 	    Glf_343 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 32 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_343 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 32 && current_player.hs_input_ready == 1}", "Glf_343"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 32 && current_player.hs_input_ready == 1}", "Glf_343"
 Function Glf_344(args)
 	On Error Resume Next
-	    Glf_344 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 33 And GetPlayerState("hs_input_ready") = 1
+	    Glf_344 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 32 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_344 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 33 && current_player.hs_input_ready == 1}", "Glf_344"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 32 && current_player.hs_input_ready == 1}", "Glf_344"
 Function Glf_345(args)
 	On Error Resume Next
 	    Glf_345 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 33 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_345 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 33 && current_player.hs_input_ready == 1}", "Glf_345"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 33 && current_player.hs_input_ready == 1}", "Glf_345"
 Function Glf_346(args)
 	On Error Resume Next
-	    Glf_346 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 34 And GetPlayerState("hs_input_ready") = 1
+	    Glf_346 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 33 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_346 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 34 && current_player.hs_input_ready == 1}", "Glf_346"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 33 && current_player.hs_input_ready == 1}", "Glf_346"
 Function Glf_347(args)
 	On Error Resume Next
 	    Glf_347 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 34 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_347 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 34 && current_player.hs_input_ready == 1}", "Glf_347"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 34 && current_player.hs_input_ready == 1}", "Glf_347"
 Function Glf_348(args)
 	On Error Resume Next
-	    Glf_348 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 35 And GetPlayerState("hs_input_ready") = 1
+	    Glf_348 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 34 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_348 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 35 && current_player.hs_input_ready == 1}", "Glf_348"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 34 && current_player.hs_input_ready == 1}", "Glf_348"
 Function Glf_349(args)
 	On Error Resume Next
 	    Glf_349 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 35 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_349 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 35 && current_player.hs_input_ready == 1}", "Glf_349"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 35 && current_player.hs_input_ready == 1}", "Glf_349"
 Function Glf_350(args)
 	On Error Resume Next
-	    Glf_350 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 36 And GetPlayerState("hs_input_ready") = 1
+	    Glf_350 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 35 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_350 = False
 End Function
-glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 36 && current_player.hs_input_ready == 1}", "Glf_350"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 35 && current_player.hs_input_ready == 1}", "Glf_350"
 Function Glf_351(args)
 	On Error Resume Next
 	    Glf_351 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 36 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_351 = False
 End Function
-glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 36 && current_player.hs_input_ready == 1}", "Glf_351"
+glf_funcRefMap.Add "s_left_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 36 && current_player.hs_input_ready == 1}", "Glf_351"
 Function Glf_352(args)
 	On Error Resume Next
-	    Glf_352 = glf_machine_vars("high_score_initials_chars").GetValue()<3
+	    Glf_352 = (((glf_machine_vars("high_score_initials_index").GetValue() Mod 37) + 37) Mod 37) = 36 And GetPlayerState("hs_input_ready") = 1
 	If Err Then Glf_352 = False
 End Function
-glf_funcRefMap.Add "text_inputted.1{machine.high_score_initials_chars<3}", "Glf_352"
+glf_funcRefMap.Add "s_right_flipper_active.1{(((machine.high_score_initials_index Mod 37) + 37) Mod 37) == 36 && current_player.hs_input_ready == 1}", "Glf_352"
 Function Glf_353(args)
 	On Error Resume Next
-	    Glf_353 = glf_dispatch_current_kwargs("position") = 1
+	    Glf_353 = glf_machine_vars("high_score_initials_chars").GetValue()<3
 	If Err Then Glf_353 = False
 End Function
-glf_funcRefMap.Add "high_score_award_display{kwargs.position == 1}", "Glf_353"
+glf_funcRefMap.Add "text_inputted.1{machine.high_score_initials_chars<3}", "Glf_353"
 Function Glf_354(args)
-	Glf_354 = "  GRAND "
+	On Error Resume Next
+	    Glf_354 = glf_dispatch_current_kwargs("position") = 1
+	If Err Then Glf_354 = False
 End Function
-glf_funcRefMap.Add """  GRAND """, "Glf_354"
+glf_funcRefMap.Add "high_score_award_display{kwargs.position == 1}", "Glf_354"
 Function Glf_355(args)
-	Glf_355 = "CHAMPION"
+	Glf_355 = "  GRAND "
 End Function
-glf_funcRefMap.Add """CHAMPION""", "Glf_355"
+glf_funcRefMap.Add """  GRAND """, "Glf_355"
 Function Glf_356(args)
-	Glf_356 = "     " & glf_machine_vars("high_score_initials").GetValue()
+	Glf_356 = "CHAMPION"
 End Function
-glf_funcRefMap.Add """     "" & machine.high_score_initials", "Glf_356"
+glf_funcRefMap.Add """CHAMPION""", "Glf_356"
 Function Glf_357(args)
-	On Error Resume Next
-	    Glf_357 = glf_dispatch_current_kwargs("position") = 2
-	If Err Then Glf_357 = False
+	Glf_357 = "     " & glf_machine_vars("high_score_initials").GetValue()
 End Function
-glf_funcRefMap.Add "high_score_award_display{kwargs.position == 2}", "Glf_357"
+glf_funcRefMap.Add """     "" & machine.high_score_initials", "Glf_357"
 Function Glf_358(args)
-	Glf_358 = "   HIGH "
+	On Error Resume Next
+	    Glf_358 = glf_dispatch_current_kwargs("position") = 2
+	If Err Then Glf_358 = False
 End Function
-glf_funcRefMap.Add """   HIGH """, "Glf_358"
+glf_funcRefMap.Add "high_score_award_display{kwargs.position == 2}", "Glf_358"
 Function Glf_359(args)
-	Glf_359 = "SCORE 1 "
+	Glf_359 = "   HIGH "
 End Function
-glf_funcRefMap.Add """SCORE 1 """, "Glf_359"
+glf_funcRefMap.Add """   HIGH """, "Glf_359"
 Function Glf_360(args)
-	On Error Resume Next
-	    Glf_360 = glf_dispatch_current_kwargs("position") = 3
-	If Err Then Glf_360 = False
+	Glf_360 = "SCORE 1 "
 End Function
-glf_funcRefMap.Add "high_score_award_display{kwargs.position == 3}", "Glf_360"
+glf_funcRefMap.Add """SCORE 1 """, "Glf_360"
 Function Glf_361(args)
-	Glf_361 = "SCORE 2 "
-End Function
-glf_funcRefMap.Add """SCORE 2 """, "Glf_361"
-Function Glf_362(args)
 	On Error Resume Next
-	    Glf_362 = glf_dispatch_current_kwargs("position") = 4
-	If Err Then Glf_362 = False
+	    Glf_361 = glf_dispatch_current_kwargs("position") = 3
+	If Err Then Glf_361 = False
 End Function
-glf_funcRefMap.Add "high_score_award_display{kwargs.position == 4}", "Glf_362"
+glf_funcRefMap.Add "high_score_award_display{kwargs.position == 3}", "Glf_361"
+Function Glf_362(args)
+	Glf_362 = "SCORE 2 "
+End Function
+glf_funcRefMap.Add """SCORE 2 """, "Glf_362"
 Function Glf_363(args)
-	Glf_363 = "SCORE 3 "
+	On Error Resume Next
+	    Glf_363 = glf_dispatch_current_kwargs("position") = 4
+	If Err Then Glf_363 = False
 End Function
-glf_funcRefMap.Add """SCORE 3 """, "Glf_363"
+glf_funcRefMap.Add "high_score_award_display{kwargs.position == 4}", "Glf_363"
 Function Glf_364(args)
-	Glf_364 = 4000
+	Glf_364 = "SCORE 3 "
 End Function
-glf_funcRefMap.Add "4000", "Glf_364"
+glf_funcRefMap.Add """SCORE 3 """, "Glf_364"
 Function Glf_365(args)
-	Glf_365 = 20000
+	Glf_365 = 4000
 End Function
-glf_funcRefMap.Add "20000", "Glf_365"
+glf_funcRefMap.Add "4000", "Glf_365"
 Function Glf_366(args)
-	Glf_366 = 1000
+	Glf_366 = 20000
 End Function
-glf_funcRefMap.Add "1000", "Glf_366"
+glf_funcRefMap.Add "20000", "Glf_366"
 Function Glf_367(args)
-	Glf_367 = 250
+	Glf_367 = 1000
 End Function
-glf_funcRefMap.Add "250", "Glf_367"
+glf_funcRefMap.Add "1000", "Glf_367"
 Function Glf_368(args)
-	Glf_368 = 50
+	Glf_368 = 250
 End Function
-glf_funcRefMap.Add "50", "Glf_368"
+glf_funcRefMap.Add "250", "Glf_368"
 Function Glf_369(args)
-	Glf_369 = 1500
+	Glf_369 = 50
 End Function
-glf_funcRefMap.Add "1500", "Glf_369"
+glf_funcRefMap.Add "50", "Glf_369"
 Function Glf_370(args)
-	Glf_370 = 100
+	Glf_370 = 1500
 End Function
-glf_funcRefMap.Add "100", "Glf_370"
+glf_funcRefMap.Add "1500", "Glf_370"
+Function Glf_371(args)
+	Glf_371 = 100
+End Function
+glf_funcRefMap.Add "100", "Glf_371"
 Dim glf_ball_seg18_lmarr : glf_ball_seg18_lmarr = Array(p_ball_seg18_vr)
 glf_lightMaps.Add "ball_seg18", glf_ball_seg18_lmarr
 Dim glf_p4_seg120_lmarr : glf_p4_seg120_lmarr = Array(p_p4_seg120_vr)
