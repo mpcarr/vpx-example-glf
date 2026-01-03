@@ -12,13 +12,12 @@ config_version=5
 
 config/name="ExampleGMCProject"
 run/main_scene="uid://ds4gduf8660uj"
-config/features=PackedStringArray("4.4", "Mobile")
+config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
 MPF="*res://addons/mpf-gmc/mpf_gmc.gd"
-Settings="*res://settings.gd"
 
 [display]
 

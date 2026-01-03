@@ -1,8 +1,15 @@
+###
+# The core MPF GMC Script, responsible for everything.
+#
+# Set this as a Global Autoload in your Godot project.
+###
+
+class_name MPFGMC
 extends LoggingNode
 
 const CONFIG_PATH = "res://gmc.cfg"
 const LOCAL_CONFIG_PATH = "user://gmc.local.cfg"
-const MPF_MIN_VERSION = "0.80.0"
+const MPF_MIN_VERSION = "0.80.0.dev10"
 
 var game
 var media
@@ -58,25 +65,27 @@ func _init():
 	# This is done explicitly line-by-line for optimized preload and relative paths
 	for s in [
 			# Static utility functions first
-			["util", preload("scripts/utilities.gd"), "GMCUtil"],
+			["util", preload("scripts/utilities.gd"), "GMCUtil", false],
 			# Log is needed for the rest
-			["log", preload("scripts/log.gd"), "GMCLogger"],
+			["log", preload("scripts/log.gd"), "GMCLogger", false],
 			# Game should be loaded next
-			["game", preload("scripts/mpf_game.gd"), "GMCGame"],
+			["game", preload("scripts/mpf_game.gd"), "GMCGame", true],
 			# Server depends on Game, should be loaded after
-			["server", preload("scripts/bcp_server.gd"), "GMCServer"],
+			["server", preload("scripts/bcp_server.gd"), "GMCServer", true],
 			# Process is here too
-			["process", preload("scripts/process.gd"), "GMCProcess"],
+			["process", preload("scripts/process.gd"), "GMCProcess", true],
 			# Media controller can come last
-			["media", preload("scripts/media.gd"), "GMCMedia"]
+			["media", preload("scripts/media.gd"), "GMCMedia", true]
 	]:
-		var script = self.get_config_value("gmc", s[2], false)
+		var script: String = self.get_config_value("gmc", s[2], '')
 		# TODO: Add logging configuration as init parameters so logging
 		# is available in the _init() methods of all scripts
-		if script:
-			self[s[0]] = load(script).new()
+		var script_inst: Resource = load(script) if script else s[1]
+		# For the main server nodes (GMCCoreScriptNode) pass this instance to the constructor
+		if s[3] == true:
+			self[s[0]] = script_inst.new(self)
 		else:
-			self[s[0]] = s[1].new()
+			self[s[0]] = script_inst.new()
 		# If an explicit value is set for this log, use it
 		if self[s[0]] is LoggingNode:
 			var script_log_level = self.get_config_value("gmc", "logging_%s" % s[0], -1)
@@ -183,9 +192,9 @@ func _input(event: InputEvent) -> void:
 					return
 				# If a kwarg dict is provided, include it
 				if cfg.size() > 2:
-					MPF.server.send_event_with_args(cfg[1], cfg[2])
+					self.server.send_event_with_args(cfg[1], cfg[2])
 				else:
-					MPF.server.send_event(cfg[1])
+					self.server.send_event(cfg[1])
 			"switch":
 				var action
 				var state
@@ -202,6 +211,6 @@ func _input(event: InputEvent) -> void:
 						state = 0
 					"toggle":
 						state = -1
-				MPF.server.send_switch(cfg[1], state)
+				self.server.send_switch(cfg[1], state)
 			_:
 				return

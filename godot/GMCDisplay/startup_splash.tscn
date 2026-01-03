@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://belkug6sa4arr"]
+[gd_scene load_steps=3 format=3 uid="uid://chyyii4xjrs6"]
 
-[ext_resource type="Script" path="res://addons/mpf-gmc/slides/startup.gd" id="1_cfjlx"]
-[ext_resource type="Texture2D" uid="uid://dounln3l35d26" path="res://addons/mpf-gmc/images/logo_mpf.png" id="2_v374h"]
+[ext_resource type="Script" uid="uid://ujpd25534tqk" path="res://addons/mpf-gmc/slides/startup.gd" id="1_jfo37"]
+[ext_resource type="Texture2D" uid="uid://dounln3l35d26" path="res://addons/mpf-gmc/images/logo_mpf.png" id="2_v2dht"]
 
 [node name="MPFSlide" type="Control"]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_cfjlx")
+script = ExtResource("1_jfo37")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -41,7 +41,7 @@ layout_mode = 2
 [node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer"]
 custom_minimum_size = Vector2(2.08165e-12, 300)
 layout_mode = 2
-texture = ExtResource("2_v374h")
+texture = ExtResource("2_v2dht")
 stretch_mode = 3
 
 [node name="status_main" type="Label" parent="CenterContainer/VBoxContainer"]

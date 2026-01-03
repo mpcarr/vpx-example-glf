@@ -1,14 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://ds4gduf8660uj"]
+[gd_scene load_steps=11 format=3 uid="uid://bxomb1kyk6cw7"]
 
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_window.gd" id="1_ixxnq"]
-[ext_resource type="Shader" path="res://addons/mpf-gmc/resources/virtual_dmd.gdshader" id="2_cbmcr"]
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_display.gd" id="2_clr31"]
-[ext_resource type="PackedScene" uid="uid://belkug6sa4arr" path="res://addons/mpf-gmc/slides/startup.tscn" id="3_8nbga"]
-[ext_resource type="Shader" path="res://addons/mpf-gmc/resources/dmd_dots.gdshader" id="5_0sixv"]
-[ext_resource type="Shader" path="res://addons/mpf-gmc/resources/pixelate.gdshader" id="5_m6y8w"]
+[ext_resource type="Script" uid="uid://b7l2vx2o7yb2q" path="res://addons/mpf-gmc/classes/mpf_window.gd" id="1_ni31q"]
+[ext_resource type="Script" uid="uid://cnc7dblwai6nd" path="res://addons/mpf-gmc/classes/mpf_display.gd" id="2_ce758"]
+[ext_resource type="PackedScene" uid="uid://belkug6sa4arr" path="res://addons/mpf-gmc/slides/startup.tscn" id="3_j12fv"]
+[ext_resource type="Shader" uid="uid://2ol6tp0k5xjg" path="res://addons/mpf-gmc/resources/virtual_dmd.gdshader" id="4_g52yu"]
+[ext_resource type="Shader" uid="uid://jeotwb7jhaxr" path="res://addons/mpf-gmc/resources/pixelate.gdshader" id="5_wy3e2"]
+[ext_resource type="Shader" uid="uid://dkgx27pr57puc" path="res://addons/mpf-gmc/resources/dmd_dots.gdshader" id="6_0q738"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vnlqf"]
-shader = ExtResource("2_cbmcr")
+shader = ExtResource("4_g52yu")
 shader_parameter/color = Color(0.101961, 0, 0, 1)
 shader_parameter/hardness = 5.0
 shader_parameter/spacing = 2.0
@@ -16,13 +16,13 @@ shader_parameter/columns = 98.0
 shader_parameter/rows = 36.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gmaen"]
-shader = ExtResource("5_m6y8w")
+shader = ExtResource("5_wy3e2")
 shader_parameter/columns = 128.0
 shader_parameter/rows = 32.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4bkj2"]
-shader = ExtResource("5_0sixv")
-shader_parameter/color = null
+shader = ExtResource("6_0q738")
+shader_parameter/color = Color(0, 0, 0, 1)
 shader_parameter/hardness = 5.0
 shader_parameter/spacing = 2.0
 shader_parameter/columns = 98.0
@@ -40,7 +40,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("1_ixxnq")
+script = ExtResource("1_ni31q")
 
 [node name="DefaultDisplay" type="Control" parent="."]
 layout_mode = 1
@@ -49,9 +49,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("2_clr31")
+script = ExtResource("2_ce758")
 is_default = true
-initial_slide = ExtResource("3_8nbga")
+initial_slide = ExtResource("3_j12fv")
 
 [node name="filters" type="Control" parent="."]
 visible = false
