@@ -1,0 +1,17 @@
+[TableOption]
+Glf Debug Log = 0.000000
+Glf Debug Log Level = 0.000000
+Glf Frame Dispatch = 1.000000
+Glf Monitor = 0.000000
+Balls Per Game = 1.000000
+Tilt Sensitivity (digital nudge) = 5.000000
+Glf Backbox Control Protocol = 1.000000
+Glf Virtual Segment DMD = 0.000000
+Glf Min Lightmap Update Rate = 1.000000
+Color Saturation = 1.000000
+Mech Volume = 0.800000
+Ball Roll Volume = 0.500000
+Ramp Roll Volume = 0.500000
+Staged Flippers = 0.000000
+Side Rails = 1.000000
+VR Room = 1.000000
