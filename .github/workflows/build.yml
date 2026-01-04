@@ -202,5 +202,6 @@ jobs:
             release/*.vpx
             release/*.exe
             release/*.directb2s
+            release/*.ini
             bcp-controller/**
 
