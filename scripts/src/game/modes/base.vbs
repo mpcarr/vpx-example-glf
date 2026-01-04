@@ -139,7 +139,7 @@ Sub CreateBaseMode()
                 .Key = "key_magnet_show"
                 .Show = "magnet_show" 
                 .Speed = 1
-                .Loops = 1
+                .Loops = 0
                 .Priority = 1000
                 '.EventsWhenCompleted = Array("mag_show_complete")
             End With
@@ -148,7 +148,7 @@ Sub CreateBaseMode()
                 .Key = "key_bumper1_show"
                 .Show = "flash_color_with_fade" 
                 .Speed = 15
-                .Loops = 1
+                .Loops = 0
                 With .Tokens()
                     .Add "lights", "tBL1"
                     .Add "fade", 500
@@ -159,7 +159,7 @@ Sub CreateBaseMode()
                 .Key = "key_bumper2_show"
                 .Show = "flash_color_with_fade" 
                 .Speed = 15
-                .Loops = 1
+                .Loops = 0
                 With .Tokens()
                     .Add "lights", "tBL2"
                     .Add "fade", 500
@@ -170,7 +170,7 @@ Sub CreateBaseMode()
                 .Key = "key_bumper3_show"
                 .Show = "flash_color_with_fade" 
                 .Speed = 15
-                .Loops = 1
+                .Loops = 0
                 With .Tokens()
                     .Add "lights", "tBL3"
                     .Add "fade", 500

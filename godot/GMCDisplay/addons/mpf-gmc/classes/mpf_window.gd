@@ -138,7 +138,6 @@ func _check_config() -> void:
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
-		var menu = $RightClickMenu
-		print(event)
-		#menu.set_position(event.position)
-		menu.popup_centered()
+		var settings_panel = $SettingsMenu
+		settings_panel.position = event.get_position()
+		settings_panel.popup()

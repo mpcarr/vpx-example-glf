@@ -88,24 +88,24 @@ Sub CreateBasementMode()
             'Display the tilt warning
             With .EventName("tilt_warning")
                 With .Display("player1")
-                    .Text = """"""
+                    .Text = ""
                     .Expire = 4000
                     .Priority = 10000
                 End With
                 With .Display("player2")
-                    .Text = """WARNING"""
+                    .Text = "WARNING"
                     .Expire = 4000
                     .Flashing = "all"
                     .Priority = 10000
                 End With
                 With .Display("player3")
-                    .Text = """WARNING"""
+                    .Text = "WARNING"
                     .Expire = 4000
                     .Flashing = "all"
                     .Priority = 10000
                 End With
                 With .Display("player4")
-                    .Text = """"""
+                    .Text = ""
                     .Expire = 4000
                     .Priority = 10000
                 End With
@@ -114,22 +114,22 @@ Sub CreateBasementMode()
             'Display tilt
             With .EventName("tilt")
                 With .Display("player1")
-                    .Text = """"""
+                    .Text = ""
                     .Expire = 4000
                     .Priority = 10000
                 End With
                 With .Display("player2")
-                    .Text = """TILT"""
+                    .Text = "TILT"
                     .Expire = 4000
                     .Priority = 10000
                 End With
                 With .Display("player3")
-                    .Text = """TILT"""
+                    .Text = "TILT"
                     .Expire = 4000
                     .Priority = 10000
                 End With
                 With .Display("player4")
-                    .Text = """"""
+                    .Text = ""
                     .Expire = 4000
                     .Priority = 10000
                 End With
@@ -145,14 +145,14 @@ Sub CreateBasementMode()
             '     .Key = "key_test_show1"
             '     .Show = "ship_saver_acquired"
             '     .Speed = 1
-            '     .Loops = 1
+            '     .Loops = 0
             '     .Priority = 20000
             ' End With
             With .EventName("test_show") 
                 .Key = "key_test_show1"
                 .Show = "fade_color_on_off_on"   'defined in CreateGeneralShows()
                 .Speed = 1
-                .Loops = 1
+                .Loops = 0
                 .Priority = 20000
                 With .Tokens()
                     .Add "lights", "GI"
@@ -166,7 +166,7 @@ Sub CreateBasementMode()
                 .Key = "key_tilted_gi"
                 .Show = "flicker_color_off" 
                 .Speed = 3
-                .Loops = 1
+                .Loops = 0
                 .Priority = 10000
                 With .Tokens()
                     .Add "lights", "GI"
@@ -177,7 +177,7 @@ Sub CreateBasementMode()
                 .Key = "key_tilted_gi"
                 .Show = "flicker_color_off" 
                 .Speed = 3
-                .Loops = 1
+                .Loops = 0
                 .Priority = 10000
                 .Action = "stop"
                 With .Tokens()
@@ -204,14 +204,14 @@ Sub CreateBasementMode()
                 .Key = "key_backglass_logo_on_show"
                 .Show = "backglass_logo_on_show" 
                 .Speed = 1
-                .Loops = 1
+                .Loops = 0
                 .Priority = 1000
             End With
             With .EventName("backglass_logo_off")
                 .Key = "key_backglass_logo_off_show"
                 .Show = "backglass_logo_off_show" 
                 .Speed = 1
-                .Loops = 1
+                .Loops = 0
                 .Priority = 1000
             End With
 
@@ -219,14 +219,14 @@ Sub CreateBasementMode()
                 .Key = "key_backglass_game_on_show"
                 .Show = "backglass_game_on_show" 
                 .Speed = 1
-                .Loops = 1
+                .Loops = 0
                 .Priority = 1000
             End With
             With .EventName("backglass_game_off")
                 .Key = "key_backglass_game_off_show"
                 .Show = "backglass_game_off_show" 
                 .Speed = 1
-                .Loops = 1
+                .Loops = 0
                 .Priority = 1000
             End With
 
@@ -234,14 +234,14 @@ Sub CreateBasementMode()
                 .Key = "key_backglass_logic_on_show"
                 .Show = "backglass_logic_on_show" 
                 .Speed = 1
-                .Loops = 1
+                .Loops = 0
                 .Priority = 1000
             End With
             With .EventName("backglass_logic_off")
                 .Key = "key_backglass_logic_off_show"
                 .Show = "backglass_logic_off_show" 
                 .Speed = 1
-                .Loops = 1
+                .Loops = 0
                 .Priority = 1000
             End With
 
@@ -249,14 +249,14 @@ Sub CreateBasementMode()
                 .Key = "key_backglass_framework_on_show"
                 .Show = "backglass_framework_on_show" 
                 .Speed = 1
-                .Loops = 1
+                .Loops = 0
                 .Priority = 1000
             End With
             With .EventName("backglass_framework_off")
                 .Key = "key_backglass_framework_off_show"
                 .Show = "backglass_framework_off_show" 
                 .Speed = 1
-                .Loops = 1
+                .Loops = 0
                 .Priority = 1000
             End With
 
@@ -264,28 +264,28 @@ Sub CreateBasementMode()
                 .Key = "key_backglass_flash1_show"
                 .Show = "backglass_flash1_show" 
                 .Speed = 1
-                .Loops = 1
+                .Loops = 0
                 .Priority = 1000
             End With
             With .EventName("backglass_flash2")
                 .Key = "key_backglass_flash2_show"
                 .Show = "backglass_flash2_show" 
                 .Speed = 1
-                .Loops = 1
+                .Loops = 0
                 .Priority = 1000
             End With
             With .EventName("backglass_flash3")
                 .Key = "key_backglass_flash3_show"
                 .Show = "backglass_flash3_show" 
                 .Speed = 1
-                .Loops = 1
+                .Loops = 0
                 .Priority = 1000
             End With
             With .EventName("backglass_flash4")
                 .Key = "key_backglass_flash4_show"
                 .Show = "backglass_flash4_show" 
                 .Speed = 1
-                .Loops = 1
+                .Loops = 0
                 .Priority = 1000
             End With
 

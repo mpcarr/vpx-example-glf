@@ -153,7 +153,7 @@ Sub CreateMultiballMode()
                     .Key = "key_fade_"&GILightNames(x)
                     .Show = "fade_color_on_off_on"   'defined in CreateGeneralShows()
                     .Speed = 1
-                    .Loops = 1
+                    .Loops = 0
                     With .Tokens()
                         .Add "lights", GILightNames(x)
                         .Add "color", JackpotColor
@@ -368,7 +368,7 @@ Sub CreateMultiballMode()
             With .Transitions()
                 .Source = Array("closed")
                 .Target = "opened"
-                .Events = Array("top_lock_ready","timer_diverter_reopen_complete{devices.state_machines.multiball.state!=""mb_running""}")
+                .Events = Array("top_lock_ready","timer_diverter_reopen_complete{device.state_machines.multiball.state!=""mb_running""}")
             End With
             With .Transitions()
                 .Source = Array("opened")

@@ -54,13 +54,12 @@ Sub CreateAttractMode()
             End With
         End With
 
-
-         With .SegmentDisplayPlayer()
+        With .SegmentDisplayPlayer()
 
             With .EventName("show_attract_title")
                 With .Display("player1")
                     .Key = "key_show_attract_title1"
-                    .Text = """GLF"""
+                    .Text = "GLF"
                     .Expire = 5000
                     .Priority = 1
                     With .Transition()
@@ -71,7 +70,7 @@ Sub CreateAttractMode()
                 End With
                 With .Display("player2")
                     .Key = "key_show_attract_title2"
-                    .Text = """EXAMPLE"""
+                    .Text = "EXAMPLE"
                     .Expire = 5000
                     .Priority = 1
                     With .Transition()
@@ -82,7 +81,7 @@ Sub CreateAttractMode()
                 End With
                 With .Display("player3")
                     .Key = "key_show_attract_title3"
-                    .Text = """TABLE  """
+                    .Text = "TABLE  "
                     .Expire = 5000
                     .Priority = 1
                     With .Transition()
@@ -96,19 +95,19 @@ Sub CreateAttractMode()
             With .EventName("show_attract_hs1")
                 With .Display("p1p2")
                     .Key = "key_score_1_label"
-                    .Text = "machine.score_1_label"
+                    .Text = "{machine.score_1_label}"
                     .Expire = 3000
                     .Priority = 2
                 End With
                 With .Display("player3")
                     .Key = "key_score_1_name"
-                    .Text = "machine.score_1_name"
+                    .Text = "{machine.score_1_name}"
                     .Expire = 3000
                     .Priority = 2
                 End With
                 With .Display("player4")
                     .Key = "key_score_1_value"
-                    .Text = "machine.score_1_value"
+                    .Text = "{machine.score_1_value}"
                     .Expire = 3000
                     .Priority = 2
                 End With
@@ -117,19 +116,19 @@ Sub CreateAttractMode()
             With .EventName("show_attract_hs2")
                 With .Display("p1p2")
                     .Key = "key_score_2_label"
-                    .Text = "machine.score_2_label"
+                    .Text = "{machine.score_2_label}"
                     .Expire = 3000
                     .Priority = 3
                 End With
                 With .Display("player3")
                     .Key = "key_score_2_name"
-                    .Text = "machine.score_2_name"
+                    .Text = "{machine.score_2_name}"
                     .Expire = 3000
                     .Priority = 3
                 End With
                 With .Display("player4")
                     .Key = "key_score_2_value"
-                    .Text = "machine.score_2_value"
+                    .Text = "{machine.score_2_value}"
                     .Expire = 3000
                     .Priority = 3
                 End With
@@ -138,19 +137,19 @@ Sub CreateAttractMode()
             With .EventName("show_attract_hs3")
                 With .Display("p1p2")
                     .Key = "key_score_3_label"
-                    .Text = "machine.score_3_label"
+                    .Text = "{machine.score_3_label}"
                     .Expire = 3000
                     .Priority = 4
                 End With
                 With .Display("player3")
                     .Key = "key_score_3_name"
-                    .Text = "machine.score_3_name"
+                    .Text = "{machine.score_3_name}"
                     .Expire = 3000
                     .Priority = 4
                 End With
                 With .Display("player4")
                     .Key = "key_score_3_value"
-                    .Text = "machine.score_3_value"
+                    .Text = "{machine.score_3_value}"
                     .Expire = 3000
                     .Priority = 4
                 End With
@@ -159,19 +158,19 @@ Sub CreateAttractMode()
             With .EventName("show_attract_hs4")
                 With .Display("p1p2")
                     .Key = "key_score_4_label"
-                    .Text = "machine.score_4_label"
+                    .Text = "{machine.score_4_label}"
                     .Expire = 3000
                     .Priority = 5
                 End With
                 With .Display("player3")
                     .Key = "key_score_4_name"
-                    .Text = "machine.score_4_name"
+                    .Text = "{machine.score_4_name}"
                     .Expire = 3000
                     .Priority = 5
                 End With
                 With .Display("player4")
                     .Key = "key_score_4_value"
-                    .Text = "machine.score_4_value"
+                    .Text = "{machine.score_4_value}"
                     .Expire = 3000
                     .Priority = 5
                 End With
@@ -180,7 +179,7 @@ Sub CreateAttractMode()
             With .EventName("show_attract_lastscores1")
                 With .Display("player2")
                     .Key = "key_p2_show_last_score"
-                    .Text = """LAST """
+                    .Text = "LAST "
                     .Expire = 2000
                     .Priority = 6
                     With .Transition()
@@ -191,7 +190,7 @@ Sub CreateAttractMode()
                 End With
                 With .Display("player3")
                     .Key = "key_p3_show_last_score"
-                    .Text = """SCORES """
+                    .Text = "SCORES "
                     .Expire = 2000
                     .Priority = 6
                     With .Transition()
@@ -204,19 +203,19 @@ Sub CreateAttractMode()
 
             With .EventName("show_attract_lastscores2")
                 With .Display("player1")
-                    .Text = "machine.player1_score"
+                    .Text = "{machine.player1_score}"
                     .Expire = 3000
                 End With
                 With .Display("player2")
-                    .Text = "machine.player2_score"
+                    .Text = "{machine.player2_score}"
                     .Expire = 3000
                 End With
                 With .Display("player3")
-                    .Text = "machine.player3_score"
+                    .Text = "{machine.player3_score}"
                     .Expire = 3000
                 End With
                 With .Display("player4")
-                    .Text = "machine.player4_score"
+                    .Text = "{machine.player4_score}"
                     .Expire = 3000
                 End With
             End With

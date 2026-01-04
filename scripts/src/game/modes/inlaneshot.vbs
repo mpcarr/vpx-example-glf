@@ -210,7 +210,7 @@ Sub CreateInlaneshotsMode()
                 .Key = "key_spin1_show"
                 .Show = "flash_color_with_fade"    'defined in CreateGeneralShows()
                 .Speed = 10
-                .Loops = 1
+                .Loops = 0
                 With .Tokens()
                     .Add "lights", "FL1"
                     .Add "fade", 500
@@ -221,14 +221,14 @@ Sub CreateInlaneshotsMode()
                 .Key = "key_spin1_super_show1"
                 .Show = "spin1_super_show1"
                 .Speed = 1
-                .Loops = 1
+                .Loops = 0
                 .Priority = 20000
             End With
             With .EventName("play_spin1_super_show2") 
                 .Key = "key_spin1_super_show2"
                 .Show = "spin1_super_show2"
                 .Speed = 1
-                .Loops = 1
+                .Loops = 0
                 .Priority = 20000
             End With
             
@@ -237,7 +237,7 @@ Sub CreateInlaneshotsMode()
                 .Key = "key_spin2_show"
                 .Show = "flash_color_with_fade"    'defined in CreateGeneralShows()
                 .Speed = 10
-                .Loops = 1
+                .Loops = 0
                 With .Tokens()
                     .Add "lights", "FL2"
                     .Add "fade", 500
@@ -248,14 +248,14 @@ Sub CreateInlaneshotsMode()
                 .Key = "key_spin2_super_show1"
                 .Show = "spin2_super_show1"
                 .Speed = 1
-                .Loops = 1
+                .Loops = 0
                 .Priority = 20000
             End With
             With .EventName("play_spin2_super_show2") 
                 .Key = "key_spin2_super_show2"
                 .Show = "spin2_super_show2"
                 .Speed = 1
-                .Loops = 1
+                .Loops = 0
                 .Priority = 20000
             End With
             

@@ -12,7 +12,7 @@ Sub CreateMultiballShows()
         '     With .Shows("flash_color_fadeout")
         '         .Key = "key_DOF2"
         '         .Speed = 10
-        '         .Loops = 1
+        '         .Loops = 0
         '         With .Tokens()
         '             .Add "color", GIColor3000k
         '             .Add "lights", "LBG02"
@@ -35,7 +35,7 @@ Sub CreateMultiballShows()
         '     With .Shows("flash_color_fadeout")
         '         .Key = "key_DOF3"
         '         .Speed = 10
-        '         .Loops = 1
+        '         .Loops = 0
         '         With .Tokens()
         '             .Add "color", GIColor3000k
         '             .Add "lights", "LBG03"
@@ -57,7 +57,7 @@ Sub CreateMultiballShows()
         '     With .Shows("flash_color_fadeout")
         '         .Key = "key_DOF4"
         '         .Speed = 10
-        '         .Loops = 1
+        '         .Loops = 0
         '         With .Tokens()
         '             .Add "color", GIColor3000k
         '             .Add "lights", "LBG04"

@@ -126,7 +126,7 @@ Sub CreateKickbackMode()
                 .Key = "key_kickback_show"
                 .Show = "sweep_up" 
                 .Speed = 4
-                .Loops = 1
+                .Loops = 0
                 .Priority = 10000
                 With .Tokens()
                     .Add "color", "ff0000"

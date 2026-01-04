@@ -234,6 +234,7 @@
       "PinCab_Metals",
       "PinCab_LegsBack",
       "PinCab_LegsFront",
+      "PinCab_Shooter",
       "PinCab_FlipBlade",
       "PinCab_FlipperButtonRings",
       "PinCab_FlipperButtonRight",
@@ -252,8 +253,7 @@
       "PinCab_KeyShake",
       "PinCab_Blades",
       "PinCab_Fittings",
-      "Pincab_Tournament_Button",
-      "PinCab_Shooter"
+      "Pincab_Tournament_Button"
     ],
     "fire_events": false,
     "stop_single_events": false,

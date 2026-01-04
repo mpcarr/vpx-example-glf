@@ -229,16 +229,16 @@ Sub CreateBonusMode()
             'Initialize the bonis score tally animation
             With .EventName("run_bonus_started")
                 With .Display("player1")
-                    .Text = """"""
+                    .Text = ""
                 End With
                 With .Display("player2")
-                    .Text = """BONUS"""
+                    .Text = "BONUS"
                 End With
                 With .Display("player3")
-                    .Text = """"""
+                    .Text = ""
                 End With
                 With .Display("player4")
-                    .Text = """00"""
+                    .Text = "00"
                 End With
             End With
 
@@ -247,7 +247,7 @@ Sub CreateBonusMode()
                 With .EventName("bonus_light"&x&"_show")
                     With .Display("player4")
                         .Priority = 2000 + x
-                        .Text = (BonusValue * x) & " * current_player.bonus_multiplier"
+                        .Text = (BonusValue * x) & " * {current_player.bonus_multiplier}"
                         .Flashing = "all"
                     End With
                 End With
@@ -256,7 +256,7 @@ Sub CreateBonusMode()
             'Show the total bonus if animation skipped
             With .EventName("skip_bonus_tally")
                 With .Display("player4")
-                    .Text = "current_player.bonus_total"
+                    .Text = "{current_player.bonus_total}"
                     .Priority = 3000
                     .Flashing = "all"
                 End With

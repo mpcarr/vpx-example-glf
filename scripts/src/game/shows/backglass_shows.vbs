@@ -139,7 +139,7 @@ Sub CreateBackglassShows()
             With .Shows("flash_color_fadeout")
                 .Key = "key_DOF5"
                 .Speed = 10
-                .Loops = 1
+                .Loops = 0
                 With .Tokens()
                     .Add "color", GIColor3000k
                     .Add "lights", "LBG05"
@@ -163,7 +163,7 @@ Sub CreateBackglassShows()
             With .Shows("flash_color_fadeout")
                 .Key = "key_DOF6"
                 .Speed = 10
-                .Loops = 1
+                .Loops = 0
                 With .Tokens()
                     .Add "color", GIColor3000k
                     .Add "lights", "LBG06"
@@ -187,7 +187,7 @@ Sub CreateBackglassShows()
             With .Shows("flash_color_fadeout")
                 .Key = "key_DOF7"
                 .Speed = 10
-                .Loops = 1
+                .Loops = 0
                 With .Tokens()
                     .Add "color", GIColor3000k
                     .Add "lights", "LBG07"
@@ -211,7 +211,7 @@ Sub CreateBackglassShows()
             With .Shows("flash_color_fadeout")
                 .Key = "key_DOF8"
                 .Speed = 10
-                .Loops = 1
+                .Loops = 0
                 With .Tokens()
                     .Add "color", GIColor3000k
                     .Add "lights", "LBG08"

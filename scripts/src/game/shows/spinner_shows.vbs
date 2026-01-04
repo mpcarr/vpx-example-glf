@@ -28,7 +28,7 @@ Sub CreateSpinnerShows()
             With .Shows("spin1_burst")
                 .Key = "spin1_super_show_13"
                 .Speed = 2
-                .Loops = 1
+                .Loops = 0
                 With .Tokens()
                     .Add "color", "00ffff"
                 End With
@@ -63,7 +63,7 @@ Sub CreateSpinnerShows()
             With .Shows("spin1_burst")
                 .Key = "spin1_super_show_23"
                 .Speed = 2
-                .Loops = 1
+                .Loops = 0
                 With .Tokens()
                     .Add "color", "ffffff"
                 End With
@@ -99,7 +99,7 @@ Sub CreateSpinnerShows()
             With .Shows("spin2_burst")
                 .Key = "spin2_super_show_13"
                 .Speed = 1
-                .Loops = 1
+                .Loops = 0
                 With .Tokens()
                     .Add "color", "00ffff"
                 End With
@@ -134,7 +134,7 @@ Sub CreateSpinnerShows()
             With .Shows("spin2_burst")
                 .Key = "spin2_super_show_23"
                 .Speed = 1
-                .Loops = 1
+                .Loops = 0
                 With .Tokens()
                     .Add "color", "ffffff"
                 End With

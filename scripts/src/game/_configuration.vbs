@@ -16,7 +16,6 @@
 '
 ' NOTE: switch and light names are case sensitive, so be aware of their names in VPX.
 
-
 ' Color definitions used througout the game
 Const GIColorWhite = "ffffff"
 Const GIColor2700k = "ffA957"
@@ -106,27 +105,6 @@ Sub ConfigureGlfDevices()
     AddPinEventListener GLF_BALL_DRAIN, "ball_drain_sound", "BallDrainSound", 100, Null
 
 
-    '*********** INITALIZE MODES ***********
-    'Note, modes must be created after sounds and shows
-
-    ' Modes
-    CreateBasementMode()
-    CreateAttractMode()
-    CreateBaseMode()
-    CreateSkillshotsMode()
-    CreateKickbackMode()
-    CreateTargetBankMode()
-    CreateExtraBallMode()
-    CreateInlaneshotsMode()
-    CreateRampshotsMode()
-    CreateMultiballMode()
-    CreateScoreMode()
-    CreateScoreBonusMode()
-    CreateBonusMode()
-    CreateHighScoreMode()
-    CreateTiltMode()
-
-
     ' Ball search
     ' With EnableGlfBallSearch()
     '     .Timeout = 15000
@@ -204,7 +182,26 @@ Sub ConfigureGlfDevices()
     Glf_SetInitialPlayerVar "bonus_skip", 0             'flag to capture if player wants to skip the bonus tally shows in bonus mode
     Glf_SetInitialPlayerVar "hs_input_ready", 1         'flag to capture when high score mode is ready for player input
     
-    
+
+    '*********** INITALIZE MODES ***********
+    'Note, modes must be created after sounds and shows
+
+    ' Modes
+    CreateBasementMode()
+    CreateAttractMode()
+    CreateBaseMode()
+    CreateSkillshotsMode()
+    CreateKickbackMode()
+    CreateTargetBankMode()
+    CreateExtraBallMode()
+    CreateInlaneshotsMode()
+    CreateRampshotsMode()
+    CreateMultiballMode()
+    CreateScoreMode()
+    CreateScoreBonusMode()
+    CreateBonusMode()
+    CreateHighScoreMode()
+    CreateTiltMode()    
 
 
     '*********** DEVICE CONFIGS ***********
