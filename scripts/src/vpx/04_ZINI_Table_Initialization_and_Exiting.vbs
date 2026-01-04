@@ -31,14 +31,14 @@ Sub Table1_Init
     Glf_Init(Table1)
 
 	' Ball rolling sounds
-	InitRolling
+	InitRolling()
 
 	' Flipper and sling corrections
-	InitPolarity
-	InitSlingCorrection
+	InitPolarity()
+	InitSlingCorrection()
 
 	' Init VR things
-	InitVR
+	InitVR()
 End Sub
 
 
