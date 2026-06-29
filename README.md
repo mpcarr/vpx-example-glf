@@ -10,7 +10,7 @@ This project was created to demonstrate the core features of [GLF](https://githu
 
 To begin using this table and learning GLF, read the [Environment Setup Guide](https://mpcarr.github.io/vpx-glf/environment-setup/).
 
----
+----
 
 ## Caveats & Notes
 
