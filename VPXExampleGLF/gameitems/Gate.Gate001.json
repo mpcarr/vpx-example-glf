@@ -9,9 +9,9 @@
     "rotation": 90.0,
     "material": "",
     "is_timer_enabled": false,
+    "timer_interval": 100,
     "show_bracket": true,
     "is_collidable": true,
-    "timer_interval": 100,
     "imgf": null,
     "imgb": null,
     "surface": "",
@@ -25,6 +25,6 @@
     "name": "Gate001",
     "two_way": false,
     "is_reflection_enabled": true,
-    "gate_type": "WireW"
+    "gate_type": "wire_w"
   }
 }
