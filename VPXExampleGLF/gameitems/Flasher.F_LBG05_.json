@@ -1,8 +1,6 @@
 {
   "Flasher": {
     "height": 50.0,
-    "pos_x": 1094.9408,
-    "pos_y": -906.5156,
     "rot_x": 0.0,
     "rot_y": 0.0,
     "rot_z": 0.0,
@@ -15,24 +13,25 @@
     "alpha": 2000,
     "modulate_vs_add": 1.0,
     "is_visible": true,
-    "add_blend": true,
-    "is_dmd": false,
-    "render_mode": null,
-    "render_style": null,
-    "glass_roughness": null,
-    "glass_ambient": null,
-    "glass_pad_top": null,
-    "glass_pad_bottom": null,
-    "glass_pad_left": null,
-    "glass_pad_right": null,
-    "image_src_link": null,
+    "add_blend": "add",
+    "render_mode": "flasher",
+    "render_style": 0,
+    "glass_roughness": 0.0,
+    "glass_ambient": 0,
+    "glass_pad_top": 0.0,
+    "glass_pad_bottom": 0.0,
+    "glass_pad_left": 0.0,
+    "glass_pad_right": 0.0,
+    "image_src_link": "",
     "display_texture": true,
     "depth_bias": -500.0,
     "image_alignment": "wrap",
     "filter": "additive",
     "filter_amount": 100,
     "light_map": "",
-    "backglass": null,
+    "state_src_link": "",
+    "backglass": false,
+    "part_group_name": "VR_Backglass_Layer",
     "drag_points": [
       {
         "x": -120.00502,
@@ -43,8 +42,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       },
       {
@@ -56,8 +53,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       },
       {
@@ -69,8 +64,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       },
       {
@@ -82,8 +75,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       }
     ]

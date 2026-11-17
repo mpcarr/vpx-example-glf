@@ -41,7 +41,6 @@
     "is_toy": false,
     "use_3d_mesh": true,
     "static_rendering": false,
-    "disable_lighting_top_old": null,
     "disable_lighting_top": 0.0,
     "disable_lighting_below": 1.0,
     "is_reflection_enabled": false,
@@ -59,9 +58,11 @@
     "alpha": 100.0,
     "color": "#ffffff",
     "light_map": "",
+    "state_src_link": "",
     "reflection_probe": "Playfield Reflections",
     "reflection_strength": 0.15,
     "refraction_probe": "",
-    "refraction_thickness": 10.0
+    "refraction_thickness": 10.0,
+    "part_group_name": "PF_Mesh"
   }
 }

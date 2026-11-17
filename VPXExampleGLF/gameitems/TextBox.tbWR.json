@@ -23,6 +23,7 @@
       "weight": 400,
       "size": 120000,
       "name": "Arial"
-    }
+    },
+    "part_group_name": "Collidable_Misc"
   }
 }

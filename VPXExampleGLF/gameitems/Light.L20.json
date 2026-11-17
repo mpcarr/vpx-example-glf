@@ -16,6 +16,7 @@
     "blink_pattern": "Inserts",
     "image": "pf",
     "blink_interval": 1250,
+    "state_src_link": "",
     "intensity": 4.0,
     "transmission_scale": 0.0,
     "surface": "",
@@ -35,6 +36,7 @@
     "shadows": "none",
     "fader": "none",
     "visible": true,
+    "part_group_name": "Insert_Lights",
     "drag_points": [
       {
         "x": 517.4765,
@@ -45,8 +47,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       },
       {
@@ -58,8 +58,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       },
       {
@@ -71,8 +69,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       },
       {
@@ -84,8 +80,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       },
       {
@@ -97,8 +91,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       },
       {
@@ -110,8 +102,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       },
       {
@@ -123,8 +113,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       },
       {
@@ -136,8 +124,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       },
       {
@@ -149,8 +135,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       },
       {
@@ -162,8 +146,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       },
       {
@@ -175,8 +157,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       },
       {
@@ -188,8 +168,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       },
       {
@@ -201,8 +179,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       },
       {
@@ -214,8 +190,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       },
       {
@@ -227,8 +201,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       },
       {
@@ -240,8 +212,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       },
       {
@@ -253,8 +223,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       },
       {
@@ -266,8 +234,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       },
       {
@@ -279,8 +245,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       },
       {
@@ -292,8 +256,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       }
     ]

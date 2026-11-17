@@ -15,11 +15,13 @@
     "surface": "WallKicker2Floor",
     "is_visible": false,
     "is_enabled": true,
+    "state_src_link": "",
     "hit_height": 50.0,
     "name": "s_Kicker1",
     "shape": "star",
     "anim_speed": 1.0,
     "is_reflection_enabled": false,
+    "part_group_name": "PF_Mesh",
     "drag_points": [
       {
         "x": 693.676,
@@ -30,8 +32,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       },
       {
@@ -43,8 +43,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       },
       {
@@ -56,8 +54,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       },
       {
@@ -69,8 +65,6 @@
         "has_auto_texture": true,
         "tex_coord": 0.0,
         "is_locked": false,
-        "editor_layer": 0,
-        "editor_layer_name": "",
         "editor_layer_visibility": true
       }
     ]

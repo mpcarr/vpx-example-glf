@@ -26,6 +26,7 @@
     "is_socket_visible": true,
     "hit_event": true,
     "is_collidable": true,
-    "is_reflection_enabled": true
+    "is_reflection_enabled": true,
+    "part_group_name": "Bumpers"
   }
 }

@@ -19,6 +19,7 @@
     "image": "spinner",
     "surface": "",
     "name": "s_spinner2",
-    "is_reflection_enabled": true
+    "is_reflection_enabled": true,
+    "part_group_name": "Collidable_Misc"
   }
 }

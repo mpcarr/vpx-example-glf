@@ -12,8 +12,6 @@
     "timer_interval": 100,
     "show_bracket": true,
     "is_collidable": true,
-    "imgf": null,
-    "imgb": null,
     "surface": "Ramp1",
     "elasticity": 0.625,
     "angle_max": 1.5707964,
@@ -25,6 +23,7 @@
     "name": "Gate",
     "two_way": true,
     "is_reflection_enabled": true,
-    "gate_type": "wire_w"
+    "gate_type": "wire_w",
+    "part_group_name": "Collidable_Misc"
   }
 }

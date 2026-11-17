@@ -41,7 +41,6 @@
     "is_toy": true,
     "use_3d_mesh": true,
     "static_rendering": false,
-    "disable_lighting_top_old": null,
     "disable_lighting_top": 1.0,
     "disable_lighting_below": 1.0,
     "is_reflection_enabled": false,
@@ -59,9 +58,11 @@
     "alpha": 100.0,
     "color": "#ffffff",
     "light_map": "",
+    "state_src_link": "",
     "reflection_probe": "",
     "reflection_strength": 0.3,
     "refraction_probe": "Bumper Caps",
-    "refraction_thickness": 3.0
+    "refraction_thickness": 3.0,
+    "part_group_name": "Bumpers"
   }
 }
