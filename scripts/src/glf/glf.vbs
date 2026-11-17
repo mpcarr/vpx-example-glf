@@ -905,7 +905,7 @@ Sub Glf_Options(ByVal eventId)
 	glf_max_dispatch = glfMaxDispatch*5
 
 	glf_debugLog.WriteToLog "Options", "BCP Check"
-	Dim glfuseBCP : glfuseBCP = Table1.Option("Glf Backbox Control Protocol", 0, 1, 1, 0, 0, Array("Off", "On"))
+	Dim glfuseBCP : glfuseBCP = Table1.Option("Glf Backbox Control Protocol", 0, 1, 1, 1, 0, Array("Off", "On"))
 	If glfuseBCP = 1 Then
 		If IsNull(bcpController) Then
 			SetDelay "start_glf_bcp", "Glf_ConnectToBCPMediaController", Null, 500
@@ -1016,7 +1016,7 @@ Public Sub Glf_KeyDown(ByVal keycode)
 		Glf_CheckTilt
 	End If
     If keycode = CenterTiltKey Then 
-		Nudge 0, 3
+		Nudge 0, 2
 		Glf_CheckTilt
 	End If
 
@@ -3116,7 +3116,7 @@ Class GlfVpxBcpController
     Public default Function init(port, backboxCommand)
         On Error Resume Next
 
-        Set m_bcpController = CreateObject("vpx_bcp_controller.VpxBcpController")
+        Set m_bcpController = CreatePluginObject("BCP.Controller")
         If backboxCommand = "" Then
             m_bcpController.EnableLogging()
         End If
@@ -3499,7 +3499,7 @@ Class GlfMonitorBcpController
 
     Public default Function init(port, backboxCommand)
         On Error Resume Next
-        Set m_bcpController = CreateObject("vpx_bcp_controller.VpxBcpController")
+        Set m_bcpController = CreatePluginObject("BCP.Controller")
         m_bcpController.Connect port, backboxCommand
         m_connected = True
         If Err Then MsgBox("Can not start VPX BCP Controller") : m_connected = False
