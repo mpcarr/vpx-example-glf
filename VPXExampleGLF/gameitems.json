@@ -2,122 +2,122 @@
   {
     "file_name": "PartGroup.Bumpers.json",
     "is_locked": false,
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   },
   {
     "file_name": "PartGroup.PF_Mesh.json",
     "is_locked": false,
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   },
   {
     "file_name": "PartGroup.Collidable_Rubbers.json",
     "is_locked": false,
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   },
   {
     "file_name": "PartGroup.Collidable_Misc.json",
     "is_locked": false,
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   },
   {
     "file_name": "PartGroup.Timers.json",
     "is_locked": false,
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   },
   {
     "file_name": "PartGroup.Misc_Primitives.json",
     "is_locked": false,
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   },
   {
     "file_name": "PartGroup.Visual_Rubbers.json",
     "is_locked": false,
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   },
   {
     "file_name": "PartGroup.Insert_Lights.json",
     "is_locked": false,
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   },
   {
     "file_name": "PartGroup.Triggers.json",
     "is_locked": false,
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   },
   {
     "file_name": "PartGroup.Targets_Layer.json",
     "is_locked": false,
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   },
   {
     "file_name": "PartGroup.Shadows.json",
     "is_locked": false,
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   },
   {
     "file_name": "PartGroup.Plastics.json",
     "is_locked": false,
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   },
   {
     "file_name": "PartGroup.Slingshots.json",
     "is_locked": false,
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   },
   {
     "file_name": "PartGroup.VR.json",
     "is_locked": false,
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   },
   {
     "file_name": "PartGroup.Flashers.json",
     "is_locked": false,
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   },
   {
     "file_name": "PartGroup.Insert_Primitives.json",
     "is_locked": false,
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   },
   {
     "file_name": "PartGroup.GI.json",
     "is_locked": false,
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   },
   {
     "file_name": "PartGroup.Flippers.json",
     "is_locked": false,
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   },
   {
     "file_name": "PartGroup.VR_Backglass_Layer.json",
     "is_locked": false,
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   },
   {
     "file_name": "PartGroup.Segment_Lights.json",
     "is_locked": false,
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   },
   {
     "file_name": "PartGroup.VR_Segment_Display.json",
     "is_locked": false,
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   },
   {
     "file_name": "PartGroup.Ramps.json",
     "is_locked": false,
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   },
   {
     "file_name": "PartGroup.VR_Cabinet.json",
     "is_locked": false,
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   },
   {
     "file_name": "PartGroup.Insert_Blooms.json",
     "is_locked": false,
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   },
   {
     "file_name": "Primitive.LM_BL3a_Top.json",

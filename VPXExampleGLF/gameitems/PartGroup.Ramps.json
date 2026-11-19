@@ -11,6 +11,6 @@
     "space_reference": "playfield",
     "player_mode_visibility_mask": 65535,
     "is_locked": false,
-    "editor_layer_visibility": true
+    "editor_layer_visibility": false
   }
 }
