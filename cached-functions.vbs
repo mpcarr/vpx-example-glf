@@ -2849,13 +2849,13 @@ Dim glf_L22_lmarr : glf_L22_lmarr = Array(p_l22_,f_l22_bloom)
 glf_lightMaps.Add "L22", glf_L22_lmarr
 Dim glf_L21_lmarr : glf_L21_lmarr = Array(p_l21_,f_l21_bloom)
 glf_lightMaps.Add "L21", glf_L21_lmarr
-Dim glf_FL2_lmarr : glf_FL2_lmarr = Array(p_base_fl2,f_fl2_,p_fl2_)
+Dim glf_FL2_lmarr : glf_FL2_lmarr = Array(f_fl2_,p_fl2_)
 glf_lightMaps.Add "FL2", glf_FL2_lmarr
-Dim glf_FL3_lmarr : glf_FL3_lmarr = Array(p_base_fl3,f_fl3_,p_fl3_)
+Dim glf_FL3_lmarr : glf_FL3_lmarr = Array(f_fl3_,p_fl3_)
 glf_lightMaps.Add "FL3", glf_FL3_lmarr
-Dim glf_FL1_lmarr : glf_FL1_lmarr = Array(p_base_fl1,f_fl1_,p_fl1_)
+Dim glf_FL1_lmarr : glf_FL1_lmarr = Array(f_fl1_,p_fl1_)
 glf_lightMaps.Add "FL1", glf_FL1_lmarr
-Dim glf_FL4_lmarr : glf_FL4_lmarr = Array(p_base_fl4,f_fl4_,p_fl4_)
+Dim glf_FL4_lmarr : glf_FL4_lmarr = Array(f_fl4_,p_fl4_)
 glf_lightMaps.Add "FL4", glf_FL4_lmarr
 Dim glf_L33_lmarr : glf_L33_lmarr = Array(p_l33_,f_l33_bloom)
 glf_lightMaps.Add "L33", glf_L33_lmarr

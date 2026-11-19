@@ -77,7 +77,7 @@ InitFlasher 4, "white"
 Sub InitFlasher(nr, col)
 	' store all objects in an array for use in FlashFlasher subroutine
     Set domelight(nr) = Eval("FL" & nr)
-	Set domebase(nr) = Eval("p_base_FL" & nr)
+	Set domebase(nr) = Eval("p_base_Flasher" & nr)
 	Set domelit(nr) = Eval("p_FL" & nr & "_")       'additive prim. follows light color
 	Set domeflasher(nr) = Eval("f_FL" & nr & "_")   'flasher. follows light color
 	

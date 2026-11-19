@@ -51,7 +51,7 @@
     "object_space_normal_map": false,
     "min_aa_bound": null,
     "max_aa_bound": null,
-    "mesh_file_name": "flupperdome_edit.obj",
+    "mesh_file_name": "",
     "depth_bias": -1000.0,
     "add_blend": true,
     "use_depth_mask": true,
