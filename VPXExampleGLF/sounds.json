@@ -2043,33 +2043,6 @@
     "output_target": "table"
   },
   {
-    "name": "DropTarget_Down",
-    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\DropTarget_Down.wav",
-    "internal_name": "",
-    "fade": 0,
-    "volume": 0,
-    "balance": 0,
-    "output_target": "table"
-  },
-  {
-    "name": "DropTarget_Up",
-    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\_Table Dev\\Example Table\\DropTarget_Up.wav",
-    "internal_name": "",
-    "fade": 0,
-    "volume": 0,
-    "balance": 0,
-    "output_target": "table"
-  },
-  {
-    "name": "WireRamp_Stop1",
-    "path": "C:\\Users\\georg\\Desktop\\FleepCode\\RampLoopSounds\\TFTC Ramp Sounds\\WireRamp_Stop.wav",
-    "internal_name": "",
-    "fade": 0,
-    "volume": 0,
-    "balance": 0,
-    "output_target": "table"
-  },
-  {
     "name": "Drop_Target_Down_1",
     "path": "C:\\Users\\bill\\Dropbox\\BILL (1)\\Sounds\\Drop_Target_Down_1.wav",
     "internal_name": "",
@@ -2322,96 +2295,6 @@
     "output_target": "table"
   },
   {
-    "name": "RampLoop1",
-    "path": "C:\\Users\\sacam\\Downloads\\Ball__Ramp_Sounds_Amp9\\Ball & Ramp Sounds Amp9\\RampLoop1.wav",
-    "internal_name": "",
-    "fade": 0,
-    "volume": 0,
-    "balance": 0,
-    "output_target": "table"
-  },
-  {
-    "name": "RampLoop2",
-    "path": "C:\\Users\\sacam\\Downloads\\Ball__Ramp_Sounds_Amp9\\Ball & Ramp Sounds Amp9\\RampLoop2.wav",
-    "internal_name": "",
-    "fade": 0,
-    "volume": 0,
-    "balance": 0,
-    "output_target": "table"
-  },
-  {
-    "name": "RampLoop3",
-    "path": "C:\\Users\\sacam\\Downloads\\Ball__Ramp_Sounds_Amp9\\Ball & Ramp Sounds Amp9\\RampLoop3.wav",
-    "internal_name": "",
-    "fade": 0,
-    "volume": 0,
-    "balance": 0,
-    "output_target": "table"
-  },
-  {
-    "name": "RampLoop4",
-    "path": "C:\\Users\\sacam\\Downloads\\Ball__Ramp_Sounds_Amp9\\Ball & Ramp Sounds Amp9\\RampLoop4.wav",
-    "internal_name": "",
-    "fade": 0,
-    "volume": 0,
-    "balance": 0,
-    "output_target": "table"
-  },
-  {
-    "name": "RampLoop5",
-    "path": "C:\\Users\\sacam\\Downloads\\Ball__Ramp_Sounds_Amp9\\Ball & Ramp Sounds Amp9\\RampLoop5.wav",
-    "internal_name": "",
-    "fade": 0,
-    "volume": 0,
-    "balance": 0,
-    "output_target": "table"
-  },
-  {
-    "name": "RampLoop6",
-    "path": "C:\\Users\\sacam\\Downloads\\Ball__Ramp_Sounds_Amp9\\Ball & Ramp Sounds Amp9\\RampLoop6.wav",
-    "internal_name": "",
-    "fade": 0,
-    "volume": 0,
-    "balance": 0,
-    "output_target": "table"
-  },
-  {
-    "name": "RampLoop7",
-    "path": "C:\\Users\\sacam\\Downloads\\Ball__Ramp_Sounds_Amp9\\Ball & Ramp Sounds Amp9\\RampLoop7.wav",
-    "internal_name": "",
-    "fade": 0,
-    "volume": 0,
-    "balance": 0,
-    "output_target": "table"
-  },
-  {
-    "name": "RampLoop8",
-    "path": "C:\\Users\\sacam\\Downloads\\Ball__Ramp_Sounds_Amp9\\Ball & Ramp Sounds Amp9\\RampLoop8.wav",
-    "internal_name": "",
-    "fade": 0,
-    "volume": 0,
-    "balance": 0,
-    "output_target": "table"
-  },
-  {
-    "name": "RampLoop9",
-    "path": "C:\\Users\\sacam\\Downloads\\Ball__Ramp_Sounds_Amp9\\Ball & Ramp Sounds Amp9\\RampLoop9.wav",
-    "internal_name": "",
-    "fade": 0,
-    "volume": 0,
-    "balance": 0,
-    "output_target": "table"
-  },
-  {
-    "name": "RampLoop10",
-    "path": "C:\\Users\\sacam\\Downloads\\Ball__Ramp_Sounds_Amp9\\Ball & Ramp Sounds Amp9\\RampLoop10.wav",
-    "internal_name": "",
-    "fade": 0,
-    "volume": 0,
-    "balance": 0,
-    "output_target": "table"
-  },
-  {
     "name": "WireLoop1",
     "path": "C:\\Users\\sacam\\Downloads\\Ball__Ramp_Sounds_Amp9\\Ball & Ramp Sounds Amp9\\WireLoop1.wav",
     "internal_name": "",
@@ -2495,24 +2378,6 @@
   {
     "name": "WireLoop10",
     "path": "C:\\Users\\sacam\\Downloads\\Ball__Ramp_Sounds_Amp9\\Ball & Ramp Sounds Amp9\\WireLoop10.wav",
-    "internal_name": "",
-    "fade": 0,
-    "volume": 0,
-    "balance": 0,
-    "output_target": "table"
-  },
-  {
-    "name": "WireRamp_Stop2",
-    "path": "C:\\VirtualPinball\\VisualPinball\\dev\\Sounds\\WireRamp_Stop2.wav",
-    "internal_name": "",
-    "fade": 0,
-    "volume": 0,
-    "balance": 0,
-    "output_target": "table"
-  },
-  {
-    "name": "WireRamp_Stop3",
-    "path": "C:\\VirtualPinball\\VisualPinball\\dev\\Sounds\\WireRamp_Stop3.wav",
     "internal_name": "",
     "fade": 0,
     "volume": 0,
@@ -2734,5 +2599,149 @@
     "volume": 0,
     "balance": 0,
     "output_target": "backglass"
+  },
+  {
+    "name": "RampLoop1",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Fleep\\Sounds\\RampLoop1.wav",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": "table"
+  },
+  {
+    "name": "RampLoop2",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Fleep\\Sounds\\RampLoop2.wav",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": "table"
+  },
+  {
+    "name": "RampLoop3",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Fleep\\Sounds\\RampLoop3.wav",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": "table"
+  },
+  {
+    "name": "RampLoop4",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Fleep\\Sounds\\RampLoop4.wav",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": "table"
+  },
+  {
+    "name": "RampLoop5",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Fleep\\Sounds\\RampLoop5.wav",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": "table"
+  },
+  {
+    "name": "RampLoop6",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Fleep\\Sounds\\RampLoop6.wav",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": "table"
+  },
+  {
+    "name": "RampLoop7",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Fleep\\Sounds\\RampLoop7.wav",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": "table"
+  },
+  {
+    "name": "RampLoop8",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Fleep\\Sounds\\RampLoop8.wav",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": "table"
+  },
+  {
+    "name": "RampLoop9",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Fleep\\Sounds\\RampLoop9.wav",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": "table"
+  },
+  {
+    "name": "RampLoop10",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Fleep\\Sounds\\RampLoop10.wav",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": "table"
+  },
+  {
+    "name": "WireRamp_Stop1",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Fleep\\Sounds\\WireRamp_Stop1.wav",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": "table"
+  },
+  {
+    "name": "WireRamp_Stop2",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Fleep\\Sounds\\WireRamp_Stop2.wav",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": "table"
+  },
+  {
+    "name": "WireRamp_Stop3",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Fleep\\Sounds\\WireRamp_Stop3.wav",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": "table"
+  },
+  {
+    "name": "WireRamp_Stop",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Fleep\\Sounds\\WireRamp_Stop.wav",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": "table"
+  },
+  {
+    "name": "DropTarget_Down",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Fleep\\Sounds\\DropTarget_Down.wav",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": "table"
+  },
+  {
+    "name": "DropTarget_Up",
+    "path": "C:\\Users\\dan\\OneDrive\\Documents\\Dan\\Pinball\\Fleep\\Sounds\\DropTarget_Up.wav",
+    "internal_name": "",
+    "fade": 0,
+    "volume": 0,
+    "balance": 0,
+    "output_target": "table"
   }
 ]

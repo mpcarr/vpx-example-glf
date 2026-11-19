@@ -5,10 +5,10 @@
   "table_rules": null,
   "author_email": null,
   "release_date": null,
-  "table_save_rev": "531",
+  "table_save_rev": "533",
   "table_version": "1.0",
   "author_website": null,
-  "table_save_date": "Tue Nov 17 06:17:27 2026",
+  "table_save_date": "Thu Nov 19 04:50:47 2026",
   "table_description": "**GLF Example Table**\r\n\r\nTable Repository: https://github.com/mpcarr/vpx-example-glf\r\nGLF documentation: https://mpcarr.github.io/vpx-glf/\r\n\r\nGLF developed by flux\r\nExample table developed by apophis",
   "properties": {},
   "properties_order": []
